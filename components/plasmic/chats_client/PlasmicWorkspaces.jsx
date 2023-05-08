@@ -28,6 +28,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicWorkspaces.module.css"; // plasmic-import: PlpIcihQhaX91/css
+import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: dkiK7MvBVR/icon
 
 export const PlasmicWorkspaces__VariantProps = new Array();
 
@@ -161,6 +162,14 @@ function PlasmicWorkspaces__RenderFunc(props) {
                             data-plasmic-name={"menu"}
                             data-plasmic-override={overrides.menu}
                             className={classNames("__wab_instance", sty.menu)}
+                            expandIcon={
+                              <Icon10Icon
+                                data-plasmic-name={"svg"}
+                                data-plasmic-override={overrides.svg}
+                                className={classNames(projectcss.all, sty.svg)}
+                                role={"img"}
+                              />
+                            }
                             mode={"vertical"}
                             multiple={false}
                           >
@@ -473,6 +482,7 @@ const PlasmicDescendants = {
     "section",
     "menu",
     "itemGroup",
+    "svg",
     "columns",
     "column",
     "sceneInfo",
@@ -485,6 +495,7 @@ const PlasmicDescendants = {
     "section",
     "menu",
     "itemGroup",
+    "svg",
     "columns",
     "column",
     "sceneInfo",
@@ -492,8 +503,9 @@ const PlasmicDescendants = {
     "input"
   ],
 
-  menu: ["menu", "itemGroup"],
+  menu: ["menu", "itemGroup", "svg"],
   itemGroup: ["itemGroup"],
+  svg: ["svg"],
   columns: ["columns", "column", "sceneInfo", "img", "input"],
   column: ["column", "sceneInfo", "img", "input"],
   sceneInfo: ["sceneInfo", "img", "input"],
@@ -537,6 +549,7 @@ export const PlasmicWorkspaces = Object.assign(
     section: makeNodeComponent("section"),
     menu: makeNodeComponent("menu"),
     itemGroup: makeNodeComponent("itemGroup"),
+    svg: makeNodeComponent("svg"),
     columns: makeNodeComponent("columns"),
     column: makeNodeComponent("column"),
     sceneInfo: makeNodeComponent("sceneInfo"),

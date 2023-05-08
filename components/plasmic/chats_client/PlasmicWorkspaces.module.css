@@ -212,6 +212,12 @@
   max-width: 100%;
   min-width: 0;
 }
+.svg {
+  object-fit: cover;
+  max-width: 100%;
+  width: 1em;
+  height: 1em;
+}
 .freeBox__aWlrv {
   display: flex;
   position: absolute;

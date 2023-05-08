@@ -20,10 +20,20 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
+import Button from "../../Button"; // plasmic-import: YO5Bwb9purCqu/component
+import { FormWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: TgJFzUZpvQ/codeComponent
+import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: EYHwZh9ILg/codeComponent
+import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponent
+import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponentHelper
+import Select from "../../Select"; // plasmic-import: DBaIAlzZ3jDAe1/component
+import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton"; // plasmic-import: bx9Xzvf5_eu/codeComponent
+import TextArea from "antd/lib/input/TextArea"; // plasmic-import: ZJIPHLoTjkN/codeComponent
+import { inputHelpers as TextArea_Helpers } from "antd/lib/input/TextArea"; // plasmic-import: ZJIPHLoTjkN/codeComponentHelper
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicMydocuments.module.css"; // plasmic-import: EKtCmtXn8XaxGh/css
+import Icon12Icon from "./icons/PlasmicIcon__Icon12"; // plasmic-import: C_0-pDO_5g/icon
 
 export const PlasmicMydocuments__VariantProps = new Array();
 
@@ -58,6 +68,37 @@ function PlasmicMydocuments__RenderFunc(props) {
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "form.value",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "input.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "select.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "o1"
+      },
+      {
+        path: "antdInputTextArea.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      }
+    ],
+
+    [$props, $ctx]
+  );
+  const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
   useDependencyAwareQuery({
     name: "query",
     getDataOp: () => ({
@@ -112,11 +153,7 @@ function PlasmicMydocuments__RenderFunc(props) {
           )}
         >
           {true ? (
-            <div
-              data-plasmic-name={"freeBox"}
-              data-plasmic-override={overrides.freeBox}
-              className={classNames(projectcss.all, sty.freeBox)}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox___0HU07)}>
               <MenuNav
                 data-plasmic-name={"menuNav"}
                 data-plasmic-override={overrides.menuNav}
@@ -125,6 +162,258 @@ function PlasmicMydocuments__RenderFunc(props) {
               />
             </div>
           ) : null}
+          <section
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section)}
+          >
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__te5Fk)}
+            >
+              {true ? (
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox___6GI2P)}
+                >
+                  {true ? (
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__k8EMt)}
+                    >
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__fr4Xc
+                        )}
+                        color={"white"}
+                        link={`/workspaces`}
+                        showStartIcon={true}
+                        size={"compact"}
+                        startIcon={
+                          <Icon12Icon
+                            data-plasmic-name={"svg"}
+                            data-plasmic-override={overrides.svg}
+                            className={classNames(projectcss.all, sty.svg)}
+                            role={"img"}
+                          />
+                        }
+                      >
+                        {"返  回"}
+                      </Button>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__cTqEt
+                        )}
+                      >
+                        {"小红书营销短文"}
+                      </div>
+                    </p.Stack>
+                  ) : null}
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__mm8EK
+                    )}
+                  >
+                    {"输入关键词，点击生成即可获得结果"}
+                  </div>
+                  <FormWrapper
+                    data-plasmic-name={"form"}
+                    data-plasmic-override={overrides.form}
+                    className={classNames("__wab_instance", sty.form)}
+                    extendedOnValuesChange={p.generateStateOnChangeProp(
+                      $state,
+                      ["form", "value"]
+                    )}
+                    labelCol={{ span: 8, horizontalOnly: true }}
+                    layout={"vertical"}
+                    wrapperCol={{ span: 16, horizontalOnly: true }}
+                  >
+                    <FormItemWrapper
+                      className={classNames(
+                        "__wab_instance",
+                        sty.formItem___9QANx
+                      )}
+                      label={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__ericr
+                          )}
+                        >
+                          {"你想写什么？（关键词输入）"}
+                        </div>
+                      }
+                      name={"name"}
+                    >
+                      {(() => {
+                        const child$Props = {
+                          className: classNames("__wab_instance", sty.input),
+                          onChange:
+                            p.generateStateOnChangePropForCodeComponents(
+                              $state,
+                              "value",
+                              ["input", "value"],
+                              AntdInput_Helpers
+                            ),
+                          value: p.generateStateValueProp($state, [
+                            "input",
+                            "value"
+                          ])
+                        };
+                        p.initializeCodeComponentStates(
+                          $state,
+                          [
+                            {
+                              name: "value",
+                              plasmicStateName: "input.value"
+                            }
+                          ],
+
+                          [],
+                          AntdInput_Helpers ?? {},
+                          child$Props
+                        );
+                        return (
+                          <AntdInput
+                            data-plasmic-name={"input"}
+                            data-plasmic-override={overrides.input}
+                            {...child$Props}
+                          />
+                        );
+                      })()}
+                    </FormItemWrapper>
+                    <FormItemWrapper
+                      className={classNames(
+                        "__wab_instance",
+                        sty.formItem__fs7Ub
+                      )}
+                      hideValidationMessage={false}
+                      label={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__vayR4
+                          )}
+                        >
+                          {"语气选择"}
+                        </div>
+                      }
+                      name={"message"}
+                    >
+                      <Select
+                        data-plasmic-name={"select"}
+                        data-plasmic-override={overrides.select}
+                        className={classNames("__wab_instance", sty.select)}
+                        name={"语气"}
+                        onChange={(...eventArgs) => {
+                          p.generateStateOnChangeProp($state, [
+                            "select",
+                            "value"
+                          ])(eventArgs[0]);
+                        }}
+                        options={[
+                          { value: "o1", label: "幽默语气" },
+                          { value: "o2", label: "撒娇语气" }
+                        ]}
+                        value={p.generateStateValueProp($state, [
+                          "select",
+                          "value"
+                        ])}
+                      />
+                    </FormItemWrapper>
+                    <FormItemWrapper
+                      className={classNames(
+                        "__wab_instance",
+                        sty.formItem__xOwUy
+                      )}
+                      label={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___3W2D
+                          )}
+                        >
+                          {"Label"}
+                        </div>
+                      }
+                      noLabel={true}
+                    >
+                      <AntdButton
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__swOBc
+                        )}
+                        submitsForm={true}
+                        type={"primary"}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__z3O3Q
+                          )}
+                        >
+                          {"生成文本"}
+                        </div>
+                      </AntdButton>
+                    </FormItemWrapper>
+                  </FormWrapper>
+                </p.Stack>
+              ) : null}
+              {(() => {
+                const child$Props = {
+                  allowClear: false,
+                  className: classNames(
+                    "__wab_instance",
+                    sty.antdInputTextArea
+                  ),
+                  onChange: p.generateStateOnChangePropForCodeComponents(
+                    $state,
+                    "value",
+                    ["antdInputTextArea", "value"],
+                    TextArea_Helpers
+                  ),
+                  placeholder:
+                    "嘿！各位亲亲粉丝们，我又来了！今天我们要来聊一聊一个冬季必备单品——苏特儿牌羊绒大衣！啵儿，听着名字就觉得暖暖的~首先得说一句，这衣服Diao炸了！用的是顶级羊绒材料，毛茸茸的手感真的超好！大衣的设计也非常时尚，穿起来还能显瘦，女孩们小细腰儿也能展现出来！男孩们更不要错过此物，给心爱的女孩送一个苏特儿牌羊绒大衣，保证她对你更加痴迷！再说一下这大衣的保暖能力，呼呼，真的暖到爆炸啊！穿在身上，就像有一床暖暖的被窝裹着一样，什么寒冷都不怕啦！这个冬季不来一件苏特儿牌羊绒大衣，你都不好意思说自己走过！小伙伴们，现在是享受冬日温暖最棒的方法——苏特儿牌羊绒大衣！抓紧时间把它买回家吧！",
+                  value: p.generateStateValueProp($state, [
+                    "antdInputTextArea",
+                    "value"
+                  ])
+                };
+                p.initializeCodeComponentStates(
+                  $state,
+                  [
+                    {
+                      name: "value",
+                      plasmicStateName: "antdInputTextArea.value"
+                    }
+                  ],
+
+                  [],
+                  TextArea_Helpers ?? {},
+                  child$Props
+                );
+                return (
+                  <TextArea
+                    data-plasmic-name={"antdInputTextArea"}
+                    data-plasmic-override={overrides.antdInputTextArea}
+                    {...child$Props}
+                  />
+                );
+              })()}
+            </p.Stack>
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -132,9 +421,24 @@ function PlasmicMydocuments__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "menuNav"],
-  freeBox: ["freeBox", "menuNav"],
-  menuNav: ["menuNav"]
+  root: [
+    "root",
+    "menuNav",
+    "section",
+    "svg",
+    "form",
+    "input",
+    "select",
+    "antdInputTextArea"
+  ],
+
+  menuNav: ["menuNav"],
+  section: ["section", "svg", "form", "input", "select", "antdInputTextArea"],
+  svg: ["svg"],
+  form: ["form", "input", "select"],
+  input: ["input"],
+  select: ["select"],
+  antdInputTextArea: ["antdInputTextArea"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -169,8 +473,13 @@ export const PlasmicMydocuments = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    freeBox: makeNodeComponent("freeBox"),
     menuNav: makeNodeComponent("menuNav"),
+    section: makeNodeComponent("section"),
+    svg: makeNodeComponent("svg"),
+    form: makeNodeComponent("form"),
+    input: makeNodeComponent("input"),
+    select: makeNodeComponent("select"),
+    antdInputTextArea: makeNodeComponent("antdInputTextArea"),
     // Metadata about props expected for PlasmicMydocuments
     internalVariantProps: PlasmicMydocuments__VariantProps,
     internalArgProps: PlasmicMydocuments__ArgProps,
