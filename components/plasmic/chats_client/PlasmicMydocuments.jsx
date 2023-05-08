@@ -23,6 +23,8 @@ import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
 import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: fo-n3xHvdqt/codeComponent
 import { AntdMenuItemGroup } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: 6ySly9jzXsR/codeComponent
 import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: QSmezaW-Gyu/codeComponent
+import TextInput from "../../TextInput"; // plasmic-import: -yvQMrhCsV3Q78/component
+import DocumentList from "../../DocumentList"; // plasmic-import: DuwZXCRDJh/component
 import TextArea from "antd/lib/input/TextArea"; // plasmic-import: ZJIPHLoTjkN/codeComponent
 import { inputHelpers as TextArea_Helpers } from "antd/lib/input/TextArea"; // plasmic-import: ZJIPHLoTjkN/codeComponentHelper
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -30,6 +32,7 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicMydocuments.module.css"; // plasmic-import: EKtCmtXn8XaxGh/css
 import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: dkiK7MvBVR/icon
+import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: -3MO1z6kLjeMH2/icon
 
 export const PlasmicMydocuments__VariantProps = new Array();
 
@@ -70,7 +73,14 @@ function PlasmicMydocuments__RenderFunc(props) {
         path: "antdInputTextArea.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          "嘿！各位亲亲粉丝们，我又来了！今天我们要来聊一聊一个冬季必备单品——苏特儿牌羊绒大衣！啵儿，听着名字就觉得暖暖的~首先得说一句，这衣服Diao炸了！用的是顶级羊绒材料，毛茸茸的手感真的超好！大衣的设计也非常时尚，穿起来还能显瘦，女孩们小细腰儿也能展现出来！男孩们更不要错过此物，给心爱的女孩送一个苏特儿牌羊绒大衣，保证她对你更加痴迷！再说一下这大衣的保暖能力，呼呼，真的暖到爆炸啊！穿在身上，就像有一床暖暖的被窝裹着一样，什么寒冷都不怕啦！这个冬季不来一件苏特儿牌羊绒大衣，你都不好意思说自己走过！小伙伴们，现在是享受冬日温暖最棒的方法——苏特儿牌羊绒大衣！抓紧时间把它买回家吧！"
+      },
+      {
+        path: "textInput.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ""
       }
     ],
 
@@ -157,9 +167,7 @@ function PlasmicMydocuments__RenderFunc(props) {
                   className={classNames("__wab_instance", sty.menu)}
                   expandIcon={
                     <Icon10Icon
-                      data-plasmic-name={"svg"}
-                      data-plasmic-override={overrides.svg}
-                      className={classNames(projectcss.all, sty.svg)}
+                      className={classNames(projectcss.all, sty.svg__tB6O8)}
                       role={"img"}
                     />
                   }
@@ -178,7 +186,7 @@ function PlasmicMydocuments__RenderFunc(props) {
                           sty.text__gQq0V
                         )}
                       >
-                        {"时间排列"}
+                        {"文档记录"}
                       </div>
                     }
                   >
@@ -187,7 +195,7 @@ function PlasmicMydocuments__RenderFunc(props) {
                         "__wab_instance",
                         sty.menuItem__rLiC3
                       )}
-                      key={"k1"}
+                      key={"doc1"}
                     >
                       <div
                         className={classNames(
@@ -204,7 +212,7 @@ function PlasmicMydocuments__RenderFunc(props) {
                         "__wab_instance",
                         sty.menuItem__rHqwZ
                       )}
-                      key={"k2"}
+                      key={"doc2"}
                     >
                       <div
                         className={classNames(
@@ -221,7 +229,7 @@ function PlasmicMydocuments__RenderFunc(props) {
                         "__wab_instance",
                         sty.menuItem__l38Zo
                       )}
-                      key={"k3"}
+                      key={"doc3"}
                     >
                       <div
                         className={classNames(
@@ -238,7 +246,7 @@ function PlasmicMydocuments__RenderFunc(props) {
                         "__wab_instance",
                         sty.menuItem__xpdE
                       )}
-                      key={"k4"}
+                      key={"doc4"}
                     >
                       <div
                         className={classNames(
@@ -255,7 +263,7 @@ function PlasmicMydocuments__RenderFunc(props) {
                         "__wab_instance",
                         sty.menuItem__wdUnw
                       )}
-                      key={"k5"}
+                      key={"doc5"}
                     >
                       <div
                         className={classNames(
@@ -272,7 +280,7 @@ function PlasmicMydocuments__RenderFunc(props) {
                         "__wab_instance",
                         sty.menuItem__p2CGa
                       )}
-                      key={"k6"}
+                      key={"doc6"}
                     >
                       <div
                         className={classNames(
@@ -281,7 +289,7 @@ function PlasmicMydocuments__RenderFunc(props) {
                           sty.text__cizFc
                         )}
                       >
-                        {"最近一年"}
+                        {"全部"}
                       </div>
                     </AntdMenuItem>
                   </AntdMenuItemGroup>
@@ -292,52 +300,47 @@ function PlasmicMydocuments__RenderFunc(props) {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__z6B9T)}
               >
-                {(
-                  (() => {
-                    try {
-                      return [2, 3, 4, 5, 6, 7, 8];
-                    } catch (e) {
-                      if (e instanceof TypeError) {
-                        return [];
-                      }
-                      throw e;
-                    }
-                  })() ?? []
-                ).map((currentItem, currentIndex) => (
-                  <div
-                    data-plasmic-name={"blockText"}
-                    data-plasmic-override={overrides.blockText}
-                    className={classNames(projectcss.all, sty.blockText)}
+                <TextInput
+                  data-plasmic-name={"textInput"}
+                  data-plasmic-override={overrides.textInput}
+                  className={classNames("__wab_instance", sty.textInput)}
+                  onChange={(...eventArgs) => {
+                    p.generateStateOnChangeProp($state, ["textInput", "value"])(
+                      (e => e.target?.value).apply(null, eventArgs)
+                    );
+                  }}
+                  placeholder={"搜索关键字"}
+                  showStartIcon={true}
+                  startIcon={
+                    true ? (
+                      <SearchsvgIcon
+                        className={classNames(projectcss.all, sty.svg__fwHnb)}
+                        role={"img"}
+                      />
+                    ) : null
+                  }
+                  value={p.generateStateValueProp($state, [
+                    "textInput",
+                    "value"
+                  ])}
+                />
+
+                <DocumentList
+                  className={classNames(
+                    "__wab_instance",
+                    sty.documentList__b2WUn
+                  )}
+                  currentState={true}
+                />
+
+                {([2, 3, 4] ?? []).map((currentItem, currentIndex) => (
+                  <DocumentList
+                    className={classNames(
+                      "__wab_instance",
+                      sty.documentList__jnqW6
+                    )}
                     key={currentIndex}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___1OWzw
-                      )}
-                    >
-                      {"模版名称"}
-                    </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__xYvnC
-                      )}
-                    >
-                      {"关键词"}
-                    </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__kGcae
-                      )}
-                    >
-                      {"嘿！各位亲亲粉丝们，我又来了！"}
-                    </div>
-                  </div>
+                  />
                 ))}
               </p.Stack>
               {(() => {
@@ -396,25 +399,15 @@ const PlasmicDescendants = {
     "section",
     "menu",
     "itemGroup",
-    "svg",
-    "blockText",
+    "textInput",
     "antdInputTextArea"
   ],
 
   menuNav: ["menuNav"],
-  section: [
-    "section",
-    "menu",
-    "itemGroup",
-    "svg",
-    "blockText",
-    "antdInputTextArea"
-  ],
-
-  menu: ["menu", "itemGroup", "svg"],
+  section: ["section", "menu", "itemGroup", "textInput", "antdInputTextArea"],
+  menu: ["menu", "itemGroup"],
   itemGroup: ["itemGroup"],
-  svg: ["svg"],
-  blockText: ["blockText"],
+  textInput: ["textInput"],
   antdInputTextArea: ["antdInputTextArea"]
 };
 
@@ -454,8 +447,7 @@ export const PlasmicMydocuments = Object.assign(
     section: makeNodeComponent("section"),
     menu: makeNodeComponent("menu"),
     itemGroup: makeNodeComponent("itemGroup"),
-    svg: makeNodeComponent("svg"),
-    blockText: makeNodeComponent("blockText"),
+    textInput: makeNodeComponent("textInput"),
     antdInputTextArea: makeNodeComponent("antdInputTextArea"),
     // Metadata about props expected for PlasmicMydocuments
     internalVariantProps: PlasmicMydocuments__VariantProps,
