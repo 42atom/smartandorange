@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@plasmicapp/cli": "^0.1.274",
+    "@plasmicapp/react-web": "^0.2.209",
+    "@plasmicpkgs/antd": "^2.0.50",
+    "@plasmicpkgs/antd5": "^0.0.55",
+    "antd": "^5.4.7",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.1",
     "next": "13.4.1",
