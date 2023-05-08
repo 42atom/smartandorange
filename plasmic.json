@@ -596,19 +596,6 @@
           "componentType": "page"
         },
         {
-          "id": "5f5R9scDOB",
-          "name": "Draft",
-          "type": "managed",
-          "projectId": "gRaosoDicn4VUCndSzazbA",
-          "renderModuleFilePath": "plasmic/chats_client/PlasmicDraft.jsx",
-          "importSpec": {
-            "modulePath": "../pages/draft.jsx"
-          },
-          "cssFilePath": "plasmic/chats_client/PlasmicDraft.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "DuwZXCRDJh",
           "name": "DocumentList",
           "type": "managed",
@@ -631,6 +618,19 @@
             "modulePath": "Fav.jsx"
           },
           "cssFilePath": "plasmic/chats_client/PlasmicFav.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "cHu398Tr36",
+          "name": "CreatedContent",
+          "type": "managed",
+          "projectId": "gRaosoDicn4VUCndSzazbA",
+          "renderModuleFilePath": "plasmic/chats_client/PlasmicCreatedContent.jsx",
+          "importSpec": {
+            "modulePath": "CreatedContent.jsx"
+          },
+          "cssFilePath": "plasmic/chats_client/PlasmicCreatedContent.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }
@@ -740,6 +740,16 @@
           "id": "XtoxUOCTka",
           "name": "Icon16Icon",
           "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon16.jsx"
+        },
+        {
+          "id": "Cuf7VN7o7",
+          "name": "Icon17Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon17.jsx"
+        },
+        {
+          "id": "pp41lU4ySO",
+          "name": "Icon18Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon18.jsx"
         }
       ],
       "images": [

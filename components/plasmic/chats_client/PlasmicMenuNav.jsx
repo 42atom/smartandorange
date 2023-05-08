@@ -95,18 +95,7 @@ function PlasmicMenuNav__RenderFunc(props) {
               const $steps = {};
               $steps["goToHomepage"] = true
                 ? (() => {
-                    const actionArgs = {
-                      destination: __wrapUserFunction(
-                        {
-                          type: "InteractionArgLoc",
-                          actionName: "navigation",
-                          interactionUuid: "c3G1bE_FZ",
-                          componentUuid: "9cR2sxpykRjad",
-                          argName: "destination"
-                        },
-                        () => `/`
-                      )
-                    };
+                    const actionArgs = {};
                     return __wrapUserFunction(
                       {
                         type: "InteractionLoc",
@@ -330,6 +319,7 @@ function PlasmicMenuNav__RenderFunc(props) {
         </MenuItem>
         <MenuItem
           className={classNames("__wab_instance", sty.antdMenuItem__i7MLq)}
+          danger={false}
           key={"menuItemKey3"}
           title={"03"}
         >
