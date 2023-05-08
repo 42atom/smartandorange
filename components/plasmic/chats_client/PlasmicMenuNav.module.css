@@ -159,7 +159,7 @@
   flex-grow: 0;
   margin: 16px;
 }
-.antdMenuItem__tLN7:global(.__wab_instance) {
+.menu1:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
@@ -170,7 +170,7 @@
   max-width: 100%;
   min-width: 0;
 }
-.antdMenuItem__tzmb7:global(.__wab_instance) {
+.menu2:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
@@ -181,7 +181,7 @@
   max-width: 100%;
   min-width: 0;
 }
-.antdMenuItem__i7MLq:global(.__wab_instance) {
+.menu3:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
@@ -192,7 +192,7 @@
   max-width: 100%;
   min-width: 0;
 }
-.antdMenuItem__j5DSs:global(.__wab_instance) {
+.menu4:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }

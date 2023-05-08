@@ -95,7 +95,18 @@ function PlasmicMenuNav__RenderFunc(props) {
               const $steps = {};
               $steps["goToHomepage"] = true
                 ? (() => {
-                    const actionArgs = {};
+                    const actionArgs = {
+                      destination: __wrapUserFunction(
+                        {
+                          type: "InteractionArgLoc",
+                          actionName: "navigation",
+                          interactionUuid: "c3G1bE_FZ",
+                          componentUuid: "9cR2sxpykRjad",
+                          argName: "destination"
+                        },
+                        () => `/`
+                      )
+                    };
                     return __wrapUserFunction(
                       {
                         type: "InteractionLoc",
@@ -182,7 +193,7 @@ function PlasmicMenuNav__RenderFunc(props) {
         className={classNames("__wab_instance", sty.menu)}
         defaultSelectedKeys={args.selected}
         expandIcon={null}
-        forceSubMenuRender={true}
+        forceSubMenuRender={false}
         mode={"horizontal"}
         overflowedIndicator={
           <Icon13Icon
@@ -193,10 +204,12 @@ function PlasmicMenuNav__RenderFunc(props) {
           />
         }
         selectable={false}
-        triggerSubMenuAction={"click"}
+        triggerSubMenuAction={"hover"}
       >
         <MenuItem
-          className={classNames("__wab_instance", sty.antdMenuItem__tLN7)}
+          data-plasmic-name={"menu1"}
+          data-plasmic-override={overrides.menu1}
+          className={classNames("__wab_instance", sty.menu1)}
           key={"menuItemKey1"}
           title={"01"}
         >
@@ -257,7 +270,9 @@ function PlasmicMenuNav__RenderFunc(props) {
           </div>
         </MenuItem>
         <MenuItem
-          className={classNames("__wab_instance", sty.antdMenuItem__tzmb7)}
+          data-plasmic-name={"menu2"}
+          data-plasmic-override={overrides.menu2}
+          className={classNames("__wab_instance", sty.menu2)}
           key={"menuItemKey2"}
           title={"02"}
         >
@@ -318,7 +333,9 @@ function PlasmicMenuNav__RenderFunc(props) {
           </div>
         </MenuItem>
         <MenuItem
-          className={classNames("__wab_instance", sty.antdMenuItem__i7MLq)}
+          data-plasmic-name={"menu3"}
+          data-plasmic-override={overrides.menu3}
+          className={classNames("__wab_instance", sty.menu3)}
           danger={false}
           key={"menuItemKey3"}
           title={"03"}
@@ -380,7 +397,9 @@ function PlasmicMenuNav__RenderFunc(props) {
           </div>
         </MenuItem>
         <MenuItem
-          className={classNames("__wab_instance", sty.antdMenuItem__j5DSs)}
+          data-plasmic-name={"menu4"}
+          data-plasmic-override={overrides.menu4}
+          className={classNames("__wab_instance", sty.menu4)}
           key={"menuItemKey4"}
           title={"04"}
         >
@@ -446,11 +465,26 @@ function PlasmicMenuNav__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "header", "img", "menu", "svg"],
+  root: [
+    "root",
+    "header",
+    "img",
+    "menu",
+    "svg",
+    "menu1",
+    "menu2",
+    "menu3",
+    "menu4"
+  ],
+
   header: ["header", "img"],
   img: ["img"],
-  menu: ["menu", "svg"],
-  svg: ["svg"]
+  menu: ["menu", "svg", "menu1", "menu2", "menu3", "menu4"],
+  svg: ["svg"],
+  menu1: ["menu1"],
+  menu2: ["menu2"],
+  menu3: ["menu3"],
+  menu4: ["menu4"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -489,6 +523,10 @@ export const PlasmicMenuNav = Object.assign(
     img: makeNodeComponent("img"),
     menu: makeNodeComponent("menu"),
     svg: makeNodeComponent("svg"),
+    menu1: makeNodeComponent("menu1"),
+    menu2: makeNodeComponent("menu2"),
+    menu3: makeNodeComponent("menu3"),
+    menu4: makeNodeComponent("menu4"),
     // Metadata about props expected for PlasmicMenuNav
     internalVariantProps: PlasmicMenuNav__VariantProps,
     internalArgProps: PlasmicMenuNav__ArgProps
