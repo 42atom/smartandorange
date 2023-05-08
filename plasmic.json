@@ -750,6 +750,16 @@
           "id": "pp41lU4ySO",
           "name": "Icon18Icon",
           "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon18.jsx"
+        },
+        {
+          "id": "Qv4aqJsvqQ",
+          "name": "Icon19Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon19.jsx"
+        },
+        {
+          "id": "6_oKYAuIan",
+          "name": "Icon20Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon20.jsx"
         }
       ],
       "images": [

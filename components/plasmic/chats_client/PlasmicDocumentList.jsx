@@ -23,6 +23,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicDocumentList.module.css"; // plasmic-import: DuwZXCRDJh/css
+import Icon18Icon from "./icons/PlasmicIcon__Icon18"; // plasmic-import: pp41lU4ySO/icon
 
 export const PlasmicDocumentList__VariantProps = new Array("currentState");
 
@@ -103,7 +104,14 @@ function PlasmicDocumentList__RenderFunc(props) {
         className={classNames(
           projectcss.all,
           projectcss.__wab_text,
-          sty.text__kLChv
+          sty.text__kLChv,
+          {
+            [sty.textcurrentState__kLChvMo5]: hasVariant(
+              $state,
+              "currentState",
+              "currentState"
+            )
+          }
         )}
       >
         {"羊绒大衣 保暖 冬季"}
@@ -112,7 +120,14 @@ function PlasmicDocumentList__RenderFunc(props) {
         className={classNames(
           projectcss.all,
           projectcss.__wab_text,
-          sty.text__bh7KB
+          sty.text__bh7KB,
+          {
+            [sty.textcurrentState__bh7KBMo5]: hasVariant(
+              $state,
+              "currentState",
+              "currentState"
+            )
+          }
         )}
       >
         {"嘿！各位亲亲粉丝们，我又来了！今天是美好充实的一天"}
@@ -148,6 +163,13 @@ function PlasmicDocumentList__RenderFunc(props) {
                 data-plasmic-override={overrides.fav}
                 className={classNames("__wab_instance", sty.fav)}
               />
+
+              <Icon18Icon
+                data-plasmic-name={"svg"}
+                data-plasmic-override={overrides.svg}
+                className={classNames(projectcss.all, sty.svg)}
+                role={"img"}
+              />
             </div>
           ) : null}
         </div>
@@ -157,8 +179,9 @@ function PlasmicDocumentList__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  blockText: ["blockText", "fav"],
-  fav: ["fav"]
+  blockText: ["blockText", "fav", "svg"],
+  fav: ["fav"],
+  svg: ["svg"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -194,6 +217,7 @@ export const PlasmicDocumentList = Object.assign(
   {
     // Helper components rendering sub-elements
     fav: makeNodeComponent("fav"),
+    svg: makeNodeComponent("svg"),
     // Metadata about props expected for PlasmicDocumentList
     internalVariantProps: PlasmicDocumentList__VariantProps,
     internalArgProps: PlasmicDocumentList__ArgProps

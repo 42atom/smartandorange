@@ -1,13 +1,13 @@
 .fav {
   object-fit: cover;
   max-width: 100%;
-  color: #dfdfdf;
+  color: var(--token-FMGQEiyNQ);
   width: 16px;
   height: 16px;
   position: relative;
 }
 .favchecked {
-  color: #f7955b;
+  color: #fac72b;
   transform: none;
   cursor: pointer;
 }

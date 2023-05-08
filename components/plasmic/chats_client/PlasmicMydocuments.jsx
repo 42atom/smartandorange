@@ -333,7 +333,18 @@ function PlasmicMydocuments__RenderFunc(props) {
                   currentState={true}
                 />
 
-                {([2, 3, 4] ?? []).map((currentItem, currentIndex) => (
+                {(
+                  (() => {
+                    try {
+                      return [2, 3, 4, 5, 6, 7];
+                    } catch (e) {
+                      if (e instanceof TypeError) {
+                        return [];
+                      }
+                      throw e;
+                    }
+                  })() ?? []
+                ).map((currentItem, currentIndex) => (
                   <DocumentList
                     className={classNames(
                       "__wab_instance",

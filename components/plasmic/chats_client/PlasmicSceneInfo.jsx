@@ -18,6 +18,7 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
+import Fav from "../../Fav"; // plasmic-import: P6DuufdWKR/component
 import Button from "../../Button"; // plasmic-import: YO5Bwb9purCqu/component
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal"; // plasmic-import: xx93QbkHH5i/codeComponent
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -197,98 +198,108 @@ function PlasmicSceneInfo__RenderFunc(props) {
           </div>
         </div>
       ) : null}
-      <Button
-        data-plasmic-name={"button"}
-        data-plasmic-override={overrides.button}
-        className={classNames("__wab_instance", sty.button)}
-        color={"softYellow"}
-        onClick={async event => {
-          const $steps = {};
-          $steps["updateModalOpen"] = true
-            ? (() => {
-                const actionArgs = {
-                  variable: __wrapUserFunction(
-                    {
-                      type: "InteractionArgLoc",
-                      actionName: "updateVariable",
-                      interactionUuid: "p7ZmQ5cB_",
-                      componentUuid: "Zf1zYQ7YK23by",
-                      argName: "variable"
-                    },
-                    () => ({
-                      objRoot: $state,
-                      variablePath: ["modal", "open"]
-                    })
-                  ),
-                  operation: __wrapUserFunction(
-                    {
-                      type: "InteractionArgLoc",
-                      actionName: "updateVariable",
-                      interactionUuid: "p7ZmQ5cB_",
-                      componentUuid: "Zf1zYQ7YK23by",
-                      argName: "operation"
-                    },
-                    () => 4
-                  ),
-                  value: __wrapUserFunction(
-                    {
-                      type: "InteractionArgLoc",
-                      actionName: "updateVariable",
-                      interactionUuid: "p7ZmQ5cB_",
-                      componentUuid: "Zf1zYQ7YK23by",
-                      argName: "value"
-                    },
-                    () => true
-                  )
-                };
-                return __wrapUserFunction(
+      {true ? (
+        <div className={classNames(projectcss.all, sty.freeBox__mL3Wc)}>
+          <Fav
+            data-plasmic-name={"fav"}
+            data-plasmic-override={overrides.fav}
+            className={classNames("__wab_instance", sty.fav)}
+          />
+
+          <Button
+            data-plasmic-name={"button"}
+            data-plasmic-override={overrides.button}
+            className={classNames("__wab_instance", sty.button)}
+            color={"link"}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateModalOpen"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: __wrapUserFunction(
+                        {
+                          type: "InteractionArgLoc",
+                          actionName: "updateVariable",
+                          interactionUuid: "p7ZmQ5cB_",
+                          componentUuid: "Zf1zYQ7YK23by",
+                          argName: "variable"
+                        },
+                        () => ({
+                          objRoot: $state,
+                          variablePath: ["modal", "open"]
+                        })
+                      ),
+                      operation: __wrapUserFunction(
+                        {
+                          type: "InteractionArgLoc",
+                          actionName: "updateVariable",
+                          interactionUuid: "p7ZmQ5cB_",
+                          componentUuid: "Zf1zYQ7YK23by",
+                          argName: "operation"
+                        },
+                        () => 4
+                      ),
+                      value: __wrapUserFunction(
+                        {
+                          type: "InteractionArgLoc",
+                          actionName: "updateVariable",
+                          interactionUuid: "p7ZmQ5cB_",
+                          componentUuid: "Zf1zYQ7YK23by",
+                          argName: "value"
+                        },
+                        () => true
+                      )
+                    };
+                    return __wrapUserFunction(
+                      {
+                        type: "InteractionLoc",
+                        actionName: "updateVariable",
+                        interactionUuid: "p7ZmQ5cB_",
+                        componentUuid: "Zf1zYQ7YK23by"
+                      },
+                      () =>
+                        (({ variable, value, startIndex, deleteCount }) => {
+                          const { objRoot, variablePath } = variable;
+                          const oldValue = p.get(objRoot, variablePath);
+                          p.set(objRoot, variablePath, !oldValue);
+                          return !oldValue;
+                        })?.apply(null, [actionArgs]),
+                      actionArgs
+                    );
+                  })()
+                : undefined;
+              if (
+                typeof $steps["updateModalOpen"] === "object" &&
+                typeof $steps["updateModalOpen"].then === "function"
+              ) {
+                $steps["updateModalOpen"] = await __wrapUserPromise(
                   {
                     type: "InteractionLoc",
                     actionName: "updateVariable",
                     interactionUuid: "p7ZmQ5cB_",
                     componentUuid: "Zf1zYQ7YK23by"
                   },
-                  () =>
-                    (({ variable, value, startIndex, deleteCount }) => {
-                      const { objRoot, variablePath } = variable;
-                      const oldValue = p.get(objRoot, variablePath);
-                      p.set(objRoot, variablePath, !oldValue);
-                      return !oldValue;
-                    })?.apply(null, [actionArgs]),
-                  actionArgs
+                  $steps["updateModalOpen"]
                 );
-              })()
-            : undefined;
-          if (
-            typeof $steps["updateModalOpen"] === "object" &&
-            typeof $steps["updateModalOpen"].then === "function"
-          ) {
-            $steps["updateModalOpen"] = await __wrapUserPromise(
-              {
-                type: "InteractionLoc",
-                actionName: "updateVariable",
-                interactionUuid: "p7ZmQ5cB_",
-                componentUuid: "Zf1zYQ7YK23by"
-              },
-              $steps["updateModalOpen"]
-            );
-          }
-        }}
-        shape={"sharp"}
-        size={"minimal"}
-      >
-        <div
-          data-plasmic-name={"text"}
-          data-plasmic-override={overrides.text}
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text
-          )}
-        >
-          {"查看样例"}
+              }
+            }}
+            shape={"sharp"}
+            size={"minimal"}
+          >
+            <div
+              data-plasmic-name={"text"}
+              data-plasmic-override={overrides.text}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text
+              )}
+            >
+              {"查看样例"}
+            </div>
+          </Button>
         </div>
-      </Button>
+      ) : null}
       {true ? (
         <AntdModal
           data-plasmic-name={"modal"}
@@ -361,7 +372,8 @@ function PlasmicSceneInfo__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "button", "text", "modal", "inputs", "output", "svg"],
+  root: ["root", "fav", "button", "text", "modal", "inputs", "output", "svg"],
+  fav: ["fav"],
   button: ["button", "text"],
   text: ["text"],
   modal: ["modal", "inputs", "output", "svg"],
@@ -402,6 +414,7 @@ export const PlasmicSceneInfo = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    fav: makeNodeComponent("fav"),
     button: makeNodeComponent("button"),
     text: makeNodeComponent("text"),
     modal: makeNodeComponent("modal"),

@@ -20,6 +20,13 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
+import { FormWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: TgJFzUZpvQ/codeComponent
+import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: EYHwZh9ILg/codeComponent
+import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponent
+import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponentHelper
+import { AntdTextArea } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: pTzGlMptTxd/codeComponent
+import { inputHelpers as AntdTextArea_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: pTzGlMptTxd/codeComponentHelper
+import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton"; // plasmic-import: bx9Xzvf5_eu/codeComponent
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
@@ -58,6 +65,43 @@ function PlasmicMyaccount__RenderFunc(props) {
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "form.value",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "input.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "textArea.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "input2.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "input3.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      }
+    ],
+
+    [$props, $ctx]
+  );
+  const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
   useDependencyAwareQuery({
     name: "query",
     getDataOp: () => ({
@@ -112,11 +156,7 @@ function PlasmicMyaccount__RenderFunc(props) {
           )}
         >
           {true ? (
-            <div
-              data-plasmic-name={"freeBox"}
-              data-plasmic-override={overrides.freeBox}
-              className={classNames(projectcss.all, sty.freeBox)}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox__fxLf)}>
               <MenuNav
                 data-plasmic-name={"menuNav"}
                 data-plasmic-override={overrides.menuNav}
@@ -125,11 +165,320 @@ function PlasmicMyaccount__RenderFunc(props) {
               />
             </div>
           ) : null}
-          <section
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            className={classNames(projectcss.all, sty.section)}
-          />
+          <section className={classNames(projectcss.all, sty.section___67ClG)}>
+            {true ? (
+              <div className={classNames(projectcss.all, sty.freeBox__vypQs)}>
+                {true ? (
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___3M39U)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___4XCqg
+                      )}
+                    >
+                      {"用户名"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xu2Ya
+                      )}
+                    >
+                      {"额度"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__hHtof
+                      )}
+                    >
+                      {"免费用户"}
+                    </div>
+                    <FormWrapper
+                      data-plasmic-name={"form"}
+                      data-plasmic-override={overrides.form}
+                      className={classNames("__wab_instance", sty.form)}
+                      extendedOnValuesChange={p.generateStateOnChangeProp(
+                        $state,
+                        ["form", "value"]
+                      )}
+                      labelCol={{ span: 8, horizontalOnly: true }}
+                      layout={"vertical"}
+                      wrapperCol={{ span: 16, horizontalOnly: true }}
+                    >
+                      <FormItemWrapper
+                        className={classNames(
+                          "__wab_instance",
+                          sty.formItem__l5U
+                        )}
+                        label={
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__x7WF
+                            )}
+                          >
+                            {"邮箱"}
+                          </div>
+                        }
+                        name={"name"}
+                      >
+                        {(() => {
+                          const child$Props = {
+                            className: classNames("__wab_instance", sty.input),
+                            onChange:
+                              p.generateStateOnChangePropForCodeComponents(
+                                $state,
+                                "value",
+                                ["input", "value"],
+                                AntdInput_Helpers
+                              ),
+                            value: p.generateStateValueProp($state, [
+                              "input",
+                              "value"
+                            ])
+                          };
+                          p.initializeCodeComponentStates(
+                            $state,
+                            [
+                              {
+                                name: "value",
+                                plasmicStateName: "input.value"
+                              }
+                            ],
+
+                            [],
+                            AntdInput_Helpers ?? {},
+                            child$Props
+                          );
+                          return (
+                            <AntdInput
+                              data-plasmic-name={"input"}
+                              data-plasmic-override={overrides.input}
+                              {...child$Props}
+                            />
+                          );
+                        })()}
+                      </FormItemWrapper>
+                      <FormItemWrapper
+                        className={classNames(
+                          "__wab_instance",
+                          sty.formItem__ckay4
+                        )}
+                        label={
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__nKb0
+                            )}
+                          >
+                            {"手机"}
+                          </div>
+                        }
+                        name={"name"}
+                      >
+                        {(() => {
+                          const child$Props = {
+                            className: classNames("__wab_instance", sty.input2),
+                            onChange:
+                              p.generateStateOnChangePropForCodeComponents(
+                                $state,
+                                "value",
+                                ["input2", "value"],
+                                AntdInput_Helpers
+                              ),
+                            value: p.generateStateValueProp($state, [
+                              "input2",
+                              "value"
+                            ])
+                          };
+                          p.initializeCodeComponentStates(
+                            $state,
+                            [
+                              {
+                                name: "value",
+                                plasmicStateName: "input2.value"
+                              }
+                            ],
+
+                            [],
+                            AntdInput_Helpers ?? {},
+                            child$Props
+                          );
+                          return (
+                            <AntdInput
+                              data-plasmic-name={"input2"}
+                              data-plasmic-override={overrides.input2}
+                              {...child$Props}
+                            />
+                          );
+                        })()}
+                      </FormItemWrapper>
+                      <FormItemWrapper
+                        className={classNames(
+                          "__wab_instance",
+                          sty.formItem__nwB6
+                        )}
+                        label={
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___0Jkpi
+                            )}
+                          >
+                            {"账号状态"}
+                          </div>
+                        }
+                        name={"name"}
+                      >
+                        {(() => {
+                          const child$Props = {
+                            className: classNames("__wab_instance", sty.input3),
+                            onChange:
+                              p.generateStateOnChangePropForCodeComponents(
+                                $state,
+                                "value",
+                                ["input3", "value"],
+                                AntdInput_Helpers
+                              ),
+                            value: p.generateStateValueProp($state, [
+                              "input3",
+                              "value"
+                            ])
+                          };
+                          p.initializeCodeComponentStates(
+                            $state,
+                            [
+                              {
+                                name: "value",
+                                plasmicStateName: "input3.value"
+                              }
+                            ],
+
+                            [],
+                            AntdInput_Helpers ?? {},
+                            child$Props
+                          );
+                          return (
+                            <AntdInput
+                              data-plasmic-name={"input3"}
+                              data-plasmic-override={overrides.input3}
+                              {...child$Props}
+                            />
+                          );
+                        })()}
+                      </FormItemWrapper>
+                      <FormItemWrapper
+                        className={classNames(
+                          "__wab_instance",
+                          sty.formItem__qAos1
+                        )}
+                        label={
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__okSz
+                            )}
+                          >
+                            {"Message"}
+                          </div>
+                        }
+                        name={"message"}
+                      >
+                        {(() => {
+                          const child$Props = {
+                            className: classNames(
+                              "__wab_instance",
+                              sty.textArea
+                            ),
+                            onChange:
+                              p.generateStateOnChangePropForCodeComponents(
+                                $state,
+                                "value",
+                                ["textArea", "value"],
+                                AntdTextArea_Helpers
+                              ),
+                            value: p.generateStateValueProp($state, [
+                              "textArea",
+                              "value"
+                            ])
+                          };
+                          p.initializeCodeComponentStates(
+                            $state,
+                            [
+                              {
+                                name: "value",
+                                plasmicStateName: "textArea.value"
+                              }
+                            ],
+
+                            [],
+                            AntdTextArea_Helpers ?? {},
+                            child$Props
+                          );
+                          return (
+                            <AntdTextArea
+                              data-plasmic-name={"textArea"}
+                              data-plasmic-override={overrides.textArea}
+                              {...child$Props}
+                            />
+                          );
+                        })()}
+                      </FormItemWrapper>
+                      <FormItemWrapper
+                        className={classNames(
+                          "__wab_instance",
+                          sty.formItem___8NkSb
+                        )}
+                        label={
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__g2R8U
+                            )}
+                          >
+                            {"Label"}
+                          </div>
+                        }
+                        noLabel={true}
+                      >
+                        <AntdButton
+                          data-plasmic-name={"button"}
+                          data-plasmic-override={overrides.button}
+                          className={classNames("__wab_instance", sty.button)}
+                          submitsForm={true}
+                          type={"primary"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__xj0N0
+                            )}
+                          >
+                            {"保存"}
+                          </div>
+                        </AntdButton>
+                      </FormItemWrapper>
+                    </FormWrapper>
+                  </div>
+                ) : null}
+                <section
+                  className={classNames(projectcss.all, sty.section__xhRnq)}
+                />
+              </div>
+            ) : null}
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -137,10 +486,24 @@ function PlasmicMyaccount__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "menuNav", "section"],
-  freeBox: ["freeBox", "menuNav"],
+  root: [
+    "root",
+    "menuNav",
+    "form",
+    "input",
+    "input2",
+    "input3",
+    "textArea",
+    "button"
+  ],
+
   menuNav: ["menuNav"],
-  section: ["section"]
+  form: ["form", "input", "input2", "input3", "textArea", "button"],
+  input: ["input"],
+  input2: ["input2"],
+  input3: ["input3"],
+  textArea: ["textArea"],
+  button: ["button"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -175,9 +538,13 @@ export const PlasmicMyaccount = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    freeBox: makeNodeComponent("freeBox"),
     menuNav: makeNodeComponent("menuNav"),
-    section: makeNodeComponent("section"),
+    form: makeNodeComponent("form"),
+    input: makeNodeComponent("input"),
+    input2: makeNodeComponent("input2"),
+    input3: makeNodeComponent("input3"),
+    textArea: makeNodeComponent("textArea"),
+    button: makeNodeComponent("button"),
     // Metadata about props expected for PlasmicMyaccount
     internalVariantProps: PlasmicMyaccount__VariantProps,
     internalArgProps: PlasmicMyaccount__ArgProps,

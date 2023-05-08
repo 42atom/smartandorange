@@ -1113,7 +1113,7 @@
     {
       "name": "Unnamed Style Token 2",
       "type": "color",
-      "value": "#757575",
+      "value": "#ACACAC",
       "category": "color",
       "meta": {
         "projectId": "gRaosoDicn4VUCndSzazbA",
@@ -1188,6 +1188,16 @@
       "meta": {
         "projectId": "gRaosoDicn4VUCndSzazbA",
         "id": "oG1h6iK0g"
+      }
+    },
+    {
+      "name": "icn_default",
+      "type": "color",
+      "value": "#CACACA",
+      "category": "color",
+      "meta": {
+        "projectId": "gRaosoDicn4VUCndSzazbA",
+        "id": "FMGQEiyNQ"
       }
     }
   ],

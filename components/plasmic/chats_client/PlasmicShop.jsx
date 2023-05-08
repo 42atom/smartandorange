@@ -20,6 +20,7 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
+import Price from "../../Price"; // plasmic-import: A7lxlJD3kKn/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
@@ -125,6 +126,17 @@ function PlasmicShop__RenderFunc(props) {
               />
             </div>
           ) : null}
+          <section
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section)}
+          >
+            <Price
+              data-plasmic-name={"price"}
+              data-plasmic-override={overrides.price}
+              className={classNames("__wab_instance", sty.price)}
+            />
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -132,9 +144,11 @@ function PlasmicShop__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "menuNav"],
+  root: ["root", "freeBox", "menuNav", "section", "price"],
   freeBox: ["freeBox", "menuNav"],
-  menuNav: ["menuNav"]
+  menuNav: ["menuNav"],
+  section: ["section", "price"],
+  price: ["price"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -171,6 +185,8 @@ export const PlasmicShop = Object.assign(
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
     menuNav: makeNodeComponent("menuNav"),
+    section: makeNodeComponent("section"),
+    price: makeNodeComponent("price"),
     // Metadata about props expected for PlasmicShop
     internalVariantProps: PlasmicShop__VariantProps,
     internalArgProps: PlasmicShop__ArgProps,
