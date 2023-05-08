@@ -594,6 +594,19 @@
           "cssFilePath": "plasmic/chats_client/PlasmicWorkspacesEdit.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "5f5R9scDOB",
+          "name": "Draft",
+          "type": "managed",
+          "projectId": "gRaosoDicn4VUCndSzazbA",
+          "renderModuleFilePath": "plasmic/chats_client/PlasmicDraft.jsx",
+          "importSpec": {
+            "modulePath": "../pages/draft.jsx"
+          },
+          "cssFilePath": "plasmic/chats_client/PlasmicDraft.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [

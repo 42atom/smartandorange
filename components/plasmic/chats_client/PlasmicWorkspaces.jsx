@@ -20,8 +20,9 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
-import { Tabs } from "@plasmicpkgs/antd/skinny/registerTabs"; // plasmic-import: Hb-DVgvuk3/codeComponent
-import { TabPane } from "@plasmicpkgs/antd/skinny/registerTabs"; // plasmic-import: p3HNI5RglT/codeComponent
+import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: fo-n3xHvdqt/codeComponent
+import { AntdMenuItemGroup } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: 6ySly9jzXsR/codeComponent
+import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: QSmezaW-Gyu/codeComponent
 import SceneInfo from "../../SceneInfo"; // plasmic-import: Zf1zYQ7YK23by/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -129,172 +130,162 @@ function PlasmicWorkspaces__RenderFunc(props) {
         >
           {true ? (
             <div className={classNames(projectcss.all, sty.freeBox__g6Bq0)}>
-              <MenuNav
-                data-plasmic-name={"menuNav"}
-                data-plasmic-override={overrides.menuNav}
-                className={classNames("__wab_instance", sty.menuNav)}
-                selected={["menuItemKey1"]}
-              />
-
+              {true ? (
+                <MenuNav
+                  data-plasmic-name={"menuNav"}
+                  data-plasmic-override={overrides.menuNav}
+                  className={classNames("__wab_instance", sty.menuNav)}
+                  selected={["menuItemKey1"]}
+                />
+              ) : null}
               <section
                 data-plasmic-name={"section"}
                 data-plasmic-override={overrides.section}
                 className={classNames(projectcss.all, sty.section)}
               >
                 {true ? (
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox___2Fy1N)}
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__xEHmj)}
                   >
-                    <Tabs
-                      data-plasmic-name={"antdTabs"}
-                      data-plasmic-override={overrides.antdTabs}
-                      addIcon={null}
-                      centered={false}
-                      className={classNames("__wab_instance", sty.antdTabs)}
-                      defaultActiveKey={"0"}
-                      leftTabBarExtraContent={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__mpbac
-                          )}
-                        >
-                          {"场景分类"}
-                        </div>
-                      }
-                      moreIcon={null}
-                      rightTabBarExtraContent={
-                        <React.Fragment>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__i4YcG
-                            )}
-                          >
-                            {"剩余字数 30000"}
-                          </div>
-                          <div
-                            data-plasmic-name={"用户名"}
-                            data-plasmic-override={overrides.用户名}
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.用户名
-                            )}
-                          >
-                            {"用户名"}
-                          </div>
-                          <div
-                            data-plasmic-name={"vip"}
-                            data-plasmic-override={overrides.vip}
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.vip
-                            )}
-                          >
-                            {"免费版"}
-                          </div>
-                        </React.Fragment>
-                      }
-                      size={"default"}
-                      tabBarGutter={4}
-                      tabPosition={"left"}
-                      type={"card"}
-                    >
-                      <TabPane
-                        className={classNames(
-                          "__wab_instance",
-                          sty.antdTabPane__tQvxZ
-                        )}
-                        closeIcon={null}
-                        key={"0"}
-                        tab={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__lXcuc
-                            )}
-                          >
-                            {"热门"}
-                          </div>
-                        }
+                    {true ? (
+                      <AntdMenu
+                        data-plasmic-name={"menu"}
+                        data-plasmic-override={overrides.menu}
+                        className={classNames("__wab_instance", sty.menu)}
+                        mode={"vertical"}
+                        multiple={false}
                       >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__u0GZf
-                          )}
-                        >
-                          {"请选择样板"}
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__xdhlF
-                          )}
-                        >
-                          {(
-                            (() => {
-                              try {
-                                return $queries.scenes.data;
-                              } catch (e) {
-                                if (e instanceof TypeError) {
-                                  return [];
-                                }
-                                throw e;
-                              }
-                            })() ?? []
-                          ).map((currentItem, currentIndex) => (
-                            <SceneInfo
-                              data-plasmic-name={"sceneInfo"}
-                              data-plasmic-override={overrides.sceneInfo}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox___4PJr
+                            )}
+                          >
+                            <AntdMenuItemGroup
+                              data-plasmic-name={"itemGroup"}
+                              data-plasmic-override={overrides.itemGroup}
                               className={classNames(
                                 "__wab_instance",
-                                sty.sceneInfo
+                                sty.itemGroup
                               )}
-                              desc={(() => {
-                                try {
-                                  return currentItem.description;
-                                } catch (e) {
-                                  if (e instanceof TypeError) {
-                                    return "desc";
-                                  }
-                                  throw e;
-                                }
-                              })()}
-                              input={
+                              title={
                                 <div
-                                  data-plasmic-name={"input"}
-                                  data-plasmic-override={overrides.input}
                                   className={classNames(
                                     projectcss.all,
                                     projectcss.__wab_text,
-                                    sty.input
+                                    sty.text__zuoAu
                                   )}
                                 >
-                                  {(() => {
-                                    try {
-                                      return (
-                                        "输入： " + currentItem.modal_input
-                                      );
-                                    } catch (e) {
-                                      if (e instanceof TypeError) {
-                                        return "Modal content";
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
+                                  {"Group"}
                                 </div>
                               }
-                              key={currentIndex}
-                              output={(() => {
+                            >
+                              <AntdMenuItem
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.menuItem__gOmv0
+                                )}
+                                key={"menuItemKey1"}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__zw1Lv
+                                  )}
+                                >
+                                  {"收藏"}
+                                </div>
+                              </AntdMenuItem>
+                              <AntdMenuItem
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.menuItem__pEy29
+                                )}
+                                key={"menuItemKey2"}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__l2Ea5
+                                  )}
+                                >
+                                  {"热门"}
+                                </div>
+                              </AntdMenuItem>
+                              <AntdMenuItem
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.menuItem___70Ju
+                                )}
+                                key={"menuItemKey2"}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text___46Vht
+                                  )}
+                                >
+                                  {"小红书营销类"}
+                                </div>
+                              </AntdMenuItem>
+                            </AntdMenuItemGroup>
+                          </p.Stack>
+                        ) : null}
+                      </AntdMenu>
+                    ) : null}
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__xdhlF)}
+                    >
+                      {(
+                        (() => {
+                          try {
+                            return $queries.scenes.data;
+                          } catch (e) {
+                            if (e instanceof TypeError) {
+                              return [];
+                            }
+                            throw e;
+                          }
+                        })() ?? []
+                      ).map((currentItem, currentIndex) => (
+                        <SceneInfo
+                          data-plasmic-name={"sceneInfo"}
+                          data-plasmic-override={overrides.sceneInfo}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.sceneInfo
+                          )}
+                          desc={(() => {
+                            try {
+                              return currentItem.description;
+                            } catch (e) {
+                              if (e instanceof TypeError) {
+                                return "desc";
+                              }
+                              throw e;
+                            }
+                          })()}
+                          input={
+                            <div
+                              data-plasmic-name={"input"}
+                              data-plasmic-override={overrides.input}
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.input
+                              )}
+                            >
+                              {(() => {
                                 try {
-                                  return "输出：" + currentItem.modal_content;
+                                  return "输入： " + currentItem.modal_input;
                                 } catch (e) {
                                   if (e instanceof TypeError) {
                                     return "Modal content";
@@ -302,201 +293,67 @@ function PlasmicWorkspaces__RenderFunc(props) {
                                   throw e;
                                 }
                               })()}
-                              slot={(() => {
-                                try {
-                                  return currentItem.scenes_name;
-                                } catch (e) {
-                                  if (e instanceof TypeError) {
-                                    return "Modal title";
-                                  }
-                                  throw e;
+                            </div>
+                          }
+                          key={currentIndex}
+                          output={(() => {
+                            try {
+                              return "输出：" + currentItem.modal_content;
+                            } catch (e) {
+                              if (e instanceof TypeError) {
+                                return "Modal content";
+                              }
+                              throw e;
+                            }
+                          })()}
+                          slot={(() => {
+                            try {
+                              return currentItem.scenes_name;
+                            } catch (e) {
+                              if (e instanceof TypeError) {
+                                return "Modal title";
+                              }
+                              throw e;
+                            }
+                          })()}
+                          title={(() => {
+                            try {
+                              return currentItem.scenes_name;
+                            } catch (e) {
+                              if (e instanceof TypeError) {
+                                return "场景标题";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        >
+                          <p.PlasmicImg
+                            data-plasmic-name={"img"}
+                            data-plasmic-override={overrides.img}
+                            alt={""}
+                            className={classNames(sty.img)}
+                            displayHeight={"24px"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"24px"}
+                            loading={"lazy"}
+                            src={(() => {
+                              try {
+                                return currentItem.scene_icon;
+                              } catch (e) {
+                                if (e instanceof TypeError) {
+                                  return "https://www.svgrepo.com/show/474676/germs.svg";
                                 }
-                              })()}
-                              title={(() => {
-                                try {
-                                  return currentItem.scenes_name;
-                                } catch (e) {
-                                  if (e instanceof TypeError) {
-                                    return "场景标题";
-                                  }
-                                  throw e;
-                                }
-                              })()}
-                            >
-                              <p.PlasmicImg
-                                data-plasmic-name={"img"}
-                                data-plasmic-override={overrides.img}
-                                alt={""}
-                                className={classNames(sty.img)}
-                                displayHeight={"24px"}
-                                displayMaxHeight={"none"}
-                                displayMaxWidth={"100%"}
-                                displayMinHeight={"0"}
-                                displayMinWidth={"0"}
-                                displayWidth={"24px"}
-                                loading={"lazy"}
-                                src={(() => {
-                                  try {
-                                    return currentItem.scene_icon;
-                                  } catch (e) {
-                                    if (e instanceof TypeError) {
-                                      return "https://www.svgrepo.com/show/474676/germs.svg";
-                                    }
-                                    throw e;
-                                  }
-                                })()}
-                              />
-                            </SceneInfo>
-                          ))}
-                        </div>
-                      </TabPane>
-                      <TabPane
-                        className={classNames(
-                          "__wab_instance",
-                          sty.antdTabPane___9MKf
-                        )}
-                        closeIcon={null}
-                        key={"1"}
-                        tab={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__sppt
-                            )}
-                          >
-                            {"小红书营销类"}
-                          </div>
-                        }
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__jbJ65
-                          )}
-                        >
-                          {"Tab Content"}
-                        </div>
-                      </TabPane>
-                      <TabPane
-                        className={classNames(
-                          "__wab_instance",
-                          sty.antdTabPane__bb67K
-                        )}
-                        closeIcon={null}
-                        key={"2"}
-                        tab={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___8Qior
-                            )}
-                          >
-                            {"中文社交媒体"}
-                          </div>
-                        }
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__r27Rp
-                          )}
-                        >
-                          {"Tab Content"}
-                        </div>
-                      </TabPane>
-                      <TabPane
-                        className={classNames(
-                          "__wab_instance",
-                          sty.antdTabPane__vC47F
-                        )}
-                        closeIcon={null}
-                        key={"3"}
-                        tab={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__gbPm4
-                            )}
-                          >
-                            {"英文社交媒体"}
-                          </div>
-                        }
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__moUgd
-                          )}
-                        >
-                          {"Tab Content"}
-                        </div>
-                      </TabPane>
-                      <TabPane
-                        className={classNames(
-                          "__wab_instance",
-                          sty.antdTabPane__hcFyH
-                        )}
-                        closeIcon={null}
-                        key={"4"}
-                        tab={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__lcqfK
-                            )}
-                          >
-                            {"出题机"}
-                          </div>
-                        }
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___5XcVw
-                          )}
-                        >
-                          {"Tab Content"}
-                        </div>
-                      </TabPane>
-                      <TabPane
-                        className={classNames(
-                          "__wab_instance",
-                          sty.antdTabPane__dtDcl
-                        )}
-                        closeIcon={null}
-                        key={"5"}
-                        tab={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__d99V8
-                            )}
-                          >
-                            {"合同助手"}
-                          </div>
-                        }
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__vGMv
-                          )}
-                        >
-                          {"Tab Content"}
-                        </div>
-                      </TabPane>
-                    </Tabs>
-                  </div>
+                                throw e;
+                              }
+                            })()}
+                          />
+                        </SceneInfo>
+                      ))}
+                    </div>
+                  </p.Stack>
                 ) : null}
               </section>
             </div>
@@ -512,28 +369,17 @@ const PlasmicDescendants = {
     "root",
     "menuNav",
     "section",
-    "antdTabs",
-    "用户名",
-    "vip",
+    "menu",
+    "itemGroup",
     "sceneInfo",
     "img",
     "input"
   ],
 
   menuNav: ["menuNav"],
-  section: [
-    "section",
-    "antdTabs",
-    "用户名",
-    "vip",
-    "sceneInfo",
-    "img",
-    "input"
-  ],
-
-  antdTabs: ["antdTabs", "用户名", "vip", "sceneInfo", "img", "input"],
-  用户名: ["用户名"],
-  vip: ["vip"],
+  section: ["section", "menu", "itemGroup", "sceneInfo", "img", "input"],
+  menu: ["menu", "itemGroup"],
+  itemGroup: ["itemGroup"],
   sceneInfo: ["sceneInfo", "img", "input"],
   img: ["img"],
   input: ["input"]
@@ -573,9 +419,8 @@ export const PlasmicWorkspaces = Object.assign(
     // Helper components rendering sub-elements
     menuNav: makeNodeComponent("menuNav"),
     section: makeNodeComponent("section"),
-    antdTabs: makeNodeComponent("antdTabs"),
-    用户名: makeNodeComponent("用户名"),
-    vip: makeNodeComponent("vip"),
+    menu: makeNodeComponent("menu"),
+    itemGroup: makeNodeComponent("itemGroup"),
     sceneInfo: makeNodeComponent("sceneInfo"),
     img: makeNodeComponent("img"),
     input: makeNodeComponent("input"),
