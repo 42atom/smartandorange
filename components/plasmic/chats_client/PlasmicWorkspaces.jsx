@@ -150,21 +150,19 @@ function PlasmicWorkspaces__RenderFunc(props) {
                     className={classNames(projectcss.all, sty.freeBox__xEHmj)}
                   >
                     {true ? (
-                      <AntdMenu
-                        data-plasmic-name={"menu"}
-                        data-plasmic-override={overrides.menu}
-                        className={classNames("__wab_instance", sty.menu)}
-                        mode={"vertical"}
-                        multiple={false}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___9MNcR
+                        )}
                       >
                         {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___4PJr
-                            )}
+                          <AntdMenu
+                            data-plasmic-name={"menu"}
+                            data-plasmic-override={overrides.menu}
+                            className={classNames("__wab_instance", sty.menu)}
+                            mode={"vertical"}
+                            multiple={false}
                           >
                             <AntdMenuItemGroup
                               data-plasmic-name={"itemGroup"}
@@ -181,7 +179,7 @@ function PlasmicWorkspaces__RenderFunc(props) {
                                     sty.text__zuoAu
                                   )}
                                 >
-                                  {"Group"}
+                                  {"模版分类"}
                                 </div>
                               }
                             >
@@ -224,7 +222,7 @@ function PlasmicWorkspaces__RenderFunc(props) {
                                   "__wab_instance",
                                   sty.menuItem___70Ju
                                 )}
-                                key={"menuItemKey2"}
+                                key={"menuItemKey3"}
                               >
                                 <div
                                   className={classNames(
@@ -237,55 +235,86 @@ function PlasmicWorkspaces__RenderFunc(props) {
                                 </div>
                               </AntdMenuItem>
                             </AntdMenuItemGroup>
-                          </p.Stack>
+                          </AntdMenu>
                         ) : null}
-                      </AntdMenu>
-                    ) : null}
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__xdhlF)}
-                    >
-                      {(
-                        (() => {
-                          try {
-                            return $queries.scenes.data;
-                          } catch (e) {
-                            if (e instanceof TypeError) {
-                              return [];
-                            }
-                            throw e;
-                          }
-                        })() ?? []
-                      ).map((currentItem, currentIndex) => (
-                        <SceneInfo
-                          data-plasmic-name={"sceneInfo"}
-                          data-plasmic-override={overrides.sceneInfo}
+                        <div
                           className={classNames(
-                            "__wab_instance",
-                            sty.sceneInfo
+                            projectcss.all,
+                            sty.freeBox__aWlrv
                           )}
-                          desc={(() => {
-                            try {
-                              return currentItem.description;
-                            } catch (e) {
-                              if (e instanceof TypeError) {
-                                return "desc";
+                        />
+                      </div>
+                    ) : null}
+                    {true ? (
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__lGoM
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__xdhlF
+                          )}
+                        >
+                          {(
+                            (() => {
+                              try {
+                                return $queries.scenes.data;
+                              } catch (e) {
+                                if (e instanceof TypeError) {
+                                  return [];
+                                }
+                                throw e;
                               }
-                              throw e;
-                            }
-                          })()}
-                          input={
-                            <div
-                              data-plasmic-name={"input"}
-                              data-plasmic-override={overrides.input}
+                            })() ?? []
+                          ).map((currentItem, currentIndex) => (
+                            <SceneInfo
+                              data-plasmic-name={"sceneInfo"}
+                              data-plasmic-override={overrides.sceneInfo}
                               className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.input
+                                "__wab_instance",
+                                sty.sceneInfo
                               )}
-                            >
-                              {(() => {
+                              desc={(() => {
                                 try {
-                                  return "输入： " + currentItem.modal_input;
+                                  return currentItem.description;
+                                } catch (e) {
+                                  if (e instanceof TypeError) {
+                                    return "desc";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                              input={
+                                <div
+                                  data-plasmic-name={"input"}
+                                  data-plasmic-override={overrides.input}
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.input
+                                  )}
+                                >
+                                  {(() => {
+                                    try {
+                                      return (
+                                        "输入： " + currentItem.modal_input
+                                      );
+                                    } catch (e) {
+                                      if (e instanceof TypeError) {
+                                        return "Modal content";
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                </div>
+                              }
+                              key={currentIndex}
+                              output={(() => {
+                                try {
+                                  return "输出：" + currentItem.modal_content;
                                 } catch (e) {
                                   if (e instanceof TypeError) {
                                     return "Modal content";
@@ -293,66 +322,55 @@ function PlasmicWorkspaces__RenderFunc(props) {
                                   throw e;
                                 }
                               })()}
-                            </div>
-                          }
-                          key={currentIndex}
-                          output={(() => {
-                            try {
-                              return "输出：" + currentItem.modal_content;
-                            } catch (e) {
-                              if (e instanceof TypeError) {
-                                return "Modal content";
-                              }
-                              throw e;
-                            }
-                          })()}
-                          slot={(() => {
-                            try {
-                              return currentItem.scenes_name;
-                            } catch (e) {
-                              if (e instanceof TypeError) {
-                                return "Modal title";
-                              }
-                              throw e;
-                            }
-                          })()}
-                          title={(() => {
-                            try {
-                              return currentItem.scenes_name;
-                            } catch (e) {
-                              if (e instanceof TypeError) {
-                                return "场景标题";
-                              }
-                              throw e;
-                            }
-                          })()}
-                        >
-                          <p.PlasmicImg
-                            data-plasmic-name={"img"}
-                            data-plasmic-override={overrides.img}
-                            alt={""}
-                            className={classNames(sty.img)}
-                            displayHeight={"24px"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"24px"}
-                            loading={"lazy"}
-                            src={(() => {
-                              try {
-                                return currentItem.scene_icon;
-                              } catch (e) {
-                                if (e instanceof TypeError) {
-                                  return "https://www.svgrepo.com/show/474676/germs.svg";
+                              slot={(() => {
+                                try {
+                                  return currentItem.scenes_name;
+                                } catch (e) {
+                                  if (e instanceof TypeError) {
+                                    return "Modal title";
+                                  }
+                                  throw e;
                                 }
-                                throw e;
-                              }
-                            })()}
-                          />
-                        </SceneInfo>
-                      ))}
-                    </div>
+                              })()}
+                              title={(() => {
+                                try {
+                                  return currentItem.scenes_name;
+                                } catch (e) {
+                                  if (e instanceof TypeError) {
+                                    return "场景标题";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            >
+                              <p.PlasmicImg
+                                data-plasmic-name={"img"}
+                                data-plasmic-override={overrides.img}
+                                alt={""}
+                                className={classNames(sty.img)}
+                                displayHeight={"24px"}
+                                displayMaxHeight={"none"}
+                                displayMaxWidth={"100%"}
+                                displayMinHeight={"0"}
+                                displayMinWidth={"0"}
+                                displayWidth={"24px"}
+                                loading={"lazy"}
+                                src={(() => {
+                                  try {
+                                    return currentItem.scene_icon;
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "https://www.svgrepo.com/show/474676/germs.svg";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              />
+                            </SceneInfo>
+                          ))}
+                        </div>
+                      </div>
+                    ) : null}
                   </p.Stack>
                 ) : null}
               </section>
