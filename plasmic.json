@@ -830,7 +830,8 @@
             "importPath": "@plasmicpkgs/plasmic-rich-components"
           }
         }
-      ]
+      ],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {

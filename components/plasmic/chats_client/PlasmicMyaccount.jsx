@@ -81,7 +81,7 @@ function PlasmicMyaccount__RenderFunc(props) {
         path: "input.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "2982shsh@163.com"
+        initFunc: ({ $props, $state, $queries, $ctx }) => "小黄帽"
       },
       {
         path: "input2.value",
@@ -93,7 +93,7 @@ function PlasmicMyaccount__RenderFunc(props) {
         path: "input3.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "2982shsh@163.com"
+        initFunc: ({ $props, $state, $queries, $ctx }) => ``
       },
       {
         path: "input6.value",
@@ -590,6 +590,11 @@ function PlasmicMyaccount__RenderFunc(props) {
                               </div>
                             }
                             name={"username"}
+                            rules={[
+                              { ruleType: "required", message: "长度限制20字" }
+                            ]}
+                            validateTrigger={[]}
+                            valuePropName={"username"}
                           >
                             {(() => {
                               const child$Props = {
@@ -606,7 +611,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                                     ["input", "value"],
                                     AntdInput_Helpers
                                   ),
-                                placholder: "绑定邮箱",
+                                placholder: "名字",
                                 readOnly: false,
                                 size: "middle",
                                 type: "text",
@@ -732,6 +737,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                               </div>
                             }
                             name={"email"}
+                            valuePropName={"email"}
                           >
                             {(() => {
                               const child$Props = {
@@ -836,7 +842,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                                     ["input3", "value"],
                                     AntdInput_Helpers
                                   ),
-                                placholder: "绑定邮箱",
+                                placholder: ``,
                                 value: p.generateStateValueProp($state, [
                                   "input3",
                                   "value"
@@ -995,7 +1001,30 @@ function PlasmicMyaccount__RenderFunc(props) {
                 ) : null}
                 <section
                   className={classNames(projectcss.all, sty.section__xhRnq)}
-                />
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___5ZWsN
+                    )}
+                  >
+                    {"进群就送3000额度"}
+                  </div>
+                  <p.PlasmicImg
+                    data-plasmic-name={"img"}
+                    data-plasmic-override={overrides.img}
+                    alt={""}
+                    className={classNames(sty.img)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                  />
+                </section>
               </p.Stack>
             ) : null}
           </section>
@@ -1017,7 +1046,8 @@ const PlasmicDescendants = {
     "select2",
     "input2",
     "input3",
-    "input6"
+    "input6",
+    "img"
   ],
 
   menuNav: ["menuNav"],
@@ -1029,7 +1059,8 @@ const PlasmicDescendants = {
   select2: ["select2"],
   input2: ["input2"],
   input3: ["input3"],
-  input6: ["input6"]
+  input6: ["input6"],
+  img: ["img"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -1074,6 +1105,7 @@ export const PlasmicMyaccount = Object.assign(
     input2: makeNodeComponent("input2"),
     input3: makeNodeComponent("input3"),
     input6: makeNodeComponent("input6"),
+    img: makeNodeComponent("img"),
     // Metadata about props expected for PlasmicMyaccount
     internalVariantProps: PlasmicMyaccount__VariantProps,
     internalArgProps: PlasmicMyaccount__ArgProps,
