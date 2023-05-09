@@ -172,33 +172,42 @@ function PlasmicMyaccount__RenderFunc(props) {
                   <div
                     className={classNames(projectcss.all, sty.freeBox___3M39U)}
                   >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___4XCqg
-                      )}
-                    >
-                      {"用户名"}
-                    </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__xu2Ya
-                      )}
-                    >
-                      {"额度"}
-                    </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__hHtof
-                      )}
-                    >
-                      {"免费用户"}
-                    </div>
+                    {true ? (
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__egS4D
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___4XCqg
+                          )}
+                        >
+                          {"用户名"}
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__xu2Ya
+                          )}
+                        >
+                          {"额度"}
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__hHtof
+                          )}
+                        >
+                          {"免费用户"}
+                        </div>
+                      </div>
+                    ) : null}
                     <FormWrapper
                       data-plasmic-name={"form"}
                       data-plasmic-override={overrides.form}

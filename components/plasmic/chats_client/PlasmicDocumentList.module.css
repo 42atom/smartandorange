@@ -46,6 +46,9 @@
   color: var(--token-WgGKuDBDe);
   min-width: 0;
 }
+.textcurrentState__bh7KBMo5 {
+  color: var(--token-PrbJaIviCD);
+}
 .freeBox__yp9Pl {
   display: flex;
   position: relative;
@@ -84,6 +87,22 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.freeBox__sffSf > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
+.freeBox__sffSf {
+  display: flex;
+  position: relative;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
@@ -91,6 +110,26 @@
   max-width: 100%;
   min-width: 0;
   padding: 0px;
+}
+.freeBoxcurrentState__sffSfMo5 > :global(.__wab_flex-container) {
+  margin-left: calc(0px - 0px);
+  width: calc(100% + 0px);
+  margin-top: calc(0px - 4px);
+  height: calc(100% + 4px);
+}
+.freeBoxcurrentState__sffSfMo5 > :global(.__wab_flex-container) > *,
+.freeBoxcurrentState__sffSfMo5
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > *,
+.freeBoxcurrentState__sffSfMo5 > :global(.__wab_flex-container) > picture > img,
+.freeBoxcurrentState__sffSfMo5
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 0px;
+  margin-top: 4px;
 }
 .text__f2KY {
   width: 100%;
@@ -109,6 +148,14 @@
   font-size: 11px;
   color: var(--token-WgGKuDBDe);
   min-width: 0;
+}
+.textcurrentState__zsxVvMo5 {
+  width: auto;
+  align-self: flex-start;
+  background: var(--token-WbeO8JoEs);
+  padding-left: 4px;
+  padding-right: 8px;
+  border-radius: 8px;
 }
 .fav:global(.__wab_instance) {
   position: relative;

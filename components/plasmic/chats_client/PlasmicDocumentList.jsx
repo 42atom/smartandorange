@@ -99,6 +99,74 @@ function PlasmicDocumentList__RenderFunc(props) {
           )
         }
       )}
+      onClick={async event => {
+        const $steps = {};
+        $steps["updateCurrentState"] = true
+          ? (() => {
+              const actionArgs = {
+                vgroup: __wrapUserFunction(
+                  {
+                    type: "InteractionArgLoc",
+                    actionName: "updateVariant",
+                    interactionUuid: "L1WBLILNt",
+                    componentUuid: "DuwZXCRDJh",
+                    argName: "vgroup"
+                  },
+                  () => "currentState"
+                ),
+                operation: __wrapUserFunction(
+                  {
+                    type: "InteractionArgLoc",
+                    actionName: "updateVariant",
+                    interactionUuid: "L1WBLILNt",
+                    componentUuid: "DuwZXCRDJh",
+                    argName: "operation"
+                  },
+                  () => 2
+                ),
+                value: __wrapUserFunction(
+                  {
+                    type: "InteractionArgLoc",
+                    actionName: "updateVariant",
+                    interactionUuid: "L1WBLILNt",
+                    componentUuid: "DuwZXCRDJh",
+                    argName: "value"
+                  },
+                  () => "currentState"
+                )
+              };
+              return __wrapUserFunction(
+                {
+                  type: "InteractionLoc",
+                  actionName: "updateVariant",
+                  interactionUuid: "L1WBLILNt",
+                  componentUuid: "DuwZXCRDJh"
+                },
+                () =>
+                  (({ vgroup, value }) => {
+                    const oldValue = p.get($state, vgroup);
+                    p.set($state, vgroup, !oldValue);
+                    return !oldValue;
+                  })?.apply(null, [actionArgs]),
+                actionArgs
+              );
+            })()
+          : undefined;
+        if (
+          typeof $steps["updateCurrentState"] === "object" &&
+          typeof $steps["updateCurrentState"].then === "function"
+        ) {
+          $steps["updateCurrentState"] = await __wrapUserPromise(
+            {
+              type: "InteractionLoc",
+              actionName: "updateVariant",
+              interactionUuid: "L1WBLILNt",
+              componentUuid: "DuwZXCRDJh"
+            },
+            $steps["updateCurrentState"]
+          );
+        }
+      }}
     >
       <div
         className={classNames(
@@ -137,7 +205,17 @@ function PlasmicDocumentList__RenderFunc(props) {
           {true ? (
             <div className={classNames(projectcss.all, sty.freeBox__kfXdL)}>
               {true ? (
-                <div className={classNames(projectcss.all, sty.freeBox__sffSf)}>
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__sffSf, {
+                    [sty.freeBoxcurrentState__sffSfMo5]: hasVariant(
+                      $state,
+                      "currentState",
+                      "currentState"
+                    )
+                  })}
+                >
                   <div
                     className={classNames(
                       projectcss.all,
@@ -151,12 +229,19 @@ function PlasmicDocumentList__RenderFunc(props) {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__zsxVv
+                      sty.text__zsxVv,
+                      {
+                        [sty.textcurrentState__zsxVvMo5]: hasVariant(
+                          $state,
+                          "currentState",
+                          "currentState"
+                        )
+                      }
                     )}
                   >
                     {"带货视频口播台词"}
                   </div>
-                </div>
+                </p.Stack>
               ) : null}
               <Fav
                 data-plasmic-name={"fav"}
