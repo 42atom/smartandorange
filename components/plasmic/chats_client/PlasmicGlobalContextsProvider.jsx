@@ -14,7 +14,7 @@ export default function GlobalContextsProvider(props) {
       borderRadius={
         antdConfigProviderProps && "borderRadius" in antdConfigProviderProps
           ? antdConfigProviderProps.borderRadius
-          : 6
+          : 4
       }
       colorBgBase={
         antdConfigProviderProps && "colorBgBase" in antdConfigProviderProps

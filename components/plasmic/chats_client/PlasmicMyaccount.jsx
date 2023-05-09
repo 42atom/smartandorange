@@ -20,17 +20,21 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
+import Button from "../../Button"; // plasmic-import: YO5Bwb9purCqu/component
+import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal"; // plasmic-import: xx93QbkHH5i/codeComponent
+import { RichTable } from "@plasmicpkgs/plasmic-rich-components"; // plasmic-import: k4RvFQUTZKCU/codeComponent
+import { tableHelpers as RichTable_Helpers } from "@plasmicpkgs/plasmic-rich-components"; // plasmic-import: k4RvFQUTZKCU/codeComponentHelper
 import { FormWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: TgJFzUZpvQ/codeComponent
 import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: EYHwZh9ILg/codeComponent
 import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponent
 import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponentHelper
-import { AntdTextArea } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: pTzGlMptTxd/codeComponent
-import { inputHelpers as AntdTextArea_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: pTzGlMptTxd/codeComponentHelper
-import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton"; // plasmic-import: bx9Xzvf5_eu/codeComponent
+import { AntdSelect } from "@plasmicpkgs/antd5/skinny/registerSelect"; // plasmic-import: OvH7ENd3m7ug/codeComponent
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
+import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicMyaccount.module.css"; // plasmic-import: Y7xcku1e2QoFP/css
+import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: iQ4dltXyU_/icon
 
 export const PlasmicMyaccount__VariantProps = new Array();
 
@@ -77,24 +81,54 @@ function PlasmicMyaccount__RenderFunc(props) {
         path: "input.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "textArea.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => "2982shsh@163.com"
       },
       {
         path: "input2.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => "2982shsh@163.com"
       },
       {
         path: "input3.value",
         type: "private",
         variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "2982shsh@163.com"
+      },
+      {
+        path: "input6.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "2982shsh@163.com"
+      },
+      {
+        path: "select2.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "modal.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "table.selectedRowKey",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "table.selectedRow",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "table.selectedRows",
+        type: "private",
+        variableType: "array",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       }
     ],
@@ -103,13 +137,26 @@ function PlasmicMyaccount__RenderFunc(props) {
   );
   const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
   useDependencyAwareQuery({
-    name: "query",
+    name: "users",
     getDataOp: () => ({
       sourceId: "9m6seF9rffTwqmNeTPj4dy",
       opId: "76d162da-e80e-4bfc-82eb-27018f41acaf",
       userArgs: {},
       cacheKey: "plasmic.$.3KHjQ9myJndrn.$.",
       invalidatedKeys: ["plasmic_refresh_all"],
+      roleId: null
+    }),
+    $queries,
+    setDollarQueries
+  });
+  useDependencyAwareQuery({
+    name: "orders",
+    getDataOp: () => ({
+      sourceId: "9m6seF9rffTwqmNeTPj4dy",
+      opId: "9ebbdd1e-6da3-41b6-a2f9-347d2925f70d",
+      userArgs: {},
+      cacheKey: "plasmic.$.srE47GKZF.$.",
+      invalidatedKeys: null,
       roleId: null
     }),
     $queries,
@@ -152,6 +199,7 @@ function PlasmicMyaccount__RenderFunc(props) {
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
+            plasmic_plasmic_rich_components_css.plasmic_tokens,
             sty.root
           )}
         >
@@ -167,46 +215,340 @@ function PlasmicMyaccount__RenderFunc(props) {
           ) : null}
           <section className={classNames(projectcss.all, sty.section___67ClG)}>
             {true ? (
-              <div className={classNames(projectcss.all, sty.freeBox__vypQs)}>
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__vypQs)}
+              >
                 {true ? (
                   <div
                     className={classNames(projectcss.all, sty.freeBox___3M39U)}
                   >
                     {true ? (
-                      <div
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__egS4D
+                          sty.freeBox___5A6Z2
                         )}
                       >
+                        <Button
+                          className={classNames(
+                            "__wab_instance",
+                            sty.button___24Viw
+                          )}
+                          color={"softGreen"}
+                          shape={"rounded"}
+                          size={"minimal"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__aiy2V
+                            )}
+                          >
+                            {"免费用户"}
+                          </div>
+                        </Button>
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text___4XCqg
+                            sty.text__c3LBd
                           )}
                         >
-                          {"用户名"}
+                          {"剩余额度   37000字"}
                         </div>
-                        <div
+                        <Button
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__xu2Ya
+                            "__wab_instance",
+                            sty.button__kWogr
                           )}
+                          color={"green"}
+                          shape={"rounded"}
+                          size={"minimal"}
                         >
-                          {"额度"}
-                        </div>
-                        <div
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___6BHuf
+                            )}
+                          >
+                            {"充值"}
+                          </div>
+                        </Button>
+                        <Button
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__hHtof
+                            "__wab_instance",
+                            sty.button__wR8Ln
                           )}
+                          color={"sand"}
+                          onClick={async event => {
+                            const $steps = {};
+                            $steps["updateModalOpen"] = true
+                              ? (() => {
+                                  const actionArgs = {
+                                    variable: __wrapUserFunction(
+                                      {
+                                        type: "InteractionArgLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "Dn2GRyybX",
+                                        componentUuid: "Y7xcku1e2QoFP",
+                                        argName: "variable"
+                                      },
+                                      () => ({
+                                        objRoot: $state,
+                                        variablePath: ["modal", "open"]
+                                      })
+                                    ),
+                                    operation: __wrapUserFunction(
+                                      {
+                                        type: "InteractionArgLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "Dn2GRyybX",
+                                        componentUuid: "Y7xcku1e2QoFP",
+                                        argName: "operation"
+                                      },
+                                      () => 4
+                                    )
+                                  };
+                                  return __wrapUserFunction(
+                                    {
+                                      type: "InteractionLoc",
+                                      actionName: "updateVariable",
+                                      interactionUuid: "Dn2GRyybX",
+                                      componentUuid: "Y7xcku1e2QoFP"
+                                    },
+                                    () =>
+                                      (({
+                                        variable,
+                                        value,
+                                        startIndex,
+                                        deleteCount
+                                      }) => {
+                                        const { objRoot, variablePath } =
+                                          variable;
+                                        const oldValue = p.get(
+                                          objRoot,
+                                          variablePath
+                                        );
+                                        p.set(objRoot, variablePath, !oldValue);
+                                        return !oldValue;
+                                      })?.apply(null, [actionArgs]),
+                                    actionArgs
+                                  );
+                                })()
+                              : undefined;
+                            if (
+                              typeof $steps["updateModalOpen"] === "object" &&
+                              typeof $steps["updateModalOpen"].then ===
+                                "function"
+                            ) {
+                              $steps["updateModalOpen"] =
+                                await __wrapUserPromise(
+                                  {
+                                    type: "InteractionLoc",
+                                    actionName: "updateVariable",
+                                    interactionUuid: "Dn2GRyybX",
+                                    componentUuid: "Y7xcku1e2QoFP"
+                                  },
+                                  $steps["updateModalOpen"]
+                                );
+                            }
+                          }}
+                          shape={"rounded"}
+                          size={"minimal"}
                         >
-                          {"免费用户"}
-                        </div>
-                      </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__wih2V
+                            )}
+                          >
+                            {"订单记录"}
+                          </div>
+                        </Button>
+                        <AntdModal
+                          data-plasmic-name={"modal"}
+                          data-plasmic-override={overrides.modal}
+                          cancelText={"返回"}
+                          className={classNames("__wab_instance", sty.modal)}
+                          closeIcon={
+                            <Icon11Icon
+                              data-plasmic-name={"svg"}
+                              data-plasmic-override={overrides.svg}
+                              className={classNames(projectcss.all, sty.svg)}
+                              role={"img"}
+                            />
+                          }
+                          defaultStylesClassName={classNames(
+                            projectcss.root_reset,
+                            projectcss.plasmic_default_styles,
+                            projectcss.plasmic_mixins,
+                            projectcss.plasmic_tokens,
+                            plasmic_antd_5_hostless_css.plasmic_tokens,
+                            plasmic_plasmic_rich_components_css.plasmic_tokens
+                          )}
+                          modalScopeClassName={sty["modal__modal"]}
+                          okText={"确认"}
+                          onOpenChange={p.generateStateOnChangeProp($state, [
+                            "modal",
+                            "open"
+                          ])}
+                          open={p.generateStateValueProp($state, [
+                            "modal",
+                            "open"
+                          ])}
+                          title={"订单记录"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__nZ5Pq
+                            )}
+                          >
+                            {(() => {
+                              const child$Props = {
+                                className: classNames(
+                                  "__wab_instance",
+                                  sty.table
+                                ),
+                                data: (() => {
+                                  try {
+                                    return $queries.orders;
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return undefined;
+                                    }
+                                    throw e;
+                                  }
+                                })(),
+                                defaultSize: "small",
+                                fields: [
+                                  {
+                                    key: "__airtable_id",
+                                    fieldId: "__airtable_id",
+                                    isHidden: true
+                                  },
+                                  {
+                                    key: "order_id",
+                                    fieldId: "order_id",
+                                    title: "订单编号",
+                                    dataType: "number"
+                                  },
+                                  {
+                                    key: "order_status",
+                                    fieldId: "order_status",
+                                    title: "状态",
+                                    isHidden: true
+                                  },
+                                  {
+                                    key: "user_id",
+                                    fieldId: "user_id",
+                                    isHidden: true
+                                  },
+                                  {
+                                    key: "amount",
+                                    fieldId: "amount",
+                                    title: "金额"
+                                  },
+                                  {
+                                    key: "product",
+                                    fieldId: "product",
+                                    title: "产品"
+                                  },
+                                  {
+                                    key: "pay_info",
+                                    fieldId: "pay_info",
+                                    title: "支付方式"
+                                  },
+                                  {
+                                    key: "order_time",
+                                    fieldId: "order_time",
+                                    title: "支付时间"
+                                  },
+                                  {
+                                    key: "order_update",
+                                    fieldId: "order_update",
+                                    isHidden: true
+                                  },
+                                  {
+                                    key: "validity_start",
+                                    fieldId: "validity_start",
+                                    isHidden: true
+                                  },
+                                  {
+                                    key: "validity_end",
+                                    fieldId: "validity_end",
+                                    isHidden: true
+                                  }
+                                ],
+
+                                hideColumnPicker: true,
+                                hideDensity: true,
+                                hideExports: true,
+                                hideSearch: true,
+                                onRowSelectionChanged: async (...eventArgs) => {
+                                  p.generateStateOnChangePropForCodeComponents(
+                                    $state,
+                                    "selectedRowKey",
+                                    ["table", "selectedRowKey"],
+                                    RichTable_Helpers
+                                  ).apply(null, eventArgs);
+                                  p.generateStateOnChangePropForCodeComponents(
+                                    $state,
+                                    "selectedRow",
+                                    ["table", "selectedRow"],
+                                    RichTable_Helpers
+                                  ).apply(null, eventArgs);
+                                  p.generateStateOnChangePropForCodeComponents(
+                                    $state,
+                                    "selectedRows",
+                                    ["table", "selectedRows"],
+                                    RichTable_Helpers
+                                  ).apply(null, eventArgs);
+                                },
+                                selectedRowKey: p.generateStateValueProp(
+                                  $state,
+                                  ["table", "selectedRowKey"]
+                                )
+                              };
+                              p.initializeCodeComponentStates(
+                                $state,
+                                [
+                                  {
+                                    name: "selectedRowKey",
+                                    plasmicStateName: "table.selectedRowKey"
+                                  },
+                                  {
+                                    name: "selectedRow",
+                                    plasmicStateName: "table.selectedRow"
+                                  },
+                                  {
+                                    name: "selectedRows",
+                                    plasmicStateName: "table.selectedRows"
+                                  }
+                                ],
+
+                                [],
+                                RichTable_Helpers ?? {},
+                                child$Props
+                              );
+                              return (
+                                <RichTable
+                                  data-plasmic-name={"table"}
+                                  data-plasmic-override={overrides.table}
+                                  {...child$Props}
+                                />
+                              );
+                            })()}
+                          </div>
+                        </AntdModal>
+                      </p.Stack>
                     ) : null}
                     <FormWrapper
                       data-plasmic-name={"form"}
@@ -218,274 +560,443 @@ function PlasmicMyaccount__RenderFunc(props) {
                       )}
                       labelCol={{ span: 8, horizontalOnly: true }}
                       layout={"vertical"}
+                      requiredMark={true}
                       wrapperCol={{ span: 16, horizontalOnly: true }}
                     >
-                      <FormItemWrapper
-                        className={classNames(
-                          "__wab_instance",
-                          sty.formItem__l5U
-                        )}
-                        label={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__x7WF
-                            )}
-                          >
-                            {"邮箱"}
-                          </div>
-                        }
-                        name={"name"}
-                      >
-                        {(() => {
-                          const child$Props = {
-                            className: classNames("__wab_instance", sty.input),
-                            onChange:
-                              p.generateStateOnChangePropForCodeComponents(
-                                $state,
-                                "value",
-                                ["input", "value"],
-                                AntdInput_Helpers
-                              ),
-                            value: p.generateStateValueProp($state, [
-                              "input",
-                              "value"
-                            ])
-                          };
-                          p.initializeCodeComponentStates(
-                            $state,
-                            [
-                              {
-                                name: "value",
-                                plasmicStateName: "input.value"
-                              }
-                            ],
-
-                            [],
-                            AntdInput_Helpers ?? {},
-                            child$Props
-                          );
-                          return (
-                            <AntdInput
-                              data-plasmic-name={"input"}
-                              data-plasmic-override={overrides.input}
-                              {...child$Props}
-                            />
-                          );
-                        })()}
-                      </FormItemWrapper>
-                      <FormItemWrapper
-                        className={classNames(
-                          "__wab_instance",
-                          sty.formItem__ckay4
-                        )}
-                        label={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__nKb0
-                            )}
-                          >
-                            {"手机"}
-                          </div>
-                        }
-                        name={"name"}
-                      >
-                        {(() => {
-                          const child$Props = {
-                            className: classNames("__wab_instance", sty.input2),
-                            onChange:
-                              p.generateStateOnChangePropForCodeComponents(
-                                $state,
-                                "value",
-                                ["input2", "value"],
-                                AntdInput_Helpers
-                              ),
-                            value: p.generateStateValueProp($state, [
-                              "input2",
-                              "value"
-                            ])
-                          };
-                          p.initializeCodeComponentStates(
-                            $state,
-                            [
-                              {
-                                name: "value",
-                                plasmicStateName: "input2.value"
-                              }
-                            ],
-
-                            [],
-                            AntdInput_Helpers ?? {},
-                            child$Props
-                          );
-                          return (
-                            <AntdInput
-                              data-plasmic-name={"input2"}
-                              data-plasmic-override={overrides.input2}
-                              {...child$Props}
-                            />
-                          );
-                        })()}
-                      </FormItemWrapper>
-                      <FormItemWrapper
-                        className={classNames(
-                          "__wab_instance",
-                          sty.formItem__nwB6
-                        )}
-                        label={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___0Jkpi
-                            )}
-                          >
-                            {"账号状态"}
-                          </div>
-                        }
-                        name={"name"}
-                      >
-                        {(() => {
-                          const child$Props = {
-                            className: classNames("__wab_instance", sty.input3),
-                            onChange:
-                              p.generateStateOnChangePropForCodeComponents(
-                                $state,
-                                "value",
-                                ["input3", "value"],
-                                AntdInput_Helpers
-                              ),
-                            value: p.generateStateValueProp($state, [
-                              "input3",
-                              "value"
-                            ])
-                          };
-                          p.initializeCodeComponentStates(
-                            $state,
-                            [
-                              {
-                                name: "value",
-                                plasmicStateName: "input3.value"
-                              }
-                            ],
-
-                            [],
-                            AntdInput_Helpers ?? {},
-                            child$Props
-                          );
-                          return (
-                            <AntdInput
-                              data-plasmic-name={"input3"}
-                              data-plasmic-override={overrides.input3}
-                              {...child$Props}
-                            />
-                          );
-                        })()}
-                      </FormItemWrapper>
-                      <FormItemWrapper
-                        className={classNames(
-                          "__wab_instance",
-                          sty.formItem__qAos1
-                        )}
-                        label={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__okSz
-                            )}
-                          >
-                            {"Message"}
-                          </div>
-                        }
-                        name={"message"}
-                      >
-                        {(() => {
-                          const child$Props = {
-                            className: classNames(
-                              "__wab_instance",
-                              sty.textArea
-                            ),
-                            onChange:
-                              p.generateStateOnChangePropForCodeComponents(
-                                $state,
-                                "value",
-                                ["textArea", "value"],
-                                AntdTextArea_Helpers
-                              ),
-                            value: p.generateStateValueProp($state, [
-                              "textArea",
-                              "value"
-                            ])
-                          };
-                          p.initializeCodeComponentStates(
-                            $state,
-                            [
-                              {
-                                name: "value",
-                                plasmicStateName: "textArea.value"
-                              }
-                            ],
-
-                            [],
-                            AntdTextArea_Helpers ?? {},
-                            child$Props
-                          );
-                          return (
-                            <AntdTextArea
-                              data-plasmic-name={"textArea"}
-                              data-plasmic-override={overrides.textArea}
-                              {...child$Props}
-                            />
-                          );
-                        })()}
-                      </FormItemWrapper>
-                      <FormItemWrapper
-                        className={classNames(
-                          "__wab_instance",
-                          sty.formItem___8NkSb
-                        )}
-                        label={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__g2R8U
-                            )}
-                          >
-                            {"Label"}
-                          </div>
-                        }
-                        noLabel={true}
-                      >
-                        <AntdButton
-                          data-plasmic-name={"button"}
-                          data-plasmic-override={overrides.button}
-                          className={classNames("__wab_instance", sty.button)}
-                          submitsForm={true}
-                          type={"primary"}
+                      {true ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__piGff
+                          )}
                         >
-                          <div
+                          <FormItemWrapper
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__xj0N0
+                              "__wab_instance",
+                              sty.formItem__l5U
                             )}
+                            initialValue={"小黄帽"}
+                            label={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__x7WF
+                                )}
+                              >
+                                {"用户名"}
+                              </div>
+                            }
+                            name={"username"}
                           >
-                            {"保存"}
-                          </div>
-                        </AntdButton>
-                      </FormItemWrapper>
+                            {(() => {
+                              const child$Props = {
+                                allowClear: true,
+                                className: classNames(
+                                  "__wab_instance",
+                                  sty.input
+                                ),
+                                disabled: false,
+                                onChange:
+                                  p.generateStateOnChangePropForCodeComponents(
+                                    $state,
+                                    "value",
+                                    ["input", "value"],
+                                    AntdInput_Helpers
+                                  ),
+                                placholder: "绑定邮箱",
+                                readOnly: false,
+                                size: "middle",
+                                type: "text",
+                                value: p.generateStateValueProp($state, [
+                                  "input",
+                                  "value"
+                                ])
+                              };
+                              p.initializeCodeComponentStates(
+                                $state,
+                                [
+                                  {
+                                    name: "value",
+                                    plasmicStateName: "input.value"
+                                  }
+                                ],
+
+                                [],
+                                AntdInput_Helpers ?? {},
+                                child$Props
+                              );
+                              return (
+                                <AntdInput
+                                  data-plasmic-name={"input"}
+                                  data-plasmic-override={overrides.input}
+                                  {...child$Props}
+                                />
+                              );
+                            })()}
+                          </FormItemWrapper>
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__y2Lrs
+                            )}
+                            color={"softGreen"}
+                            size={"compact"}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__s9Fw3
+                              )}
+                            >
+                              {"保存修改"}
+                            </div>
+                          </Button>
+                          <FormItemWrapper
+                            className={classNames(
+                              "__wab_instance",
+                              sty.formItem__ceD7D
+                            )}
+                            label={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__fQa1X
+                                )}
+                              >
+                                {"账号状态"}
+                              </div>
+                            }
+                          >
+                            <AntdSelect
+                              data-plasmic-name={"select2"}
+                              data-plasmic-override={overrides.select2}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.select2
+                              )}
+                              defaultStylesClassName={classNames(
+                                projectcss.root_reset,
+                                projectcss.plasmic_default_styles,
+                                projectcss.plasmic_mixins,
+                                projectcss.plasmic_tokens,
+                                plasmic_antd_5_hostless_css.plasmic_tokens,
+                                plasmic_plasmic_rich_components_css.plasmic_tokens
+                              )}
+                              onChange={p.generateStateOnChangeProp($state, [
+                                "select2",
+                                "value"
+                              ])}
+                              options={[
+                                { value: "option1", label: "Option 1" },
+                                { value: "option2", label: "Option 2" }
+                              ]}
+                              placeholder={"免费版"}
+                              popupScopeClassName={sty["select2__popup"]}
+                              value={p.generateStateValueProp($state, [
+                                "select2",
+                                "value"
+                              ])}
+                            />
+                          </FormItemWrapper>
+                        </p.Stack>
+                      ) : null}
+                      {true ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___0A2A
+                          )}
+                        >
+                          <FormItemWrapper
+                            className={classNames(
+                              "__wab_instance",
+                              sty.formItem__vptI5
+                            )}
+                            initialValue={"无"}
+                            label={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__x9E15
+                                )}
+                              >
+                                {"邮箱"}
+                              </div>
+                            }
+                            name={"email"}
+                          >
+                            {(() => {
+                              const child$Props = {
+                                className: classNames(
+                                  "__wab_instance",
+                                  sty.input2
+                                ),
+                                onChange:
+                                  p.generateStateOnChangePropForCodeComponents(
+                                    $state,
+                                    "value",
+                                    ["input2", "value"],
+                                    AntdInput_Helpers
+                                  ),
+                                placholder: "绑定邮箱",
+                                value: p.generateStateValueProp($state, [
+                                  "input2",
+                                  "value"
+                                ])
+                              };
+                              p.initializeCodeComponentStates(
+                                $state,
+                                [
+                                  {
+                                    name: "value",
+                                    plasmicStateName: "input2.value"
+                                  }
+                                ],
+
+                                [],
+                                AntdInput_Helpers ?? {},
+                                child$Props
+                              );
+                              return (
+                                <AntdInput
+                                  data-plasmic-name={"input2"}
+                                  data-plasmic-override={overrides.input2}
+                                  {...child$Props}
+                                />
+                              );
+                            })()}
+                          </FormItemWrapper>
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__x7Q8O
+                            )}
+                            color={"softGreen"}
+                            size={"compact"}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__xShwH
+                              )}
+                            >
+                              {"绑定邮箱"}
+                            </div>
+                          </Button>
+                        </p.Stack>
+                      ) : null}
+                      {true ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__yzy7M
+                          )}
+                        >
+                          <FormItemWrapper
+                            className={classNames(
+                              "__wab_instance",
+                              sty.formItem___6SkUa
+                            )}
+                            initialValue={"122673627872"}
+                            label={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__oEzuk
+                                )}
+                              >
+                                {"手机"}
+                              </div>
+                            }
+                            name={"mobile"}
+                          >
+                            {(() => {
+                              const child$Props = {
+                                className: classNames(
+                                  "__wab_instance",
+                                  sty.input3
+                                ),
+                                disabled: true,
+                                onChange:
+                                  p.generateStateOnChangePropForCodeComponents(
+                                    $state,
+                                    "value",
+                                    ["input3", "value"],
+                                    AntdInput_Helpers
+                                  ),
+                                placholder: "绑定邮箱",
+                                value: p.generateStateValueProp($state, [
+                                  "input3",
+                                  "value"
+                                ])
+                              };
+                              p.initializeCodeComponentStates(
+                                $state,
+                                [
+                                  {
+                                    name: "value",
+                                    plasmicStateName: "input3.value"
+                                  }
+                                ],
+
+                                [],
+                                AntdInput_Helpers ?? {},
+                                child$Props
+                              );
+                              return (
+                                <AntdInput
+                                  data-plasmic-name={"input3"}
+                                  data-plasmic-override={overrides.input3}
+                                  {...child$Props}
+                                />
+                              );
+                            })()}
+                          </FormItemWrapper>
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__xtKeq
+                            )}
+                            color={"softGreen"}
+                            size={"compact"}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__tGWcF
+                              )}
+                            >
+                              {"手机换绑"}
+                            </div>
+                          </Button>
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__yGtHx
+                            )}
+                            color={"softGreen"}
+                            size={"compact"}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__nXnqj
+                              )}
+                            >
+                              {"修改密码"}
+                            </div>
+                          </Button>
+                        </p.Stack>
+                      ) : null}
+                      {true ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___7D2Cq
+                          )}
+                        >
+                          <FormItemWrapper
+                            className={classNames(
+                              "__wab_instance",
+                              sty.formItem__cbFn6
+                            )}
+                            label={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__fDkIh
+                                )}
+                              >
+                                {"礼品码"}
+                              </div>
+                            }
+                            name={"name"}
+                          >
+                            {(() => {
+                              const child$Props = {
+                                className: classNames(
+                                  "__wab_instance",
+                                  sty.input6
+                                ),
+                                onChange:
+                                  p.generateStateOnChangePropForCodeComponents(
+                                    $state,
+                                    "value",
+                                    ["input6", "value"],
+                                    AntdInput_Helpers
+                                  ),
+                                placholder: "绑定邮箱",
+                                value: p.generateStateValueProp($state, [
+                                  "input6",
+                                  "value"
+                                ])
+                              };
+                              p.initializeCodeComponentStates(
+                                $state,
+                                [
+                                  {
+                                    name: "value",
+                                    plasmicStateName: "input6.value"
+                                  }
+                                ],
+
+                                [],
+                                AntdInput_Helpers ?? {},
+                                child$Props
+                              );
+                              return (
+                                <AntdInput
+                                  data-plasmic-name={"input6"}
+                                  data-plasmic-override={overrides.input6}
+                                  {...child$Props}
+                                />
+                              );
+                            })()}
+                          </FormItemWrapper>
+                          <Button
+                            className={classNames(
+                              "__wab_instance",
+                              sty.button__qvCyv
+                            )}
+                            color={"softGreen"}
+                            size={"compact"}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__fQxtj
+                              )}
+                            >
+                              {"使用"}
+                            </div>
+                          </Button>
+                        </p.Stack>
+                      ) : null}
                     </FormWrapper>
                   </div>
                 ) : null}
                 <section
                   className={classNames(projectcss.all, sty.section__xhRnq)}
                 />
-              </div>
+              </p.Stack>
             ) : null}
           </section>
         </div>
@@ -498,21 +1009,27 @@ const PlasmicDescendants = {
   root: [
     "root",
     "menuNav",
+    "modal",
+    "table",
+    "svg",
     "form",
     "input",
+    "select2",
     "input2",
     "input3",
-    "textArea",
-    "button"
+    "input6"
   ],
 
   menuNav: ["menuNav"],
-  form: ["form", "input", "input2", "input3", "textArea", "button"],
+  modal: ["modal", "table", "svg"],
+  table: ["table"],
+  svg: ["svg"],
+  form: ["form", "input", "select2", "input2", "input3", "input6"],
   input: ["input"],
+  select2: ["select2"],
   input2: ["input2"],
   input3: ["input3"],
-  textArea: ["textArea"],
-  button: ["button"]
+  input6: ["input6"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -548,12 +1065,15 @@ export const PlasmicMyaccount = Object.assign(
   {
     // Helper components rendering sub-elements
     menuNav: makeNodeComponent("menuNav"),
+    modal: makeNodeComponent("modal"),
+    table: makeNodeComponent("table"),
+    svg: makeNodeComponent("svg"),
     form: makeNodeComponent("form"),
     input: makeNodeComponent("input"),
+    select2: makeNodeComponent("select2"),
     input2: makeNodeComponent("input2"),
     input3: makeNodeComponent("input3"),
-    textArea: makeNodeComponent("textArea"),
-    button: makeNodeComponent("button"),
+    input6: makeNodeComponent("input6"),
     // Metadata about props expected for PlasmicMyaccount
     internalVariantProps: PlasmicMyaccount__VariantProps,
     internalArgProps: PlasmicMyaccount__ArgProps,

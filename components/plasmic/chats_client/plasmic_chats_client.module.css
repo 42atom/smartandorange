@@ -37,6 +37,8 @@
   --plasmic-token-unnamed-style-token-5: var(--token-26pFRJH-g);
   --token-FMGQEiyNQ: #cacaca;
   --plasmic-token-icn-default: var(--token-FMGQEiyNQ);
+  --token-LJzy5WSR2: #f3f4f6;
+  --plasmic-token-bkgd-base: var(--token-LJzy5WSR2);
 }
 
 .plasmic_tokens {
