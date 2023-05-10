@@ -15,12 +15,16 @@ import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import { useDependencyAwareQuery } from "@plasmicapp/react-web/lib/data-sources";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
 import Price from "../../Price"; // plasmic-import: A7lxlJD3kKn/component
+import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
+import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -72,6 +76,9 @@ function PlasmicShop__RenderFunc(props) {
     }),
     $queries,
     setDollarQueries
+  });
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsnl9I0Oib3VOwY()
   });
   return (
     <React.Fragment>
@@ -139,6 +146,15 @@ function PlasmicShop__RenderFunc(props) {
               className={classNames("__wab_instance", sty.price)}
             />
           </section>
+          {(
+            hasVariant(globalVariants, "screen", "mobileOnly") ? true : false
+          ) ? (
+            <Toolbar
+              data-plasmic-name={"toolbar"}
+              data-plasmic-override={overrides.toolbar}
+              className={classNames("__wab_instance", sty.toolbar)}
+            />
+          ) : null}
         </div>
       </div>
     </React.Fragment>
@@ -146,11 +162,12 @@ function PlasmicShop__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "menuNav", "section", "price"],
+  root: ["root", "freeBox", "menuNav", "section", "price", "toolbar"],
   freeBox: ["freeBox", "menuNav"],
   menuNav: ["menuNav"],
   section: ["section", "price"],
-  price: ["price"]
+  price: ["price"],
+  toolbar: ["toolbar"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -189,6 +206,7 @@ export const PlasmicShop = Object.assign(
     menuNav: makeNodeComponent("menuNav"),
     section: makeNodeComponent("section"),
     price: makeNodeComponent("price"),
+    toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicShop
     internalVariantProps: PlasmicShop__VariantProps,
     internalArgProps: PlasmicShop__ArgProps,

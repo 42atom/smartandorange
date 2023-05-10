@@ -144,6 +144,11 @@
   width: 100%;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .menu:global(.__wab_instance) {
+    display: none;
+  }
+}
 .svg {
   object-fit: cover;
   max-width: 100%;

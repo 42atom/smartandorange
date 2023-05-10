@@ -15,9 +15,11 @@ import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import { useDependencyAwareQuery } from "@plasmicapp/react-web/lib/data-sources";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
 import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: fo-n3xHvdqt/codeComponent
@@ -27,6 +29,8 @@ import TextInput from "../../TextInput"; // plasmic-import: -yvQMrhCsV3Q78/compo
 import DocumentList from "../../DocumentList"; // plasmic-import: DuwZXCRDJh/component
 import TextArea from "antd/lib/input/TextArea"; // plasmic-import: ZJIPHLoTjkN/codeComponent
 import { inputHelpers as TextArea_Helpers } from "antd/lib/input/TextArea"; // plasmic-import: ZJIPHLoTjkN/codeComponentHelper
+import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
+import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -100,6 +104,9 @@ function PlasmicMydocuments__RenderFunc(props) {
     }),
     $queries,
     setDollarQueries
+  });
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsnl9I0Oib3VOwY()
   });
   return (
     <React.Fragment>
@@ -399,6 +406,15 @@ function PlasmicMydocuments__RenderFunc(props) {
               })()}
             </p.Stack>
           </section>
+          {(
+            hasVariant(globalVariants, "screen", "mobileOnly") ? true : false
+          ) ? (
+            <Toolbar
+              data-plasmic-name={"toolbar"}
+              data-plasmic-override={overrides.toolbar}
+              className={classNames("__wab_instance", sty.toolbar)}
+            />
+          ) : null}
         </div>
       </div>
     </React.Fragment>
@@ -413,7 +429,8 @@ const PlasmicDescendants = {
     "menu",
     "itemGroup",
     "textInput",
-    "antdInputTextArea"
+    "antdInputTextArea",
+    "toolbar"
   ],
 
   menuNav: ["menuNav"],
@@ -421,7 +438,8 @@ const PlasmicDescendants = {
   menu: ["menu", "itemGroup"],
   itemGroup: ["itemGroup"],
   textInput: ["textInput"],
-  antdInputTextArea: ["antdInputTextArea"]
+  antdInputTextArea: ["antdInputTextArea"],
+  toolbar: ["toolbar"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -462,6 +480,7 @@ export const PlasmicMydocuments = Object.assign(
     itemGroup: makeNodeComponent("itemGroup"),
     textInput: makeNodeComponent("textInput"),
     antdInputTextArea: makeNodeComponent("antdInputTextArea"),
+    toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicMydocuments
     internalVariantProps: PlasmicMydocuments__VariantProps,
     internalArgProps: PlasmicMydocuments__ArgProps,

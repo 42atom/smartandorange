@@ -277,3 +277,17 @@
   position: relative;
   padding: 24px;
 }
+.toolbar:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .toolbar:global(.__wab_instance) {
+    position: fixed;
+    left: 0;
+    top: auto;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+  }
+}

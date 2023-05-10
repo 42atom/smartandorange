@@ -31,6 +31,7 @@ import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // pla
 import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponent
 import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponentHelper
 import { AntdSelect } from "@plasmicpkgs/antd5/skinny/registerSelect"; // plasmic-import: OvH7ENd3m7ug/codeComponent
+import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -1078,6 +1079,15 @@ function PlasmicMyaccount__RenderFunc(props) {
               </p.Stack>
             ) : null}
           </section>
+          {(
+            hasVariant(globalVariants, "screen", "mobileOnly") ? true : false
+          ) ? (
+            <Toolbar
+              data-plasmic-name={"toolbar"}
+              data-plasmic-override={overrides.toolbar}
+              className={classNames("__wab_instance", sty.toolbar)}
+            />
+          ) : null}
         </div>
       </div>
     </React.Fragment>
@@ -1097,7 +1107,8 @@ const PlasmicDescendants = {
     "input2",
     "input3",
     "input6",
-    "img"
+    "img",
+    "toolbar"
   ],
 
   menuNav: ["menuNav"],
@@ -1110,7 +1121,8 @@ const PlasmicDescendants = {
   input2: ["input2"],
   input3: ["input3"],
   input6: ["input6"],
-  img: ["img"]
+  img: ["img"],
+  toolbar: ["toolbar"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -1156,6 +1168,7 @@ export const PlasmicMyaccount = Object.assign(
     input3: makeNodeComponent("input3"),
     input6: makeNodeComponent("input6"),
     img: makeNodeComponent("img"),
+    toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicMyaccount
     internalVariantProps: PlasmicMyaccount__VariantProps,
     internalArgProps: PlasmicMyaccount__ArgProps,

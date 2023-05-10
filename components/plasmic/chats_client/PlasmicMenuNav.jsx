@@ -13,12 +13,15 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Menu from "antd/lib/menu/index"; // plasmic-import: Iz_hLKpHZDg/codeComponent
 import MenuItem from "antd/lib/menu/MenuItem"; // plasmic-import: HZ6EmQgIQJr/codeComponent
+import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -68,6 +71,9 @@ function PlasmicMenuNav__RenderFunc(props) {
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsnl9I0Oib3VOwY()
+  });
   return true ? (
     <div
       data-plasmic-name={"root"}
@@ -189,279 +195,281 @@ function PlasmicMenuNav__RenderFunc(props) {
           </p.Stack>
         </div>
       ) : null}
-      <Menu
-        data-plasmic-name={"menu"}
-        data-plasmic-override={overrides.menu}
-        className={classNames("__wab_instance", sty.menu)}
-        defaultSelectedKeys={args.selected}
-        expandIcon={null}
-        forceSubMenuRender={false}
-        mode={"horizontal"}
-        overflowedIndicator={
-          <Icon13Icon
-            data-plasmic-name={"svg"}
-            data-plasmic-override={overrides.svg}
-            className={classNames(projectcss.all, sty.svg)}
-            role={"img"}
-          />
-        }
-        selectable={false}
-        triggerSubMenuAction={"hover"}
-      >
-        <MenuItem
-          data-plasmic-name={"menu1"}
-          data-plasmic-override={overrides.menu1}
-          className={classNames("__wab_instance", sty.menu1)}
-          key={"menuItemKey1"}
-          title={"01"}
+      {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
+        <Menu
+          data-plasmic-name={"menu"}
+          data-plasmic-override={overrides.menu}
+          className={classNames("__wab_instance", sty.menu)}
+          defaultSelectedKeys={args.selected}
+          expandIcon={null}
+          forceSubMenuRender={false}
+          mode={"horizontal"}
+          overflowedIndicator={
+            <Icon13Icon
+              data-plasmic-name={"svg"}
+              data-plasmic-override={overrides.svg}
+              className={classNames(projectcss.all, sty.svg)}
+              role={"img"}
+            />
+          }
+          selectable={false}
+          triggerSubMenuAction={"hover"}
         >
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__yXmqT
-            )}
-            onClick={async event => {
-              const $steps = {};
-              $steps["goToWorkspaces"] = true
-                ? (() => {
-                    const actionArgs = {
-                      destination: __wrapUserFunction(
+          <MenuItem
+            data-plasmic-name={"menu1"}
+            data-plasmic-override={overrides.menu1}
+            className={classNames("__wab_instance", sty.menu1)}
+            key={"menuItemKey1"}
+            title={"01"}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__yXmqT
+              )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToWorkspaces"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        destination: __wrapUserFunction(
+                          {
+                            type: "InteractionArgLoc",
+                            actionName: "navigation",
+                            interactionUuid: "8MqZUpxfB",
+                            componentUuid: "9cR2sxpykRjad",
+                            argName: "destination"
+                          },
+                          () => `/workspaces`
+                        )
+                      };
+                      return __wrapUserFunction(
                         {
-                          type: "InteractionArgLoc",
+                          type: "InteractionLoc",
                           actionName: "navigation",
                           interactionUuid: "8MqZUpxfB",
-                          componentUuid: "9cR2sxpykRjad",
-                          argName: "destination"
+                          componentUuid: "9cR2sxpykRjad"
                         },
-                        () => `/workspaces`
-                      )
-                    };
-                    return __wrapUserFunction(
-                      {
-                        type: "InteractionLoc",
-                        actionName: "navigation",
-                        interactionUuid: "8MqZUpxfB",
-                        componentUuid: "9cR2sxpykRjad"
-                      },
-                      () =>
-                        (({ destination }) => {
-                          __nextRouter?.push(destination);
-                        })?.apply(null, [actionArgs]),
-                      actionArgs
-                    );
-                  })()
-                : undefined;
-              if (
-                typeof $steps["goToWorkspaces"] === "object" &&
-                typeof $steps["goToWorkspaces"].then === "function"
-              ) {
-                $steps["goToWorkspaces"] = await __wrapUserPromise(
-                  {
-                    type: "InteractionLoc",
-                    actionName: "navigation",
-                    interactionUuid: "8MqZUpxfB",
-                    componentUuid: "9cR2sxpykRjad"
-                  },
-                  $steps["goToWorkspaces"]
-                );
-              }
-            }}
+                        () =>
+                          (({ destination }) => {
+                            __nextRouter?.push(destination);
+                          })?.apply(null, [actionArgs]),
+                        actionArgs
+                      );
+                    })()
+                  : undefined;
+                if (
+                  typeof $steps["goToWorkspaces"] === "object" &&
+                  typeof $steps["goToWorkspaces"].then === "function"
+                ) {
+                  $steps["goToWorkspaces"] = await __wrapUserPromise(
+                    {
+                      type: "InteractionLoc",
+                      actionName: "navigation",
+                      interactionUuid: "8MqZUpxfB",
+                      componentUuid: "9cR2sxpykRjad"
+                    },
+                    $steps["goToWorkspaces"]
+                  );
+                }
+              }}
+            >
+              {"我的工作台"}
+            </div>
+          </MenuItem>
+          <MenuItem
+            data-plasmic-name={"menu2"}
+            data-plasmic-override={overrides.menu2}
+            className={classNames("__wab_instance", sty.menu2)}
+            key={"menuItemKey2"}
+            title={"02"}
           >
-            {"我的工作台"}
-          </div>
-        </MenuItem>
-        <MenuItem
-          data-plasmic-name={"menu2"}
-          data-plasmic-override={overrides.menu2}
-          className={classNames("__wab_instance", sty.menu2)}
-          key={"menuItemKey2"}
-          title={"02"}
-        >
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__eePdL
-            )}
-            onClick={async event => {
-              const $steps = {};
-              $steps["goToMydocuments"] = true
-                ? (() => {
-                    const actionArgs = {
-                      destination: __wrapUserFunction(
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__eePdL
+              )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToMydocuments"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        destination: __wrapUserFunction(
+                          {
+                            type: "InteractionArgLoc",
+                            actionName: "navigation",
+                            interactionUuid: "m1V620vzk",
+                            componentUuid: "9cR2sxpykRjad",
+                            argName: "destination"
+                          },
+                          () => `/mydocuments`
+                        )
+                      };
+                      return __wrapUserFunction(
                         {
-                          type: "InteractionArgLoc",
+                          type: "InteractionLoc",
                           actionName: "navigation",
                           interactionUuid: "m1V620vzk",
-                          componentUuid: "9cR2sxpykRjad",
-                          argName: "destination"
+                          componentUuid: "9cR2sxpykRjad"
                         },
-                        () => `/mydocuments`
-                      )
-                    };
-                    return __wrapUserFunction(
-                      {
-                        type: "InteractionLoc",
-                        actionName: "navigation",
-                        interactionUuid: "m1V620vzk",
-                        componentUuid: "9cR2sxpykRjad"
-                      },
-                      () =>
-                        (({ destination }) => {
-                          __nextRouter?.push(destination);
-                        })?.apply(null, [actionArgs]),
-                      actionArgs
-                    );
-                  })()
-                : undefined;
-              if (
-                typeof $steps["goToMydocuments"] === "object" &&
-                typeof $steps["goToMydocuments"].then === "function"
-              ) {
-                $steps["goToMydocuments"] = await __wrapUserPromise(
-                  {
-                    type: "InteractionLoc",
-                    actionName: "navigation",
-                    interactionUuid: "m1V620vzk",
-                    componentUuid: "9cR2sxpykRjad"
-                  },
-                  $steps["goToMydocuments"]
-                );
-              }
-            }}
+                        () =>
+                          (({ destination }) => {
+                            __nextRouter?.push(destination);
+                          })?.apply(null, [actionArgs]),
+                        actionArgs
+                      );
+                    })()
+                  : undefined;
+                if (
+                  typeof $steps["goToMydocuments"] === "object" &&
+                  typeof $steps["goToMydocuments"].then === "function"
+                ) {
+                  $steps["goToMydocuments"] = await __wrapUserPromise(
+                    {
+                      type: "InteractionLoc",
+                      actionName: "navigation",
+                      interactionUuid: "m1V620vzk",
+                      componentUuid: "9cR2sxpykRjad"
+                    },
+                    $steps["goToMydocuments"]
+                  );
+                }
+              }}
+            >
+              {"我的文档"}
+            </div>
+          </MenuItem>
+          <MenuItem
+            data-plasmic-name={"menu3"}
+            data-plasmic-override={overrides.menu3}
+            className={classNames("__wab_instance", sty.menu3)}
+            danger={false}
+            key={"menuItemKey3"}
+            title={"03"}
           >
-            {"我的文档"}
-          </div>
-        </MenuItem>
-        <MenuItem
-          data-plasmic-name={"menu3"}
-          data-plasmic-override={overrides.menu3}
-          className={classNames("__wab_instance", sty.menu3)}
-          danger={false}
-          key={"menuItemKey3"}
-          title={"03"}
-        >
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__zzTgz
-            )}
-            onClick={async event => {
-              const $steps = {};
-              $steps["goToMyaccount"] = true
-                ? (() => {
-                    const actionArgs = {
-                      destination: __wrapUserFunction(
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__zzTgz
+              )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToMyaccount"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        destination: __wrapUserFunction(
+                          {
+                            type: "InteractionArgLoc",
+                            actionName: "navigation",
+                            interactionUuid: "RH5n_3Hkr",
+                            componentUuid: "9cR2sxpykRjad",
+                            argName: "destination"
+                          },
+                          () => `/myaccount`
+                        )
+                      };
+                      return __wrapUserFunction(
                         {
-                          type: "InteractionArgLoc",
+                          type: "InteractionLoc",
                           actionName: "navigation",
                           interactionUuid: "RH5n_3Hkr",
-                          componentUuid: "9cR2sxpykRjad",
-                          argName: "destination"
+                          componentUuid: "9cR2sxpykRjad"
                         },
-                        () => `/myaccount`
-                      )
-                    };
-                    return __wrapUserFunction(
-                      {
-                        type: "InteractionLoc",
-                        actionName: "navigation",
-                        interactionUuid: "RH5n_3Hkr",
-                        componentUuid: "9cR2sxpykRjad"
-                      },
-                      () =>
-                        (({ destination }) => {
-                          __nextRouter?.push(destination);
-                        })?.apply(null, [actionArgs]),
-                      actionArgs
-                    );
-                  })()
-                : undefined;
-              if (
-                typeof $steps["goToMyaccount"] === "object" &&
-                typeof $steps["goToMyaccount"].then === "function"
-              ) {
-                $steps["goToMyaccount"] = await __wrapUserPromise(
-                  {
-                    type: "InteractionLoc",
-                    actionName: "navigation",
-                    interactionUuid: "RH5n_3Hkr",
-                    componentUuid: "9cR2sxpykRjad"
-                  },
-                  $steps["goToMyaccount"]
-                );
-              }
-            }}
+                        () =>
+                          (({ destination }) => {
+                            __nextRouter?.push(destination);
+                          })?.apply(null, [actionArgs]),
+                        actionArgs
+                      );
+                    })()
+                  : undefined;
+                if (
+                  typeof $steps["goToMyaccount"] === "object" &&
+                  typeof $steps["goToMyaccount"].then === "function"
+                ) {
+                  $steps["goToMyaccount"] = await __wrapUserPromise(
+                    {
+                      type: "InteractionLoc",
+                      actionName: "navigation",
+                      interactionUuid: "RH5n_3Hkr",
+                      componentUuid: "9cR2sxpykRjad"
+                    },
+                    $steps["goToMyaccount"]
+                  );
+                }
+              }}
+            >
+              {"我的账户"}
+            </div>
+          </MenuItem>
+          <MenuItem
+            data-plasmic-name={"menu4"}
+            data-plasmic-override={overrides.menu4}
+            className={classNames("__wab_instance", sty.menu4)}
+            key={"menuItemKey4"}
+            title={"04"}
           >
-            {"我的账户"}
-          </div>
-        </MenuItem>
-        <MenuItem
-          data-plasmic-name={"menu4"}
-          data-plasmic-override={overrides.menu4}
-          className={classNames("__wab_instance", sty.menu4)}
-          key={"menuItemKey4"}
-          title={"04"}
-        >
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__cQloA
-            )}
-            onClick={async event => {
-              const $steps = {};
-              $steps["goToShop"] = true
-                ? (() => {
-                    const actionArgs = {
-                      destination: __wrapUserFunction(
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__cQloA
+              )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToShop"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        destination: __wrapUserFunction(
+                          {
+                            type: "InteractionArgLoc",
+                            actionName: "navigation",
+                            interactionUuid: "5nKh6-jt2",
+                            componentUuid: "9cR2sxpykRjad",
+                            argName: "destination"
+                          },
+                          () => `/shop`
+                        )
+                      };
+                      return __wrapUserFunction(
                         {
-                          type: "InteractionArgLoc",
+                          type: "InteractionLoc",
                           actionName: "navigation",
                           interactionUuid: "5nKh6-jt2",
-                          componentUuid: "9cR2sxpykRjad",
-                          argName: "destination"
+                          componentUuid: "9cR2sxpykRjad"
                         },
-                        () => `/shop`
-                      )
-                    };
-                    return __wrapUserFunction(
-                      {
-                        type: "InteractionLoc",
-                        actionName: "navigation",
-                        interactionUuid: "5nKh6-jt2",
-                        componentUuid: "9cR2sxpykRjad"
-                      },
-                      () =>
-                        (({ destination }) => {
-                          __nextRouter?.push(destination);
-                        })?.apply(null, [actionArgs]),
-                      actionArgs
-                    );
-                  })()
-                : undefined;
-              if (
-                typeof $steps["goToShop"] === "object" &&
-                typeof $steps["goToShop"].then === "function"
-              ) {
-                $steps["goToShop"] = await __wrapUserPromise(
-                  {
-                    type: "InteractionLoc",
-                    actionName: "navigation",
-                    interactionUuid: "5nKh6-jt2",
-                    componentUuid: "9cR2sxpykRjad"
-                  },
-                  $steps["goToShop"]
-                );
-              }
-            }}
-          >
-            {"系统商城"}
-          </div>
-        </MenuItem>
-      </Menu>
+                        () =>
+                          (({ destination }) => {
+                            __nextRouter?.push(destination);
+                          })?.apply(null, [actionArgs]),
+                        actionArgs
+                      );
+                    })()
+                  : undefined;
+                if (
+                  typeof $steps["goToShop"] === "object" &&
+                  typeof $steps["goToShop"].then === "function"
+                ) {
+                  $steps["goToShop"] = await __wrapUserPromise(
+                    {
+                      type: "InteractionLoc",
+                      actionName: "navigation",
+                      interactionUuid: "5nKh6-jt2",
+                      componentUuid: "9cR2sxpykRjad"
+                    },
+                    $steps["goToShop"]
+                  );
+                }
+              }}
+            >
+              {"系统商城"}
+            </div>
+          </MenuItem>
+        </Menu>
+      ) : null}
     </div>
   ) : null;
 }

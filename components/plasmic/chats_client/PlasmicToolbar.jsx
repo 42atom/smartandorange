@@ -19,13 +19,13 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import ToolButton from "../../ToolButton"; // plasmic-import: 1dOF1uaw3X/component
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicToolbar.module.css"; // plasmic-import: UlyQXoohOO/css
-import Icon22Icon from "./icons/PlasmicIcon__Icon22"; // plasmic-import: xKIJ8vVG0g/icon
 import Icon23Icon from "./icons/PlasmicIcon__Icon23"; // plasmic-import: w6QM0uw4C3/icon
 import Icon24Icon from "./icons/PlasmicIcon__Icon24"; // plasmic-import: iCilKbZrcl/icon
 import Icon25Icon from "./icons/PlasmicIcon__Icon25"; // plasmic-import: edocmb3Rcj/icon
@@ -83,107 +83,229 @@ function PlasmicToolbar__RenderFunc(props) {
         sty.root
       )}
     >
-      <p.Stack
-        as={"button"}
-        hasGap={true}
-        className={classNames(
-          projectcss.all,
-          projectcss.button,
-          sty.button__bHaAs
-        )}
-      >
-        <p.PlasmicIcon
-          PlasmicIconType={
-            hasVariant(globalVariants, "screen", "mobileOnly")
-              ? Icon22Icon
-              : Icon22Icon
+      <ToolButton
+        className={classNames("__wab_instance", sty.toolButton__hjzR)}
+        selected={
+          hasVariant(globalVariants, "screen", "mobileOnly") ? true : undefined
+        }
+        url={async () => {
+          const $steps = {};
+          $steps["goToWorkspaces"] = true
+            ? (() => {
+                const actionArgs = {
+                  destination: __wrapUserFunction(
+                    {
+                      type: "InteractionArgLoc",
+                      actionName: "navigation",
+                      interactionUuid: "Pe1KFQ-fn",
+                      componentUuid: "UlyQXoohOO",
+                      argName: "destination"
+                    },
+                    () => `/workspaces`
+                  )
+                };
+                return __wrapUserFunction(
+                  {
+                    type: "InteractionLoc",
+                    actionName: "navigation",
+                    interactionUuid: "Pe1KFQ-fn",
+                    componentUuid: "UlyQXoohOO"
+                  },
+                  () =>
+                    (({ destination }) => {
+                      __nextRouter?.push(destination);
+                    })?.apply(null, [actionArgs]),
+                  actionArgs
+                );
+              })()
+            : undefined;
+          if (
+            typeof $steps["goToWorkspaces"] === "object" &&
+            typeof $steps["goToWorkspaces"].then === "function"
+          ) {
+            $steps["goToWorkspaces"] = await __wrapUserPromise(
+              {
+                type: "InteractionLoc",
+                actionName: "navigation",
+                interactionUuid: "Pe1KFQ-fn",
+                componentUuid: "UlyQXoohOO"
+              },
+              $steps["goToWorkspaces"]
+            );
           }
-          className={classNames(projectcss.all, sty.svg__hTYo)}
-          role={"img"}
-        />
+        }}
+      />
 
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__j3SJn
-          )}
-        >
-          {"工作台"}
-        </div>
-      </p.Stack>
-      <p.Stack
-        as={"button"}
-        hasGap={true}
-        className={classNames(
-          projectcss.all,
-          projectcss.button,
-          sty.button__diBv3
-        )}
-      >
-        <Icon23Icon
-          className={classNames(projectcss.all, sty.svg__rxq5U)}
-          role={"img"}
-        />
+      <ToolButton
+        className={classNames("__wab_instance", sty.toolButton__x0A34)}
+        icon={
+          <Icon23Icon
+            className={classNames(projectcss.all, sty.svg__hoRix)}
+            role={"img"}
+          />
+        }
+        label={"文档"}
+        url={async () => {
+          const $steps = {};
+          $steps["goToMydocuments"] = true
+            ? (() => {
+                const actionArgs = {
+                  destination: __wrapUserFunction(
+                    {
+                      type: "InteractionArgLoc",
+                      actionName: "navigation",
+                      interactionUuid: "pL6abd_FG",
+                      componentUuid: "UlyQXoohOO",
+                      argName: "destination"
+                    },
+                    () => `/mydocuments`
+                  )
+                };
+                return __wrapUserFunction(
+                  {
+                    type: "InteractionLoc",
+                    actionName: "navigation",
+                    interactionUuid: "pL6abd_FG",
+                    componentUuid: "UlyQXoohOO"
+                  },
+                  () =>
+                    (({ destination }) => {
+                      __nextRouter?.push(destination);
+                    })?.apply(null, [actionArgs]),
+                  actionArgs
+                );
+              })()
+            : undefined;
+          if (
+            typeof $steps["goToMydocuments"] === "object" &&
+            typeof $steps["goToMydocuments"].then === "function"
+          ) {
+            $steps["goToMydocuments"] = await __wrapUserPromise(
+              {
+                type: "InteractionLoc",
+                actionName: "navigation",
+                interactionUuid: "pL6abd_FG",
+                componentUuid: "UlyQXoohOO"
+              },
+              $steps["goToMydocuments"]
+            );
+          }
+        }}
+      />
 
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__vzn3K
-          )}
-        >
-          {"文档"}
-        </div>
-      </p.Stack>
-      <p.Stack
-        as={"button"}
-        hasGap={true}
-        className={classNames(
-          projectcss.all,
-          projectcss.button,
-          sty.button__dl0GS
-        )}
-      >
-        <Icon24Icon
-          className={classNames(projectcss.all, sty.svg__bvCjt)}
-          role={"img"}
-        />
+      <ToolButton
+        className={classNames("__wab_instance", sty.toolButton__jI7Kp)}
+        icon={
+          <Icon24Icon
+            className={classNames(projectcss.all, sty.svg___84ZIr)}
+            role={"img"}
+          />
+        }
+        label={"账户"}
+        url={async () => {
+          const $steps = {};
+          $steps["goToMyaccount"] = true
+            ? (() => {
+                const actionArgs = {
+                  destination: __wrapUserFunction(
+                    {
+                      type: "InteractionArgLoc",
+                      actionName: "navigation",
+                      interactionUuid: "cliTG91jk",
+                      componentUuid: "UlyQXoohOO",
+                      argName: "destination"
+                    },
+                    () => `/myaccount`
+                  )
+                };
+                return __wrapUserFunction(
+                  {
+                    type: "InteractionLoc",
+                    actionName: "navigation",
+                    interactionUuid: "cliTG91jk",
+                    componentUuid: "UlyQXoohOO"
+                  },
+                  () =>
+                    (({ destination }) => {
+                      __nextRouter?.push(destination);
+                    })?.apply(null, [actionArgs]),
+                  actionArgs
+                );
+              })()
+            : undefined;
+          if (
+            typeof $steps["goToMyaccount"] === "object" &&
+            typeof $steps["goToMyaccount"].then === "function"
+          ) {
+            $steps["goToMyaccount"] = await __wrapUserPromise(
+              {
+                type: "InteractionLoc",
+                actionName: "navigation",
+                interactionUuid: "cliTG91jk",
+                componentUuid: "UlyQXoohOO"
+              },
+              $steps["goToMyaccount"]
+            );
+          }
+        }}
+      />
 
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__maBOr
-          )}
-        >
-          {"账户"}
-        </div>
-      </p.Stack>
-      <p.Stack
-        as={"button"}
-        hasGap={true}
-        className={classNames(
-          projectcss.all,
-          projectcss.button,
-          sty.button__izqsH
-        )}
-      >
-        <Icon25Icon
-          className={classNames(projectcss.all, sty.svg___1Gmt9)}
-          role={"img"}
-        />
-
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text___7ZcL0
-          )}
-        >
-          {"商店"}
-        </div>
-      </p.Stack>
+      <ToolButton
+        className={classNames("__wab_instance", sty.toolButton__m0Ova)}
+        icon={
+          <Icon25Icon
+            className={classNames(projectcss.all, sty.svg__mJ4X3)}
+            role={"img"}
+          />
+        }
+        label={"商店"}
+        url={async () => {
+          const $steps = {};
+          $steps["goToShop"] = true
+            ? (() => {
+                const actionArgs = {
+                  destination: __wrapUserFunction(
+                    {
+                      type: "InteractionArgLoc",
+                      actionName: "navigation",
+                      interactionUuid: "YR3qTFjlc",
+                      componentUuid: "UlyQXoohOO",
+                      argName: "destination"
+                    },
+                    () => `/shop`
+                  )
+                };
+                return __wrapUserFunction(
+                  {
+                    type: "InteractionLoc",
+                    actionName: "navigation",
+                    interactionUuid: "YR3qTFjlc",
+                    componentUuid: "UlyQXoohOO"
+                  },
+                  () =>
+                    (({ destination }) => {
+                      __nextRouter?.push(destination);
+                    })?.apply(null, [actionArgs]),
+                  actionArgs
+                );
+              })()
+            : undefined;
+          if (
+            typeof $steps["goToShop"] === "object" &&
+            typeof $steps["goToShop"].then === "function"
+          ) {
+            $steps["goToShop"] = await __wrapUserPromise(
+              {
+                type: "InteractionLoc",
+                actionName: "navigation",
+                interactionUuid: "YR3qTFjlc",
+                componentUuid: "UlyQXoohOO"
+              },
+              $steps["goToShop"]
+            );
+          }
+        }}
+      />
     </div>
   );
 }

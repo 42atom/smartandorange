@@ -646,6 +646,19 @@
           "cssFilePath": "plasmic/chats_client/PlasmicToolbar.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "1dOF1uaw3X",
+          "name": "ToolButton",
+          "type": "managed",
+          "projectId": "gRaosoDicn4VUCndSzazbA",
+          "renderModuleFilePath": "plasmic/chats_client/PlasmicToolButton.jsx",
+          "importSpec": {
+            "modulePath": "ToolButton.jsx"
+          },
+          "cssFilePath": "plasmic/chats_client/PlasmicToolButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
