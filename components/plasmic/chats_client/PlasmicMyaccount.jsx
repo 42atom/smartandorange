@@ -15,9 +15,11 @@ import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import { useDependencyAwareQuery } from "@plasmicapp/react-web/lib/data-sources";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
 import Button from "../../Button"; // plasmic-import: YO5Bwb9purCqu/component
@@ -29,6 +31,7 @@ import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // pla
 import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponent
 import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponentHelper
 import { AntdSelect } from "@plasmicpkgs/antd5/skinny/registerSelect"; // plasmic-import: OvH7ENd3m7ug/codeComponent
+import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -162,6 +165,9 @@ function PlasmicMyaccount__RenderFunc(props) {
     $queries,
     setDollarQueries
   });
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsnl9I0Oib3VOwY()
+  });
   return (
     <React.Fragment>
       <Head>
@@ -261,122 +267,145 @@ function PlasmicMyaccount__RenderFunc(props) {
                         >
                           {"剩余额度   37000字"}
                         </div>
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button__kWogr
-                          )}
-                          color={"green"}
-                          shape={"rounded"}
-                          size={"minimal"}
-                        >
-                          <div
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___6BHuf
+                              sty.freeBox__pfzn1
                             )}
                           >
-                            {"充值"}
-                          </div>
-                        </Button>
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button__wR8Ln
-                          )}
-                          color={"sand"}
-                          onClick={async event => {
-                            const $steps = {};
-                            $steps["updateModalOpen"] = true
-                              ? (() => {
-                                  const actionArgs = {
-                                    variable: __wrapUserFunction(
+                            <Button
+                              className={classNames(
+                                "__wab_instance",
+                                sty.button__kWogr
+                              )}
+                              color={"green"}
+                              shape={"rounded"}
+                              size={"minimal"}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text___6BHuf
+                                )}
+                              >
+                                {"充值"}
+                              </div>
+                            </Button>
+                            <Button
+                              className={classNames(
+                                "__wab_instance",
+                                sty.button__wR8Ln
+                              )}
+                              color={"sand"}
+                              onClick={async event => {
+                                const $steps = {};
+                                $steps["updateModalOpen"] = true
+                                  ? (() => {
+                                      const actionArgs = {
+                                        variable: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "Dn2GRyybX",
+                                            componentUuid: "Y7xcku1e2QoFP",
+                                            argName: "variable"
+                                          },
+                                          () => ({
+                                            objRoot: $state,
+                                            variablePath: ["modal", "open"]
+                                          })
+                                        ),
+                                        operation: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "Dn2GRyybX",
+                                            componentUuid: "Y7xcku1e2QoFP",
+                                            argName: "operation"
+                                          },
+                                          () => 4
+                                        )
+                                      };
+                                      return __wrapUserFunction(
+                                        {
+                                          type: "InteractionLoc",
+                                          actionName: "updateVariable",
+                                          interactionUuid: "Dn2GRyybX",
+                                          componentUuid: "Y7xcku1e2QoFP"
+                                        },
+                                        () =>
+                                          (({
+                                            variable,
+                                            value,
+                                            startIndex,
+                                            deleteCount
+                                          }) => {
+                                            const { objRoot, variablePath } =
+                                              variable;
+                                            const oldValue = p.get(
+                                              objRoot,
+                                              variablePath
+                                            );
+                                            p.set(
+                                              objRoot,
+                                              variablePath,
+                                              !oldValue
+                                            );
+                                            return !oldValue;
+                                          })?.apply(null, [actionArgs]),
+                                        actionArgs
+                                      );
+                                    })()
+                                  : undefined;
+                                if (
+                                  typeof $steps["updateModalOpen"] ===
+                                    "object" &&
+                                  typeof $steps["updateModalOpen"].then ===
+                                    "function"
+                                ) {
+                                  $steps["updateModalOpen"] =
+                                    await __wrapUserPromise(
                                       {
-                                        type: "InteractionArgLoc",
+                                        type: "InteractionLoc",
                                         actionName: "updateVariable",
                                         interactionUuid: "Dn2GRyybX",
-                                        componentUuid: "Y7xcku1e2QoFP",
-                                        argName: "variable"
+                                        componentUuid: "Y7xcku1e2QoFP"
                                       },
-                                      () => ({
-                                        objRoot: $state,
-                                        variablePath: ["modal", "open"]
-                                      })
-                                    ),
-                                    operation: __wrapUserFunction(
-                                      {
-                                        type: "InteractionArgLoc",
-                                        actionName: "updateVariable",
-                                        interactionUuid: "Dn2GRyybX",
-                                        componentUuid: "Y7xcku1e2QoFP",
-                                        argName: "operation"
-                                      },
-                                      () => 4
-                                    )
-                                  };
-                                  return __wrapUserFunction(
-                                    {
-                                      type: "InteractionLoc",
-                                      actionName: "updateVariable",
-                                      interactionUuid: "Dn2GRyybX",
-                                      componentUuid: "Y7xcku1e2QoFP"
-                                    },
-                                    () =>
-                                      (({
-                                        variable,
-                                        value,
-                                        startIndex,
-                                        deleteCount
-                                      }) => {
-                                        const { objRoot, variablePath } =
-                                          variable;
-                                        const oldValue = p.get(
-                                          objRoot,
-                                          variablePath
-                                        );
-                                        p.set(objRoot, variablePath, !oldValue);
-                                        return !oldValue;
-                                      })?.apply(null, [actionArgs]),
-                                    actionArgs
-                                  );
-                                })()
-                              : undefined;
-                            if (
-                              typeof $steps["updateModalOpen"] === "object" &&
-                              typeof $steps["updateModalOpen"].then ===
-                                "function"
-                            ) {
-                              $steps["updateModalOpen"] =
-                                await __wrapUserPromise(
-                                  {
-                                    type: "InteractionLoc",
-                                    actionName: "updateVariable",
-                                    interactionUuid: "Dn2GRyybX",
-                                    componentUuid: "Y7xcku1e2QoFP"
-                                  },
-                                  $steps["updateModalOpen"]
-                                );
-                            }
-                          }}
-                          shape={"rounded"}
-                          size={"minimal"}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__wih2V
-                            )}
-                          >
-                            {"订单记录"}
-                          </div>
-                        </Button>
+                                      $steps["updateModalOpen"]
+                                    );
+                                }
+                              }}
+                              shape={"rounded"}
+                              size={"minimal"}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__wih2V
+                                )}
+                              >
+                                {"订单记录"}
+                              </div>
+                            </Button>
+                          </p.Stack>
+                        ) : null}
                         <AntdModal
                           data-plasmic-name={"modal"}
                           data-plasmic-override={overrides.modal}
                           cancelText={"返回"}
                           className={classNames("__wab_instance", sty.modal)}
+                          closeButtonClassName={classNames({
+                            [sty["pcls_3zA669NES"]]: true
+                          })}
                           closeIcon={
                             <Icon11Icon
                               data-plasmic-name={"svg"}
@@ -393,6 +422,9 @@ function PlasmicMyaccount__RenderFunc(props) {
                             plasmic_antd_5_hostless_css.plasmic_tokens,
                             plasmic_plasmic_rich_components_css.plasmic_tokens
                           )}
+                          modalClassName={classNames({
+                            [sty["pcls_vCH3UpV_-"]]: true
+                          })}
                           modalScopeClassName={sty["modal__modal"]}
                           okText={"确认"}
                           onOpenChange={p.generateStateOnChangeProp($state, [
@@ -572,94 +604,112 @@ function PlasmicMyaccount__RenderFunc(props) {
                             sty.freeBox__piGff
                           )}
                         >
-                          <FormItemWrapper
-                            className={classNames(
-                              "__wab_instance",
-                              sty.formItem__l5U
-                            )}
-                            initialValue={"小黄帽"}
-                            label={
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__x7WF
-                                )}
-                              >
-                                {"用户名"}
-                              </div>
-                            }
-                            name={"username"}
-                            rules={[
-                              { ruleType: "required", message: "长度限制20字" }
-                            ]}
-                            validateTrigger={[]}
-                            valuePropName={"username"}
-                          >
-                            {(() => {
-                              const child$Props = {
-                                allowClear: true,
-                                className: classNames(
-                                  "__wab_instance",
-                                  sty.input
-                                ),
-                                disabled: false,
-                                onChange:
-                                  p.generateStateOnChangePropForCodeComponents(
-                                    $state,
-                                    "value",
-                                    ["input", "value"],
-                                    AntdInput_Helpers
-                                  ),
-                                placholder: "名字",
-                                readOnly: false,
-                                size: "middle",
-                                type: "text",
-                                value: p.generateStateValueProp($state, [
-                                  "input",
-                                  "value"
-                                ])
-                              };
-                              p.initializeCodeComponentStates(
-                                $state,
-                                [
-                                  {
-                                    name: "value",
-                                    plasmicStateName: "input.value"
-                                  }
-                                ],
-
-                                [],
-                                AntdInput_Helpers ?? {},
-                                child$Props
-                              );
-                              return (
-                                <AntdInput
-                                  data-plasmic-name={"input"}
-                                  data-plasmic-override={overrides.input}
-                                  {...child$Props}
-                                />
-                              );
-                            })()}
-                          </FormItemWrapper>
-                          <Button
-                            className={classNames(
-                              "__wab_instance",
-                              sty.button__y2Lrs
-                            )}
-                            color={"softGreen"}
-                            size={"compact"}
-                          >
-                            <div
+                          {(
+                            hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? true
+                              : true
+                          ) ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
                               className={classNames(
                                 projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__s9Fw3
+                                sty.freeBox__tyLzK
                               )}
                             >
-                              {"保存修改"}
-                            </div>
-                          </Button>
+                              <FormItemWrapper
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.formItem__l5U
+                                )}
+                                initialValue={"小黄帽"}
+                                label={
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__x7WF
+                                    )}
+                                  >
+                                    {"用户名"}
+                                  </div>
+                                }
+                                name={"username"}
+                                rules={[
+                                  {
+                                    ruleType: "required",
+                                    message: "长度限制20字"
+                                  }
+                                ]}
+                                validateTrigger={[]}
+                                valuePropName={"username"}
+                              >
+                                {(() => {
+                                  const child$Props = {
+                                    allowClear: true,
+                                    className: classNames(
+                                      "__wab_instance",
+                                      sty.input
+                                    ),
+                                    disabled: false,
+                                    onChange:
+                                      p.generateStateOnChangePropForCodeComponents(
+                                        $state,
+                                        "value",
+                                        ["input", "value"],
+                                        AntdInput_Helpers
+                                      ),
+                                    placholder: "名字",
+                                    readOnly: false,
+                                    size: "middle",
+                                    type: "text",
+                                    value: p.generateStateValueProp($state, [
+                                      "input",
+                                      "value"
+                                    ])
+                                  };
+                                  p.initializeCodeComponentStates(
+                                    $state,
+                                    [
+                                      {
+                                        name: "value",
+                                        plasmicStateName: "input.value"
+                                      }
+                                    ],
+
+                                    [],
+                                    AntdInput_Helpers ?? {},
+                                    child$Props
+                                  );
+                                  return (
+                                    <AntdInput
+                                      data-plasmic-name={"input"}
+                                      data-plasmic-override={overrides.input}
+                                      {...child$Props}
+                                    />
+                                  );
+                                })()}
+                              </FormItemWrapper>
+                              <Button
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.button__y2Lrs
+                                )}
+                                color={"softGreen"}
+                                size={"compact"}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__s9Fw3
+                                  )}
+                                >
+                                  {"保存修改"}
+                                </div>
+                              </Button>
+                            </p.Stack>
+                          ) : null}
                           <FormItemWrapper
                             className={classNames(
                               "__wab_instance",

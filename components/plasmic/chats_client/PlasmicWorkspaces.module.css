@@ -110,6 +110,37 @@
   grid-column-end: -1;
   padding: 8px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__xEHmj {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__xEHmj > :global(.__wab_flex-container) {
+    flex-direction: column;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__xEHmj > :global(.__wab_flex-container) > *,
+  .freeBox__xEHmj > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .freeBox__xEHmj > :global(.__wab_flex-container) > picture > img,
+  .freeBox__xEHmj
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__xEHmj {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .freeBox___9MNcR {
   display: flex;
   position: relative;
@@ -129,11 +160,21 @@
   display: flex;
   border-radius: 4px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .menu:global(.__wab_instance) {
+    display: block;
+  }
+}
 .itemGroup:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   position: relative;
   display: block;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .itemGroup:global(.__wab_instance) {
+    overflow: auto;
+  }
 }
 .text__zuoAu {
   position: relative;
@@ -236,6 +277,11 @@
   min-width: 100px;
   padding: 4px 10px 20px;
   margin: 4px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__aWlrv {
+    display: none;
+  }
 }
 .text__li5Gw {
   position: relative;

@@ -633,6 +633,19 @@
           "cssFilePath": "plasmic/chats_client/PlasmicCreatedContent.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "UlyQXoohOO",
+          "name": "Toolbar",
+          "type": "managed",
+          "projectId": "gRaosoDicn4VUCndSzazbA",
+          "renderModuleFilePath": "plasmic/chats_client/PlasmicToolbar.jsx",
+          "importSpec": {
+            "modulePath": "Toolbar.jsx"
+          },
+          "cssFilePath": "plasmic/chats_client/PlasmicToolbar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

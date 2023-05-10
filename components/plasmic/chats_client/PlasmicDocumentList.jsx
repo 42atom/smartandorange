@@ -186,22 +186,6 @@ function PlasmicDocumentList__RenderFunc(props) {
       >
         {"羊绒大衣 保暖 冬季"}
       </div>
-      <div
-        className={classNames(
-          projectcss.all,
-          projectcss.__wab_text,
-          sty.text__bh7KB,
-          {
-            [sty.textcurrentState__bh7KBMo5]: hasVariant(
-              $state,
-              "currentState",
-              "currentState"
-            )
-          }
-        )}
-      >
-        {"嘿！各位亲亲粉丝们，我又来了！今天是美好充实的一天"}
-      </div>
       {true ? (
         <div className={classNames(projectcss.all, sty.freeBox__yp9Pl)}>
           {true ? (
@@ -225,7 +209,7 @@ function PlasmicDocumentList__RenderFunc(props) {
                       sty.text__f2KY
                     )}
                   >
-                    {"周六 2:30 2023/2/12"}
+                    {"4小时前"}
                   </div>
                   <div
                     className={classNames(

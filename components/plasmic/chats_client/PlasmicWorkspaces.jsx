@@ -15,15 +15,18 @@ import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import { useDependencyAwareQuery } from "@plasmicapp/react-web/lib/data-sources";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
 import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: fo-n3xHvdqt/codeComponent
 import { AntdMenuItemGroup } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: 6ySly9jzXsR/codeComponent
 import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: QSmezaW-Gyu/codeComponent
 import SceneInfo from "../../SceneInfo"; // plasmic-import: Zf1zYQ7YK23by/component
+import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -89,6 +92,9 @@ function PlasmicWorkspaces__RenderFunc(props) {
     }),
     $queries,
     setDollarQueries
+  });
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsnl9I0Oib3VOwY()
   });
   return (
     <React.Fragment>
@@ -172,7 +178,11 @@ function PlasmicWorkspaces__RenderFunc(props) {
                                 role={"img"}
                               />
                             }
-                            mode={"vertical"}
+                            mode={
+                              hasVariant(globalVariants, "screen", "mobileOnly")
+                                ? "horizontal"
+                                : "vertical"
+                            }
                             multiple={false}
                           >
                             <AntdMenuItemGroup
@@ -299,40 +309,46 @@ function PlasmicWorkspaces__RenderFunc(props) {
                             </AntdMenuItemGroup>
                           </AntdMenu>
                         ) : null}
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__aWlrv
-                          )}
-                        >
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
                           <div
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__li5Gw
+                              sty.freeBox__aWlrv
                             )}
                           >
-                            {"剩余字数\n19280 字"}
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__li5Gw
+                              )}
+                            >
+                              {"剩余字数\n19280 字"}
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__ieywc
+                              )}
+                            >
+                              {"用户小黄帽"}
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___2Ov4U
+                              )}
+                            >
+                              {"免费用户"}
+                            </div>
                           </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__ieywc
-                            )}
-                          >
-                            {"用户小黄帽"}
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___2Ov4U
-                            )}
-                          >
-                            {"免费用户"}
-                          </div>
-                        </div>
+                        ) : null}
                       </div>
                     ) : null}
                     {true ? (

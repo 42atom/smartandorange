@@ -112,7 +112,9 @@ function PlasmicSceneInfo__RenderFunc(props) {
       )}
     >
       {true ? (
-        <div
+        <p.Stack
+          as={"div"}
+          hasGap={true}
           className={classNames(projectcss.all, sty.freeBox__o9AcT)}
           onClick={async event => {
             const $steps = {};
@@ -198,10 +200,14 @@ function PlasmicSceneInfo__RenderFunc(props) {
               className: classNames(sty.slotTargetDesc)
             })}
           </div>
-        </div>
+        </p.Stack>
       ) : null}
       {true ? (
-        <div className={classNames(projectcss.all, sty.freeBox__mL3Wc)}>
+        <p.Stack
+          as={"div"}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.freeBox__mL3Wc)}
+        >
           <Fav
             data-plasmic-name={"fav"}
             data-plasmic-override={overrides.fav}
@@ -297,10 +303,10 @@ function PlasmicSceneInfo__RenderFunc(props) {
                 sty.text
               )}
             >
-              {"查看样例"}
+              {"样例文字"}
             </div>
           </Button>
-        </div>
+        </p.Stack>
       ) : null}
       {true ? (
         <AntdModal
