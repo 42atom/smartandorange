@@ -26,6 +26,7 @@ import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-im
 import { AntdMenuItemGroup } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: 6ySly9jzXsR/codeComponent
 import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: QSmezaW-Gyu/codeComponent
 import SceneInfo from "../../SceneInfo"; // plasmic-import: Zf1zYQ7YK23by/component
+import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -139,7 +140,9 @@ function PlasmicWorkspaces__RenderFunc(props) {
         >
           {true ? (
             <div className={classNames(projectcss.all, sty.freeBox__g6Bq0)}>
-              {true ? (
+              {(
+                hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+              ) ? (
                 <MenuNav
                   data-plasmic-name={"menuNav"}
                   data-plasmic-override={overrides.menuNav}
@@ -487,6 +490,11 @@ function PlasmicWorkspaces__RenderFunc(props) {
               </section>
             </div>
           ) : null}
+          <Toolbar
+            data-plasmic-name={"toolbar"}
+            data-plasmic-override={overrides.toolbar}
+            className={classNames("__wab_instance", sty.toolbar)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -505,7 +513,8 @@ const PlasmicDescendants = {
     "column",
     "sceneInfo",
     "img",
-    "input"
+    "input",
+    "toolbar"
   ],
 
   menuNav: ["menuNav"],
@@ -528,7 +537,8 @@ const PlasmicDescendants = {
   column: ["column", "sceneInfo", "img", "input"],
   sceneInfo: ["sceneInfo", "img", "input"],
   img: ["img"],
-  input: ["input"]
+  input: ["input"],
+  toolbar: ["toolbar"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -573,6 +583,7 @@ export const PlasmicWorkspaces = Object.assign(
     sceneInfo: makeNodeComponent("sceneInfo"),
     img: makeNodeComponent("img"),
     input: makeNodeComponent("input"),
+    toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicWorkspaces
     internalVariantProps: PlasmicWorkspaces__VariantProps,
     internalArgProps: PlasmicWorkspaces__ArgProps,

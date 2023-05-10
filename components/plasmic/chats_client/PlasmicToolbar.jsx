@@ -13,15 +13,22 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicToolbar.module.css"; // plasmic-import: UlyQXoohOO/css
+import Icon22Icon from "./icons/PlasmicIcon__Icon22"; // plasmic-import: xKIJ8vVG0g/icon
+import Icon23Icon from "./icons/PlasmicIcon__Icon23"; // plasmic-import: w6QM0uw4C3/icon
+import Icon24Icon from "./icons/PlasmicIcon__Icon24"; // plasmic-import: iCilKbZrcl/icon
+import Icon25Icon from "./icons/PlasmicIcon__Icon25"; // plasmic-import: edocmb3Rcj/icon
 
 export const PlasmicToolbar__VariantProps = new Array();
 
@@ -56,6 +63,9 @@ function PlasmicToolbar__RenderFunc(props) {
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsnl9I0Oib3VOwY()
+  });
   return (
     <div
       data-plasmic-name={"root"}
@@ -73,8 +83,21 @@ function PlasmicToolbar__RenderFunc(props) {
         sty.root
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__bHaAs)}>
-        <svg
+      <p.Stack
+        as={"button"}
+        hasGap={true}
+        className={classNames(
+          projectcss.all,
+          projectcss.button,
+          sty.button__bHaAs
+        )}
+      >
+        <p.PlasmicIcon
+          PlasmicIconType={
+            hasVariant(globalVariants, "screen", "mobileOnly")
+              ? Icon22Icon
+              : Icon22Icon
+          }
           className={classNames(projectcss.all, sty.svg__hTYo)}
           role={"img"}
         />
@@ -88,9 +111,17 @@ function PlasmicToolbar__RenderFunc(props) {
         >
           {"工作台"}
         </div>
-      </div>
-      <div className={classNames(projectcss.all, sty.freeBox__diBv3)}>
-        <svg
+      </p.Stack>
+      <p.Stack
+        as={"button"}
+        hasGap={true}
+        className={classNames(
+          projectcss.all,
+          projectcss.button,
+          sty.button__diBv3
+        )}
+      >
+        <Icon23Icon
           className={classNames(projectcss.all, sty.svg__rxq5U)}
           role={"img"}
         />
@@ -102,11 +133,19 @@ function PlasmicToolbar__RenderFunc(props) {
             sty.text__vzn3K
           )}
         >
-          {"工作台"}
+          {"文档"}
         </div>
-      </div>
-      <div className={classNames(projectcss.all, sty.freeBox__dl0GS)}>
-        <svg
+      </p.Stack>
+      <p.Stack
+        as={"button"}
+        hasGap={true}
+        className={classNames(
+          projectcss.all,
+          projectcss.button,
+          sty.button__dl0GS
+        )}
+      >
+        <Icon24Icon
           className={classNames(projectcss.all, sty.svg__bvCjt)}
           role={"img"}
         />
@@ -118,11 +157,19 @@ function PlasmicToolbar__RenderFunc(props) {
             sty.text__maBOr
           )}
         >
-          {"工作台"}
+          {"账户"}
         </div>
-      </div>
-      <div className={classNames(projectcss.all, sty.freeBox__izqsH)}>
-        <svg
+      </p.Stack>
+      <p.Stack
+        as={"button"}
+        hasGap={true}
+        className={classNames(
+          projectcss.all,
+          projectcss.button,
+          sty.button__izqsH
+        )}
+      >
+        <Icon25Icon
           className={classNames(projectcss.all, sty.svg___1Gmt9)}
           role={"img"}
         />
@@ -134,9 +181,9 @@ function PlasmicToolbar__RenderFunc(props) {
             sty.text___7ZcL0
           )}
         >
-          {"工作台"}
+          {"商店"}
         </div>
-      </div>
+      </p.Stack>
     </div>
   );
 }

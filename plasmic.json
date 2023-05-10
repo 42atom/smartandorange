@@ -773,6 +773,31 @@
           "id": "6_oKYAuIan",
           "name": "Icon20Icon",
           "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon20.jsx"
+        },
+        {
+          "id": "7SQTTfTX9I",
+          "name": "Icon21Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon21.jsx"
+        },
+        {
+          "id": "xKIJ8vVG0g",
+          "name": "Icon22Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon22.jsx"
+        },
+        {
+          "id": "w6QM0uw4C3",
+          "name": "Icon23Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon23.jsx"
+        },
+        {
+          "id": "iCilKbZrcl",
+          "name": "Icon24Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon24.jsx"
+        },
+        {
+          "id": "edocmb3Rcj",
+          "name": "Icon25Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon25.jsx"
         }
       ],
       "images": [
@@ -861,6 +886,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.274",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.274/dist/plasmic.schema.json"
+  "cliVersion": "0.1.275",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.275/dist/plasmic.schema.json"
 }
