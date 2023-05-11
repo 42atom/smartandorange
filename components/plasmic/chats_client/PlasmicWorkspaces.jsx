@@ -139,7 +139,11 @@ function PlasmicWorkspaces__RenderFunc(props) {
           )}
         >
           {true ? (
-            <div className={classNames(projectcss.all, sty.freeBox__g6Bq0)}>
+            <div
+              data-plasmic-name={"bkgd"}
+              data-plasmic-override={overrides.bkgd}
+              className={classNames(projectcss.all, sty.bkgd)}
+            >
               {(
                 hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
               ) ? (
@@ -513,6 +517,7 @@ function PlasmicWorkspaces__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "bkgd",
     "navMenu",
     "section",
     "menu",
@@ -524,6 +529,20 @@ const PlasmicDescendants = {
     "img",
     "input",
     "toolbar"
+  ],
+
+  bkgd: [
+    "bkgd",
+    "navMenu",
+    "section",
+    "menu",
+    "itemGroup",
+    "svg",
+    "columns",
+    "column",
+    "sceneInfo",
+    "img",
+    "input"
   ],
 
   navMenu: ["navMenu"],
@@ -582,6 +601,7 @@ export const PlasmicWorkspaces = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    bkgd: makeNodeComponent("bkgd"),
     navMenu: makeNodeComponent("navMenu"),
     section: makeNodeComponent("section"),
     menu: makeNodeComponent("menu"),

@@ -30,7 +30,6 @@ import { FormWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic
 import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: EYHwZh9ILg/codeComponent
 import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponent
 import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponentHelper
-import { AntdSelect } from "@plasmicpkgs/antd5/skinny/registerSelect"; // plasmic-import: OvH7ENd3m7ug/codeComponent
 import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -82,34 +81,28 @@ function PlasmicMyaccount__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "input.value",
+        path: "inputNickanme.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => "小黄帽"
       },
       {
-        path: "input2.value",
+        path: "inputEmail.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "2982shsh@163.com"
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "input3.value",
+        path: "inputMob.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ``
       },
       {
-        path: "input6.value",
+        path: "presentCode.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "2982shsh@163.com"
-      },
-      {
-        path: "select2.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => "345678"
       },
       {
         path: "modal.open",
@@ -209,9 +202,9 @@ function PlasmicMyaccount__RenderFunc(props) {
             </div>
           ) : null}
           <section
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            className={classNames(projectcss.all, sty.section)}
+            data-plasmic-name={"bkgd"}
+            data-plasmic-override={overrides.bkgd}
+            className={classNames(projectcss.all, sty.bkgd)}
           >
             {true ? (
               <p.Stack
@@ -579,7 +572,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                       )}
                       labelCol={{ span: 8, horizontalOnly: true }}
                       layout={"vertical"}
-                      requiredMark={true}
+                      requiredMark={false}
                       wrapperCol={{ span: 16, horizontalOnly: true }}
                     >
                       {true ? (
@@ -632,7 +625,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                                     bordered: true,
                                     className: classNames(
                                       "__wab_instance",
-                                      sty.input
+                                      sty.inputNickanme
                                     ),
                                     disabled: false,
                                     maxLength: 20,
@@ -640,7 +633,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                                       p.generateStateOnChangePropForCodeComponents(
                                         $state,
                                         "value",
-                                        ["input", "value"],
+                                        ["inputNickanme", "value"],
                                         AntdInput_Helpers
                                       ),
                                     placholder: "填写昵称",
@@ -648,7 +641,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                                     size: "middle",
                                     type: "text",
                                     value: p.generateStateValueProp($state, [
-                                      "input",
+                                      "inputNickanme",
                                       "value"
                                     ])
                                   };
@@ -657,7 +650,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                                     [
                                       {
                                         name: "value",
-                                        plasmicStateName: "input.value"
+                                        plasmicStateName: "inputNickanme.value"
                                       }
                                     ],
 
@@ -667,8 +660,10 @@ function PlasmicMyaccount__RenderFunc(props) {
                                   );
                                   return (
                                     <AntdInput
-                                      data-plasmic-name={"input"}
-                                      data-plasmic-override={overrides.input}
+                                      data-plasmic-name={"inputNickanme"}
+                                      data-plasmic-override={
+                                        overrides.inputNickanme
+                                      }
                                       {...child$Props}
                                     />
                                   );
@@ -714,36 +709,15 @@ function PlasmicMyaccount__RenderFunc(props) {
                               </div>
                             }
                           >
-                            <AntdSelect
-                              data-plasmic-name={"select2"}
-                              data-plasmic-override={overrides.select2}
+                            <div
                               className={classNames(
-                                "__wab_instance",
-                                sty.select2
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__jMgHl
                               )}
-                              defaultStylesClassName={classNames(
-                                projectcss.root_reset,
-                                projectcss.plasmic_default_styles,
-                                projectcss.plasmic_mixins,
-                                projectcss.plasmic_tokens,
-                                plasmic_antd_5_hostless_css.plasmic_tokens,
-                                plasmic_plasmic_rich_components_css.plasmic_tokens
-                              )}
-                              onChange={p.generateStateOnChangeProp($state, [
-                                "select2",
-                                "value"
-                              ])}
-                              options={[
-                                { value: "option1", label: "Option 1" },
-                                { value: "option2", label: "Option 2" }
-                              ]}
-                              placeholder={"免费版"}
-                              popupScopeClassName={sty["select2__popup"]}
-                              value={p.generateStateValueProp($state, [
-                                "select2",
-                                "value"
-                              ])}
-                            />
+                            >
+                              {"免费版（正常）"}
+                            </div>
                           </FormItemWrapper>
                         </p.Stack>
                       ) : null}
@@ -780,18 +754,19 @@ function PlasmicMyaccount__RenderFunc(props) {
                               const child$Props = {
                                 className: classNames(
                                   "__wab_instance",
-                                  sty.input2
+                                  sty.inputEmail
                                 ),
                                 onChange:
                                   p.generateStateOnChangePropForCodeComponents(
                                     $state,
                                     "value",
-                                    ["input2", "value"],
+                                    ["inputEmail", "value"],
                                     AntdInput_Helpers
                                   ),
                                 placholder: "绑定邮箱",
+                                type: "email",
                                 value: p.generateStateValueProp($state, [
-                                  "input2",
+                                  "inputEmail",
                                   "value"
                                 ])
                               };
@@ -800,7 +775,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                                 [
                                   {
                                     name: "value",
-                                    plasmicStateName: "input2.value"
+                                    plasmicStateName: "inputEmail.value"
                                   }
                                 ],
 
@@ -810,8 +785,8 @@ function PlasmicMyaccount__RenderFunc(props) {
                               );
                               return (
                                 <AntdInput
-                                  data-plasmic-name={"input2"}
-                                  data-plasmic-override={overrides.input2}
+                                  data-plasmic-name={"inputEmail"}
+                                  data-plasmic-override={overrides.inputEmail}
                                   {...child$Props}
                                 />
                               );
@@ -869,19 +844,19 @@ function PlasmicMyaccount__RenderFunc(props) {
                               const child$Props = {
                                 className: classNames(
                                   "__wab_instance",
-                                  sty.input3
+                                  sty.inputMob
                                 ),
                                 disabled: true,
                                 onChange:
                                   p.generateStateOnChangePropForCodeComponents(
                                     $state,
                                     "value",
-                                    ["input3", "value"],
+                                    ["inputMob", "value"],
                                     AntdInput_Helpers
                                   ),
                                 placholder: ``,
                                 value: p.generateStateValueProp($state, [
-                                  "input3",
+                                  "inputMob",
                                   "value"
                                 ])
                               };
@@ -890,7 +865,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                                 [
                                   {
                                     name: "value",
-                                    plasmicStateName: "input3.value"
+                                    plasmicStateName: "inputMob.value"
                                   }
                                 ],
 
@@ -900,8 +875,8 @@ function PlasmicMyaccount__RenderFunc(props) {
                               );
                               return (
                                 <AntdInput
-                                  data-plasmic-name={"input3"}
-                                  data-plasmic-override={overrides.input3}
+                                  data-plasmic-name={"inputMob"}
+                                  data-plasmic-override={overrides.inputMob}
                                   {...child$Props}
                                 />
                               );
@@ -976,18 +951,19 @@ function PlasmicMyaccount__RenderFunc(props) {
                               const child$Props = {
                                 className: classNames(
                                   "__wab_instance",
-                                  sty.input6
+                                  sty.presentCode
                                 ),
                                 onChange:
                                   p.generateStateOnChangePropForCodeComponents(
                                     $state,
                                     "value",
-                                    ["input6", "value"],
+                                    ["presentCode", "value"],
                                     AntdInput_Helpers
                                   ),
-                                placholder: "绑定邮箱",
+                                placholder: "礼品码",
+                                size: "middle",
                                 value: p.generateStateValueProp($state, [
-                                  "input6",
+                                  "presentCode",
                                   "value"
                                 ])
                               };
@@ -996,7 +972,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                                 [
                                   {
                                     name: "value",
-                                    plasmicStateName: "input6.value"
+                                    plasmicStateName: "presentCode.value"
                                   }
                                 ],
 
@@ -1006,8 +982,8 @@ function PlasmicMyaccount__RenderFunc(props) {
                               );
                               return (
                                 <AntdInput
-                                  data-plasmic-name={"input6"}
-                                  data-plasmic-override={overrides.input6}
+                                  data-plasmic-name={"presentCode"}
+                                  data-plasmic-override={overrides.presentCode}
                                   {...child$Props}
                                 />
                               );
@@ -1093,44 +1069,41 @@ const PlasmicDescendants = {
   root: [
     "root",
     "navMenu",
-    "section",
+    "bkgd",
     "modal",
     "table",
     "svg",
     "form",
-    "input",
-    "select2",
-    "input2",
-    "input3",
-    "input6",
+    "inputNickanme",
+    "inputEmail",
+    "inputMob",
+    "presentCode",
     "img",
     "toolbar"
   ],
 
   navMenu: ["navMenu"],
-  section: [
-    "section",
+  bkgd: [
+    "bkgd",
     "modal",
     "table",
     "svg",
     "form",
-    "input",
-    "select2",
-    "input2",
-    "input3",
-    "input6",
+    "inputNickanme",
+    "inputEmail",
+    "inputMob",
+    "presentCode",
     "img"
   ],
 
   modal: ["modal", "table", "svg"],
   table: ["table"],
   svg: ["svg"],
-  form: ["form", "input", "select2", "input2", "input3", "input6"],
-  input: ["input"],
-  select2: ["select2"],
-  input2: ["input2"],
-  input3: ["input3"],
-  input6: ["input6"],
+  form: ["form", "inputNickanme", "inputEmail", "inputMob", "presentCode"],
+  inputNickanme: ["inputNickanme"],
+  inputEmail: ["inputEmail"],
+  inputMob: ["inputMob"],
+  presentCode: ["presentCode"],
   img: ["img"],
   toolbar: ["toolbar"]
 };
@@ -1168,16 +1141,15 @@ export const PlasmicMyaccount = Object.assign(
   {
     // Helper components rendering sub-elements
     navMenu: makeNodeComponent("navMenu"),
-    section: makeNodeComponent("section"),
+    bkgd: makeNodeComponent("bkgd"),
     modal: makeNodeComponent("modal"),
     table: makeNodeComponent("table"),
     svg: makeNodeComponent("svg"),
     form: makeNodeComponent("form"),
-    input: makeNodeComponent("input"),
-    select2: makeNodeComponent("select2"),
-    input2: makeNodeComponent("input2"),
-    input3: makeNodeComponent("input3"),
-    input6: makeNodeComponent("input6"),
+    inputNickanme: makeNodeComponent("inputNickanme"),
+    inputEmail: makeNodeComponent("inputEmail"),
+    inputMob: makeNodeComponent("inputMob"),
+    presentCode: makeNodeComponent("presentCode"),
     img: makeNodeComponent("img"),
     toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicMyaccount

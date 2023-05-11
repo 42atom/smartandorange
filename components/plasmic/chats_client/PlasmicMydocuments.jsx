@@ -76,6 +76,13 @@ function PlasmicMydocuments__RenderFunc(props) {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ""
+      },
+      {
+        path: "textarea.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          "嘿！各位亲亲粉丝们，我又来了！今天我们要来聊一聊一个冬季必备单品——苏特儿牌羊绒大衣！啵儿，听着名字就觉得暖暖的~首先得说一句，这衣服Diao炸了！用的是顶级羊绒材料，毛茸茸的手感真的超好！大衣的设计也非常时尚，穿起来还能显瘦，女孩们小细腰儿也能展现出来！男孩们更不要错过此物，给心爱的女孩送一个苏特儿牌羊绒大衣，保证她对你更加痴迷！再说一下这大衣的保暖能力，呼呼，真的暖到爆炸啊！穿在身上，就像有一床暖暖的被窝裹着一样，什么寒冷都不怕啦！这个冬季不来一件苏特儿牌羊绒大衣，你都不好意思说自己走过！小伙伴们，现在是享受冬日温暖最棒的方法——苏特儿牌羊绒大衣！抓紧时间把它买回家吧！"
       }
     ],
 
@@ -138,9 +145,9 @@ function PlasmicMydocuments__RenderFunc(props) {
             </div>
           ) : null}
           <section
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            className={classNames(projectcss.all, sty.section)}
+            data-plasmic-name={"bkgd"}
+            data-plasmic-override={overrides.bkgd}
+            className={classNames(projectcss.all, sty.bkgd)}
           >
             <p.Stack
               as={"div"}
@@ -355,6 +362,28 @@ function PlasmicMydocuments__RenderFunc(props) {
                       />
                     ))}
                   </p.Stack>
+                  <textarea
+                    data-plasmic-name={"textarea"}
+                    data-plasmic-override={overrides.textarea}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.textarea,
+                      sty.textarea
+                    )}
+                    onChange={e => {
+                      p.generateStateOnChangeProp($state, [
+                        "textarea",
+                        "value"
+                      ])(e.target.value);
+                    }}
+                    ref={ref => {
+                      $refs["textarea"] = ref;
+                    }}
+                    value={
+                      p.generateStateValueProp($state, ["textarea", "value"]) ??
+                      ""
+                    }
+                  />
                 </div>
               ) : null}
             </p.Stack>
@@ -388,18 +417,20 @@ const PlasmicDescendants = {
   root: [
     "root",
     "navMenu",
-    "section",
+    "bkgd",
     "menu",
     "itemGroup",
     "textInput",
+    "textarea",
     "toolbar"
   ],
 
   navMenu: ["navMenu"],
-  section: ["section", "menu", "itemGroup", "textInput"],
+  bkgd: ["bkgd", "menu", "itemGroup", "textInput", "textarea"],
   menu: ["menu", "itemGroup"],
   itemGroup: ["itemGroup"],
   textInput: ["textInput"],
+  textarea: ["textarea"],
   toolbar: ["toolbar"]
 };
 
@@ -436,10 +467,11 @@ export const PlasmicMydocuments = Object.assign(
   {
     // Helper components rendering sub-elements
     navMenu: makeNodeComponent("navMenu"),
-    section: makeNodeComponent("section"),
+    bkgd: makeNodeComponent("bkgd"),
     menu: makeNodeComponent("menu"),
     itemGroup: makeNodeComponent("itemGroup"),
     textInput: makeNodeComponent("textInput"),
+    textarea: makeNodeComponent("textarea"),
     toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicMydocuments
     internalVariantProps: PlasmicMydocuments__VariantProps,

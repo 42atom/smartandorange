@@ -193,7 +193,11 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
           )}
         >
           {true ? (
-            <div className={classNames(projectcss.all, sty.freeBox__lF7Rf)}>
+            <div
+              data-plasmic-name={"bkgd"}
+              data-plasmic-override={overrides.bkgd}
+              className={classNames(projectcss.all, sty.bkgd)}
+            >
               <NavMenu
                 data-plasmic-name={"navMenu"}
                 data-plasmic-override={overrides.navMenu}
@@ -729,6 +733,18 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "bkgd",
+    "navMenu",
+    "section",
+    "svg",
+    "form",
+    "input",
+    "input2",
+    "select"
+  ],
+
+  bkgd: [
+    "bkgd",
     "navMenu",
     "section",
     "svg",
@@ -779,6 +795,7 @@ export const PlasmicWorkspacesEdit = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    bkgd: makeNodeComponent("bkgd"),
     navMenu: makeNodeComponent("navMenu"),
     section: makeNodeComponent("section"),
     svg: makeNodeComponent("svg"),

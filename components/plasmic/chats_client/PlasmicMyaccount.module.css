@@ -43,13 +43,13 @@
   width: 100%;
   min-width: 0;
 }
-.section {
+.bkgd {
   display: grid;
   position: relative;
   align-content: flex-start;
   justify-items: center;
   width: 100%;
-  background: none;
+  background: var(--token-VjrjoT8JqOgm);
   height: 100%;
   overflow: auto;
   left: auto;
@@ -70,7 +70,7 @@
     var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
   padding: 8px 0;
 }
-:where(.section > *) {
+:where(.bkgd > *) {
   grid-column: 4;
 }
 .freeBox__vypQs {
@@ -620,14 +620,14 @@
   font-size: 14px;
   min-width: 0;
 }
-.input:global(.__wab_instance) {
+.inputNickanme:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   font-size: 14px;
   background: none;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .input:global(.__wab_instance) {
+  .inputNickanme:global(.__wab_instance) {
     width: 100%;
     min-width: 0;
   }
@@ -673,9 +673,11 @@
     min-width: 0;
   }
 }
-.select2:global(.__wab_instance) {
+.text__jMgHl {
+  width: 100%;
+  height: auto;
   max-width: 100%;
-  object-fit: cover;
+  min-width: 0;
 }
 .text__fQa1X {
   position: relative;
@@ -741,7 +743,7 @@
   font-size: 14px;
   min-width: 0;
 }
-.input2:global(.__wab_instance) {
+.inputEmail:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   font-size: 14px;
@@ -822,7 +824,7 @@
   font-size: 14px;
   min-width: 0;
 }
-.input3:global(.__wab_instance) {
+.inputMob:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   font-size: 14px;
@@ -912,7 +914,7 @@
   padding: 0px 8px;
 }
 .formItem__cbFn6:global(.__wab_instance) {
-  width: 60%;
+  width: 50%;
   max-width: 100%;
   object-fit: cover;
 }
@@ -924,10 +926,12 @@
   font-size: 14px;
   min-width: 0;
 }
-.input6:global(.__wab_instance) {
+.presentCode:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   font-size: 14px;
+  width: 100%;
+  min-width: 0;
 }
 .button__qvCyv:global(.__wab_instance) {
   max-width: 100%;
@@ -957,7 +961,7 @@
   justify-items: center;
   width: 100%;
   background: var(--token-0fnHY1gYVsoU);
-  margin-top: 24px;
+  margin-top: 0px;
   margin-right: 24px;
   margin-bottom: 24px;
   margin-left: calc(24px + 24px) !important;

@@ -122,9 +122,9 @@ function PlasmicShop__RenderFunc(props) {
             </div>
           ) : null}
           <section
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            className={classNames(projectcss.all, sty.section)}
+            data-plasmic-name={"bkgd"}
+            data-plasmic-override={overrides.bkgd}
+            className={classNames(projectcss.all, sty.bkgd)}
           >
             <Price
               data-plasmic-name={"price"}
@@ -153,10 +153,10 @@ function PlasmicShop__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "navMenu", "section", "price", "toolbar"],
+  root: ["root", "freeBox", "navMenu", "bkgd", "price", "toolbar"],
   freeBox: ["freeBox", "navMenu"],
   navMenu: ["navMenu"],
-  section: ["section", "price"],
+  bkgd: ["bkgd", "price"],
   price: ["price"],
   toolbar: ["toolbar"]
 };
@@ -195,7 +195,7 @@ export const PlasmicShop = Object.assign(
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
     navMenu: makeNodeComponent("navMenu"),
-    section: makeNodeComponent("section"),
+    bkgd: makeNodeComponent("bkgd"),
     price: makeNodeComponent("price"),
     toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicShop
