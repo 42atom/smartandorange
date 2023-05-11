@@ -1100,6 +1100,11 @@ function PlasmicMyaccount__RenderFunc(props) {
               data-plasmic-name={"toolbar"}
               data-plasmic-override={overrides.toolbar}
               className={classNames("__wab_instance", sty.toolbar)}
+              tab3={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? true
+                  : undefined
+              }
             />
           ) : null}
         </div>

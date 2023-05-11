@@ -32,7 +32,12 @@ import Icon25Icon from "./icons/PlasmicIcon__Icon25"; // plasmic-import: edocmb3
 
 export const PlasmicToolbar__VariantProps = new Array();
 
-export const PlasmicToolbar__ArgProps = new Array();
+export const PlasmicToolbar__ArgProps = new Array(
+  "tab1",
+  "tab2",
+  "tab3",
+  "tab4"
+);
 
 const __wrapUserFunction =
   globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
@@ -84,9 +89,21 @@ function PlasmicToolbar__RenderFunc(props) {
       )}
     >
       <ToolButton
+        active={args.tab1}
         className={classNames("__wab_instance", sty.toolButton__hjzR)}
         selected={
-          hasVariant(globalVariants, "screen", "mobileOnly") ? true : undefined
+          hasVariant(globalVariants, "screen", "mobileOnly")
+            ? true
+            : (() => {
+                try {
+                  return $props.activeBar;
+                } catch (e) {
+                  if (e instanceof TypeError) {
+                    return [];
+                  }
+                  throw e;
+                }
+              })()
         }
         url={async () => {
           const $steps = {};
@@ -137,6 +154,7 @@ function PlasmicToolbar__RenderFunc(props) {
       />
 
       <ToolButton
+        active={args.tab2}
         className={classNames("__wab_instance", sty.toolButton__x0A34)}
         icon={
           <Icon23Icon
@@ -194,6 +212,7 @@ function PlasmicToolbar__RenderFunc(props) {
       />
 
       <ToolButton
+        active={args.tab3}
         className={classNames("__wab_instance", sty.toolButton__jI7Kp)}
         icon={
           <Icon24Icon
@@ -251,6 +270,7 @@ function PlasmicToolbar__RenderFunc(props) {
       />
 
       <ToolButton
+        active={args.tab4}
         className={classNames("__wab_instance", sty.toolButton__m0Ova)}
         icon={
           <Icon25Icon

@@ -27,7 +27,12 @@ import Icon22Icon from "./icons/PlasmicIcon__Icon22"; // plasmic-import: xKIJ8vV
 
 export const PlasmicToolButton__VariantProps = new Array("selected");
 
-export const PlasmicToolButton__ArgProps = new Array("label", "icon", "url");
+export const PlasmicToolButton__ArgProps = new Array(
+  "label",
+  "icon",
+  "url",
+  "active"
+);
 
 const __wrapUserFunction =
   globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
@@ -87,7 +92,8 @@ function PlasmicToolButton__RenderFunc(props) {
                 $steps["goToPage"]
               );
             }
-          }
+          },
+          active: false
         },
         props.args
       ),
@@ -107,7 +113,8 @@ function PlasmicToolButton__RenderFunc(props) {
         path: "selected",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.selected
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          $props.active ?? $props.selected
       }
     ],
 
