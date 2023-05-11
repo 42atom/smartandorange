@@ -989,48 +989,6 @@
 .img > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
-.modal:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-  position: relative;
-  width: 100%;
-  flex-shrink: 0;
-  flex-grow: 0;
-  display: flex;
-  height: auto;
-  flex-direction: column;
-  grid-column-start: 2;
-  grid-column-end: -2;
-}
-.modal__modal .ant-modal .ant-modal-content {
-  width: 100%;
-  top: auto;
-  bottom: auto;
-  left: auto;
-  right: auto;
-  position: relative;
-  align-self: center;
-}
-.freeBox__nZ5Pq {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: auto;
-  min-width: 0;
-  padding: 8px;
-}
-.svg {
-  object-fit: cover;
-  max-width: 100%;
-  align-self: center;
-  width: 1em;
-  height: 1em;
-}
 .toolbar:global(.__wab_instance) {
   max-width: 100%;
   position: relative;

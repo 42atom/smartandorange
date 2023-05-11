@@ -27,7 +27,6 @@ import { FormWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic
 import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: EYHwZh9ILg/codeComponent
 import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponent
 import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponentHelper
-import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal"; // plasmic-import: xx93QbkHH5i/codeComponent
 import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -35,7 +34,6 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicMyaccount.module.css"; // plasmic-import: Y7xcku1e2QoFP/css
-import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: iQ4dltXyU_/icon
 
 export const PlasmicMyaccount__VariantProps = new Array();
 
@@ -101,12 +99,6 @@ function PlasmicMyaccount__RenderFunc(props) {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => "345678"
-      },
-      {
-        path: "modal.open",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
       }
     ],
 
@@ -286,81 +278,6 @@ function PlasmicMyaccount__RenderFunc(props) {
                               color={"sand"}
                               onClick={async event => {
                                 const $steps = {};
-                                $steps["updateModalOpen"] = true
-                                  ? (() => {
-                                      const actionArgs = {
-                                        variable: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "Dn2GRyybX",
-                                            componentUuid: "Y7xcku1e2QoFP",
-                                            argName: "variable"
-                                          },
-                                          () => ({
-                                            objRoot: $state,
-                                            variablePath: ["modal", "open"]
-                                          })
-                                        ),
-                                        operation: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "Dn2GRyybX",
-                                            componentUuid: "Y7xcku1e2QoFP",
-                                            argName: "operation"
-                                          },
-                                          () => 4
-                                        )
-                                      };
-                                      return __wrapUserFunction(
-                                        {
-                                          type: "InteractionLoc",
-                                          actionName: "updateVariable",
-                                          interactionUuid: "Dn2GRyybX",
-                                          componentUuid: "Y7xcku1e2QoFP"
-                                        },
-                                        () =>
-                                          (({
-                                            variable,
-                                            value,
-                                            startIndex,
-                                            deleteCount
-                                          }) => {
-                                            const { objRoot, variablePath } =
-                                              variable;
-                                            const oldValue = p.get(
-                                              objRoot,
-                                              variablePath
-                                            );
-                                            p.set(
-                                              objRoot,
-                                              variablePath,
-                                              !oldValue
-                                            );
-                                            return !oldValue;
-                                          })?.apply(null, [actionArgs]),
-                                        actionArgs
-                                      );
-                                    })()
-                                  : undefined;
-                                if (
-                                  typeof $steps["updateModalOpen"] ===
-                                    "object" &&
-                                  typeof $steps["updateModalOpen"].then ===
-                                    "function"
-                                ) {
-                                  $steps["updateModalOpen"] =
-                                    await __wrapUserPromise(
-                                      {
-                                        type: "InteractionLoc",
-                                        actionName: "updateVariable",
-                                        interactionUuid: "Dn2GRyybX",
-                                        componentUuid: "Y7xcku1e2QoFP"
-                                      },
-                                      $steps["updateModalOpen"]
-                                    );
-                                }
                               }}
                               shape={"rounded"}
                               size={"minimal"}
@@ -868,40 +785,6 @@ function PlasmicMyaccount__RenderFunc(props) {
               </p.Stack>
             ) : null}
           </section>
-          <AntdModal
-            data-plasmic-name={"modal"}
-            data-plasmic-override={overrides.modal}
-            cancelText={"返回"}
-            className={classNames("__wab_instance", sty.modal)}
-            closeButtonClassName={classNames({ [sty["pcls_3zA669NES"]]: true })}
-            closeIcon={
-              <Icon11Icon
-                data-plasmic-name={"svg"}
-                data-plasmic-override={overrides.svg}
-                className={classNames(projectcss.all, sty.svg)}
-                role={"img"}
-              />
-            }
-            defaultStylesClassName={classNames(
-              projectcss.root_reset,
-              projectcss.plasmic_default_styles,
-              projectcss.plasmic_mixins,
-              projectcss.plasmic_tokens,
-              plasmic_antd_5_hostless_css.plasmic_tokens,
-              plasmic_plasmic_rich_components_css.plasmic_tokens
-            )}
-            modalClassName={classNames({ [sty["pcls_vCH3UpV_-"]]: true })}
-            modalScopeClassName={sty["modal__modal"]}
-            okText={"确认"}
-            onOpenChange={p.generateStateOnChangeProp($state, [
-              "modal",
-              "open"
-            ])}
-            open={p.generateStateValueProp($state, ["modal", "open"])}
-            title={"订单记录"}
-          >
-            <div className={classNames(projectcss.all, sty.freeBox__nZ5Pq)} />
-          </AntdModal>
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : false
           ) ? (
@@ -933,8 +816,6 @@ const PlasmicDescendants = {
     "inputMob",
     "presentCode",
     "img",
-    "modal",
-    "svg",
     "toolbar"
   ],
 
@@ -955,8 +836,6 @@ const PlasmicDescendants = {
   inputMob: ["inputMob"],
   presentCode: ["presentCode"],
   img: ["img"],
-  modal: ["modal", "svg"],
-  svg: ["svg"],
   toolbar: ["toolbar"]
 };
 
@@ -1000,8 +879,6 @@ export const PlasmicMyaccount = Object.assign(
     inputMob: makeNodeComponent("inputMob"),
     presentCode: makeNodeComponent("presentCode"),
     img: makeNodeComponent("img"),
-    modal: makeNodeComponent("modal"),
-    svg: makeNodeComponent("svg"),
     toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicMyaccount
     internalVariantProps: PlasmicMyaccount__VariantProps,
