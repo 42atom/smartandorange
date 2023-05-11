@@ -22,10 +22,10 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import NavMenu from "../../NavMenu"; // plasmic-import: 9cR2sxpykRjad/component
-import Button from "../../Button"; // plasmic-import: YO5Bwb9purCqu/component
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal"; // plasmic-import: xx93QbkHH5i/codeComponent
 import { RichTable } from "@plasmicpkgs/plasmic-rich-components"; // plasmic-import: k4RvFQUTZKCU/codeComponent
 import { tableHelpers as RichTable_Helpers } from "@plasmicpkgs/plasmic-rich-components"; // plasmic-import: k4RvFQUTZKCU/codeComponentHelper
+import Button from "../../Button"; // plasmic-import: YO5Bwb9purCqu/component
 import { FormWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: TgJFzUZpvQ/codeComponent
 import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: EYHwZh9ILg/codeComponent
 import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponent
@@ -141,19 +141,6 @@ function PlasmicMyaccount__RenderFunc(props) {
   );
   const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
   useDependencyAwareQuery({
-    name: "users",
-    getDataOp: () => ({
-      sourceId: "9m6seF9rffTwqmNeTPj4dy",
-      opId: "76d162da-e80e-4bfc-82eb-27018f41acaf",
-      userArgs: {},
-      cacheKey: "plasmic.$.3KHjQ9myJndrn.$.",
-      invalidatedKeys: ["plasmic_refresh_all"],
-      roleId: null
-    }),
-    $queries,
-    setDollarQueries
-  });
-  useDependencyAwareQuery({
     name: "orders",
     getDataOp: () => ({
       sourceId: "9m6seF9rffTwqmNeTPj4dy",
@@ -221,13 +208,180 @@ function PlasmicMyaccount__RenderFunc(props) {
               />
             </div>
           ) : null}
-          <section className={classNames(projectcss.all, sty.section___67ClG)}>
+          <section
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section)}
+          >
             {true ? (
               <p.Stack
                 as={"div"}
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__vypQs)}
               >
+                <AntdModal
+                  data-plasmic-name={"modal"}
+                  data-plasmic-override={overrides.modal}
+                  cancelText={"返回"}
+                  className={classNames("__wab_instance", sty.modal)}
+                  closeButtonClassName={classNames({
+                    [sty["pcls_3zA669NES"]]: true
+                  })}
+                  closeIcon={
+                    <Icon11Icon
+                      data-plasmic-name={"svg"}
+                      data-plasmic-override={overrides.svg}
+                      className={classNames(projectcss.all, sty.svg)}
+                      role={"img"}
+                    />
+                  }
+                  defaultStylesClassName={classNames(
+                    projectcss.root_reset,
+                    projectcss.plasmic_default_styles,
+                    projectcss.plasmic_mixins,
+                    projectcss.plasmic_tokens,
+                    plasmic_antd_5_hostless_css.plasmic_tokens,
+                    plasmic_plasmic_rich_components_css.plasmic_tokens
+                  )}
+                  modalClassName={classNames({ [sty["pcls_vCH3UpV_-"]]: true })}
+                  modalScopeClassName={sty["modal__modal"]}
+                  okText={"确认"}
+                  onOpenChange={p.generateStateOnChangeProp($state, [
+                    "modal",
+                    "open"
+                  ])}
+                  open={p.generateStateValueProp($state, ["modal", "open"])}
+                  title={"订单记录"}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__nZ5Pq)}
+                  >
+                    {(() => {
+                      const child$Props = {
+                        className: classNames("__wab_instance", sty.table),
+                        data: (() => {
+                          try {
+                            return $queries.orders;
+                          } catch (e) {
+                            if (e instanceof TypeError) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })(),
+                        defaultSize: "small",
+                        fields: [
+                          {
+                            key: "__airtable_id",
+                            fieldId: "__airtable_id",
+                            isHidden: true
+                          },
+                          {
+                            key: "order_id",
+                            fieldId: "order_id",
+                            title: "订单编号",
+                            dataType: "number"
+                          },
+                          {
+                            key: "order_status",
+                            fieldId: "order_status",
+                            title: "状态",
+                            isHidden: true
+                          },
+                          {
+                            key: "user_id",
+                            fieldId: "user_id",
+                            isHidden: true
+                          },
+                          { key: "amount", fieldId: "amount", title: "金额" },
+                          { key: "product", fieldId: "product", title: "产品" },
+                          {
+                            key: "pay_info",
+                            fieldId: "pay_info",
+                            title: "支付方式"
+                          },
+                          {
+                            key: "order_time",
+                            fieldId: "order_time",
+                            title: "支付时间"
+                          },
+                          {
+                            key: "order_update",
+                            fieldId: "order_update",
+                            isHidden: true
+                          },
+                          {
+                            key: "validity_start",
+                            fieldId: "validity_start",
+                            isHidden: true
+                          },
+                          {
+                            key: "validity_end",
+                            fieldId: "validity_end",
+                            isHidden: true
+                          }
+                        ],
+
+                        hideColumnPicker: true,
+                        hideDensity: true,
+                        hideExports: true,
+                        hideSearch: true,
+                        onRowSelectionChanged: async (...eventArgs) => {
+                          p.generateStateOnChangePropForCodeComponents(
+                            $state,
+                            "selectedRowKey",
+                            ["table", "selectedRowKey"],
+                            RichTable_Helpers
+                          ).apply(null, eventArgs);
+                          p.generateStateOnChangePropForCodeComponents(
+                            $state,
+                            "selectedRow",
+                            ["table", "selectedRow"],
+                            RichTable_Helpers
+                          ).apply(null, eventArgs);
+                          p.generateStateOnChangePropForCodeComponents(
+                            $state,
+                            "selectedRows",
+                            ["table", "selectedRows"],
+                            RichTable_Helpers
+                          ).apply(null, eventArgs);
+                        },
+                        selectedRowKey: p.generateStateValueProp($state, [
+                          "table",
+                          "selectedRowKey"
+                        ])
+                      };
+                      p.initializeCodeComponentStates(
+                        $state,
+                        [
+                          {
+                            name: "selectedRowKey",
+                            plasmicStateName: "table.selectedRowKey"
+                          },
+                          {
+                            name: "selectedRow",
+                            plasmicStateName: "table.selectedRow"
+                          },
+                          {
+                            name: "selectedRows",
+                            plasmicStateName: "table.selectedRows"
+                          }
+                        ],
+
+                        [],
+                        RichTable_Helpers ?? {},
+                        child$Props
+                      );
+                      return (
+                        <RichTable
+                          data-plasmic-name={"table"}
+                          data-plasmic-override={overrides.table}
+                          {...child$Props}
+                        />
+                      );
+                    })()}
+                  </div>
+                </AntdModal>
                 {true ? (
                   <div
                     className={classNames(projectcss.all, sty.freeBox___3M39U)}
@@ -413,188 +567,6 @@ function PlasmicMyaccount__RenderFunc(props) {
                             </Button>
                           </p.Stack>
                         ) : null}
-                        <AntdModal
-                          data-plasmic-name={"modal"}
-                          data-plasmic-override={overrides.modal}
-                          cancelText={"返回"}
-                          className={classNames("__wab_instance", sty.modal)}
-                          closeButtonClassName={classNames({
-                            [sty["pcls_3zA669NES"]]: true
-                          })}
-                          closeIcon={
-                            <Icon11Icon
-                              data-plasmic-name={"svg"}
-                              data-plasmic-override={overrides.svg}
-                              className={classNames(projectcss.all, sty.svg)}
-                              role={"img"}
-                            />
-                          }
-                          defaultStylesClassName={classNames(
-                            projectcss.root_reset,
-                            projectcss.plasmic_default_styles,
-                            projectcss.plasmic_mixins,
-                            projectcss.plasmic_tokens,
-                            plasmic_antd_5_hostless_css.plasmic_tokens,
-                            plasmic_plasmic_rich_components_css.plasmic_tokens
-                          )}
-                          modalClassName={classNames({
-                            [sty["pcls_vCH3UpV_-"]]: true
-                          })}
-                          modalScopeClassName={sty["modal__modal"]}
-                          okText={"确认"}
-                          onOpenChange={p.generateStateOnChangeProp($state, [
-                            "modal",
-                            "open"
-                          ])}
-                          open={p.generateStateValueProp($state, [
-                            "modal",
-                            "open"
-                          ])}
-                          title={"订单记录"}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__nZ5Pq
-                            )}
-                          >
-                            {(() => {
-                              const child$Props = {
-                                className: classNames(
-                                  "__wab_instance",
-                                  sty.table
-                                ),
-                                data: (() => {
-                                  try {
-                                    return $queries.orders;
-                                  } catch (e) {
-                                    if (e instanceof TypeError) {
-                                      return undefined;
-                                    }
-                                    throw e;
-                                  }
-                                })(),
-                                defaultSize: "small",
-                                fields: [
-                                  {
-                                    key: "__airtable_id",
-                                    fieldId: "__airtable_id",
-                                    isHidden: true
-                                  },
-                                  {
-                                    key: "order_id",
-                                    fieldId: "order_id",
-                                    title: "订单编号",
-                                    dataType: "number"
-                                  },
-                                  {
-                                    key: "order_status",
-                                    fieldId: "order_status",
-                                    title: "状态",
-                                    isHidden: true
-                                  },
-                                  {
-                                    key: "user_id",
-                                    fieldId: "user_id",
-                                    isHidden: true
-                                  },
-                                  {
-                                    key: "amount",
-                                    fieldId: "amount",
-                                    title: "金额"
-                                  },
-                                  {
-                                    key: "product",
-                                    fieldId: "product",
-                                    title: "产品"
-                                  },
-                                  {
-                                    key: "pay_info",
-                                    fieldId: "pay_info",
-                                    title: "支付方式"
-                                  },
-                                  {
-                                    key: "order_time",
-                                    fieldId: "order_time",
-                                    title: "支付时间"
-                                  },
-                                  {
-                                    key: "order_update",
-                                    fieldId: "order_update",
-                                    isHidden: true
-                                  },
-                                  {
-                                    key: "validity_start",
-                                    fieldId: "validity_start",
-                                    isHidden: true
-                                  },
-                                  {
-                                    key: "validity_end",
-                                    fieldId: "validity_end",
-                                    isHidden: true
-                                  }
-                                ],
-
-                                hideColumnPicker: true,
-                                hideDensity: true,
-                                hideExports: true,
-                                hideSearch: true,
-                                onRowSelectionChanged: async (...eventArgs) => {
-                                  p.generateStateOnChangePropForCodeComponents(
-                                    $state,
-                                    "selectedRowKey",
-                                    ["table", "selectedRowKey"],
-                                    RichTable_Helpers
-                                  ).apply(null, eventArgs);
-                                  p.generateStateOnChangePropForCodeComponents(
-                                    $state,
-                                    "selectedRow",
-                                    ["table", "selectedRow"],
-                                    RichTable_Helpers
-                                  ).apply(null, eventArgs);
-                                  p.generateStateOnChangePropForCodeComponents(
-                                    $state,
-                                    "selectedRows",
-                                    ["table", "selectedRows"],
-                                    RichTable_Helpers
-                                  ).apply(null, eventArgs);
-                                },
-                                selectedRowKey: p.generateStateValueProp(
-                                  $state,
-                                  ["table", "selectedRowKey"]
-                                )
-                              };
-                              p.initializeCodeComponentStates(
-                                $state,
-                                [
-                                  {
-                                    name: "selectedRowKey",
-                                    plasmicStateName: "table.selectedRowKey"
-                                  },
-                                  {
-                                    name: "selectedRow",
-                                    plasmicStateName: "table.selectedRow"
-                                  },
-                                  {
-                                    name: "selectedRows",
-                                    plasmicStateName: "table.selectedRows"
-                                  }
-                                ],
-
-                                [],
-                                RichTable_Helpers ?? {},
-                                child$Props
-                              );
-                              return (
-                                <RichTable
-                                  data-plasmic-name={"table"}
-                                  data-plasmic-override={overrides.table}
-                                  {...child$Props}
-                                />
-                              );
-                            })()}
-                          </div>
-                        </AntdModal>
                       </p.Stack>
                     ) : null}
                     <FormWrapper
@@ -1064,9 +1036,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                     </FormWrapper>
                   </div>
                 ) : null}
-                <section
-                  className={classNames(projectcss.all, sty.section__xhRnq)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__xhRnq)}>
                   <div
                     className={classNames(
                       projectcss.all,
@@ -1095,7 +1065,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                       aspectRatio: 1
                     }}
                   />
-                </section>
+                </div>
               </p.Stack>
             ) : null}
           </section>
@@ -1123,6 +1093,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "navMenu",
+    "section",
     "modal",
     "table",
     "svg",
@@ -1137,6 +1108,20 @@ const PlasmicDescendants = {
   ],
 
   navMenu: ["navMenu"],
+  section: [
+    "section",
+    "modal",
+    "table",
+    "svg",
+    "form",
+    "input",
+    "select2",
+    "input2",
+    "input3",
+    "input6",
+    "img"
+  ],
+
   modal: ["modal", "table", "svg"],
   table: ["table"],
   svg: ["svg"],
@@ -1183,6 +1168,7 @@ export const PlasmicMyaccount = Object.assign(
   {
     // Helper components rendering sub-elements
     navMenu: makeNodeComponent("navMenu"),
+    section: makeNodeComponent("section"),
     modal: makeNodeComponent("modal"),
     table: makeNodeComponent("table"),
     svg: makeNodeComponent("svg"),
