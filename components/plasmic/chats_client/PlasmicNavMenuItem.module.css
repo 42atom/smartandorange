@@ -74,10 +74,11 @@
   text-overflow: ellipsis;
 }
 .slotTargetLabelselectedItem {
-  color: var(--token-PrbJaIviCD);
+  color: var(--token-_aVAOSuusH4-);
   text-align: center;
   line-height: 1;
   white-space: pre;
+  font-weight: 700;
 }
 .slotTargetLabelselectedItem > :global(.__wab_text),
 .slotTargetLabelselectedItem > :global(.__wab_slot-string-wrapper),

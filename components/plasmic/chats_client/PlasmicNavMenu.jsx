@@ -205,7 +205,16 @@ function PlasmicNavMenu__RenderFunc(props) {
         <div className={classNames(projectcss.all, sty.freeBox__uWzy1)}>
           <NavMenuItem
             className={classNames("__wab_instance", sty.navMenuItem__j5ED0)}
-            selectedItem={$props.menu1}
+            selectedItem={(() => {
+              try {
+                return $props.menu1;
+              } catch (e) {
+                if (e instanceof TypeError) {
+                  return "selectedItem";
+                }
+                throw e;
+              }
+            })()}
             selectedState={args.menu1}
             url={"/workspaces"}
           />
@@ -213,7 +222,16 @@ function PlasmicNavMenu__RenderFunc(props) {
           <NavMenuItem
             className={classNames("__wab_instance", sty.navMenuItem__tZjvr)}
             label={"我的文档"}
-            selectedItem={$props.menu2}
+            selectedItem={(() => {
+              try {
+                return $props.menu2;
+              } catch (e) {
+                if (e instanceof TypeError) {
+                  return "selectedItem";
+                }
+                throw e;
+              }
+            })()}
             selectedState={args.menu1}
             url={"/mydocuments"}
           />
@@ -221,7 +239,16 @@ function PlasmicNavMenu__RenderFunc(props) {
           <NavMenuItem
             className={classNames("__wab_instance", sty.navMenuItem__ld6Dy)}
             label={"我的账户"}
-            selectedItem={$props.menu3}
+            selectedItem={(() => {
+              try {
+                return $props.menu3;
+              } catch (e) {
+                if (e instanceof TypeError) {
+                  return "selectedItem";
+                }
+                throw e;
+              }
+            })()}
             selectedState={args.menu1}
             url={"/myaccount"}
           />
@@ -229,7 +256,16 @@ function PlasmicNavMenu__RenderFunc(props) {
           <NavMenuItem
             className={classNames("__wab_instance", sty.navMenuItem___5Dc5E)}
             label={"系统商店"}
-            selectedItem={$props.menu4}
+            selectedItem={(() => {
+              try {
+                return $props.menu4;
+              } catch (e) {
+                if (e instanceof TypeError) {
+                  return "selectedItem";
+                }
+                throw e;
+              }
+            })()}
             selectedState={args.menu1}
             url={"/shop"}
           />

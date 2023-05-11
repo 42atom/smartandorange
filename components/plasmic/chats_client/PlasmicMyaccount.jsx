@@ -650,12 +650,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                                   </div>
                                 }
                                 name={"username"}
-                                rules={[
-                                  {
-                                    ruleType: "required",
-                                    message: "长度限制20字"
-                                  }
-                                ]}
+                                rules={[]}
                                 validateTrigger={["onSubmit"]}
                                 valuePropName={"username"}
                               >
@@ -1093,6 +1088,12 @@ function PlasmicMyaccount__RenderFunc(props) {
                     displayMinWidth={"0"}
                     displayWidth={"auto"}
                     loading={"lazy"}
+                    src={{
+                      src: "/plasmic/chats_client/images/image2.svg",
+                      fullWidth: 150,
+                      fullHeight: 150,
+                      aspectRatio: 1
+                    }}
                   />
                 </section>
               </p.Stack>
