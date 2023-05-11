@@ -21,7 +21,6 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
 import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: fo-n3xHvdqt/codeComponent
 import { AntdMenuItemGroup } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: 6ySly9jzXsR/codeComponent
 import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: QSmezaW-Gyu/codeComponent
@@ -140,16 +139,6 @@ function PlasmicWorkspaces__RenderFunc(props) {
         >
           {true ? (
             <div className={classNames(projectcss.all, sty.freeBox__g6Bq0)}>
-              {(
-                hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
-              ) ? (
-                <MenuNav
-                  data-plasmic-name={"menuNav"}
-                  data-plasmic-override={overrides.menuNav}
-                  className={classNames("__wab_instance", sty.menuNav)}
-                  selected={["menuItemKey1"]}
-                />
-              ) : null}
               <section
                 data-plasmic-name={"section"}
                 data-plasmic-override={overrides.section}
@@ -508,7 +497,6 @@ function PlasmicWorkspaces__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "menuNav",
     "section",
     "menu",
     "itemGroup",
@@ -521,7 +509,6 @@ const PlasmicDescendants = {
     "toolbar"
   ],
 
-  menuNav: ["menuNav"],
   section: [
     "section",
     "menu",
@@ -577,7 +564,6 @@ export const PlasmicWorkspaces = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    menuNav: makeNodeComponent("menuNav"),
     section: makeNodeComponent("section"),
     menu: makeNodeComponent("menu"),
     itemGroup: makeNodeComponent("itemGroup"),
