@@ -111,19 +111,19 @@ function PlasmicMyaccount__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => false
       },
       {
-        path: "table.selectedRowKey",
+        path: "tableState.selectedRowKey",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "table.selectedRow",
+        path: "tableState.selectedRow",
         type: "private",
         variableType: "object",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "table.selectedRows",
+        path: "tableState.selectedRows",
         type: "private",
         variableType: "array",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
@@ -859,25 +859,31 @@ function PlasmicMyaccount__RenderFunc(props) {
                   >
                     {"进群就送3000额度"}
                   </div>
-                  <p.PlasmicImg
-                    data-plasmic-name={"img"}
-                    data-plasmic-override={overrides.img}
-                    alt={""}
-                    className={classNames(sty.img)}
-                    displayHeight={"auto"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"auto"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/chats_client/images/image2.svg",
-                      fullWidth: 150,
-                      fullHeight: 150,
-                      aspectRatio: 1
-                    }}
-                  />
+                  {true ? (
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__zrzrt)}
+                    >
+                      <p.PlasmicImg
+                        data-plasmic-name={"img"}
+                        data-plasmic-override={overrides.img}
+                        alt={""}
+                        className={classNames(sty.img)}
+                        displayHeight={"201px"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/chats_client/images/image2.svg",
+                          fullWidth: 150,
+                          fullHeight: 150,
+                          aspectRatio: 1
+                        }}
+                      />
+                    </div>
+                  ) : null}
                 </div>
               </p.Stack>
             ) : null}
@@ -917,8 +923,7 @@ function PlasmicMyaccount__RenderFunc(props) {
             <div className={classNames(projectcss.all, sty.freeBox__nZ5Pq)}>
               {(() => {
                 const child$Props = {
-                  canSelectRows: "none",
-                  className: classNames("__wab_instance", sty.table),
+                  className: classNames("__wab_instance", sty.tableState),
                   data: (() => {
                     try {
                       return $queries.orders;
@@ -929,7 +934,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                       throw e;
                     }
                   })(),
-                  defaultSize: "small",
+                  defaultSize: "middle",
                   fields: [
                     {
                       key: "__airtable_id",
@@ -945,40 +950,35 @@ function PlasmicMyaccount__RenderFunc(props) {
                     { key: "order_time", fieldId: "order_time" },
                     { key: "order_update", fieldId: "order_update" },
                     { key: "validity_start", fieldId: "validity_start" },
-                    {
-                      key: "validity_end",
-                      fieldId: "validity_end",
-                      isHidden: true
-                    }
+                    { key: "validity_end", fieldId: "validity_end" }
                   ],
 
-                  hideColumnPicker: true,
-                  hideDensity: true,
+                  hideColumnPicker: false,
+                  hideDensity: false,
                   hideExports: true,
                   hideSearch: true,
                   onRowSelectionChanged: async (...eventArgs) => {
                     p.generateStateOnChangePropForCodeComponents(
                       $state,
                       "selectedRowKey",
-                      ["table", "selectedRowKey"],
+                      ["tableState", "selectedRowKey"],
                       RichTable_Helpers
                     ).apply(null, eventArgs);
                     p.generateStateOnChangePropForCodeComponents(
                       $state,
                       "selectedRow",
-                      ["table", "selectedRow"],
+                      ["tableState", "selectedRow"],
                       RichTable_Helpers
                     ).apply(null, eventArgs);
                     p.generateStateOnChangePropForCodeComponents(
                       $state,
                       "selectedRows",
-                      ["table", "selectedRows"],
+                      ["tableState", "selectedRows"],
                       RichTable_Helpers
                     ).apply(null, eventArgs);
                   },
-                  pagination: false,
                   selectedRowKey: p.generateStateValueProp($state, [
-                    "table",
+                    "tableState",
                     "selectedRowKey"
                   ])
                 };
@@ -987,15 +987,15 @@ function PlasmicMyaccount__RenderFunc(props) {
                   [
                     {
                       name: "selectedRowKey",
-                      plasmicStateName: "table.selectedRowKey"
+                      plasmicStateName: "tableState.selectedRowKey"
                     },
                     {
                       name: "selectedRow",
-                      plasmicStateName: "table.selectedRow"
+                      plasmicStateName: "tableState.selectedRow"
                     },
                     {
                       name: "selectedRows",
-                      plasmicStateName: "table.selectedRows"
+                      plasmicStateName: "tableState.selectedRows"
                     }
                   ],
 
@@ -1005,8 +1005,8 @@ function PlasmicMyaccount__RenderFunc(props) {
                 );
                 return (
                   <RichTable
-                    data-plasmic-name={"table"}
-                    data-plasmic-override={overrides.table}
+                    data-plasmic-name={"tableState"}
+                    data-plasmic-override={overrides.tableState}
                     {...child$Props}
                   />
                 );
@@ -1045,7 +1045,7 @@ const PlasmicDescendants = {
     "presentCode",
     "img",
     "modal",
-    "table",
+    "tableState",
     "svg",
     "toolbar"
   ],
@@ -1067,8 +1067,8 @@ const PlasmicDescendants = {
   inputMob: ["inputMob"],
   presentCode: ["presentCode"],
   img: ["img"],
-  modal: ["modal", "table", "svg"],
-  table: ["table"],
+  modal: ["modal", "tableState", "svg"],
+  tableState: ["tableState"],
   svg: ["svg"],
   toolbar: ["toolbar"]
 };
@@ -1114,7 +1114,7 @@ export const PlasmicMyaccount = Object.assign(
     presentCode: makeNodeComponent("presentCode"),
     img: makeNodeComponent("img"),
     modal: makeNodeComponent("modal"),
-    table: makeNodeComponent("table"),
+    tableState: makeNodeComponent("tableState"),
     svg: makeNodeComponent("svg"),
     toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicMyaccount
