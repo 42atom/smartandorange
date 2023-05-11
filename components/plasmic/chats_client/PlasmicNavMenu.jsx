@@ -207,6 +207,7 @@ function PlasmicNavMenu__RenderFunc(props) {
             className={classNames("__wab_instance", sty.navMenuItem__j5ED0)}
             selectedItem={$props.menu1}
             selectedState={args.menu1}
+            url={"/workspaces"}
           />
 
           <NavMenuItem
@@ -214,6 +215,7 @@ function PlasmicNavMenu__RenderFunc(props) {
             label={"我的文档"}
             selectedItem={$props.menu2}
             selectedState={args.menu1}
+            url={"/mydocuments"}
           />
 
           <NavMenuItem
@@ -221,6 +223,7 @@ function PlasmicNavMenu__RenderFunc(props) {
             label={"我的账户"}
             selectedItem={$props.menu3}
             selectedState={args.menu1}
+            url={"/myaccount"}
           />
 
           <NavMenuItem
@@ -228,6 +231,7 @@ function PlasmicNavMenu__RenderFunc(props) {
             label={"系统商店"}
             selectedItem={$props.menu4}
             selectedState={args.menu1}
+            url={"/shop"}
           />
         </div>
       ) : null}

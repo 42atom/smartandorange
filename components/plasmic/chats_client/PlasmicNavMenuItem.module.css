@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   align-items: stretch;
 }
-.button {
+.tabButton {
   width: auto;
   max-width: 100%;
   background: var(--token-u4-1U5i2CHHR);
@@ -29,7 +29,7 @@
   padding: 8px;
   border: 1px solid var(--token-_w178omqxW);
 }
-.buttonselectedItem {
+.tabButtonselectedItem {
   background: var(--token-8jk2BfOx3);
   width: 100%;
   height: auto;
@@ -40,7 +40,7 @@
   padding: 8px;
   border: 1px solid var(--token-_w178omqxW);
 }
-.root:active .button {
+.root:active .tabButton {
   background: var(--token-h7zTaNgA16Wj);
 }
 .slotTargetLabel {

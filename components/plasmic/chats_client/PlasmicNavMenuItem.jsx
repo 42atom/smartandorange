@@ -26,7 +26,11 @@ import sty from "./PlasmicNavMenuItem.module.css"; // plasmic-import: Vp9kLSLaI-
 
 export const PlasmicNavMenuItem__VariantProps = new Array("selectedItem");
 
-export const PlasmicNavMenuItem__ArgProps = new Array("selectedState", "label");
+export const PlasmicNavMenuItem__ArgProps = new Array(
+  "selectedState",
+  "label",
+  "url"
+);
 
 const __wrapUserFunction =
   globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
@@ -52,7 +56,8 @@ function PlasmicNavMenuItem__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          selectedState: false
+          selectedState: false,
+          url: "/"
         },
         props.args
       ),
@@ -104,15 +109,79 @@ function PlasmicNavMenuItem__RenderFunc(props) {
       )}
     >
       <button
-        data-plasmic-name={"button"}
-        data-plasmic-override={overrides.button}
-        className={classNames(projectcss.all, projectcss.button, sty.button, {
-          [sty.buttonselectedItem]: hasVariant(
-            $state,
-            "selectedItem",
-            "selectedItem"
-          )
-        })}
+        data-plasmic-name={"tabButton"}
+        data-plasmic-override={overrides.tabButton}
+        className={classNames(
+          projectcss.all,
+          projectcss.button,
+          sty.tabButton,
+          {
+            [sty.tabButtonselectedItem]: hasVariant(
+              $state,
+              "selectedItem",
+              "selectedItem"
+            )
+          }
+        )}
+        onClick={async event => {
+          const $steps = {};
+          $steps["goToPage"] = true
+            ? (() => {
+                const actionArgs = {
+                  destination: __wrapUserFunction(
+                    {
+                      type: "InteractionArgLoc",
+                      actionName: "navigation",
+                      interactionUuid: "OC8kqK5vc",
+                      componentUuid: "Vp9kLSLaI-",
+                      argName: "destination"
+                    },
+                    () =>
+                      (() => {
+                        try {
+                          return $props.url;
+                        } catch (e) {
+                          if (e instanceof TypeError) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                  )
+                };
+                return __wrapUserFunction(
+                  {
+                    type: "InteractionLoc",
+                    actionName: "navigation",
+                    interactionUuid: "OC8kqK5vc",
+                    componentUuid: "Vp9kLSLaI-"
+                  },
+                  () =>
+                    (({ destination }) => {
+                      __nextRouter?.push(destination);
+                    })?.apply(null, [actionArgs]),
+                  actionArgs
+                );
+              })()
+            : undefined;
+          if (
+            typeof $steps["goToPage"] === "object" &&
+            typeof $steps["goToPage"].then === "function"
+          ) {
+            $steps["goToPage"] = await __wrapUserPromise(
+              {
+                type: "InteractionLoc",
+                actionName: "navigation",
+                interactionUuid: "OC8kqK5vc",
+                componentUuid: "Vp9kLSLaI-"
+              },
+              $steps["goToPage"]
+            );
+          }
+        }}
+        ref={ref => {
+          $refs["tabButton"] = ref;
+        }}
       >
         {p.renderPlasmicSlot({
           defaultContents: "工作台",
@@ -131,8 +200,8 @@ function PlasmicNavMenuItem__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "button"],
-  button: ["button"]
+  root: ["root", "tabButton"],
+  tabButton: ["tabButton"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -167,7 +236,7 @@ export const PlasmicNavMenuItem = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    button: makeNodeComponent("button"),
+    tabButton: makeNodeComponent("tabButton"),
     // Metadata about props expected for PlasmicNavMenuItem
     internalVariantProps: PlasmicNavMenuItem__VariantProps,
     internalArgProps: PlasmicNavMenuItem__ArgProps
