@@ -37,7 +37,6 @@
       "projectId": "gRaosoDicn4VUCndSzazbA",
       "version": "latest",
       "dependencies": {
-        "28Ba3BDvRe7EiWdfFNnLB6": "2.21.0",
         "ohDidvG9XsCeFumugENU3J": "3.9.0",
         "jkU633o1Cz7HrJdwdxhVHk": "6.0.0"
       },
@@ -56,12 +55,12 @@
         {
           "type": "renderModule",
           "assetId": "AAi9AuCCbMra",
-          "checksum": "53418937eb234500d46b6bb892512fed"
+          "checksum": "53691bac1cfc752e2261a1e642f6f66c"
         },
         {
           "type": "cssRules",
           "assetId": "AAi9AuCCbMra",
-          "checksum": "53418937eb234500d46b6bb892512fed"
+          "checksum": "53691bac1cfc752e2261a1e642f6f66c"
         },
         {
           "type": "renderModule",
@@ -126,22 +125,22 @@
         {
           "type": "renderModule",
           "assetId": "EKtCmtXn8XaxGh",
-          "checksum": "262efcb22211d73ddb409bc45b113342"
+          "checksum": "e39c65081ec93324db72d57024f3c5a4"
         },
         {
           "type": "cssRules",
           "assetId": "EKtCmtXn8XaxGh",
-          "checksum": "262efcb22211d73ddb409bc45b113342"
+          "checksum": "e39c65081ec93324db72d57024f3c5a4"
         },
         {
           "type": "renderModule",
           "assetId": "-yvQMrhCsV3Q78",
-          "checksum": "775f186e6fef0b61b9814ed37e5063e6"
+          "checksum": "73c47b83a88d3cca1918a2ef2c8a7f34"
         },
         {
           "type": "cssRules",
           "assetId": "-yvQMrhCsV3Q78",
-          "checksum": "775f186e6fef0b61b9814ed37e5063e6"
+          "checksum": "73c47b83a88d3cca1918a2ef2c8a7f34"
         },
         {
           "type": "renderModule",
@@ -206,12 +205,12 @@
         {
           "type": "renderModule",
           "assetId": "-2p_ZIYW-pY",
-          "checksum": "8cb06f2b723cc9be7f1761f848b499ab"
+          "checksum": "84311222f7e71ebc93a9a30d076211d2"
         },
         {
           "type": "cssRules",
           "assetId": "-2p_ZIYW-pY",
-          "checksum": "8cb06f2b723cc9be7f1761f848b499ab"
+          "checksum": "84311222f7e71ebc93a9a30d076211d2"
         },
         {
           "type": "icon",

@@ -15,7 +15,6 @@ import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import { useDependencyAwareQuery } from "@plasmicapp/react-web/lib/data-sources";
 import {
-  hasVariant,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -30,8 +29,6 @@ import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/reg
 import Select from "../../Select"; // plasmic-import: DBaIAlzZ3jDAe1/component
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton"; // plasmic-import: bx9Xzvf5_eu/codeComponent
 import CreatedContent from "../../CreatedContent"; // plasmic-import: cHu398Tr36/component
-import TextArea from "antd/lib/input/TextArea"; // plasmic-import: ZJIPHLoTjkN/codeComponent
-import { inputHelpers as TextArea_Helpers } from "antd/lib/input/TextArea"; // plasmic-import: ZJIPHLoTjkN/codeComponentHelper
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -84,12 +81,6 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
   const [$queries, setDollarQueries] = React.useState({});
   const stateSpecs = React.useMemo(
     () => [
-      {
-        path: "antdInputTextArea.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
       {
         path: "form.value",
         type: "private",
@@ -725,54 +716,6 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                       </div>
                     </p.Stack>
                   ) : null}
-                  {(
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? true
-                      : true
-                  )
-                    ? (() => {
-                        const child$Props = {
-                          allowClear: false,
-                          className: classNames(
-                            "__wab_instance",
-                            sty.antdInputTextArea
-                          ),
-                          onChange:
-                            p.generateStateOnChangePropForCodeComponents(
-                              $state,
-                              "value",
-                              ["antdInputTextArea", "value"],
-                              TextArea_Helpers
-                            ),
-                          placeholder:
-                            "嘿！各位亲亲粉丝们，我又来了！今天我们要来聊一聊一个冬季必备单品——苏特儿牌羊绒大衣！啵儿，听着名字就觉得暖暖的~首先得说一句，这衣服Diao炸了！用的是顶级羊绒材料，毛茸茸的手感真的超好！大衣的设计也非常时尚，穿起来还能显瘦，女孩们小细腰儿也能展现出来！男孩们更不要错过此物，给心爱的女孩送一个苏特儿牌羊绒大衣，保证她对你更加痴迷！再说一下这大衣的保暖能力，呼呼，真的暖到爆炸啊！穿在身上，就像有一床暖暖的被窝裹着一样，什么寒冷都不怕啦！这个冬季不来一件苏特儿牌羊绒大衣，你都不好意思说自己走过！小伙伴们，现在是享受冬日温暖最棒的方法——苏特儿牌羊绒大衣！抓紧时间把它买回家吧！",
-                          value: p.generateStateValueProp($state, [
-                            "antdInputTextArea",
-                            "value"
-                          ])
-                        };
-                        p.initializeCodeComponentStates(
-                          $state,
-                          [
-                            {
-                              name: "value",
-                              plasmicStateName: "antdInputTextArea.value"
-                            }
-                          ],
-
-                          [],
-                          TextArea_Helpers ?? {},
-                          child$Props
-                        );
-                        return (
-                          <TextArea
-                            data-plasmic-name={"antdInputTextArea"}
-                            data-plasmic-override={overrides.antdInputTextArea}
-                            {...child$Props}
-                          />
-                        );
-                      })()
-                    : null}
                 </p.Stack>
               </section>
             </div>
@@ -792,27 +735,16 @@ const PlasmicDescendants = {
     "form",
     "input",
     "input2",
-    "select",
-    "antdInputTextArea"
+    "select"
   ],
 
   navMenu: ["navMenu"],
-  section: [
-    "section",
-    "svg",
-    "form",
-    "input",
-    "input2",
-    "select",
-    "antdInputTextArea"
-  ],
-
+  section: ["section", "svg", "form", "input", "input2", "select"],
   svg: ["svg"],
   form: ["form", "input", "input2", "select"],
   input: ["input"],
   input2: ["input2"],
-  select: ["select"],
-  antdInputTextArea: ["antdInputTextArea"]
+  select: ["select"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -854,7 +786,6 @@ export const PlasmicWorkspacesEdit = Object.assign(
     input: makeNodeComponent("input"),
     input2: makeNodeComponent("input2"),
     select: makeNodeComponent("select"),
-    antdInputTextArea: makeNodeComponent("antdInputTextArea"),
     // Metadata about props expected for PlasmicWorkspacesEdit
     internalVariantProps: PlasmicWorkspacesEdit__VariantProps,
     internalArgProps: PlasmicWorkspacesEdit__ArgProps,

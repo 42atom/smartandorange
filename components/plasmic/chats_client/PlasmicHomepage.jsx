@@ -91,42 +91,6 @@ function PlasmicHomepage__RenderFunc(props) {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ``
-      },
-      {
-        path: "textbox.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
-      },
-      {
-        path: "textbox2.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
-      },
-      {
-        path: "textbox3.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
-      },
-      {
-        path: "textbox.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
-      },
-      {
-        path: "textbox2.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
-      },
-      {
-        path: "textbox3.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
       }
     ],
 
@@ -761,10 +725,12 @@ function PlasmicHomepage__RenderFunc(props) {
                       }}
                       size={1}
                       type={"text"}
-                      value={p.generateStateValueProp($state, [
-                        "textbox",
-                        "value"
-                      ])}
+                      value={
+                        p.generateStateValueProp($state, [
+                          "textbox",
+                          "value"
+                        ]) ?? ""
+                      }
                     />
 
                     <input
@@ -787,10 +753,12 @@ function PlasmicHomepage__RenderFunc(props) {
                       }}
                       size={1}
                       type={"password"}
-                      value={p.generateStateValueProp($state, [
-                        "textbox2",
-                        "value"
-                      ])}
+                      value={
+                        p.generateStateValueProp($state, [
+                          "textbox2",
+                          "value"
+                        ]) ?? ""
+                      }
                     />
 
                     <input
@@ -813,10 +781,12 @@ function PlasmicHomepage__RenderFunc(props) {
                       }}
                       size={1}
                       type={"text"}
-                      value={p.generateStateValueProp($state, [
-                        "textbox3",
-                        "value"
-                      ])}
+                      value={
+                        p.generateStateValueProp($state, [
+                          "textbox3",
+                          "value"
+                        ]) ?? ""
+                      }
                     />
                   </p.Stack>
                   <div

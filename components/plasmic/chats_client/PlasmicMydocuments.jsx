@@ -27,8 +27,6 @@ import { AntdMenuItemGroup } from "@plasmicpkgs/antd5/skinny/registerMenu"; // p
 import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: QSmezaW-Gyu/codeComponent
 import TextInput from "../../TextInput"; // plasmic-import: -yvQMrhCsV3Q78/component
 import DocumentList from "../../DocumentList"; // plasmic-import: DuwZXCRDJh/component
-import TextArea from "antd/lib/input/TextArea"; // plasmic-import: ZJIPHLoTjkN/codeComponent
-import { inputHelpers as TextArea_Helpers } from "antd/lib/input/TextArea"; // plasmic-import: ZJIPHLoTjkN/codeComponentHelper
 import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -74,13 +72,6 @@ function PlasmicMydocuments__RenderFunc(props) {
   const [$queries, setDollarQueries] = React.useState({});
   const stateSpecs = React.useMemo(
     () => [
-      {
-        path: "antdInputTextArea.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
-          "嘿！各位亲亲粉丝们，我又来了！今天我们要来聊一聊一个冬季必备单品——苏特儿牌羊绒大衣！啵儿，听着名字就觉得暖暖的~首先得说一句，这衣服Diao炸了！用的是顶级羊绒材料，毛茸茸的手感真的超好！大衣的设计也非常时尚，穿起来还能显瘦，女孩们小细腰儿也能展现出来！男孩们更不要错过此物，给心爱的女孩送一个苏特儿牌羊绒大衣，保证她对你更加痴迷！再说一下这大衣的保暖能力，呼呼，真的暖到爆炸啊！穿在身上，就像有一床暖暖的被窝裹着一样，什么寒冷都不怕啦！这个冬季不来一件苏特儿牌羊绒大衣，你都不好意思说自己走过！小伙伴们，现在是享受冬日温暖最棒的方法——苏特儿牌羊绒大衣！抓紧时间把它买回家吧！"
-      },
       {
         path: "textInput.value",
         type: "private",
@@ -341,10 +332,12 @@ function PlasmicMydocuments__RenderFunc(props) {
                           />
                         ) : null
                       }
-                      value={p.generateStateValueProp($state, [
-                        "textInput",
-                        "value"
-                      ])}
+                      value={
+                        p.generateStateValueProp($state, [
+                          "textInput",
+                          "value"
+                        ]) ?? ""
+                      }
                     />
 
                     <DocumentList
@@ -376,47 +369,6 @@ function PlasmicMydocuments__RenderFunc(props) {
                       />
                     ))}
                   </p.Stack>
-                  {(() => {
-                    const child$Props = {
-                      allowClear: false,
-                      className: classNames(
-                        "__wab_instance",
-                        sty.antdInputTextArea
-                      ),
-                      onChange: p.generateStateOnChangePropForCodeComponents(
-                        $state,
-                        "value",
-                        ["antdInputTextArea", "value"],
-                        TextArea_Helpers
-                      ),
-                      placeholder:
-                        "嘿！各位亲亲粉丝们，我又来了！今天我们要来聊一聊一个冬季必备单品——苏特儿牌羊绒大衣！啵儿，听着名字就觉得暖暖的~首先得说一句，这衣服Diao炸了！用的是顶级羊绒材料，毛茸茸的手感真的超好！大衣的设计也非常时尚，穿起来还能显瘦，女孩们小细腰儿也能展现出来！男孩们更不要错过此物，给心爱的女孩送一个苏特儿牌羊绒大衣，保证她对你更加痴迷！再说一下这大衣的保暖能力，呼呼，真的暖到爆炸啊！穿在身上，就像有一床暖暖的被窝裹着一样，什么寒冷都不怕啦！这个冬季不来一件苏特儿牌羊绒大衣，你都不好意思说自己走过！小伙伴们，现在是享受冬日温暖最棒的方法——苏特儿牌羊绒大衣！抓紧时间把它买回家吧！",
-                      value: p.generateStateValueProp($state, [
-                        "antdInputTextArea",
-                        "value"
-                      ])
-                    };
-                    p.initializeCodeComponentStates(
-                      $state,
-                      [
-                        {
-                          name: "value",
-                          plasmicStateName: "antdInputTextArea.value"
-                        }
-                      ],
-
-                      [],
-                      TextArea_Helpers ?? {},
-                      child$Props
-                    );
-                    return (
-                      <TextArea
-                        data-plasmic-name={"antdInputTextArea"}
-                        data-plasmic-override={overrides.antdInputTextArea}
-                        {...child$Props}
-                      />
-                    );
-                  })()}
                 </div>
               ) : null}
             </p.Stack>
@@ -454,16 +406,14 @@ const PlasmicDescendants = {
     "menu",
     "itemGroup",
     "textInput",
-    "antdInputTextArea",
     "toolbar"
   ],
 
   navMenu: ["navMenu"],
-  section: ["section", "menu", "itemGroup", "textInput", "antdInputTextArea"],
+  section: ["section", "menu", "itemGroup", "textInput"],
   menu: ["menu", "itemGroup"],
   itemGroup: ["itemGroup"],
   textInput: ["textInput"],
-  antdInputTextArea: ["antdInputTextArea"],
   toolbar: ["toolbar"]
 };
 
@@ -504,7 +454,6 @@ export const PlasmicMydocuments = Object.assign(
     menu: makeNodeComponent("menu"),
     itemGroup: makeNodeComponent("itemGroup"),
     textInput: makeNodeComponent("textInput"),
-    antdInputTextArea: makeNodeComponent("antdInputTextArea"),
     toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicMydocuments
     internalVariantProps: PlasmicMydocuments__VariantProps,
