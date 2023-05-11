@@ -59,7 +59,17 @@ function PlasmicToolbar__RenderFunc(props) {
   const { variants, overrides, forNode } = props;
   const __nextRouter = useNextRouter();
   const $ctx = ph.useDataEnv?.() || {};
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {
+          tab1: false,
+          tab4: false
+        },
+        props.args
+      ),
+    [props.args]
+  );
   const $props = {
     ...args,
     ...variants
@@ -92,18 +102,7 @@ function PlasmicToolbar__RenderFunc(props) {
         active={args.tab1}
         className={classNames("__wab_instance", sty.toolButton__hjzR)}
         selected={
-          hasVariant(globalVariants, "screen", "mobileOnly")
-            ? true
-            : (() => {
-                try {
-                  return $props.activeBar;
-                } catch (e) {
-                  if (e instanceof TypeError) {
-                    return [];
-                  }
-                  throw e;
-                }
-              })()
+          hasVariant(globalVariants, "screen", "mobileOnly") ? true : undefined
         }
         url={async () => {
           const $steps = {};

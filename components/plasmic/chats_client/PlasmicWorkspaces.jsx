@@ -148,8 +148,6 @@ function PlasmicWorkspaces__RenderFunc(props) {
                   data-plasmic-override={overrides.navMenu}
                   className={classNames("__wab_instance", sty.navMenu)}
                   menu1={true}
-                  menu2={false}
-                  menu3={false}
                 />
               ) : null}
               <section
