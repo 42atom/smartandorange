@@ -240,34 +240,47 @@ function PlasmicMyaccount__RenderFunc(props) {
                           sty.freeBox___5A6Z2
                         )}
                       >
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button___24Viw
-                          )}
-                          color={"softGreen"}
-                          shape={"rounded"}
-                          size={"minimal"}
-                        >
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
                           <div
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__aiy2V
+                              sty.freeBox___9MlSg
                             )}
                           >
-                            {"免费用户"}
+                            <Button
+                              className={classNames(
+                                "__wab_instance",
+                                sty.button___24Viw
+                              )}
+                              color={"softGreen"}
+                              shape={"rounded"}
+                              size={"minimal"}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__aiy2V
+                                )}
+                              >
+                                {"免费用户"}
+                              </div>
+                            </Button>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__c3LBd
+                              )}
+                            >
+                              {"剩余额度   37000字"}
+                            </div>
                           </div>
-                        </Button>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__c3LBd
-                          )}
-                        >
-                          {"剩余额度   37000字"}
-                        </div>
+                        ) : null}
                         {(
                           hasVariant(globalVariants, "screen", "mobileOnly")
                             ? true
