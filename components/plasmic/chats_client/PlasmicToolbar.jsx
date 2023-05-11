@@ -64,6 +64,8 @@ function PlasmicToolbar__RenderFunc(props) {
       Object.assign(
         {
           tab1: false,
+          tab2: false,
+          tab3: false,
           tab4: false
         },
         props.args
