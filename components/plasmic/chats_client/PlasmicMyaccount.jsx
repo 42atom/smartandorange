@@ -28,8 +28,6 @@ import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // pla
 import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponent
 import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponentHelper
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal"; // plasmic-import: xx93QbkHH5i/codeComponent
-import { RichTable } from "@plasmicpkgs/plasmic-rich-components"; // plasmic-import: k4RvFQUTZKCU/codeComponent
-import { tableHelpers as RichTable_Helpers } from "@plasmicpkgs/plasmic-rich-components"; // plasmic-import: k4RvFQUTZKCU/codeComponentHelper
 import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -108,25 +106,7 @@ function PlasmicMyaccount__RenderFunc(props) {
         path: "modal.open",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
-      },
-      {
-        path: "tableState.selectedRowKey",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "tableState.selectedRow",
-        type: "private",
-        variableType: "object",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "tableState.selectedRows",
-        type: "private",
-        variableType: "array",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       }
     ],
 
@@ -920,98 +900,7 @@ function PlasmicMyaccount__RenderFunc(props) {
             open={p.generateStateValueProp($state, ["modal", "open"])}
             title={"订单记录"}
           >
-            <div className={classNames(projectcss.all, sty.freeBox__nZ5Pq)}>
-              {(() => {
-                const child$Props = {
-                  className: classNames("__wab_instance", sty.tableState),
-                  data: (() => {
-                    try {
-                      return $queries.orders;
-                    } catch (e) {
-                      if (e instanceof TypeError) {
-                        return undefined;
-                      }
-                      throw e;
-                    }
-                  })(),
-                  defaultSize: "middle",
-                  fields: [
-                    {
-                      key: "__airtable_id",
-                      fieldId: "__airtable_id",
-                      isHidden: true
-                    },
-                    { key: "order_id", fieldId: "order_id" },
-                    { key: "order_status", fieldId: "order_status" },
-                    { key: "user_id", fieldId: "user_id" },
-                    { key: "amount", fieldId: "amount" },
-                    { key: "product", fieldId: "product" },
-                    { key: "pay_info", fieldId: "pay_info" },
-                    { key: "order_time", fieldId: "order_time" },
-                    { key: "order_update", fieldId: "order_update" },
-                    { key: "validity_start", fieldId: "validity_start" },
-                    { key: "validity_end", fieldId: "validity_end" }
-                  ],
-
-                  hideColumnPicker: false,
-                  hideDensity: false,
-                  hideExports: true,
-                  hideSearch: true,
-                  onRowSelectionChanged: async (...eventArgs) => {
-                    p.generateStateOnChangePropForCodeComponents(
-                      $state,
-                      "selectedRowKey",
-                      ["tableState", "selectedRowKey"],
-                      RichTable_Helpers
-                    ).apply(null, eventArgs);
-                    p.generateStateOnChangePropForCodeComponents(
-                      $state,
-                      "selectedRow",
-                      ["tableState", "selectedRow"],
-                      RichTable_Helpers
-                    ).apply(null, eventArgs);
-                    p.generateStateOnChangePropForCodeComponents(
-                      $state,
-                      "selectedRows",
-                      ["tableState", "selectedRows"],
-                      RichTable_Helpers
-                    ).apply(null, eventArgs);
-                  },
-                  selectedRowKey: p.generateStateValueProp($state, [
-                    "tableState",
-                    "selectedRowKey"
-                  ])
-                };
-                p.initializeCodeComponentStates(
-                  $state,
-                  [
-                    {
-                      name: "selectedRowKey",
-                      plasmicStateName: "tableState.selectedRowKey"
-                    },
-                    {
-                      name: "selectedRow",
-                      plasmicStateName: "tableState.selectedRow"
-                    },
-                    {
-                      name: "selectedRows",
-                      plasmicStateName: "tableState.selectedRows"
-                    }
-                  ],
-
-                  [],
-                  RichTable_Helpers ?? {},
-                  child$Props
-                );
-                return (
-                  <RichTable
-                    data-plasmic-name={"tableState"}
-                    data-plasmic-override={overrides.tableState}
-                    {...child$Props}
-                  />
-                );
-              })()}
-            </div>
+            <div className={classNames(projectcss.all, sty.freeBox__nZ5Pq)} />
           </AntdModal>
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : false
@@ -1045,7 +934,6 @@ const PlasmicDescendants = {
     "presentCode",
     "img",
     "modal",
-    "tableState",
     "svg",
     "toolbar"
   ],
@@ -1067,8 +955,7 @@ const PlasmicDescendants = {
   inputMob: ["inputMob"],
   presentCode: ["presentCode"],
   img: ["img"],
-  modal: ["modal", "tableState", "svg"],
-  tableState: ["tableState"],
+  modal: ["modal", "svg"],
   svg: ["svg"],
   toolbar: ["toolbar"]
 };
@@ -1114,7 +1001,6 @@ export const PlasmicMyaccount = Object.assign(
     presentCode: makeNodeComponent("presentCode"),
     img: makeNodeComponent("img"),
     modal: makeNodeComponent("modal"),
-    tableState: makeNodeComponent("tableState"),
     svg: makeNodeComponent("svg"),
     toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicMyaccount
