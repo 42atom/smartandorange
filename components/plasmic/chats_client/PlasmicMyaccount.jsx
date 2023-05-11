@@ -936,37 +936,15 @@ function PlasmicMyaccount__RenderFunc(props) {
                       fieldId: "__airtable_id",
                       isHidden: true
                     },
-                    {
-                      key: "order_id",
-                      fieldId: "order_id",
-                      title: "订单编号",
-                      dataType: "number"
-                    },
-                    {
-                      key: "order_status",
-                      fieldId: "order_status",
-                      title: "状态",
-                      isHidden: true
-                    },
-                    { key: "user_id", fieldId: "user_id", isHidden: true },
-                    { key: "amount", fieldId: "amount", title: "金额" },
-                    { key: "product", fieldId: "product", title: "产品" },
-                    { key: "pay_info", fieldId: "pay_info", title: "支付方式" },
-                    {
-                      key: "order_time",
-                      fieldId: "order_time",
-                      title: "支付时间"
-                    },
-                    {
-                      key: "order_update",
-                      fieldId: "order_update",
-                      isHidden: true
-                    },
-                    {
-                      key: "validity_start",
-                      fieldId: "validity_start",
-                      isHidden: true
-                    },
+                    { key: "order_id", fieldId: "order_id" },
+                    { key: "order_status", fieldId: "order_status" },
+                    { key: "user_id", fieldId: "user_id" },
+                    { key: "amount", fieldId: "amount" },
+                    { key: "product", fieldId: "product" },
+                    { key: "pay_info", fieldId: "pay_info" },
+                    { key: "order_time", fieldId: "order_time" },
+                    { key: "order_update", fieldId: "order_update" },
+                    { key: "validity_start", fieldId: "validity_start" },
                     {
                       key: "validity_end",
                       fieldId: "validity_end",
@@ -998,6 +976,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                       RichTable_Helpers
                     ).apply(null, eventArgs);
                   },
+                  pagination: false,
                   selectedRowKey: p.generateStateValueProp($state, [
                     "table",
                     "selectedRowKey"

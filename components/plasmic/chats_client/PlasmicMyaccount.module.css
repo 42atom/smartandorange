@@ -981,12 +981,14 @@
   max-width: 100%;
   object-fit: cover;
   position: relative;
-  width: 645px;
-  flex-shrink: 1;
-  flex-grow: 1;
+  width: 100%;
+  flex-shrink: 0;
+  flex-grow: 0;
   display: flex;
   height: auto;
   flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: -2;
 }
 .modal__modal .ant-modal .ant-modal-content {
   width: 100%;
@@ -1010,11 +1012,12 @@
   padding: 8px;
 }
 .table:global(.__wab_instance) {
-  width: 546px;
+  width: 100%;
   max-height: 100%;
   max-width: 100%;
   object-fit: cover;
   position: relative;
+  min-width: 0;
   padding: 16px;
 }
 .svg {
