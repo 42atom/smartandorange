@@ -656,17 +656,19 @@ function PlasmicMyaccount__RenderFunc(props) {
                                     message: "长度限制20字"
                                   }
                                 ]}
-                                validateTrigger={[]}
+                                validateTrigger={["onSubmit"]}
                                 valuePropName={"username"}
                               >
                                 {(() => {
                                   const child$Props = {
-                                    allowClear: true,
+                                    allowClear: false,
+                                    bordered: true,
                                     className: classNames(
                                       "__wab_instance",
                                       sty.input
                                     ),
                                     disabled: false,
+                                    maxLength: 20,
                                     onChange:
                                       p.generateStateOnChangePropForCodeComponents(
                                         $state,
@@ -674,7 +676,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                                         ["input", "value"],
                                         AntdInput_Helpers
                                       ),
-                                    placholder: "名字",
+                                    placholder: "填写昵称",
                                     readOnly: false,
                                     size: "middle",
                                     type: "text",
@@ -711,6 +713,9 @@ function PlasmicMyaccount__RenderFunc(props) {
                                   sty.button__y2Lrs
                                 )}
                                 color={"softGreen"}
+                                onClick={async event => {
+                                  const $steps = {};
+                                }}
                                 size={"compact"}
                               >
                                 <div
