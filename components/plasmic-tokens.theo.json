@@ -63,7 +63,7 @@
     {
       "name": "System: Bg Layout",
       "type": "color",
-      "value": "var(--antd-colorBgLayout)",
+      "value": "#FFFBFB",
       "category": "color",
       "meta": {
         "projectId": "gRaosoDicn4VUCndSzazbA",
@@ -2173,7 +2173,7 @@
     {
       "name": "bkgd1",
       "type": "color",
-      "value": "#F5F5F5",
+      "value": "#FFFBFB",
       "category": "color",
       "meta": {
         "projectId": "gRaosoDicn4VUCndSzazbA",

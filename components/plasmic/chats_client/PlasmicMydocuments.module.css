@@ -37,7 +37,7 @@
   grid-column-end: -1;
   padding: 0px;
 }
-.menuNav:global(.__wab_instance) {
+.navMenu:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;

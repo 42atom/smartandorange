@@ -447,19 +447,6 @@
           "componentType": "page"
         },
         {
-          "id": "9cR2sxpykRjad",
-          "name": "MenuNav",
-          "type": "managed",
-          "projectId": "gRaosoDicn4VUCndSzazbA",
-          "renderModuleFilePath": "plasmic/chats_client/PlasmicMenuNav.jsx",
-          "importSpec": {
-            "modulePath": "MenuNav.jsx"
-          },
-          "cssFilePath": "plasmic/chats_client/PlasmicMenuNav.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "Ke9LrDUSMB1rJP",
           "name": "Shop",
           "type": "managed",
@@ -657,6 +644,32 @@
             "modulePath": "ToolButton.jsx"
           },
           "cssFilePath": "plasmic/chats_client/PlasmicToolButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "9cR2sxpykRjad",
+          "name": "NavMenu",
+          "type": "managed",
+          "projectId": "gRaosoDicn4VUCndSzazbA",
+          "renderModuleFilePath": "plasmic/chats_client/PlasmicNavMenu.jsx",
+          "importSpec": {
+            "modulePath": "NavMenu.jsx"
+          },
+          "cssFilePath": "plasmic/chats_client/PlasmicNavMenu.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Vp9kLSLaI-",
+          "name": "NavMenuItem",
+          "type": "managed",
+          "projectId": "gRaosoDicn4VUCndSzazbA",
+          "renderModuleFilePath": "plasmic/chats_client/PlasmicNavMenuItem.jsx",
+          "importSpec": {
+            "modulePath": "NavMenuItem.jsx"
+          },
+          "cssFilePath": "plasmic/chats_client/PlasmicNavMenuItem.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }

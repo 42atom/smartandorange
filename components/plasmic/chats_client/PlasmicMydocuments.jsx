@@ -21,7 +21,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
+import NavMenu from "../../NavMenu"; // plasmic-import: 9cR2sxpykRjad/component
 import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: fo-n3xHvdqt/codeComponent
 import { AntdMenuItemGroup } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: 6ySly9jzXsR/codeComponent
 import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: QSmezaW-Gyu/codeComponent
@@ -151,11 +151,12 @@ function PlasmicMydocuments__RenderFunc(props) {
         >
           {true ? (
             <div className={classNames(projectcss.all, sty.freeBox___0HU07)}>
-              <MenuNav
-                data-plasmic-name={"menuNav"}
-                data-plasmic-override={overrides.menuNav}
-                className={classNames("__wab_instance", sty.menuNav)}
-                selected={["menuItemKey2"]}
+              <NavMenu
+                data-plasmic-name={"navMenu"}
+                data-plasmic-override={overrides.navMenu}
+                className={classNames("__wab_instance", sty.navMenu)}
+                menu2={true}
+                menu3={false}
               />
             </div>
           ) : null}
@@ -438,7 +439,7 @@ function PlasmicMydocuments__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "menuNav",
+    "navMenu",
     "section",
     "menu",
     "itemGroup",
@@ -447,7 +448,7 @@ const PlasmicDescendants = {
     "toolbar"
   ],
 
-  menuNav: ["menuNav"],
+  navMenu: ["navMenu"],
   section: ["section", "menu", "itemGroup", "textInput", "antdInputTextArea"],
   menu: ["menu", "itemGroup"],
   itemGroup: ["itemGroup"],
@@ -488,7 +489,7 @@ export const PlasmicMydocuments = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    menuNav: makeNodeComponent("menuNav"),
+    navMenu: makeNodeComponent("navMenu"),
     section: makeNodeComponent("section"),
     menu: makeNodeComponent("menu"),
     itemGroup: makeNodeComponent("itemGroup"),

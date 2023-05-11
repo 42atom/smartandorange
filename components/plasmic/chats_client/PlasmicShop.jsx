@@ -21,7 +21,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
+import NavMenu from "../../NavMenu"; // plasmic-import: 9cR2sxpykRjad/component
 import Price from "../../Price"; // plasmic-import: A7lxlJD3kKn/component
 import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
@@ -127,11 +127,11 @@ function PlasmicShop__RenderFunc(props) {
               data-plasmic-override={overrides.freeBox}
               className={classNames(projectcss.all, sty.freeBox)}
             >
-              <MenuNav
-                data-plasmic-name={"menuNav"}
-                data-plasmic-override={overrides.menuNav}
-                className={classNames("__wab_instance", sty.menuNav)}
-                selected={["menuItemKey4"]}
+              <NavMenu
+                data-plasmic-name={"navMenu"}
+                data-plasmic-override={overrides.navMenu}
+                className={classNames("__wab_instance", sty.navMenu)}
+                menu4={true}
               />
             </div>
           ) : null}
@@ -162,9 +162,9 @@ function PlasmicShop__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "menuNav", "section", "price", "toolbar"],
-  freeBox: ["freeBox", "menuNav"],
-  menuNav: ["menuNav"],
+  root: ["root", "freeBox", "navMenu", "section", "price", "toolbar"],
+  freeBox: ["freeBox", "navMenu"],
+  navMenu: ["navMenu"],
   section: ["section", "price"],
   price: ["price"],
   toolbar: ["toolbar"]
@@ -203,7 +203,7 @@ export const PlasmicShop = Object.assign(
   {
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
-    menuNav: makeNodeComponent("menuNav"),
+    navMenu: makeNodeComponent("navMenu"),
     section: makeNodeComponent("section"),
     price: makeNodeComponent("price"),
     toolbar: makeNodeComponent("toolbar"),

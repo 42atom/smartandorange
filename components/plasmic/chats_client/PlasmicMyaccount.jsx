@@ -21,7 +21,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
+import NavMenu from "../../NavMenu"; // plasmic-import: 9cR2sxpykRjad/component
 import Button from "../../Button"; // plasmic-import: YO5Bwb9purCqu/component
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal"; // plasmic-import: xx93QbkHH5i/codeComponent
 import { RichTable } from "@plasmicpkgs/plasmic-rich-components"; // plasmic-import: k4RvFQUTZKCU/codeComponent
@@ -212,11 +212,12 @@ function PlasmicMyaccount__RenderFunc(props) {
         >
           {true ? (
             <div className={classNames(projectcss.all, sty.freeBox__fxLf)}>
-              <MenuNav
-                data-plasmic-name={"menuNav"}
-                data-plasmic-override={overrides.menuNav}
-                className={classNames("__wab_instance", sty.menuNav)}
-                selected={["menuItemKey3"]}
+              <NavMenu
+                data-plasmic-name={"navMenu"}
+                data-plasmic-override={overrides.navMenu}
+                className={classNames("__wab_instance", sty.navMenu)}
+                menu2={false}
+                menu3={true}
               />
             </div>
           ) : null}
@@ -1110,7 +1111,7 @@ function PlasmicMyaccount__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "menuNav",
+    "navMenu",
     "modal",
     "table",
     "svg",
@@ -1124,7 +1125,7 @@ const PlasmicDescendants = {
     "toolbar"
   ],
 
-  menuNav: ["menuNav"],
+  navMenu: ["navMenu"],
   modal: ["modal", "table", "svg"],
   table: ["table"],
   svg: ["svg"],
@@ -1170,7 +1171,7 @@ export const PlasmicMyaccount = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    menuNav: makeNodeComponent("menuNav"),
+    navMenu: makeNodeComponent("navMenu"),
     modal: makeNodeComponent("modal"),
     table: makeNodeComponent("table"),
     svg: makeNodeComponent("svg"),

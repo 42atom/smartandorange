@@ -21,7 +21,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import MenuNav from "../../MenuNav"; // plasmic-import: 9cR2sxpykRjad/component
+import NavMenu from "../../NavMenu"; // plasmic-import: 9cR2sxpykRjad/component
 import Button from "../../Button"; // plasmic-import: YO5Bwb9purCqu/component
 import { FormWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: TgJFzUZpvQ/codeComponent
 import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: EYHwZh9ILg/codeComponent
@@ -203,11 +203,11 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
         >
           {true ? (
             <div className={classNames(projectcss.all, sty.freeBox__lF7Rf)}>
-              <MenuNav
-                data-plasmic-name={"menuNav"}
-                data-plasmic-override={overrides.menuNav}
-                className={classNames("__wab_instance", sty.menuNav)}
-                selected={["menuItemKey1"]}
+              <NavMenu
+                data-plasmic-name={"navMenu"}
+                data-plasmic-override={overrides.navMenu}
+                className={classNames("__wab_instance", sty.navMenu)}
+                menu1={true}
               />
 
               <section
@@ -786,7 +786,7 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "menuNav",
+    "navMenu",
     "section",
     "svg",
     "form",
@@ -796,7 +796,7 @@ const PlasmicDescendants = {
     "antdInputTextArea"
   ],
 
-  menuNav: ["menuNav"],
+  navMenu: ["navMenu"],
   section: [
     "section",
     "svg",
@@ -847,7 +847,7 @@ export const PlasmicWorkspacesEdit = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    menuNav: makeNodeComponent("menuNav"),
+    navMenu: makeNodeComponent("navMenu"),
     section: makeNodeComponent("section"),
     svg: makeNodeComponent("svg"),
     form: makeNodeComponent("form"),
