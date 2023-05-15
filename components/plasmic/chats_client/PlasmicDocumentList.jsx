@@ -184,7 +184,7 @@ function PlasmicDocumentList__RenderFunc(props) {
           }
         )}
       >
-        {"羊绒大衣 保暖 冬季"}
+        {"羊绒大衣 保暖 冬季 "}
       </div>
       {true ? (
         <div className={classNames(projectcss.all, sty.freeBox__yp9Pl)}>

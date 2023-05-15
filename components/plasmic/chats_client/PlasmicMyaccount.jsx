@@ -13,7 +13,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
-import { useDependencyAwareQuery } from "@plasmicapp/react-web/lib/data-sources";
 import {
   hasVariant,
   classNames,
@@ -105,19 +104,6 @@ function PlasmicMyaccount__RenderFunc(props) {
     [$props, $ctx]
   );
   const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
-  useDependencyAwareQuery({
-    name: "orders",
-    getDataOp: () => ({
-      sourceId: "9m6seF9rffTwqmNeTPj4dy",
-      opId: "9ebbdd1e-6da3-41b6-a2f9-347d2925f70d",
-      userArgs: {},
-      cacheKey: "plasmic.$.srE47GKZF.$.",
-      invalidatedKeys: null,
-      roleId: null
-    }),
-    $queries,
-    setDollarQueries
-  });
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsnl9I0Oib3VOwY()
   });
@@ -866,9 +852,24 @@ function makeNodeComponent(nodeName) {
   return func;
 }
 
+function withPlasmicPageGuard(WrappedComponent) {
+  const PageGuard = props => (
+    <p.PlasmicPageGuard
+      minRole={null}
+      appId={"gRaosoDicn4VUCndSzazbA"}
+      authorizeEndpoint={"https://studio.plasmic.app/authorize"}
+      canTriggerLogin={true}
+    >
+      <WrappedComponent {...props} />
+    </p.PlasmicPageGuard>
+  );
+
+  return PageGuard;
+}
+
 export const PlasmicMyaccount = Object.assign(
   // Top-level PlasmicMyaccount renders the root element
-  makeNodeComponent("root"),
+  withPlasmicPageGuard(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
     navMenu: makeNodeComponent("navMenu"),

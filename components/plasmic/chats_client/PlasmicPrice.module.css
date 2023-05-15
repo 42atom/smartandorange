@@ -36,13 +36,6 @@
   justify-content: center;
   align-items: center;
 }
-.freeBox__kKfRk {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  max-width: 1920px;
-  align-items: center;
-}
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__kKfRk {
     display: flex;
@@ -69,12 +62,6 @@
     > img {
     margin-left: 0px;
     margin-top: 32px;
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__kKfRk {
-    display: flex;
-    flex-direction: column;
   }
 }
 .freeBox___0OzX {
@@ -116,14 +103,6 @@
   > img {
   margin-top: 16px;
 }
-.freeBox___3X7E {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 32px;
-}
 .text__nwzQf {
   font-size: 16px;
   font-weight: 600;
@@ -160,13 +139,6 @@
   > picture
   > img {
   margin-left: 8px;
-}
-.freeBox__wyOja {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 .freeBox___2Uvu {
   display: flex;
@@ -241,15 +213,6 @@
   > img {
   margin-top: 32px;
 }
-.freeBox__xSpl {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  background: #f2f2f7;
-  padding: 32px;
-}
 .freeBox__vbgN9 {
   display: flex;
   position: relative;
@@ -271,13 +234,6 @@
   > picture
   > img {
   margin-top: 16px;
-}
-.freeBox__vbgN9 {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
 }
 .freeBox__of702 {
   display: flex;
@@ -302,14 +258,6 @@
   > picture
   > img {
   margin-left: 16px;
-}
-.freeBox__of702 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  min-width: 0;
 }
 .freeBox__uYtZ {
   background: none;
@@ -365,13 +313,6 @@
   > img {
   margin-top: 4px;
 }
-.freeBox__qs7EO {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-}
 .text__ff2A9 {
   font-weight: 600;
   font-size: 20px;
@@ -426,14 +367,6 @@
   > img {
   margin-left: 16px;
 }
-.freeBox__gepOj {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  min-width: 0;
-}
 .freeBox__cs0YA {
   background: none;
   display: flex;
@@ -487,13 +420,6 @@
   > picture
   > img {
   margin-top: 4px;
-}
-.freeBox__zgIl {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
 }
 .text__jFtwa {
   font-weight: 600;
@@ -589,14 +515,6 @@
   > img {
   margin-top: 16px;
 }
-.freeBox__z5Nz {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 32px;
-}
 .text__wTfNi {
   font-size: 16px;
   font-weight: 600;
@@ -633,13 +551,6 @@
   > picture
   > img {
   margin-left: 8px;
-}
-.freeBox__lu5Vc {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 .freeBox__yTkcP {
   display: flex;
@@ -714,15 +625,6 @@
   > img {
   margin-top: 32px;
 }
-.freeBox__zuakT {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  background: #f2f2f7;
-  padding: 32px;
-}
 .freeBox__kSnX {
   display: flex;
   position: relative;
@@ -744,13 +646,6 @@
   > picture
   > img {
   margin-top: 16px;
-}
-.freeBox__kSnX {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
 }
 .freeBox__acwUi {
   display: flex;
@@ -775,14 +670,6 @@
   > picture
   > img {
   margin-left: 16px;
-}
-.freeBox__acwUi {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  min-width: 0;
 }
 .freeBox___5AaoR {
   background: none;
@@ -838,13 +725,6 @@
   > img {
   margin-top: 4px;
 }
-.freeBox__kXuKd {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-}
 .text___9Jlzd {
   font-weight: 600;
   font-size: 20px;
@@ -899,14 +779,6 @@
   > img {
   margin-left: 16px;
 }
-.freeBox__rk9R {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  min-width: 0;
-}
 .freeBox__eYsUz {
   background: none;
   display: flex;
@@ -960,13 +832,6 @@
   > picture
   > img {
   margin-top: 4px;
-}
-.freeBox__lnkuq {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
 }
 .text___2Ww7N {
   font-weight: 600;
@@ -1023,14 +888,6 @@
   > img {
   margin-left: 16px;
 }
-.freeBox___6TOoU {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  min-width: 0;
-}
 .freeBox__kn4Dk {
   background: none;
   display: flex;
@@ -1084,13 +941,6 @@
   > picture
   > img {
   margin-top: 4px;
-}
-.freeBox__zZcmw {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
 }
 .text__ay9Ca {
   font-weight: 600;
@@ -1146,14 +996,6 @@
   > img {
   margin-left: 16px;
 }
-.freeBox__wEvDc {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  min-width: 0;
-}
 .freeBox___32ReA {
   background: none;
   display: flex;
@@ -1207,13 +1049,6 @@
   > picture
   > img {
   margin-top: 4px;
-}
-.freeBox___5P0Ao {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
 }
 .text__xw5Se {
   font-weight: 600;
@@ -1316,14 +1151,6 @@
   > img {
   margin-top: 16px;
 }
-.freeBox__o3QiS {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 32px;
-}
 .text__g5WG5 {
   height: auto;
   font-size: 16px;
@@ -1361,13 +1188,6 @@
   > picture
   > img {
   margin-left: 8px;
-}
-.freeBox__gZc7 {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 .freeBox__ffeWi {
   display: flex;
@@ -1442,15 +1262,6 @@
   > img {
   margin-top: 32px;
 }
-.freeBox__chWQw {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  background: #f2f2f7;
-  padding: 32px;
-}
 .freeBox__soaFm {
   display: flex;
   position: relative;
@@ -1472,13 +1283,6 @@
   > picture
   > img {
   margin-top: 16px;
-}
-.freeBox__soaFm {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
 }
 .freeBox__ajq7S {
   display: flex;
@@ -1503,14 +1307,6 @@
   > picture
   > img {
   margin-left: 16px;
-}
-.freeBox__ajq7S {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  min-width: 0;
 }
 .freeBox__gntRz {
   background: none;
@@ -1566,13 +1362,6 @@
   > img {
   margin-top: 4px;
 }
-.freeBox__omtEx {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-}
 .text__nd1F4 {
   font-weight: 600;
   font-size: 20px;
@@ -1626,14 +1415,6 @@
   > picture
   > img {
   margin-left: 16px;
-}
-.freeBox__veYSr {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  min-width: 0;
 }
 .freeBox___4Bmah {
   background: none;
@@ -1689,13 +1470,6 @@
   > img {
   margin-top: 4px;
 }
-.freeBox__nv6XT {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-}
 .text__zhkJg {
   font-weight: 600;
   font-size: 20px;
@@ -1750,14 +1524,6 @@
   > img {
   margin-left: 16px;
 }
-.freeBox__hZfRu {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  min-width: 0;
-}
 .freeBox__shVs2 {
   background: none;
   display: flex;
@@ -1811,13 +1577,6 @@
   > picture
   > img {
   margin-top: 4px;
-}
-.freeBox__aSTen {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
 }
 .text___0Lg1I {
   font-weight: 600;

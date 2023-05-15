@@ -2121,16 +2121,6 @@
       }
     },
     {
-      "name": "Unnamed Style Token",
-      "type": "color",
-      "value": "#A5D301",
-      "category": "color",
-      "meta": {
-        "projectId": "gRaosoDicn4VUCndSzazbA",
-        "id": "l-1COI_6w"
-      }
-    },
-    {
       "name": "Unnamed Style Token 2",
       "type": "color",
       "value": "#ACACAC",
@@ -2228,6 +2218,16 @@
       "meta": {
         "projectId": "gRaosoDicn4VUCndSzazbA",
         "id": "FMGQEiyNQ"
+      }
+    },
+    {
+      "name": "main",
+      "type": "color",
+      "value": "#369C00",
+      "category": "color",
+      "meta": {
+        "projectId": "gRaosoDicn4VUCndSzazbA",
+        "id": "l-1COI_6w"
       }
     }
   ],

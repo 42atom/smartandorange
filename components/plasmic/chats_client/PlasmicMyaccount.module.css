@@ -101,19 +101,6 @@
   > img {
   margin-left: 24px;
 }
-.freeBox__vypQs {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  grid-column-start: 1;
-  grid-column-end: -1;
-  padding: 8px;
-}
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__vypQs {
     display: flex;
@@ -138,13 +125,6 @@
     > picture
     > img {
     margin-left: 0px;
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__vypQs {
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
   }
 }
 .freeBox___3M39U {
@@ -188,20 +168,6 @@
   > img {
   margin-left: 8px;
 }
-.freeBox___5A6Z2 {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  background: var(--token-WbeO8JoEs);
-  min-width: 0;
-  padding: 16px;
-  margin: 0px;
-}
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox___5A6Z2 {
     display: flex;
@@ -228,15 +194,6 @@
     > picture
     > img {
     margin-left: 0px;
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .freeBox___5A6Z2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 8px;
   }
 }
 .freeBox___9MlSg {
@@ -317,19 +274,6 @@
   > img {
   margin-left: 16px;
 }
-.freeBox__pfzn1 {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  align-self: center;
-  min-width: 0;
-  padding: 8px;
-}
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__pfzn1 {
     display: flex;
@@ -356,13 +300,6 @@
     > img {
     margin-left: 8px;
     margin-top: 0px;
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__pfzn1 {
-    justify-content: center;
-    align-items: center;
-    display: flex;
   }
 }
 .button__kWogr:global(.__wab_instance) {
@@ -445,19 +382,6 @@
   > img {
   margin-left: 16px;
 }
-.freeBox__piGff {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  margin-bottom: 8px;
-  min-width: 0;
-  padding: 0px 8px;
-}
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__piGff {
     display: flex;
@@ -481,12 +405,6 @@
     > picture
     > img {
     margin-left: 0px;
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__piGff {
-    display: flex;
-    flex-direction: column;
   }
 }
 .freeBox__tyLzK {
@@ -517,18 +435,6 @@
   > img {
   margin-left: 16px;
 }
-.freeBox__tyLzK {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
-  padding: 8px;
-}
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__tyLzK {
     align-self: center;
@@ -556,14 +462,6 @@
     > img {
     margin-left: 8px;
     margin-top: 0px;
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__tyLzK {
-    align-self: center;
-    padding-left: 0px;
-    padding-right: 0px;
-    display: flex;
   }
 }
 .formItem__l5U:global(.__wab_instance) {
@@ -676,19 +574,6 @@
   > img {
   margin-left: 16px;
 }
-.freeBox___0A2A {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  margin-bottom: 8px;
-  min-width: 0;
-  padding: 0px 8px;
-}
 .formItem__vptI5:global(.__wab_instance) {
   width: 50%;
   max-width: 100%;
@@ -756,19 +641,6 @@
   > picture
   > img {
   margin-left: 16px;
-}
-.freeBox__yzy7M {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  margin-bottom: 8px;
-  min-width: 0;
-  padding: 0px 8px;
 }
 .formItem___6SkUa:global(.__wab_instance) {
   width: 50%;
@@ -858,19 +730,6 @@
   > picture
   > img {
   margin-left: 16px;
-}
-.freeBox___7D2Cq {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  margin-bottom: 8px;
-  min-width: 0;
-  padding: 0px 8px;
 }
 .formItem__cbFn6:global(.__wab_instance) {
   width: 50%;

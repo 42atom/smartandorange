@@ -81,19 +81,6 @@ function PlasmicWorkspaces__RenderFunc(props) {
     $queries,
     setDollarQueries
   });
-  useDependencyAwareQuery({
-    name: "catalogs",
-    getDataOp: () => ({
-      sourceId: "9m6seF9rffTwqmNeTPj4dy",
-      opId: "4e42ebdf-8e99-4ba7-8b79-48a8b655a36b",
-      userArgs: {},
-      cacheKey: "plasmic.$.8DStGR5tk.$.",
-      invalidatedKeys: ["plasmic_refresh_all"],
-      roleId: null
-    }),
-    $queries,
-    setDollarQueries
-  });
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsnl9I0Oib3VOwY()
   });
@@ -375,116 +362,57 @@ function PlasmicWorkspaces__RenderFunc(props) {
                               sty.freeBox__xdhlF
                             )}
                           >
-                            {(
-                              (() => {
+                            <SceneInfo
+                              data-plasmic-name={"sceneInfo"}
+                              data-plasmic-override={overrides.sceneInfo}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.sceneInfo
+                              )}
+                              desc={"desc"}
+                              input={
+                                <div
+                                  data-plasmic-name={"input"}
+                                  data-plasmic-override={overrides.input}
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.input
+                                  )}
+                                >
+                                  {"Modal content"}
+                                </div>
+                              }
+                              output={"Modal content"}
+                              slot={(() => {
                                 try {
-                                  return $queries.scenes.data;
+                                  return currentItem.scenes_name;
                                 } catch (e) {
                                   if (e instanceof TypeError) {
-                                    return [];
+                                    return "Modal title";
                                   }
                                   throw e;
                                 }
-                              })() ?? []
-                            ).map((currentItem, currentIndex) => (
-                              <SceneInfo
-                                data-plasmic-name={"sceneInfo"}
-                                data-plasmic-override={overrides.sceneInfo}
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.sceneInfo
-                                )}
-                                desc={(() => {
-                                  try {
-                                    return currentItem.description;
-                                  } catch (e) {
-                                    if (e instanceof TypeError) {
-                                      return "desc";
-                                    }
-                                    throw e;
-                                  }
-                                })()}
-                                input={
-                                  <div
-                                    data-plasmic-name={"input"}
-                                    data-plasmic-override={overrides.input}
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.input
-                                    )}
-                                  >
-                                    {(() => {
-                                      try {
-                                        return (
-                                          "输入： " + currentItem.modal_input
-                                        );
-                                      } catch (e) {
-                                        if (e instanceof TypeError) {
-                                          return "Modal content";
-                                        }
-                                        throw e;
-                                      }
-                                    })()}
-                                  </div>
+                              })()}
+                              title={"场景标题"}
+                            >
+                              <p.PlasmicImg
+                                data-plasmic-name={"img"}
+                                data-plasmic-override={overrides.img}
+                                alt={""}
+                                className={classNames(sty.img)}
+                                displayHeight={"24px"}
+                                displayMaxHeight={"none"}
+                                displayMaxWidth={"100%"}
+                                displayMinHeight={"0"}
+                                displayMinWidth={"0"}
+                                displayWidth={"24px"}
+                                loading={"lazy"}
+                                src={
+                                  "https://www.svgrepo.com/show/474676/germs.svg"
                                 }
-                                key={currentIndex}
-                                output={(() => {
-                                  try {
-                                    return "输出：" + currentItem.modal_content;
-                                  } catch (e) {
-                                    if (e instanceof TypeError) {
-                                      return "Modal content";
-                                    }
-                                    throw e;
-                                  }
-                                })()}
-                                slot={(() => {
-                                  try {
-                                    return currentItem.scenes_name;
-                                  } catch (e) {
-                                    if (e instanceof TypeError) {
-                                      return "Modal title";
-                                    }
-                                    throw e;
-                                  }
-                                })()}
-                                title={(() => {
-                                  try {
-                                    return currentItem.scenes_name;
-                                  } catch (e) {
-                                    if (e instanceof TypeError) {
-                                      return "场景标题";
-                                    }
-                                    throw e;
-                                  }
-                                })()}
-                              >
-                                <p.PlasmicImg
-                                  data-plasmic-name={"img"}
-                                  data-plasmic-override={overrides.img}
-                                  alt={""}
-                                  className={classNames(sty.img)}
-                                  displayHeight={"24px"}
-                                  displayMaxHeight={"none"}
-                                  displayMaxWidth={"100%"}
-                                  displayMinHeight={"0"}
-                                  displayMinWidth={"0"}
-                                  displayWidth={"24px"}
-                                  loading={"lazy"}
-                                  src={(() => {
-                                    try {
-                                      return currentItem.scene_icon;
-                                    } catch (e) {
-                                      if (e instanceof TypeError) {
-                                        return "https://www.svgrepo.com/show/474676/germs.svg";
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                />
-                              </SceneInfo>
-                            ))}
+                              />
+                            </SceneInfo>
                           </div>
                         </div>
                       </div>
@@ -596,9 +524,24 @@ function makeNodeComponent(nodeName) {
   return func;
 }
 
+function withPlasmicPageGuard(WrappedComponent) {
+  const PageGuard = props => (
+    <p.PlasmicPageGuard
+      minRole={null}
+      appId={"gRaosoDicn4VUCndSzazbA"}
+      authorizeEndpoint={"https://studio.plasmic.app/authorize"}
+      canTriggerLogin={true}
+    >
+      <WrappedComponent {...props} />
+    </p.PlasmicPageGuard>
+  );
+
+  return PageGuard;
+}
+
 export const PlasmicWorkspaces = Object.assign(
   // Top-level PlasmicWorkspaces renders the root element
-  makeNodeComponent("root"),
+  withPlasmicPageGuard(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
     bkgd: makeNodeComponent("bkgd"),

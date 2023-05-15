@@ -45,20 +45,6 @@
   > img {
   margin-top: 4px;
 }
-.freeBox__o9AcT {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  margin-bottom: 0px;
-  cursor: pointer;
-  min-width: 0;
-  padding: 0px;
-}
 .freeBox__q0LrV {
   width: 100%;
   height: auto;
@@ -82,14 +68,6 @@
   > picture
   > img {
   margin-left: 12px;
-}
-.freeBox__q0LrV {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  display: flex;
-  flex-direction: row;
-  min-width: 0;
 }
 .freeBox___1EjA1 {
   display: flex;
@@ -162,26 +140,6 @@
   > picture
   > img {
   margin-left: 16px;
-}
-.freeBox__mL3Wc {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  top: auto;
-  left: auto;
-  z-index: 1;
-  min-width: 0;
-  padding: 0px;
-  margin: 12px 0px 0px;
-}
-.root:hover .freeBox__mL3Wc {
-  margin-left: 0px;
-  align-self: stretch;
 }
 .root:hover .freeBox__mL3Wc {
   margin-left: 0px;

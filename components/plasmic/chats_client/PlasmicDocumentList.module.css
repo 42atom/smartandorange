@@ -4,7 +4,7 @@
   height: auto;
   max-width: 100%;
   flex-direction: column;
-  background: var(--token-8jk2BfOx3);
+  background: var(--token-u4-1U5i2CHHR);
   position: relative;
   min-width: 0;
   padding: 8px 8px 8px 16px;
@@ -25,6 +25,7 @@
   margin-bottom: 24px;
   color: var(--token-rqDJQlRsV);
   margin-top: 0px;
+  white-space: pre-wrap;
   min-width: 0;
 }
 .textcurrentState__kLChvMo5 {
@@ -67,34 +68,35 @@
 .freeBox__sffSf {
   display: flex;
   position: relative;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   height: auto;
   max-width: 100%;
+  align-self: center;
   min-width: 0;
   padding: 0px;
 }
 .freeBox__sffSf > :global(.__wab_flex-container) {
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   min-width: 0;
+  margin-left: calc(0px - 8px);
+  width: calc(100% + 8px);
 }
-.freeBox__sffSf {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
-  padding: 0px;
+.freeBox__sffSf > :global(.__wab_flex-container) > *,
+.freeBox__sffSf > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__sffSf > :global(.__wab_flex-container) > picture > img,
+.freeBox__sffSf
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 8px;
 }
 .freeBoxcurrentState__sffSfMo5 > :global(.__wab_flex-container) {
-  margin-left: calc(0px - 0px);
-  width: calc(100% + 0px);
+  margin-left: calc(0px - 8px);
+  width: calc(100% + 8px);
   margin-top: calc(0px - 4px);
   height: calc(100% + 4px);
 }
@@ -109,18 +111,17 @@
   > :global(.__wab_slot)
   > picture
   > img {
-  margin-left: 0px;
+  margin-left: 8px;
   margin-top: 4px;
 }
 .text__f2KY {
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 100%;
   line-height: 1;
   white-space: pre;
   font-size: 11px;
   color: #a2a2a2;
-  min-width: 0;
 }
 .text__zsxVv {
   width: auto;
@@ -128,7 +129,7 @@
   max-width: 100%;
   font-size: 11px;
   color: var(--token-WgGKuDBDe);
-  background: var(--token-8jk2BfOx3);
+  background: var(--token-oG1h6iK0g);
   align-self: flex-start;
   border-radius: 8px;
   padding: 0px 4px;

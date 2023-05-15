@@ -13,7 +13,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
-import { useDependencyAwareQuery } from "@plasmicapp/react-web/lib/data-sources";
 import {
   classNames,
   createPlasmicElementProxy,
@@ -122,32 +121,6 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
     [$props, $ctx]
   );
   const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
-  useDependencyAwareQuery({
-    name: "scenes",
-    getDataOp: () => ({
-      sourceId: "9m6seF9rffTwqmNeTPj4dy",
-      opId: "0fcbb781-dca9-42b0-bffb-923550b1d4c5",
-      userArgs: {},
-      cacheKey: "plasmic.$.vSUfnfRkRxw.$.",
-      invalidatedKeys: null,
-      roleId: null
-    }),
-    $queries,
-    setDollarQueries
-  });
-  useDependencyAwareQuery({
-    name: "catalogs",
-    getDataOp: () => ({
-      sourceId: "9m6seF9rffTwqmNeTPj4dy",
-      opId: "4e42ebdf-8e99-4ba7-8b79-48a8b655a36b",
-      userArgs: {},
-      cacheKey: "plasmic.$.4Y98nLSqrki.$.",
-      invalidatedKeys: ["plasmic_refresh_all"],
-      roleId: null
-    }),
-    $queries,
-    setDollarQueries
-  });
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsnl9I0Oib3VOwY()
   });
@@ -790,9 +763,24 @@ function makeNodeComponent(nodeName) {
   return func;
 }
 
+function withPlasmicPageGuard(WrappedComponent) {
+  const PageGuard = props => (
+    <p.PlasmicPageGuard
+      minRole={null}
+      appId={"gRaosoDicn4VUCndSzazbA"}
+      authorizeEndpoint={"https://studio.plasmic.app/authorize"}
+      canTriggerLogin={true}
+    >
+      <WrappedComponent {...props} />
+    </p.PlasmicPageGuard>
+  );
+
+  return PageGuard;
+}
+
 export const PlasmicWorkspacesEdit = Object.assign(
   // Top-level PlasmicWorkspacesEdit renders the root element
-  makeNodeComponent("root"),
+  withPlasmicPageGuard(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
     bkgd: makeNodeComponent("bkgd"),

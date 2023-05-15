@@ -12,7 +12,6 @@ import * as React from "react";
 import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
-import { useDependencyAwareQuery } from "@plasmicapp/react-web/lib/data-sources";
 import {
   classNames,
   createPlasmicElementProxy,
@@ -81,19 +80,6 @@ function PlasmicSceneInfo__RenderFunc(props) {
     [$props, $ctx]
   );
   const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
-  useDependencyAwareQuery({
-    name: "componentDataAigc",
-    getDataOp: () => ({
-      sourceId: "9m6seF9rffTwqmNeTPj4dy",
-      opId: "ae50926e-6858-4f8e-bfeb-0ce2a2e12901",
-      userArgs: {},
-      cacheKey: "plasmic.$.Lch-M5URyt8yK.$.",
-      invalidatedKeys: null,
-      roleId: null
-    }),
-    $queries,
-    setDollarQueries
-  });
   return (
     <div
       data-plasmic-name={"root"}

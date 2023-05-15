@@ -461,9 +461,24 @@ function makeNodeComponent(nodeName) {
   return func;
 }
 
+function withPlasmicPageGuard(WrappedComponent) {
+  const PageGuard = props => (
+    <p.PlasmicPageGuard
+      minRole={null}
+      appId={"gRaosoDicn4VUCndSzazbA"}
+      authorizeEndpoint={"https://studio.plasmic.app/authorize"}
+      canTriggerLogin={true}
+    >
+      <WrappedComponent {...props} />
+    </p.PlasmicPageGuard>
+  );
+
+  return PageGuard;
+}
+
 export const PlasmicMydocuments = Object.assign(
   // Top-level PlasmicMydocuments renders the root element
-  makeNodeComponent("root"),
+  withPlasmicPageGuard(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
     navMenu: makeNodeComponent("navMenu"),
@@ -478,7 +493,7 @@ export const PlasmicMydocuments = Object.assign(
     internalArgProps: PlasmicMydocuments__ArgProps,
     // Page metadata
     pageMetadata: {
-      title: "会员管理",
+      title: "我的文档",
       description: "",
       ogImageSrc: "",
       canonical: ""
