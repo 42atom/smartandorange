@@ -13,7 +13,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
-import { useDependencyAwareQuery } from "@plasmicapp/react-web/lib/data-sources";
 import {
   hasVariant,
   classNames,
@@ -37,7 +36,7 @@ import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: dkiK7Mv
 
 export const PlasmicWorkspaces__VariantProps = new Array();
 
-export const PlasmicWorkspaces__ArgProps = new Array();
+export const PlasmicWorkspaces__ArgProps = new Array("grid");
 
 const __wrapUserFunction =
   globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
@@ -68,19 +67,6 @@ function PlasmicWorkspaces__RenderFunc(props) {
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
-  useDependencyAwareQuery({
-    name: "scenes",
-    getDataOp: () => ({
-      sourceId: "9m6seF9rffTwqmNeTPj4dy",
-      opId: "0fcbb781-dca9-42b0-bffb-923550b1d4c5",
-      userArgs: {},
-      cacheKey: "plasmic.$.rINfrMoPavP8l.$.",
-      invalidatedKeys: null,
-      roleId: null
-    }),
-    $queries,
-    setDollarQueries
-  });
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsnl9I0Oib3VOwY()
   });
@@ -357,62 +343,36 @@ function PlasmicWorkspaces__RenderFunc(props) {
                           className={classNames(projectcss.all, sty.column)}
                         >
                           <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__xdhlF
-                            )}
+                            data-plasmic-name={"grid"}
+                            data-plasmic-override={overrides.grid}
+                            className={classNames(projectcss.all, sty.grid)}
                           >
-                            <SceneInfo
-                              data-plasmic-name={"sceneInfo"}
-                              data-plasmic-override={overrides.sceneInfo}
-                              className={classNames(
-                                "__wab_instance",
-                                sty.sceneInfo
-                              )}
-                              desc={"desc"}
-                              input={
-                                <div
-                                  data-plasmic-name={"input"}
-                                  data-plasmic-override={overrides.input}
+                            {p.renderPlasmicSlot({
+                              defaultContents: (
+                                <SceneInfo
                                   className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.input
+                                    "__wab_instance",
+                                    sty.sceneInfo__zigmA
                                   )}
-                                >
-                                  {"Modal content"}
-                                </div>
-                              }
-                              output={"Modal content"}
-                              slot={(() => {
-                                try {
-                                  return currentItem.scenes_name;
-                                } catch (e) {
-                                  if (e instanceof TypeError) {
-                                    return "Modal title";
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__u2GgT
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
                                   }
-                                  throw e;
-                                }
-                              })()}
-                              title={"场景标题"}
-                            >
-                              <p.PlasmicImg
-                                data-plasmic-name={"img"}
-                                data-plasmic-override={overrides.img}
-                                alt={""}
-                                className={classNames(sty.img)}
-                                displayHeight={"24px"}
-                                displayMaxHeight={"none"}
-                                displayMaxWidth={"100%"}
-                                displayMinHeight={"0"}
-                                displayMinWidth={"0"}
-                                displayWidth={"24px"}
-                                loading={"lazy"}
-                                src={
-                                  "https://www.svgrepo.com/show/474676/germs.svg"
-                                }
-                              />
-                            </SceneInfo>
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+                              ),
+
+                              value: args.grid
+                            })}
                           </div>
                         </div>
                       </div>
@@ -453,9 +413,7 @@ const PlasmicDescendants = {
     "svg",
     "columns",
     "column",
-    "sceneInfo",
-    "img",
-    "input",
+    "grid",
     "toolbar"
   ],
 
@@ -468,32 +426,17 @@ const PlasmicDescendants = {
     "svg",
     "columns",
     "column",
-    "sceneInfo",
-    "img",
-    "input"
+    "grid"
   ],
 
   navMenu: ["navMenu"],
-  section: [
-    "section",
-    "menu",
-    "itemGroup",
-    "svg",
-    "columns",
-    "column",
-    "sceneInfo",
-    "img",
-    "input"
-  ],
-
+  section: ["section", "menu", "itemGroup", "svg", "columns", "column", "grid"],
   menu: ["menu", "itemGroup", "svg"],
   itemGroup: ["itemGroup"],
   svg: ["svg"],
-  columns: ["columns", "column", "sceneInfo", "img", "input"],
-  column: ["column", "sceneInfo", "img", "input"],
-  sceneInfo: ["sceneInfo", "img", "input"],
-  img: ["img"],
-  input: ["input"],
+  columns: ["columns", "column", "grid"],
+  column: ["column", "grid"],
+  grid: ["grid"],
   toolbar: ["toolbar"]
 };
 
@@ -552,9 +495,7 @@ export const PlasmicWorkspaces = Object.assign(
     svg: makeNodeComponent("svg"),
     columns: makeNodeComponent("columns"),
     column: makeNodeComponent("column"),
-    sceneInfo: makeNodeComponent("sceneInfo"),
-    img: makeNodeComponent("img"),
-    input: makeNodeComponent("input"),
+    grid: makeNodeComponent("grid"),
     toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicWorkspaces
     internalVariantProps: PlasmicWorkspaces__VariantProps,

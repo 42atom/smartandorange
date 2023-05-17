@@ -220,6 +220,7 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                                 role={"img"}
                               />
                             }
+                            submitsForm={true}
                           >
                             {"返  回"}
                           </Button>

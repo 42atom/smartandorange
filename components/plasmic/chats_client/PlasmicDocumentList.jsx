@@ -146,6 +146,9 @@ function PlasmicDocumentList__RenderFunc(props) {
                 },
                 () =>
                   (({ vgroup, value }) => {
+                    if (typeof value === "string") {
+                      value = [value];
+                    }
                     const oldValue = p.get($state, vgroup);
                     p.set($state, vgroup, !oldValue);
                     return !oldValue;
@@ -171,12 +174,14 @@ function PlasmicDocumentList__RenderFunc(props) {
       }}
     >
       <div
+        data-plasmic-name={"prompt"}
+        data-plasmic-override={overrides.prompt}
         className={classNames(
           projectcss.all,
           projectcss.__wab_text,
-          sty.text__kLChv,
+          sty.prompt,
           {
-            [sty.textcurrentState__kLChvMo5]: hasVariant(
+            [sty.promptcurrentState]: hasVariant(
               $state,
               "currentState",
               "currentState"
@@ -203,21 +208,32 @@ function PlasmicDocumentList__RenderFunc(props) {
                   })}
                 >
                   <div
+                    data-plasmic-name={"createdAt"}
+                    data-plasmic-override={overrides.createdAt}
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__f2KY
+                      sty.createdAt,
+                      {
+                        [sty.createdAtcurrentState]: hasVariant(
+                          $state,
+                          "currentState",
+                          "currentState"
+                        )
+                      }
                     )}
                   >
                     {"4小时前"}
                   </div>
                   <div
+                    data-plasmic-name={"sceneName"}
+                    data-plasmic-override={overrides.sceneName}
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__zsxVv,
+                      sty.sceneName,
                       {
-                        [sty.textcurrentState__zsxVvMo5]: hasVariant(
+                        [sty.sceneNamecurrentState]: hasVariant(
                           $state,
                           "currentState",
                           "currentState"
@@ -230,15 +246,15 @@ function PlasmicDocumentList__RenderFunc(props) {
                 </p.Stack>
               ) : null}
               <Fav
-                data-plasmic-name={"fav"}
-                data-plasmic-override={overrides.fav}
-                className={classNames("__wab_instance", sty.fav)}
+                data-plasmic-name={"favIcon"}
+                data-plasmic-override={overrides.favIcon}
+                className={classNames("__wab_instance", sty.favIcon)}
               />
 
               <Icon18Icon
-                data-plasmic-name={"svg"}
-                data-plasmic-override={overrides.svg}
-                className={classNames(projectcss.all, sty.svg)}
+                data-plasmic-name={"deleteIcon"}
+                data-plasmic-override={overrides.deleteIcon}
+                className={classNames(projectcss.all, sty.deleteIcon)}
                 role={"img"}
               />
             </div>
@@ -250,9 +266,20 @@ function PlasmicDocumentList__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  blockText: ["blockText", "fav", "svg"],
-  fav: ["fav"],
-  svg: ["svg"]
+  blockText: [
+    "blockText",
+    "prompt",
+    "createdAt",
+    "sceneName",
+    "favIcon",
+    "deleteIcon"
+  ],
+
+  prompt: ["prompt"],
+  createdAt: ["createdAt"],
+  sceneName: ["sceneName"],
+  favIcon: ["favIcon"],
+  deleteIcon: ["deleteIcon"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -287,8 +314,11 @@ export const PlasmicDocumentList = Object.assign(
   makeNodeComponent("blockText"),
   {
     // Helper components rendering sub-elements
-    fav: makeNodeComponent("fav"),
-    svg: makeNodeComponent("svg"),
+    prompt: makeNodeComponent("prompt"),
+    createdAt: makeNodeComponent("createdAt"),
+    sceneName: makeNodeComponent("sceneName"),
+    favIcon: makeNodeComponent("favIcon"),
+    deleteIcon: makeNodeComponent("deleteIcon"),
     // Metadata about props expected for PlasmicDocumentList
     internalVariantProps: PlasmicDocumentList__VariantProps,
     internalArgProps: PlasmicDocumentList__ArgProps

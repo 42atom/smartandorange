@@ -137,6 +137,9 @@ function PlasmicFav__RenderFunc(props) {
                 },
                 () =>
                   (({ vgroup, value }) => {
+                    if (typeof value === "string") {
+                      value = [value];
+                    }
                     const oldValue = p.get($state, vgroup);
                     p.set($state, vgroup, !oldValue);
                     return !oldValue;

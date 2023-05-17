@@ -32,8 +32,6 @@ export const PlasmicSceneInfo__VariantProps = new Array();
 export const PlasmicSceneInfo__ArgProps = new Array(
   "title",
   "desc",
-  "children",
-  "slot",
   "input",
   "output"
 );
@@ -155,23 +153,19 @@ function PlasmicSceneInfo__RenderFunc(props) {
             className={classNames(projectcss.all, sty.freeBox__q0LrV)}
           >
             <div className={classNames(projectcss.all, sty.freeBox___1EjA1)}>
-              {p.renderPlasmicSlot({
-                defaultContents: (
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__kvodc)}
-                    displayHeight={"24px"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"24px"}
-                    loading={"lazy"}
-                  />
-                ),
-
-                value: args.children
-              })}
+              <p.PlasmicImg
+                data-plasmic-name={"img"}
+                data-plasmic-override={overrides.img}
+                alt={""}
+                className={classNames(sty.img)}
+                displayHeight={"24px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"24px"}
+                loading={"lazy"}
+              />
             </div>
             {p.renderPlasmicSlot({
               defaultContents: "场景标题",
@@ -279,6 +273,7 @@ function PlasmicSceneInfo__RenderFunc(props) {
             }}
             shape={"sharp"}
             size={"minimal"}
+            submitsForm={true}
           >
             <div
               data-plasmic-name={"text"}
@@ -322,10 +317,7 @@ function PlasmicSceneInfo__RenderFunc(props) {
           okText={"使用模版"}
           onOpenChange={p.generateStateOnChangeProp($state, ["modal", "open"])}
           open={p.generateStateValueProp($state, ["modal", "open"])}
-          title={p.renderPlasmicSlot({
-            defaultContents: "Modal title",
-            value: args.slot
-          })}
+          title={"Modal title"}
         >
           <div
             data-plasmic-name={"inputs"}
@@ -367,7 +359,19 @@ function PlasmicSceneInfo__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "fav", "button", "text", "modal", "inputs", "output", "svg"],
+  root: [
+    "root",
+    "img",
+    "fav",
+    "button",
+    "text",
+    "modal",
+    "inputs",
+    "output",
+    "svg"
+  ],
+
+  img: ["img"],
   fav: ["fav"],
   button: ["button", "text"],
   text: ["text"],
@@ -409,6 +413,7 @@ export const PlasmicSceneInfo = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    img: makeNodeComponent("img"),
     fav: makeNodeComponent("fav"),
     button: makeNodeComponent("button"),
     text: makeNodeComponent("text"),

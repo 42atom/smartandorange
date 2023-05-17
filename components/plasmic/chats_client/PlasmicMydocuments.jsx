@@ -72,13 +72,13 @@ function PlasmicMydocuments__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "textInput.value",
+        path: "search.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ""
       },
       {
-        path: "textarea.value",
+        path: "docTxt.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) =>
@@ -303,12 +303,12 @@ function PlasmicMydocuments__RenderFunc(props) {
                     className={classNames(projectcss.all, sty.freeBox__z6B9T)}
                   >
                     <TextInput
-                      data-plasmic-name={"textInput"}
-                      data-plasmic-override={overrides.textInput}
-                      className={classNames("__wab_instance", sty.textInput)}
+                      data-plasmic-name={"search"}
+                      data-plasmic-override={overrides.search}
+                      className={classNames("__wab_instance", sty.search)}
                       onChange={(...eventArgs) => {
                         p.generateStateOnChangeProp($state, [
-                          "textInput",
+                          "search",
                           "value"
                         ])((e => e.target?.value).apply(null, eventArgs));
                       }}
@@ -326,61 +326,46 @@ function PlasmicMydocuments__RenderFunc(props) {
                         ) : null
                       }
                       value={
-                        p.generateStateValueProp($state, [
-                          "textInput",
-                          "value"
-                        ]) ?? ""
+                        p.generateStateValueProp($state, ["search", "value"]) ??
+                        ""
                       }
                     />
 
-                    <DocumentList
-                      className={classNames(
-                        "__wab_instance",
-                        sty.documentList__b2WUn
-                      )}
-                      currentState={true}
-                    />
-
-                    {(
-                      (() => {
-                        try {
-                          return [2, 3, 4, 5, 6, 7];
-                        } catch (e) {
-                          if (e instanceof TypeError) {
-                            return [];
-                          }
-                          throw e;
-                        }
-                      })() ?? []
-                    ).map((currentItem, currentIndex) => (
-                      <DocumentList
-                        className={classNames(
-                          "__wab_instance",
-                          sty.documentList__jnqW6
-                        )}
-                        key={currentIndex}
-                      />
-                    ))}
+                    {true ? (
+                      <div
+                        data-plasmic-name={"docsWrap"}
+                        data-plasmic-override={overrides.docsWrap}
+                        className={classNames(projectcss.all, sty.docsWrap)}
+                      >
+                        <DocumentList
+                          data-plasmic-name={"documentList"}
+                          data-plasmic-override={overrides.documentList}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.documentList
+                          )}
+                        />
+                      </div>
+                    ) : null}
                   </p.Stack>
                   <textarea
-                    data-plasmic-name={"textarea"}
-                    data-plasmic-override={overrides.textarea}
+                    data-plasmic-name={"docTxt"}
+                    data-plasmic-override={overrides.docTxt}
                     className={classNames(
                       projectcss.all,
                       projectcss.textarea,
-                      sty.textarea
+                      sty.docTxt
                     )}
                     onChange={e => {
-                      p.generateStateOnChangeProp($state, [
-                        "textarea",
-                        "value"
-                      ])(e.target.value);
+                      p.generateStateOnChangeProp($state, ["docTxt", "value"])(
+                        e.target.value
+                      );
                     }}
                     ref={ref => {
-                      $refs["textarea"] = ref;
+                      $refs["docTxt"] = ref;
                     }}
                     value={
-                      p.generateStateValueProp($state, ["textarea", "value"]) ??
+                      p.generateStateValueProp($state, ["docTxt", "value"]) ??
                       ""
                     }
                   />
@@ -420,17 +405,30 @@ const PlasmicDescendants = {
     "bkgd",
     "menu",
     "itemGroup",
-    "textInput",
-    "textarea",
+    "search",
+    "docsWrap",
+    "documentList",
+    "docTxt",
     "toolbar"
   ],
 
   navMenu: ["navMenu"],
-  bkgd: ["bkgd", "menu", "itemGroup", "textInput", "textarea"],
+  bkgd: [
+    "bkgd",
+    "menu",
+    "itemGroup",
+    "search",
+    "docsWrap",
+    "documentList",
+    "docTxt"
+  ],
+
   menu: ["menu", "itemGroup"],
   itemGroup: ["itemGroup"],
-  textInput: ["textInput"],
-  textarea: ["textarea"],
+  search: ["search"],
+  docsWrap: ["docsWrap", "documentList"],
+  documentList: ["documentList"],
+  docTxt: ["docTxt"],
   toolbar: ["toolbar"]
 };
 
@@ -485,8 +483,10 @@ export const PlasmicMydocuments = Object.assign(
     bkgd: makeNodeComponent("bkgd"),
     menu: makeNodeComponent("menu"),
     itemGroup: makeNodeComponent("itemGroup"),
-    textInput: makeNodeComponent("textInput"),
-    textarea: makeNodeComponent("textarea"),
+    search: makeNodeComponent("search"),
+    docsWrap: makeNodeComponent("docsWrap"),
+    documentList: makeNodeComponent("documentList"),
+    docTxt: makeNodeComponent("docTxt"),
     toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicMydocuments
     internalVariantProps: PlasmicMydocuments__VariantProps,

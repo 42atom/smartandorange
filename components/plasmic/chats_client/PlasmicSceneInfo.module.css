@@ -74,7 +74,7 @@
   position: relative;
   align-self: center;
 }
-.img__kvodc {
+.img {
   position: relative;
   object-fit: cover;
   max-width: 100%;
@@ -82,10 +82,10 @@
   height: 24px;
   flex-shrink: 0;
 }
-.img__kvodc > picture > img {
+.img > picture > img {
   object-fit: cover;
 }
-.img__kvodc > :global(.__wab_img-spacer) > img {
+.img > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .slotTargetTitle {

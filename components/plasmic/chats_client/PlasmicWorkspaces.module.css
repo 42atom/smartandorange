@@ -74,6 +74,11 @@
 :where(.section > *) {
   grid-column: 4;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  :where(.section > *) {
+    grid-column: 4;
+  }
+}
 .freeBox__xEHmj {
   display: flex;
   position: relative;
@@ -138,6 +143,11 @@
   max-width: 100%;
   min-height: 0;
   padding: 8px 0px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___9MNcR {
+    height: auto;
+  }
 }
 .menu:global(.__wab_instance) {
   max-width: 100%;
@@ -353,7 +363,7 @@
   min-width: 0;
   padding: 8px;
 }
-.freeBox__xdhlF {
+.grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   width: 100%;
@@ -365,28 +375,15 @@
   padding: 0px 0px 8px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__xdhlF {
+  .grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
-.sceneInfo:global(.__wab_instance) {
+.sceneInfo__zigmA:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   left: auto;
   top: auto;
-}
-.img {
-  position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  width: 24px;
-  height: 24px;
-}
-.img > picture > img {
-  object-fit: cover;
-}
-.img > :global(.__wab_img-spacer) > img {
-  object-fit: cover;
 }
 .toolbar:global(.__wab_instance) {
   max-width: 100%;

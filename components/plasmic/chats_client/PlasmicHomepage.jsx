@@ -278,6 +278,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
+                    submitsForm={true}
                   >
                     <div
                       className={classNames(
@@ -350,6 +351,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
+                    submitsForm={true}
                   >
                     <div
                       className={classNames(
@@ -422,6 +424,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
+                    submitsForm={true}
                   >
                     <div
                       className={classNames(
@@ -449,6 +452,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
+                    submitsForm={true}
                   >
                     <div
                       className={classNames(
@@ -500,6 +504,7 @@ function PlasmicHomepage__RenderFunc(props) {
                             role={"img"}
                           />
                         }
+                        submitsForm={true}
                       >
                         <div
                           className={classNames(
@@ -597,7 +602,7 @@ function PlasmicHomepage__RenderFunc(props) {
               ) : null}
             </p.Stack>
             <p.Stack
-              as={"div"}
+              as={"form"}
               data-plasmic-name={"login"}
               data-plasmic-override={overrides.login}
               hasGap={true}
@@ -633,6 +638,7 @@ function PlasmicHomepage__RenderFunc(props) {
                           role={"img"}
                         />
                       }
+                      submitsForm={true}
                     >
                       <div
                         className={classNames(
@@ -666,6 +672,7 @@ function PlasmicHomepage__RenderFunc(props) {
                           role={"img"}
                         />
                       }
+                      submitsForm={true}
                     >
                       <div
                         className={classNames(
@@ -713,6 +720,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         projectcss.input,
                         sty.textbox
                       )}
+                      name={"username"}
                       onChange={e => {
                         p.generateStateOnChangeProp($state, [
                           "textbox",
@@ -741,6 +749,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         projectcss.input,
                         sty.textbox2
                       )}
+                      name={"password"}
                       onChange={e => {
                         p.generateStateOnChangeProp($state, [
                           "textbox2",
@@ -769,6 +778,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         projectcss.input,
                         sty.textbox3
                       )}
+                      name={"verify_code"}
                       onChange={e => {
                         p.generateStateOnChangeProp($state, [
                           "textbox3",
@@ -807,48 +817,13 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
-                    link={`/myaccount`}
-                    onClick={async event => {
-                      const $steps = {};
-                      $steps["goToWorkspace"] = true
-                        ? (() => {
-                            const actionArgs = {};
-                            return __wrapUserFunction(
-                              {
-                                type: "InteractionLoc",
-                                actionName: "navigation",
-                                interactionUuid: "jtc46TirU",
-                                componentUuid: "AAi9AuCCbMra"
-                              },
-                              () =>
-                                (({ destination }) => {
-                                  __nextRouter?.push(destination);
-                                })?.apply(null, [actionArgs]),
-                              actionArgs
-                            );
-                          })()
-                        : undefined;
-                      if (
-                        typeof $steps["goToWorkspace"] === "object" &&
-                        typeof $steps["goToWorkspace"].then === "function"
-                      ) {
-                        $steps["goToWorkspace"] = await __wrapUserPromise(
-                          {
-                            type: "InteractionLoc",
-                            actionName: "navigation",
-                            interactionUuid: "jtc46TirU",
-                            componentUuid: "AAi9AuCCbMra"
-                          },
-                          $steps["goToWorkspace"]
-                        );
-                      }
-                    }}
                     startIcon={
                       <ChecksvgIcon
                         className={classNames(projectcss.all, sty.svg__lkGa)}
                         role={"img"}
                       />
                     }
+                    submitsForm={true}
                   >
                     <div
                       className={classNames(
@@ -1594,6 +1569,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
+                    submitsForm={true}
                   >
                     <div
                       className={classNames(
@@ -1621,6 +1597,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
+                    submitsForm={true}
                   >
                     <div
                       className={classNames(
@@ -1648,6 +1625,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
+                    submitsForm={true}
                   >
                     <div
                       className={classNames(
@@ -1675,6 +1653,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
+                    submitsForm={true}
                   >
                     <div
                       className={classNames(
@@ -1719,6 +1698,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
+                    submitsForm={true}
                   >
                     <div
                       className={classNames(
@@ -1746,6 +1726,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
+                    submitsForm={true}
                   >
                     <div
                       className={classNames(
@@ -1773,6 +1754,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
+                    submitsForm={true}
                   >
                     <div
                       className={classNames(

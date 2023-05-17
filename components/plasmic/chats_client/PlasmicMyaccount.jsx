@@ -202,6 +202,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                               color={"softGreen"}
                               shape={"rounded"}
                               size={"minimal"}
+                              submitsForm={true}
                             >
                               <div
                                 className={classNames(
@@ -245,6 +246,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                               color={"green"}
                               shape={"rounded"}
                               size={"minimal"}
+                              submitsForm={true}
                             >
                               <div
                                 className={classNames(
@@ -267,6 +269,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                               }}
                               shape={"rounded"}
                               size={"minimal"}
+                              submitsForm={true}
                             >
                               <div
                                 className={classNames(
@@ -399,6 +402,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                                   const $steps = {};
                                 }}
                                 size={"compact"}
+                                submitsForm={true}
                               >
                                 <div
                                   className={classNames(
@@ -519,6 +523,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                             )}
                             color={"softGreen"}
                             size={"compact"}
+                            submitsForm={true}
                           >
                             <div
                               className={classNames(
@@ -609,6 +614,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                             )}
                             color={"softGreen"}
                             size={"compact"}
+                            submitsForm={true}
                           >
                             <div
                               className={classNames(
@@ -627,6 +633,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                             )}
                             color={"softGreen"}
                             size={"compact"}
+                            submitsForm={true}
                           >
                             <div
                               className={classNames(
@@ -716,6 +723,7 @@ function PlasmicMyaccount__RenderFunc(props) {
                             )}
                             color={"softGreen"}
                             size={"compact"}
+                            submitsForm={true}
                           >
                             <div
                               className={classNames(

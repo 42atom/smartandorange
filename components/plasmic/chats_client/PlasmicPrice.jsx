@@ -166,6 +166,9 @@ function PlasmicPrice__RenderFunc(props) {
                       },
                       () =>
                         (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
                           const oldValue = p.get($state, vgroup);
                           p.set($state, vgroup, !oldValue);
                           return !oldValue;
@@ -371,6 +374,7 @@ function PlasmicPrice__RenderFunc(props) {
                   role={"img"}
                 />
               }
+              submitsForm={true}
             >
               <div
                 className={classNames(
@@ -663,6 +667,7 @@ function PlasmicPrice__RenderFunc(props) {
                   role={"img"}
                 />
               }
+              submitsForm={true}
             >
               <div
                 className={classNames(
@@ -905,6 +910,7 @@ function PlasmicPrice__RenderFunc(props) {
                   role={"img"}
                 />
               }
+              submitsForm={true}
             >
               <div
                 className={classNames(
