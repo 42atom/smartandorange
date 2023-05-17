@@ -104,18 +104,7 @@ function PlasmicSceneInfo__RenderFunc(props) {
             const $steps = {};
             $steps["goToWorkspacesEdit"] = true
               ? (() => {
-                  const actionArgs = {
-                    destination: __wrapUserFunction(
-                      {
-                        type: "InteractionArgLoc",
-                        actionName: "navigation",
-                        interactionUuid: "GUBJnxW2T",
-                        componentUuid: "Zf1zYQ7YK23by",
-                        argName: "destination"
-                      },
-                      () => `/workspaces_edit`
-                    )
-                  };
+                  const actionArgs = {};
                   return __wrapUserFunction(
                     {
                       type: "InteractionLoc",

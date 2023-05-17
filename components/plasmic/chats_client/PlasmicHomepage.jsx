@@ -31,8 +31,6 @@ import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: g
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: AAi9AuCCbMra/css
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: JhZ3dtt_5DRD2s/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: AO1hQKEExk65Hm/icon
-import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: A0Me8Phykv/icon
-import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: P8LQPjDHPd/icon
 import Icon14Icon from "./icons/PlasmicIcon__Icon14"; // plasmic-import: MTyawrbN6uF/icon
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: WYrTsWzQKYW/icon
 import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: KoY309Tgrjk/icon
@@ -72,31 +70,6 @@ function PlasmicHomepage__RenderFunc(props) {
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
-  const stateSpecs = React.useMemo(
-    () => [
-      {
-        path: "textbox.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
-      },
-      {
-        path: "textbox2.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
-      },
-      {
-        path: "textbox3.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
-      }
-    ],
-
-    [$props, $ctx]
-  );
-  const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
   useDependencyAwareQuery({
     name: "query",
     getDataOp: () => ({
@@ -446,13 +419,14 @@ function PlasmicHomepage__RenderFunc(props) {
                       />
                     }
                     link={`/workspaces`}
+                    size={"compact"}
                     startIcon={
                       <ChecksvgIcon
                         className={classNames(projectcss.all, sty.svg__nrmNp)}
                         role={"img"}
                       />
                     }
-                    submitsForm={true}
+                    submitsForm={false}
                   >
                     <div
                       className={classNames(
@@ -462,6 +436,33 @@ function PlasmicHomepage__RenderFunc(props) {
                       )}
                     >
                       {"免费注册"}
+                    </div>
+                  </Button>
+                  <Button
+                    className={classNames("__wab_instance", sty.button__t5W)}
+                    color={"green"}
+                    endIcon={
+                      <IconIcon
+                        className={classNames(projectcss.all, sty.svg__bEOsd)}
+                        role={"img"}
+                      />
+                    }
+                    startIcon={
+                      <ChecksvgIcon
+                        className={classNames(projectcss.all, sty.svg__fCi4L)}
+                        role={"img"}
+                      />
+                    }
+                    submitsForm={true}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___7Dt8L
+                      )}
+                    >
+                      {"登录"}
                     </div>
                   </Button>
                 </p.Stack>
@@ -595,248 +596,11 @@ function PlasmicHomepage__RenderFunc(props) {
                         sty.text__efmCb
                       )}
                     >
-                      {"AI不会取代我们，使用AI会让我们走的更远..."}
+                      {"AI让创作者会走的更远..."}
                     </div>
                   </p.Stack>
                 </div>
               ) : null}
-            </p.Stack>
-            <p.Stack
-              as={"form"}
-              data-plasmic-name={"login"}
-              data-plasmic-override={overrides.login}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.login)}
-            >
-              <div className={classNames(projectcss.all, sty.freeBox__fdw14)}>
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__r532S)}
-                >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__gbZ50)}
-                  >
-                    <Button
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button__uIxf0
-                      )}
-                      color={"white"}
-                      endIcon={
-                        <IconIcon
-                          className={classNames(projectcss.all, sty.svg__anZa)}
-                          role={"img"}
-                        />
-                      }
-                      showStartIcon={true}
-                      startIcon={
-                        <Icon5Icon
-                          className={classNames(projectcss.all, sty.svg__yX2De)}
-                          role={"img"}
-                        />
-                      }
-                      submitsForm={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__la2Kz
-                        )}
-                      >
-                        {"邮箱注册"}
-                      </div>
-                    </Button>
-                    <Button
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button__movWt
-                      )}
-                      color={"white"}
-                      endIcon={
-                        <IconIcon
-                          className={classNames(
-                            projectcss.all,
-                            sty.svg___60MOu
-                          )}
-                          role={"img"}
-                        />
-                      }
-                      showStartIcon={true}
-                      startIcon={
-                        <Icon7Icon
-                          className={classNames(projectcss.all, sty.svg__livc9)}
-                          role={"img"}
-                        />
-                      }
-                      submitsForm={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__zNjbG
-                        )}
-                      >
-                        {"手机注册"}
-                      </div>
-                    </Button>
-                  </p.Stack>
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__uVbLd)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox___8W4)}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__yMRf
-                      )}
-                    >
-                      {"登录"}
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__jnwzj)}
-                    />
-                  </p.Stack>
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__zDgSk)}
-                  >
-                    <input
-                      data-plasmic-name={"textbox"}
-                      data-plasmic-override={overrides.textbox}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.input,
-                        sty.textbox
-                      )}
-                      name={"username"}
-                      onChange={e => {
-                        p.generateStateOnChangeProp($state, [
-                          "textbox",
-                          "value"
-                        ])(e.target.value);
-                      }}
-                      placeholder={"邮箱/手机号"}
-                      ref={ref => {
-                        $refs["textbox"] = ref;
-                      }}
-                      size={1}
-                      type={"text"}
-                      value={
-                        p.generateStateValueProp($state, [
-                          "textbox",
-                          "value"
-                        ]) ?? ""
-                      }
-                    />
-
-                    <input
-                      data-plasmic-name={"textbox2"}
-                      data-plasmic-override={overrides.textbox2}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.input,
-                        sty.textbox2
-                      )}
-                      name={"password"}
-                      onChange={e => {
-                        p.generateStateOnChangeProp($state, [
-                          "textbox2",
-                          "value"
-                        ])(e.target.value);
-                      }}
-                      placeholder={"输入密码"}
-                      ref={ref => {
-                        $refs["textbox2"] = ref;
-                      }}
-                      size={1}
-                      type={"password"}
-                      value={
-                        p.generateStateValueProp($state, [
-                          "textbox2",
-                          "value"
-                        ]) ?? ""
-                      }
-                    />
-
-                    <input
-                      data-plasmic-name={"textbox3"}
-                      data-plasmic-override={overrides.textbox3}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.input,
-                        sty.textbox3
-                      )}
-                      name={"verify_code"}
-                      onChange={e => {
-                        p.generateStateOnChangeProp($state, [
-                          "textbox3",
-                          "value"
-                        ])(e.target.value);
-                      }}
-                      placeholder={"验证码"}
-                      ref={ref => {
-                        $refs["textbox3"] = ref;
-                      }}
-                      size={1}
-                      type={"text"}
-                      value={
-                        p.generateStateValueProp($state, [
-                          "textbox3",
-                          "value"
-                        ]) ?? ""
-                      }
-                    />
-                  </p.Stack>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__feud5
-                    )}
-                  >
-                    {"请阅读用户隐私协议"}
-                  </div>
-                  <Button
-                    className={classNames("__wab_instance", sty.button__c5DC0)}
-                    color={"green"}
-                    endIcon={
-                      <IconIcon
-                        className={classNames(projectcss.all, sty.svg__vrQ0S)}
-                        role={"img"}
-                      />
-                    }
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__lkGa)}
-                        role={"img"}
-                      />
-                    }
-                    submitsForm={true}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__yfUb
-                      )}
-                    >
-                      {"登录"}
-                    </div>
-                  </Button>
-                </p.Stack>
-              </div>
             </p.Stack>
           </p.Stack>
           {true ? (
@@ -1780,10 +1544,6 @@ const PlasmicDescendants = {
   root: [
     "root",
     "foreground",
-    "login",
-    "textbox",
-    "textbox2",
-    "textbox3",
     "value",
     "foreground4",
     "h2",
@@ -1796,11 +1556,7 @@ const PlasmicDescendants = {
     "columns"
   ],
 
-  foreground: ["foreground", "login", "textbox", "textbox2", "textbox3"],
-  login: ["login", "textbox", "textbox2", "textbox3"],
-  textbox: ["textbox"],
-  textbox2: ["textbox2"],
-  textbox3: ["textbox3"],
+  foreground: ["foreground"],
   value: ["value", "foreground4", "h2"],
   foreground4: ["foreground4", "h2"],
   h2: ["h2"],
@@ -1861,10 +1617,6 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     foreground: makeNodeComponent("foreground"),
-    login: makeNodeComponent("login"),
-    textbox: makeNodeComponent("textbox"),
-    textbox2: makeNodeComponent("textbox2"),
-    textbox3: makeNodeComponent("textbox3"),
     value: makeNodeComponent("value"),
     foreground4: makeNodeComponent("foreground4"),
     h2: makeNodeComponent("h2"),

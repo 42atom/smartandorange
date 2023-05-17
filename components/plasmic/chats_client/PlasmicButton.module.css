@@ -118,7 +118,7 @@
   background: #7f7e77;
 }
 .rootcolor_white:hover {
-  background: #ffef5c;
+  background: var(--token-Au_oFWqRVEUZ);
 }
 .rootcolor_softBlue:hover {
   background: #e1f0ff;
@@ -168,7 +168,7 @@
   background: #a1a09a;
 }
 .rootcolor_white:active {
-  background: #f0c000;
+  background: var(--token-f2dibjK9-v2a);
 }
 .rootcolor_softBlue:active {
   background: #cee7fe;

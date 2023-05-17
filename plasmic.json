@@ -672,6 +672,32 @@
           "cssFilePath": "plasmic/chats_client/PlasmicNavMenuItem.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "n7stwr_SHF",
+          "name": "Register",
+          "type": "managed",
+          "projectId": "gRaosoDicn4VUCndSzazbA",
+          "renderModuleFilePath": "plasmic/chats_client/PlasmicRegister.jsx",
+          "importSpec": {
+            "modulePath": "../pages/register.jsx"
+          },
+          "cssFilePath": "plasmic/chats_client/PlasmicRegister.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "Sdxulv4_ssW",
+          "name": "RegisterInput",
+          "type": "managed",
+          "projectId": "gRaosoDicn4VUCndSzazbA",
+          "renderModuleFilePath": "plasmic/chats_client/PlasmicRegisterInput.jsx",
+          "importSpec": {
+            "modulePath": "RegisterInput.jsx"
+          },
+          "cssFilePath": "plasmic/chats_client/PlasmicRegisterInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -831,11 +857,6 @@
           "id": "ls-cHmcIfLVf8O",
           "name": "logoOnly.png 2",
           "filePath": "../public/plasmic/chats_client/images/logoOnlypng2.png"
-        },
-        {
-          "id": "73Gf_RftusJ",
-          "name": "image",
-          "filePath": "../public/plasmic/chats_client/images/image.svg"
         },
         {
           "id": "jcw5_g73v",
