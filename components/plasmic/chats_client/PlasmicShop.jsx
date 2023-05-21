@@ -21,7 +21,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import NavMenu from "../../NavMenu"; // plasmic-import: 9cR2sxpykRjad/component
-import Price from "../../Price"; // plasmic-import: A7lxlJD3kKn/component
+import PayItems from "../../PayItems"; // plasmic-import: l2Kc8Ybaed/component
 import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -126,10 +126,10 @@ function PlasmicShop__RenderFunc(props) {
             data-plasmic-override={overrides.bkgd}
             className={classNames(projectcss.all, sty.bkgd)}
           >
-            <Price
-              data-plasmic-name={"price"}
-              data-plasmic-override={overrides.price}
-              className={classNames("__wab_instance", sty.price)}
+            <PayItems
+              data-plasmic-name={"payItems"}
+              data-plasmic-override={overrides.payItems}
+              className={classNames("__wab_instance", sty.payItems)}
             />
           </section>
           {(
@@ -153,11 +153,11 @@ function PlasmicShop__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "navMenu", "bkgd", "price", "toolbar"],
+  root: ["root", "freeBox", "navMenu", "bkgd", "payItems", "toolbar"],
   freeBox: ["freeBox", "navMenu"],
   navMenu: ["navMenu"],
-  bkgd: ["bkgd", "price"],
-  price: ["price"],
+  bkgd: ["bkgd", "payItems"],
+  payItems: ["payItems"],
   toolbar: ["toolbar"]
 };
 
@@ -188,30 +188,15 @@ function makeNodeComponent(nodeName) {
   return func;
 }
 
-function withPlasmicPageGuard(WrappedComponent) {
-  const PageGuard = props => (
-    <p.PlasmicPageGuard
-      minRole={null}
-      appId={"gRaosoDicn4VUCndSzazbA"}
-      authorizeEndpoint={"https://studio.plasmic.app/authorize"}
-      canTriggerLogin={true}
-    >
-      <WrappedComponent {...props} />
-    </p.PlasmicPageGuard>
-  );
-
-  return PageGuard;
-}
-
 export const PlasmicShop = Object.assign(
   // Top-level PlasmicShop renders the root element
-  withPlasmicPageGuard(makeNodeComponent("root")),
+  makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
     navMenu: makeNodeComponent("navMenu"),
     bkgd: makeNodeComponent("bkgd"),
-    price: makeNodeComponent("price"),
+    payItems: makeNodeComponent("payItems"),
     toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicShop
     internalVariantProps: PlasmicShop__VariantProps,

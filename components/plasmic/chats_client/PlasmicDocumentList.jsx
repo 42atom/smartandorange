@@ -255,6 +255,70 @@ function PlasmicDocumentList__RenderFunc(props) {
                 data-plasmic-name={"deleteIcon"}
                 data-plasmic-override={overrides.deleteIcon}
                 className={classNames(projectcss.all, sty.deleteIcon)}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateCurrent"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: __wrapUserFunction(
+                            {
+                              type: "InteractionArgLoc",
+                              actionName: "updateVariable",
+                              interactionUuid: "_Dvg345Ds",
+                              componentUuid: "DuwZXCRDJh",
+                              argName: "variable"
+                            },
+                            () => ({
+                              objRoot: $state,
+                              variablePath: ["current"]
+                            })
+                          ),
+                          operation: __wrapUserFunction(
+                            {
+                              type: "InteractionArgLoc",
+                              actionName: "updateVariable",
+                              interactionUuid: "_Dvg345Ds",
+                              componentUuid: "DuwZXCRDJh",
+                              argName: "operation"
+                            },
+                            () => 0
+                          )
+                        };
+                        return __wrapUserFunction(
+                          {
+                            type: "InteractionLoc",
+                            actionName: "updateVariable",
+                            interactionUuid: "_Dvg345Ds",
+                            componentUuid: "DuwZXCRDJh"
+                          },
+                          () =>
+                            (({ variable, value, startIndex, deleteCount }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+                              p.set(objRoot, variablePath, value);
+                              return value;
+                            })?.apply(null, [actionArgs]),
+                          actionArgs
+                        );
+                      })()
+                    : undefined;
+                  if (
+                    typeof $steps["updateCurrent"] === "object" &&
+                    typeof $steps["updateCurrent"].then === "function"
+                  ) {
+                    $steps["updateCurrent"] = await __wrapUserPromise(
+                      {
+                        type: "InteractionLoc",
+                        actionName: "updateVariable",
+                        interactionUuid: "_Dvg345Ds",
+                        componentUuid: "DuwZXCRDJh"
+                      },
+                      $steps["updateCurrent"]
+                    );
+                  }
+                }}
                 role={"img"}
               />
             </div>

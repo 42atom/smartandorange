@@ -1,0 +1,31 @@
+.root {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  background: linear-gradient(147.84770485871763deg, #ce9fff 0%, #56b9ff 100%)
+      0% 0% / 100% 100% repeat,
+    var(--token-47ovROB-Xr2C);
+  position: relative;
+  border-radius: 14px;
+  padding: 6px;
+}
+.freeBox {
+  display: flex;
+  position: sticky;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+}
+.svg__es5Ix {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-AbckxUHKx);
+  position: relative;
+  left: auto;
+  top: auto;
+  z-index: auto;
+  width: 1em;
+  flex-shrink: 0;
+  height: 1em;
+}

@@ -467,24 +467,9 @@ function makeNodeComponent(nodeName) {
   return func;
 }
 
-function withPlasmicPageGuard(WrappedComponent) {
-  const PageGuard = props => (
-    <p.PlasmicPageGuard
-      minRole={null}
-      appId={"gRaosoDicn4VUCndSzazbA"}
-      authorizeEndpoint={"https://studio.plasmic.app/authorize"}
-      canTriggerLogin={true}
-    >
-      <WrappedComponent {...props} />
-    </p.PlasmicPageGuard>
-  );
-
-  return PageGuard;
-}
-
 export const PlasmicWorkspaces = Object.assign(
   // Top-level PlasmicWorkspaces renders the root element
-  withPlasmicPageGuard(makeNodeComponent("root")),
+  makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
     bkgd: makeNodeComponent("bkgd"),

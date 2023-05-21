@@ -13,7 +13,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
-import { useDependencyAwareQuery } from "@plasmicapp/react-web/lib/data-sources";
 import {
   hasVariant,
   classNames,
@@ -70,19 +69,6 @@ function PlasmicHomepage__RenderFunc(props) {
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
-  useDependencyAwareQuery({
-    name: "query",
-    getDataOp: () => ({
-      sourceId: "9m6seF9rffTwqmNeTPj4dy",
-      opId: "76d162da-e80e-4bfc-82eb-27018f41acaf",
-      userArgs: {},
-      cacheKey: "plasmic.$.AXV5MeQQE3xu.$.",
-      invalidatedKeys: ["plasmic_refresh_all"],
-      roleId: null
-    }),
-    $queries,
-    setDollarQueries
-  });
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsnl9I0Oib3VOwY()
   });
@@ -411,14 +397,14 @@ function PlasmicHomepage__RenderFunc(props) {
                   </Button>
                   <Button
                     className={classNames("__wab_instance", sty.button__a1X34)}
-                    color={"green"}
+                    color={"softGreen"}
                     endIcon={
                       <IconIcon
                         className={classNames(projectcss.all, sty.svg__kzRcy)}
                         role={"img"}
                       />
                     }
-                    link={`/workspaces`}
+                    link={`/register`}
                     size={"compact"}
                     startIcon={
                       <ChecksvgIcon
@@ -447,6 +433,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         role={"img"}
                       />
                     }
+                    link={`/login`}
+                    size={"compact"}
                     startIcon={
                       <ChecksvgIcon
                         className={classNames(projectcss.all, sty.svg__fCi4L)}
@@ -1596,24 +1584,9 @@ function makeNodeComponent(nodeName) {
   return func;
 }
 
-function withPlasmicPageGuard(WrappedComponent) {
-  const PageGuard = props => (
-    <p.PlasmicPageGuard
-      minRole={null}
-      appId={"gRaosoDicn4VUCndSzazbA"}
-      authorizeEndpoint={"https://studio.plasmic.app/authorize"}
-      canTriggerLogin={true}
-    >
-      <WrappedComponent {...props} />
-    </p.PlasmicPageGuard>
-  );
-
-  return PageGuard;
-}
-
 export const PlasmicHomepage = Object.assign(
   // Top-level PlasmicHomepage renders the root element
-  withPlasmicPageGuard(makeNodeComponent("root")),
+  makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
     foreground: makeNodeComponent("foreground"),

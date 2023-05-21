@@ -9,7 +9,7 @@
   --plasmic-token-system-success-active: var(--token-mHGy3iJMuj);
   --token-hS7e36A1nc: var(--antd-colorSuccess);
   --plasmic-token-system-success: var(--token-hS7e36A1nc);
-  --token-tsAjOKoWUS: var(--antd-colorWarningBgHover);
+  --token-tsAjOKoWUS: #f7ffee;
   --plasmic-token-system-warning-bg-hover: var(--token-tsAjOKoWUS);
   --token-PrbJaIviCD: var(--antd-colorText);
   --plasmic-token-system-text: var(--token-PrbJaIviCD);
@@ -39,6 +39,20 @@
   --plasmic-token-icn-default: var(--token-FMGQEiyNQ);
   --token-LJzy5WSR2: #f3f4f6;
   --plasmic-token-bkgd-base: var(--token-LJzy5WSR2);
+  --token--clqsEv8iP8y: var(--antd-colorInfoBg);
+  --plasmic-token-system-info-bg: var(--token--clqsEv8iP8y);
+  --token-iuivkJD8aiSZ: var(--antd-colorInfoBgHover);
+  --plasmic-token-system-info-bg-hover: var(--token-iuivkJD8aiSZ);
+  --token-0tej4Zeiesvz: #f2f9e3;
+  --plasmic-token-system-bg-layout-2: var(--token-0tej4Zeiesvz);
+  --token-2B9kEbcE-zaF: var(--antd-colorError);
+  --plasmic-token-system-error: var(--token-2B9kEbcE-zaF);
+  --token-QRin4DwcgZ4-: var(--antd-colorBgElevated);
+  --plasmic-token-system-bg-elevated: var(--token-QRin4DwcgZ4-);
+  --token-inRKTKkFw--B: var(--antd-colorBorderSecondary);
+  --plasmic-token-system-border-secondary: var(--token-inRKTKkFw--B);
+  --token-WOxkaP-l-mKp: var(--antd-colorPrimary);
+  --plasmic-token-system-primary: var(--token-WOxkaP-l-mKp);
 }
 
 .plasmic_tokens {

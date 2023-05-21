@@ -181,10 +181,10 @@ function PlasmicMydocuments__RenderFunc(props) {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__gQq0V
+                          sty.text__llNth
                         )}
                       >
-                        {"文档记录"}
+                        {"Group"}
                       </div>
                     }
                   >
@@ -459,24 +459,9 @@ function makeNodeComponent(nodeName) {
   return func;
 }
 
-function withPlasmicPageGuard(WrappedComponent) {
-  const PageGuard = props => (
-    <p.PlasmicPageGuard
-      minRole={null}
-      appId={"gRaosoDicn4VUCndSzazbA"}
-      authorizeEndpoint={"https://studio.plasmic.app/authorize"}
-      canTriggerLogin={true}
-    >
-      <WrappedComponent {...props} />
-    </p.PlasmicPageGuard>
-  );
-
-  return PageGuard;
-}
-
 export const PlasmicMydocuments = Object.assign(
   // Top-level PlasmicMydocuments renders the root element
-  withPlasmicPageGuard(makeNodeComponent("root")),
+  makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
     navMenu: makeNodeComponent("navMenu"),

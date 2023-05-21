@@ -107,38 +107,6 @@ function PlasmicNavMenu__RenderFunc(props) {
             className={classNames(projectcss.all, sty.header)}
             onClick={async event => {
               const $steps = {};
-              $steps["goToHomepage"] = true
-                ? (() => {
-                    const actionArgs = {};
-                    return __wrapUserFunction(
-                      {
-                        type: "InteractionLoc",
-                        actionName: "navigation",
-                        interactionUuid: "c3G1bE_FZ",
-                        componentUuid: "9cR2sxpykRjad"
-                      },
-                      () =>
-                        (({ destination }) => {
-                          __nextRouter?.push(destination);
-                        })?.apply(null, [actionArgs]),
-                      actionArgs
-                    );
-                  })()
-                : undefined;
-              if (
-                typeof $steps["goToHomepage"] === "object" &&
-                typeof $steps["goToHomepage"].then === "function"
-              ) {
-                $steps["goToHomepage"] = await __wrapUserPromise(
-                  {
-                    type: "InteractionLoc",
-                    actionName: "navigation",
-                    interactionUuid: "c3G1bE_FZ",
-                    componentUuid: "9cR2sxpykRjad"
-                  },
-                  $steps["goToHomepage"]
-                );
-              }
             }}
           >
             <p.PlasmicImg

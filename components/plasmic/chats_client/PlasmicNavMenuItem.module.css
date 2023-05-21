@@ -17,7 +17,7 @@
 .tabButton {
   width: auto;
   max-width: 100%;
-  background: var(--token-u4-1U5i2CHHR);
+  background: var(--token-QRin4DwcgZ4-);
   height: auto;
   align-self: center;
   overflow: hidden;
@@ -41,7 +41,7 @@
   border: 1px solid var(--token-_w178omqxW);
 }
 .root:active .tabButton {
-  background: var(--token-h7zTaNgA16Wj);
+  background: var(--token-inRKTKkFw--B);
 }
 .slotTargetLabel {
   color: var(--token-PrbJaIviCD);
@@ -107,8 +107,8 @@
   text-overflow: ellipsis;
 }
 .root:hover .slotTargetLabel {
-  color: var(--token-_aVAOSuusH4-);
+  color: var(--token-WOxkaP-l-mKp);
 }
 .root:active .slotTargetLabel {
-  color: var(--token-_aVAOSuusH4-);
+  color: var(--token-WOxkaP-l-mKp);
 }

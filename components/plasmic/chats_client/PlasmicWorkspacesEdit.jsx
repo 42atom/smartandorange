@@ -99,18 +99,6 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => "option1"
       },
       {
-        path: "load",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
-      },
-      {
-        path: "gcontenthide",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
-      },
-      {
         path: "input2.value",
         type: "private",
         variableType: "text",
@@ -225,10 +213,12 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                             {"返  回"}
                           </Button>
                           <div
+                            data-plasmic-name={"title"}
+                            data-plasmic-override={overrides.title}
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__bYdq0
+                              sty.title
                             )}
                           >
                             {"小红书营销短文"}
@@ -273,7 +263,7 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                             <FormItemWrapper
                               className={classNames(
                                 "__wab_instance",
-                                sty.formItem___89WdK
+                                sty.formField___89WdK
                               )}
                               label={
                                 <div
@@ -286,7 +276,10 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                                   {"你想写什么？（关键词输入）"}
                                 </div>
                               }
-                              name={"name"}
+                              name={"keywords"}
+                              rules={[
+                                { ruleType: "required", message: "请填写" }
+                              ]}
                             >
                               {(() => {
                                 const child$Props = {
@@ -303,7 +296,6 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                                       ["input", "value"],
                                       AntdInput_Helpers
                                     ),
-                                  placholder: "输入关键词",
                                   size: "large",
                                   type: "text",
                                   value: p.generateStateValueProp($state, [
@@ -345,7 +337,7 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                                 <FormItemWrapper
                                   className={classNames(
                                     "__wab_instance",
-                                    sty.formItem__bYsQp
+                                    sty.formField__bYsQp
                                   )}
                                   label={
                                     <div
@@ -358,7 +350,8 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                                       {"生成数量"}
                                     </div>
                                   }
-                                  name={"name"}
+                                  name={"number"}
+                                  rules={[{ ruleType: "required" }]}
                                 >
                                   {(() => {
                                     const child$Props = {
@@ -373,7 +366,6 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                                           ["input2", "value"],
                                           AntdInput_Helpers
                                         ),
-                                      placholder: "输入数量",
                                       size: "large",
                                       type: "number",
                                       value: p.generateStateValueProp($state, [
@@ -406,7 +398,7 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                                 <FormItemWrapper
                                   className={classNames(
                                     "__wab_instance",
-                                    sty.formItem__lDubi
+                                    sty.formField__lDubi
                                   )}
                                   hideValidationMessage={false}
                                   label={
@@ -420,11 +412,13 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                                       {"语气选择"}
                                     </div>
                                   }
-                                  name={"message"}
+                                  name={"tone"}
+                                  rules={[{ ruleType: "required" }]}
                                 >
                                   <Select
                                     data-plasmic-name={"select"}
                                     data-plasmic-override={overrides.select}
+                                    aria-label={"tone"}
                                     className={classNames(
                                       "__wab_instance",
                                       sty.select
@@ -459,236 +453,39 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                                 </FormItemWrapper>
                               </p.Stack>
                             ) : null}
-                            <FormItemWrapper
+                            <AntdButton
                               className={classNames(
                                 "__wab_instance",
-                                sty.formItem__lTvri
+                                sty.button__vZ8Y9
                               )}
-                              label={
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__kzCAs
-                                  )}
-                                >
-                                  {"Label"}
-                                </div>
-                              }
-                              noLabel={true}
+                              onClick={async () => {
+                                const $steps = {};
+                              }}
+                              shape={"round"}
+                              size={"medium"}
+                              submitsForm={true}
+                              type={"primary"}
                             >
-                              <AntdButton
+                              <div
                                 className={classNames(
-                                  "__wab_instance",
-                                  sty.button__vZ8Y9
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__xsAp8
                                 )}
-                                onClick={async () => {
-                                  const $steps = {};
-                                  $steps["updateVariable"] = true
-                                    ? (() => {
-                                        const actionArgs = {
-                                          operation: __wrapUserFunction(
-                                            {
-                                              type: "InteractionArgLoc",
-                                              actionName: "updateVariable",
-                                              interactionUuid: "EzFbpBjgd",
-                                              componentUuid: "-2p_ZIYW-pY",
-                                              argName: "operation"
-                                            },
-                                            () => 4
-                                          ),
-                                          variable: __wrapUserFunction(
-                                            {
-                                              type: "InteractionArgLoc",
-                                              actionName: "updateVariable",
-                                              interactionUuid: "EzFbpBjgd",
-                                              componentUuid: "-2p_ZIYW-pY",
-                                              argName: "variable"
-                                            },
-                                            () => ({
-                                              objRoot: $state,
-                                              variablePath: ["load"]
-                                            })
-                                          )
-                                        };
-                                        return __wrapUserFunction(
-                                          {
-                                            type: "InteractionLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "EzFbpBjgd",
-                                            componentUuid: "-2p_ZIYW-pY"
-                                          },
-                                          () =>
-                                            (({
-                                              variable,
-                                              value,
-                                              startIndex,
-                                              deleteCount
-                                            }) => {
-                                              const { objRoot, variablePath } =
-                                                variable;
-                                              const oldValue = p.get(
-                                                objRoot,
-                                                variablePath
-                                              );
-                                              p.set(
-                                                objRoot,
-                                                variablePath,
-                                                !oldValue
-                                              );
-                                              return !oldValue;
-                                            })?.apply(null, [actionArgs]),
-                                          actionArgs
-                                        );
-                                      })()
-                                    : undefined;
-                                  if (
-                                    typeof $steps["updateVariable"] ===
-                                      "object" &&
-                                    typeof $steps["updateVariable"].then ===
-                                      "function"
-                                  ) {
-                                    $steps["updateVariable"] =
-                                      await __wrapUserPromise(
-                                        {
-                                          type: "InteractionLoc",
-                                          actionName: "updateVariable",
-                                          interactionUuid: "EzFbpBjgd",
-                                          componentUuid: "-2p_ZIYW-pY"
-                                        },
-                                        $steps["updateVariable"]
-                                      );
-                                  }
-                                  $steps["updateGcontenthide"] = true
-                                    ? (() => {
-                                        const actionArgs = {
-                                          variable: __wrapUserFunction(
-                                            {
-                                              type: "InteractionArgLoc",
-                                              actionName: "updateVariable",
-                                              interactionUuid: "Iu6ggDoiT",
-                                              componentUuid: "-2p_ZIYW-pY",
-                                              argName: "variable"
-                                            },
-                                            () => ({
-                                              objRoot: $state,
-                                              variablePath: ["gcontenthide"]
-                                            })
-                                          ),
-                                          operation: __wrapUserFunction(
-                                            {
-                                              type: "InteractionArgLoc",
-                                              actionName: "updateVariable",
-                                              interactionUuid: "Iu6ggDoiT",
-                                              componentUuid: "-2p_ZIYW-pY",
-                                              argName: "operation"
-                                            },
-                                            () => 4
-                                          )
-                                        };
-                                        return __wrapUserFunction(
-                                          {
-                                            type: "InteractionLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "Iu6ggDoiT",
-                                            componentUuid: "-2p_ZIYW-pY"
-                                          },
-                                          () =>
-                                            (({
-                                              variable,
-                                              value,
-                                              startIndex,
-                                              deleteCount
-                                            }) => {
-                                              const { objRoot, variablePath } =
-                                                variable;
-                                              const oldValue = p.get(
-                                                objRoot,
-                                                variablePath
-                                              );
-                                              p.set(
-                                                objRoot,
-                                                variablePath,
-                                                !oldValue
-                                              );
-                                              return !oldValue;
-                                            })?.apply(null, [actionArgs]),
-                                          actionArgs
-                                        );
-                                      })()
-                                    : undefined;
-                                  if (
-                                    typeof $steps["updateGcontenthide"] ===
-                                      "object" &&
-                                    typeof $steps["updateGcontenthide"].then ===
-                                      "function"
-                                  ) {
-                                    $steps["updateGcontenthide"] =
-                                      await __wrapUserPromise(
-                                        {
-                                          type: "InteractionLoc",
-                                          actionName: "updateVariable",
-                                          interactionUuid: "Iu6ggDoiT",
-                                          componentUuid: "-2p_ZIYW-pY"
-                                        },
-                                        $steps["updateGcontenthide"]
-                                      );
-                                  }
-                                }}
-                                shape={"round"}
-                                size={"medium"}
-                                submitsForm={false}
-                                type={"primary"}
                               >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__xsAp8
-                                  )}
-                                >
-                                  {"生成文本"}
-                                </div>
-                              </AntdButton>
-                            </FormItemWrapper>
+                                {"生成文本"}
+                              </div>
+                            </AntdButton>
                           </FormWrapper>
-                          {(() => {
-                            try {
-                              return $state.gcontenthide;
-                            } catch (e) {
-                              if (e instanceof TypeError) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })() ? (
+                          {true ? (
                             <CreatedContent
+                              data-plasmic-name={"contents"}
+                              data-plasmic-override={overrides.contents}
                               className={classNames(
                                 "__wab_instance",
-                                sty.createdContent__teItb
+                                sty.contents
                               )}
                             />
-                          ) : null}
-                          {(() => {
-                            try {
-                              return $state.gcontenthide;
-                            } catch (e) {
-                              if (e instanceof TypeError) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })() ? (
-                            <CreatedContent
-                              className={classNames(
-                                "__wab_instance",
-                                sty.createdContent___3Ajlh
-                              )}
-                            >
-                              {
-                                "在攀登泰山的过程中，我感受到了脚下的路越来越陡峭，气温也越来越低。但是，我没有放弃，一步一步地向前走。经过一个多小时的努力，我终于到达了泰山的山顶。站在山顶，我感到了一种无与伦比的震撼和骄傲。从这里，我可以俯瞰整个山脉，欣赏到了宏伟壮观的景色。\n在泰山的山顶，我还参观了许多历史文化遗迹，这些古老的建筑和文化遗迹，让我深深地感受到了泰山的底蕴与丰厚的历史文化。"
-                              }
-                            </CreatedContent>
                           ) : null}
                         </p.Stack>
                       </div>
@@ -711,10 +508,12 @@ const PlasmicDescendants = {
     "navMenu",
     "section",
     "svg",
+    "title",
     "form",
     "input",
     "input2",
-    "select"
+    "select",
+    "contents"
   ],
 
   bkgd: [
@@ -722,19 +521,33 @@ const PlasmicDescendants = {
     "navMenu",
     "section",
     "svg",
+    "title",
     "form",
     "input",
     "input2",
-    "select"
+    "select",
+    "contents"
   ],
 
   navMenu: ["navMenu"],
-  section: ["section", "svg", "form", "input", "input2", "select"],
+  section: [
+    "section",
+    "svg",
+    "title",
+    "form",
+    "input",
+    "input2",
+    "select",
+    "contents"
+  ],
+
   svg: ["svg"],
+  title: ["title"],
   form: ["form", "input", "input2", "select"],
   input: ["input"],
   input2: ["input2"],
-  select: ["select"]
+  select: ["select"],
+  contents: ["contents"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -764,34 +577,21 @@ function makeNodeComponent(nodeName) {
   return func;
 }
 
-function withPlasmicPageGuard(WrappedComponent) {
-  const PageGuard = props => (
-    <p.PlasmicPageGuard
-      minRole={null}
-      appId={"gRaosoDicn4VUCndSzazbA"}
-      authorizeEndpoint={"https://studio.plasmic.app/authorize"}
-      canTriggerLogin={true}
-    >
-      <WrappedComponent {...props} />
-    </p.PlasmicPageGuard>
-  );
-
-  return PageGuard;
-}
-
 export const PlasmicWorkspacesEdit = Object.assign(
   // Top-level PlasmicWorkspacesEdit renders the root element
-  withPlasmicPageGuard(makeNodeComponent("root")),
+  makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
     bkgd: makeNodeComponent("bkgd"),
     navMenu: makeNodeComponent("navMenu"),
     section: makeNodeComponent("section"),
     svg: makeNodeComponent("svg"),
+    title: makeNodeComponent("title"),
     form: makeNodeComponent("form"),
     input: makeNodeComponent("input"),
     input2: makeNodeComponent("input2"),
     select: makeNodeComponent("select"),
+    contents: makeNodeComponent("contents"),
     // Metadata about props expected for PlasmicWorkspacesEdit
     internalVariantProps: PlasmicWorkspacesEdit__VariantProps,
     internalArgProps: PlasmicWorkspacesEdit__ArgProps,
