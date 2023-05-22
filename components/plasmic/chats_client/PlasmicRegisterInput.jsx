@@ -192,7 +192,7 @@ function PlasmicRegisterInput__RenderFunc(props) {
                           componentUuid: "Sdxulv4_ssW",
                           argName: "operation"
                         },
-                        () => 2
+                        () => 6
                       ),
                       value: __wrapUserFunction(
                         {
@@ -217,9 +217,8 @@ function PlasmicRegisterInput__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          const oldValue = p.get($state, vgroup);
-                          p.set($state, vgroup, !oldValue);
-                          return !oldValue;
+                          p.set($state, vgroup, false);
+                          return false;
                         })?.apply(null, [actionArgs]),
                       actionArgs
                     );
@@ -424,10 +423,16 @@ function PlasmicRegisterInput__RenderFunc(props) {
                 }
               )}
               name={"mobile"}
-              onChange={e => {
-                p.generateStateOnChangeProp($state, ["mobileNumber", "value"])(
-                  e.target.value
-                );
+              onChange={async (...eventArgs) => {
+                (e => {
+                  p.generateStateOnChangeProp($state, [
+                    "mobileNumber",
+                    "value"
+                  ])(e.target.value);
+                }).apply(null, eventArgs);
+                (async event => {
+                  const $steps = {};
+                }).apply(null, eventArgs);
               }}
               placeholder={"手机号"}
               ref={ref => {

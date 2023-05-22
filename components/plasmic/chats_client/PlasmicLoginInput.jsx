@@ -191,7 +191,7 @@ function PlasmicLoginInput__RenderFunc(props) {
                           componentUuid: "KyDDGn4_M-r",
                           argName: "operation"
                         },
-                        () => 2
+                        () => 6
                       ),
                       value: __wrapUserFunction(
                         {
@@ -216,9 +216,8 @@ function PlasmicLoginInput__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          const oldValue = p.get($state, vgroup);
-                          p.set($state, vgroup, !oldValue);
-                          return !oldValue;
+                          p.set($state, vgroup, false);
+                          return false;
                         })?.apply(null, [actionArgs]),
                       actionArgs
                     );
@@ -269,7 +268,7 @@ function PlasmicLoginInput__RenderFunc(props) {
               )}
             >
               {hasVariant($state, "mailState", "mailState")
-                ? "手机注册"
+                ? "手机登录"
                 : "手机登录"}
             </div>
           </Button>
@@ -388,7 +387,7 @@ function PlasmicLoginInput__RenderFunc(props) {
               )}
             >
               {hasVariant($state, "mailState", "mailState")
-                ? "邮箱注册"
+                ? "邮箱登录"
                 : "邮箱登录"}
             </div>
           </Button>
@@ -536,7 +535,7 @@ function PlasmicLoginInput__RenderFunc(props) {
                   e.target.value
                 );
               }}
-              placeholder={"填写邮箱"}
+              placeholder={"填写已注册的邮箱"}
               ref={ref => {
                 $refs["mail"] = ref;
               }}

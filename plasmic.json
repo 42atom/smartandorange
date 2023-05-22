@@ -195,7 +195,8 @@
           "name": "AntdSwitch",
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerSwitch"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "28Ba3BDvRe7EiWdfFNnLB6",
@@ -1019,7 +1020,8 @@
           "name": "RichDetails",
           "componentImportPath": "@plasmicpkgs/plasmic-rich-components"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "YUiM7yqBWAqsh8KSnrdj7",
@@ -1043,7 +1045,8 @@
           "name": "GraphqlFetcher",
           "componentImportPath": "@plasmicpkgs/plasmic-query"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -1138,7 +1141,8 @@
           "name": "TabContent",
           "componentImportPath": "@plasmicpkgs/plasmic-tabs"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
