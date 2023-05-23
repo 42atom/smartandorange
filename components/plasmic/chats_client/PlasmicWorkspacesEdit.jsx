@@ -34,7 +34,6 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicWorkspacesEdit.module.css"; // plasmic-import: -2p_ZIYW-pY/css
-import Icon12Icon from "./icons/PlasmicIcon__Icon12"; // plasmic-import: C_0-pDO_5g/icon
 
 export const PlasmicWorkspacesEdit__VariantProps = new Array();
 
@@ -200,14 +199,6 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                             link={`/workspaces`}
                             showStartIcon={true}
                             size={"compact"}
-                            startIcon={
-                              <Icon12Icon
-                                data-plasmic-name={"svg"}
-                                data-plasmic-override={overrides.svg}
-                                className={classNames(projectcss.all, sty.svg)}
-                                role={"img"}
-                              />
-                            }
                             submitsForm={true}
                           >
                             {"返  回"}
@@ -507,7 +498,6 @@ const PlasmicDescendants = {
     "bkgd",
     "navMenu",
     "section",
-    "svg",
     "title",
     "form",
     "input",
@@ -520,7 +510,6 @@ const PlasmicDescendants = {
     "bkgd",
     "navMenu",
     "section",
-    "svg",
     "title",
     "form",
     "input",
@@ -532,7 +521,6 @@ const PlasmicDescendants = {
   navMenu: ["navMenu"],
   section: [
     "section",
-    "svg",
     "title",
     "form",
     "input",
@@ -541,7 +529,6 @@ const PlasmicDescendants = {
     "contents"
   ],
 
-  svg: ["svg"],
   title: ["title"],
   form: ["form", "input", "input2", "select"],
   input: ["input"],
@@ -585,7 +572,6 @@ export const PlasmicWorkspacesEdit = Object.assign(
     bkgd: makeNodeComponent("bkgd"),
     navMenu: makeNodeComponent("navMenu"),
     section: makeNodeComponent("section"),
-    svg: makeNodeComponent("svg"),
     title: makeNodeComponent("title"),
     form: makeNodeComponent("form"),
     input: makeNodeComponent("input"),

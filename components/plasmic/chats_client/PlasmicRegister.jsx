@@ -25,7 +25,6 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicRegister.module.css"; // plasmic-import: n7stwr_SHF/css
-import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: JhZ3dtt_5DRD2s/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: AO1hQKEExk65Hm/icon
 
 export const PlasmicRegister__VariantProps = new Array();
@@ -107,7 +106,9 @@ function PlasmicRegister__RenderFunc(props) {
                   color={"green"}
                   endIcon={
                     <IconIcon
-                      className={classNames(projectcss.all, sty.svg__uZSuO)}
+                      data-plasmic-name={"svg"}
+                      data-plasmic-override={overrides.svg}
+                      className={classNames(projectcss.all, sty.svg)}
                       role={"img"}
                     />
                   }
@@ -115,12 +116,6 @@ function PlasmicRegister__RenderFunc(props) {
                   onClick={async event => {
                     const $steps = {};
                   }}
-                  startIcon={
-                    <ChecksvgIcon
-                      className={classNames(projectcss.all, sty.svg__xnPia)}
-                      role={"img"}
-                    />
-                  }
                   submitsForm={true}
                 >
                   <div
@@ -145,11 +140,12 @@ function PlasmicRegister__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "login", "regiesterInputs", "confirm", "text"],
-  login: ["login", "regiesterInputs", "confirm", "text"],
-  regiesterInputs: ["regiesterInputs", "confirm", "text"],
-  confirm: ["confirm", "text"],
-  text: ["text"]
+  root: ["root", "login", "regiesterInputs", "confirm", "text", "svg"],
+  login: ["login", "regiesterInputs", "confirm", "text", "svg"],
+  regiesterInputs: ["regiesterInputs", "confirm", "text", "svg"],
+  confirm: ["confirm", "text", "svg"],
+  text: ["text"],
+  svg: ["svg"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -188,6 +184,7 @@ export const PlasmicRegister = Object.assign(
     regiesterInputs: makeNodeComponent("regiesterInputs"),
     confirm: makeNodeComponent("confirm"),
     text: makeNodeComponent("text"),
+    svg: makeNodeComponent("svg"),
     // Metadata about props expected for PlasmicRegister
     internalVariantProps: PlasmicRegister__VariantProps,
     internalArgProps: PlasmicRegister__ArgProps,

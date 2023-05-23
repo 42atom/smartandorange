@@ -25,7 +25,6 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicLogin.module.css"; // plasmic-import: u47P7dt0C8/css
-import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: JhZ3dtt_5DRD2s/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: AO1hQKEExk65Hm/icon
 
 export const PlasmicLogin__VariantProps = new Array();
@@ -107,13 +106,9 @@ function PlasmicLogin__RenderFunc(props) {
                   color={"green"}
                   endIcon={
                     <IconIcon
-                      className={classNames(projectcss.all, sty.svg__wj1Xk)}
-                      role={"img"}
-                    />
-                  }
-                  startIcon={
-                    <ChecksvgIcon
-                      className={classNames(projectcss.all, sty.svg__knDbO)}
+                      data-plasmic-name={"svg"}
+                      data-plasmic-override={overrides.svg}
+                      className={classNames(projectcss.all, sty.svg)}
                       role={"img"}
                     />
                   }
@@ -141,11 +136,12 @@ function PlasmicLogin__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "login", "loginInput", "confirm2", "text"],
-  login: ["login", "loginInput", "confirm2", "text"],
-  loginInput: ["loginInput", "confirm2", "text"],
-  confirm2: ["confirm2", "text"],
-  text: ["text"]
+  root: ["root", "login", "loginInput", "confirm2", "text", "svg"],
+  login: ["login", "loginInput", "confirm2", "text", "svg"],
+  loginInput: ["loginInput", "confirm2", "text", "svg"],
+  confirm2: ["confirm2", "text", "svg"],
+  text: ["text"],
+  svg: ["svg"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -184,6 +180,7 @@ export const PlasmicLogin = Object.assign(
     loginInput: makeNodeComponent("loginInput"),
     confirm2: makeNodeComponent("confirm2"),
     text: makeNodeComponent("text"),
+    svg: makeNodeComponent("svg"),
     // Metadata about props expected for PlasmicLogin
     internalVariantProps: PlasmicLogin__VariantProps,
     internalArgProps: PlasmicLogin__ArgProps,

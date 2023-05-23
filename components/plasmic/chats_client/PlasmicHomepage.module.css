@@ -191,12 +191,6 @@
   position: relative;
   align-self: flex-start;
 }
-.svg__bz3MI {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .text__yGBgA {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -222,12 +216,6 @@
   max-width: 100%;
   position: relative;
   align-self: flex-start;
-}
-.svg__gHyel {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }
 .text__rdeBy {
   font-family: "Inter", sans-serif;
@@ -255,12 +243,6 @@
   position: relative;
   align-self: flex-start;
 }
-.svg___3NgSh {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .text__kNtlw {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -287,12 +269,6 @@
   position: relative;
   align-self: center;
 }
-.svg__nrmNp {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .text___0U4Qk {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -318,12 +294,6 @@
   max-width: 100%;
   position: relative;
   align-self: center;
-}
-.svg__fCi4L {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }
 .text___7Dt8L {
   font-family: "Inter", sans-serif;
@@ -375,12 +345,6 @@
   max-width: 100%;
   position: relative;
   display: none;
-}
-.svg___9VItp {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }
 .text__usbzz {
   font-family: "Inter", sans-serif;
@@ -614,6 +578,17 @@
   .text__efmCb {
     text-align: center;
   }
+}
+.button___8HFnL:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  align-self: flex-start;
+}
+.svg___2Q5Vn {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
 }
 .freeBox__qfCrU {
   display: flex;
@@ -2047,12 +2022,6 @@
 .button___1N0I5:global(.__wab_instance) {
   position: relative;
 }
-.svg__zgHNf {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .text__gKtby {
   height: auto;
   font-family: "Inter", sans-serif;
@@ -2076,12 +2045,6 @@
 }
 .button__dnsbo:global(.__wab_instance) {
   position: relative;
-}
-.svg__ocgLh {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }
 .text__kJznj {
   height: auto;
@@ -2107,12 +2070,6 @@
 .button__szD65:global(.__wab_instance) {
   position: relative;
 }
-.svg__vT4T4 {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .text__rfyFt {
   height: auto;
   font-family: "Inter", sans-serif;
@@ -2136,12 +2093,6 @@
 }
 .button___3NAr6:global(.__wab_instance) {
   position: relative;
-}
-.svg__zyLrg {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }
 .text__rtk4A {
   height: auto;
@@ -2223,12 +2174,6 @@
 .button__gtZoB:global(.__wab_instance) {
   position: relative;
 }
-.svg___11TgO {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .text__zPfyo {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -2252,12 +2197,6 @@
 .button___2M31F:global(.__wab_instance) {
   position: relative;
 }
-.svg___2Ggcw {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .text__hBcwJ {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -2280,12 +2219,6 @@
 }
 .button__tWbr:global(.__wab_instance) {
   position: relative;
-}
-.svg__bmuoe {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }
 .text__e639I {
   font-family: "Inter", sans-serif;

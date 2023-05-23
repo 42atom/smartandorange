@@ -568,12 +568,6 @@
   max-width: 100%;
   position: relative;
 }
-.svg__mUjx {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .text__o5UY {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -1218,12 +1212,6 @@
   max-width: 100%;
   position: relative;
 }
-.svg__fmeL6 {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .text__mj73 {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -1751,12 +1739,6 @@
 .button___5Wh7A:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
-}
-.svg__lwao0 {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }
 .text__yQBc {
   font-family: "Inter", sans-serif;

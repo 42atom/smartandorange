@@ -25,10 +25,7 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicLoginInput.module.css"; // plasmic-import: KyDDGn4_M-r/css
-import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: P8LQPjDHPd/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: AO1hQKEExk65Hm/icon
-import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: A0Me8Phykv/icon
-import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: JhZ3dtt_5DRD2s/icon
 
 export const PlasmicLoginInput__VariantProps = new Array("mailState");
 
@@ -239,18 +236,6 @@ function PlasmicLoginInput__RenderFunc(props) {
               }
             }}
             showStartIcon={true}
-            startIcon={
-              <Icon7Icon
-                className={classNames(projectcss.all, sty.svg___5Tfj3, {
-                  [sty.svgmailState___5Tfj3IlXmh]: hasVariant(
-                    $state,
-                    "mailState",
-                    "mailState"
-                  )
-                })}
-                role={"img"}
-              />
-            }
             submitsForm={false}
           >
             <div
@@ -358,18 +343,6 @@ function PlasmicLoginInput__RenderFunc(props) {
               }
             }}
             showStartIcon={true}
-            startIcon={
-              <Icon5Icon
-                className={classNames(projectcss.all, sty.svg__jAc0, {
-                  [sty.svgmailState__jAc0IlXmh]: hasVariant(
-                    $state,
-                    "mailState",
-                    "mailState"
-                  )
-                })}
-                role={"img"}
-              />
-            }
             submitsForm={false}
           >
             <div
@@ -413,6 +386,7 @@ function PlasmicLoginInput__RenderFunc(props) {
                 projectcss.all,
                 projectcss.input,
                 sty.mobileNumber,
+                ``,
                 {
                   [sty.mobileNumbermailState]: hasVariant(
                     $state,
@@ -640,12 +614,6 @@ function PlasmicLoginInput__RenderFunc(props) {
                 />
               }
               link={`/workspaces`}
-              startIcon={
-                <ChecksvgIcon
-                  className={classNames(projectcss.all, sty.svg__vwTwG)}
-                  role={"img"}
-                />
-              }
               submitsForm={true}
             >
               <div

@@ -195,57 +195,14 @@
   background: #52a9ff;
 }
 .startIconContainer {
-  display: flex;
   position: relative;
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
+  display: none;
 }
 .startIconContainershowStartIcon {
   display: flex;
-}
-.slotTargetStartIcon {
-  color: #ededec;
-}
-.slotTargetStartIconcolor_yellow {
-  color: #35290f;
-}
-.slotTargetStartIconcolor_white {
-  color: #35290f;
-}
-.slotTargetStartIconcolor_softBlue {
-  color: #006adc;
-}
-.slotTargetStartIconcolor_softGreen {
-  color: #18794e;
-}
-.slotTargetStartIconcolor_softYellow {
-  color: #946800;
-}
-.slotTargetStartIconcolor_softRed {
-  color: #ca3214;
-}
-.slotTargetStartIconcolor_softSand {
-  color: #706f6c;
-}
-.slotTargetStartIconcolor_clear {
-  color: #1b1b18;
-}
-.slotTargetStartIconcolor_link {
-  color: #0091ff;
-}
-.rootcolor_link:hover .slotTargetStartIconcolor_link {
-  color: #0081f1;
-}
-.rootcolor_link:active .slotTargetStartIconcolor_link {
-  color: #006adc;
-}
-.svg__hdt1L {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-  flex-shrink: 0;
 }
 .contentContainer {
   display: flex;

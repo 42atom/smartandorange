@@ -141,16 +141,6 @@
   width: 100%;
   min-width: 0;
 }
-.svg__tXkvL {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
-  color: var(--token-mHGy3iJMuj);
-}
-.svgmailState__tXkvLenDGo {
-  color: var(--token-WgGKuDBDe);
-}
 .text___7X0D {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -189,16 +179,6 @@
   position: relative;
   width: 100%;
   min-width: 0;
-}
-.svg__imK1 {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
-  color: var(--token-WgGKuDBDe);
-}
-.svgmailState__imK1EnDGo {
-  color: var(--token-mHGy3iJMuj);
 }
 .text__ot39T {
   font-family: "Inter", sans-serif;
@@ -304,12 +284,6 @@
   max-width: 100%;
   position: relative;
 }
-.svg__o9Tw {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .svg__wdWvl {
   position: relative;
   object-fit: cover;
@@ -410,12 +384,6 @@
 .button__leNzd:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
-}
-.svg__zMwC4 {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }
 .text__jo1Z {
   font-family: "Inter", sans-serif;

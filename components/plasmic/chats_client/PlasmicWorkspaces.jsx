@@ -21,9 +21,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import NavMenu from "../../NavMenu"; // plasmic-import: 9cR2sxpykRjad/component
-import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: fo-n3xHvdqt/codeComponent
-import { AntdMenuItemGroup } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: 6ySly9jzXsR/codeComponent
-import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: QSmezaW-Gyu/codeComponent
+import ScenesTagMenuBtn from "../../ScenesTagMenuBtn"; // plasmic-import: slY9K5ec7o/component
 import SceneInfo from "../../SceneInfo"; // plasmic-import: Zf1zYQ7YK23by/component
 import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
@@ -32,7 +30,7 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicWorkspaces.module.css"; // plasmic-import: PlpIcihQhaX91/css
-import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: dkiK7MvBVR/icon
+import Icon15Icon from "./icons/PlasmicIcon__Icon15"; // plasmic-import: HpyYmDJCsB/icon
 
 export const PlasmicWorkspaces__VariantProps = new Array();
 
@@ -145,150 +143,138 @@ function PlasmicWorkspaces__RenderFunc(props) {
                           sty.freeBox___9MNcR
                         )}
                       >
-                        {true ? (
-                          <AntdMenu
-                            data-plasmic-name={"menu"}
-                            data-plasmic-override={overrides.menu}
-                            className={classNames("__wab_instance", sty.menu)}
-                            expandIcon={
-                              <Icon10Icon
-                                data-plasmic-name={"svg"}
-                                data-plasmic-override={overrides.svg}
-                                className={classNames(projectcss.all, sty.svg)}
-                                role={"img"}
-                              />
-                            }
-                            mode={
-                              hasVariant(globalVariants, "screen", "mobileOnly")
-                                ? "horizontal"
-                                : "vertical"
-                            }
-                            multiple={false}
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
+                          <p.Stack
+                            as={"div"}
+                            data-plasmic-name={"tabTitle"}
+                            data-plasmic-override={overrides.tabTitle}
+                            hasGap={true}
+                            className={classNames(projectcss.all, sty.tabTitle)}
                           >
-                            <AntdMenuItemGroup
-                              data-plasmic-name={"itemGroup"}
-                              data-plasmic-override={overrides.itemGroup}
+                            <Icon15Icon
+                              data-plasmic-name={"svg"}
+                              data-plasmic-override={overrides.svg}
+                              className={classNames(projectcss.all, sty.svg)}
+                              role={"img"}
+                            />
+
+                            <div
                               className={classNames(
-                                "__wab_instance",
-                                sty.itemGroup
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___1Lu3A
                               )}
-                              title={
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__zuoAu
-                                  )}
-                                >
-                                  {"模版分类"}
-                                </div>
-                              }
                             >
-                              <AntdMenuItem
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.menuItem__gOmv0
-                                )}
-                                key={"k1"}
-                              >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__zw1Lv
-                                  )}
-                                >
-                                  {"收藏"}
-                                </div>
-                              </AntdMenuItem>
-                              <AntdMenuItem
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.menuItem__pEy29
-                                )}
-                                key={"k2"}
-                              >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__l2Ea5
-                                  )}
-                                >
-                                  {"热门"}
-                                </div>
-                              </AntdMenuItem>
-                              <AntdMenuItem
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.menuItem___70Ju
-                                )}
-                                key={"k3"}
-                              >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text___46Vht
-                                  )}
-                                >
-                                  {"小红书营销类"}
-                                </div>
-                              </AntdMenuItem>
-                              <AntdMenuItem
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.menuItem___1SkBi
-                                )}
-                                key={"k4"}
-                              >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__fGjOe
-                                  )}
-                                >
-                                  {"中文社交媒体"}
-                                </div>
-                              </AntdMenuItem>
-                              <AntdMenuItem
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.menuItem__woTjl
-                                )}
-                                key={"k5"}
-                              >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__ylzy
-                                  )}
-                                >
-                                  {"英文社交媒体"}
-                                </div>
-                              </AntdMenuItem>
-                              <AntdMenuItem
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.menuItem__iMxql
-                                )}
-                                key={"k6"}
-                              >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__wLoO7
-                                  )}
-                                >
-                                  {"出题机"}
-                                </div>
-                              </AntdMenuItem>
-                            </AntdMenuItemGroup>
-                          </AntdMenu>
+                              {"场景分类"}
+                            </div>
+                          </p.Stack>
                         ) : null}
+                        <p.Stack
+                          as={"aside"}
+                          data-plasmic-name={"scenesTabs"}
+                          data-plasmic-override={overrides.scenesTabs}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.scenesTabs,
+                            ``
+                          )}
+                          id={"scenes_tag"}
+                          tabIndex={1}
+                        >
+                          <ScenesTagMenuBtn
+                            className={classNames(
+                              "__wab_instance",
+                              sty.scenesTagMenuBtn__sC6Sx
+                            )}
+                            isActive={true}
+                          />
+
+                          <ScenesTagMenuBtn
+                            className={classNames(
+                              "__wab_instance",
+                              sty.scenesTagMenuBtn__xJv31
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___541Oa
+                              )}
+                            >
+                              {"热门"}
+                            </div>
+                          </ScenesTagMenuBtn>
+                          <ScenesTagMenuBtn
+                            className={classNames(
+                              "__wab_instance",
+                              sty.scenesTagMenuBtn__l1UmW
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__zhIp
+                              )}
+                            >
+                              {"小红书营销类"}
+                            </div>
+                          </ScenesTagMenuBtn>
+                          <ScenesTagMenuBtn
+                            className={classNames(
+                              "__wab_instance",
+                              sty.scenesTagMenuBtn__dObK
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__qt2Yg
+                              )}
+                            >
+                              {"出题机"}
+                            </div>
+                          </ScenesTagMenuBtn>
+                          <ScenesTagMenuBtn
+                            className={classNames(
+                              "__wab_instance",
+                              sty.scenesTagMenuBtn__nuhil
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__lIPvv
+                              )}
+                            >
+                              {"中文社交媒体"}
+                            </div>
+                          </ScenesTagMenuBtn>
+                          <ScenesTagMenuBtn
+                            className={classNames(
+                              "__wab_instance",
+                              sty.scenesTagMenuBtn___8Jcxy
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__lqRom
+                              )}
+                            >
+                              {"全部"}
+                            </div>
+                          </ScenesTagMenuBtn>
+                        </p.Stack>
                         {(
                           hasVariant(globalVariants, "screen", "mobileOnly")
                             ? true
@@ -349,26 +335,133 @@ function PlasmicWorkspaces__RenderFunc(props) {
                           >
                             {p.renderPlasmicSlot({
                               defaultContents: (
-                                <SceneInfo
-                                  className={classNames(
-                                    "__wab_instance",
-                                    sty.sceneInfo__zigmA
-                                  )}
-                                  desc={"desc"}
-                                  input={
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__u2GgT
-                                      )}
-                                    >
-                                      {"Modal content"}
-                                    </div>
-                                  }
-                                  output={"Modal content"}
-                                  title={"场景标题"}
-                                />
+                                <React.Fragment>
+                                  <SceneInfo
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.sceneInfo__zigmA
+                                    )}
+                                    desc={"desc"}
+                                    input={
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__u2GgT
+                                        )}
+                                      >
+                                        {"Modal content"}
+                                      </div>
+                                    }
+                                    output={"Modal content"}
+                                    title={"场景标题"}
+                                  />
+
+                                  <SceneInfo
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.sceneInfo__ok60U
+                                    )}
+                                    desc={"desc"}
+                                    input={
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__kCFbv
+                                        )}
+                                      >
+                                        {"Modal content"}
+                                      </div>
+                                    }
+                                    output={"Modal content"}
+                                    title={"场景标题"}
+                                  />
+
+                                  <SceneInfo
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.sceneInfo__qdlmq
+                                    )}
+                                    desc={"desc"}
+                                    input={
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__hx7T0
+                                        )}
+                                      >
+                                        {"Modal content"}
+                                      </div>
+                                    }
+                                    output={"Modal content"}
+                                    title={"场景标题"}
+                                  />
+
+                                  <SceneInfo
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.sceneInfo__dtd5A
+                                    )}
+                                    desc={"desc"}
+                                    input={
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__cvTn8
+                                        )}
+                                      >
+                                        {"Modal content"}
+                                      </div>
+                                    }
+                                    output={"Modal content"}
+                                    title={"场景标题"}
+                                  />
+
+                                  <SceneInfo
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.sceneInfo__bu96
+                                    )}
+                                    desc={"desc"}
+                                    input={
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__rgGA
+                                        )}
+                                      >
+                                        {"Modal content"}
+                                      </div>
+                                    }
+                                    output={"Modal content"}
+                                    title={"场景标题"}
+                                  />
+
+                                  <SceneInfo
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.sceneInfo__maa04
+                                    )}
+                                    desc={"desc"}
+                                    input={
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__pBRxc
+                                        )}
+                                      >
+                                        {"Modal content"}
+                                      </div>
+                                    }
+                                    output={"Modal content"}
+                                    title={"场景标题"}
+                                  />
+                                </React.Fragment>
                               ),
 
                               value: args.grid
@@ -408,9 +501,9 @@ const PlasmicDescendants = {
     "bkgd",
     "navMenu",
     "section",
-    "menu",
-    "itemGroup",
+    "tabTitle",
     "svg",
+    "scenesTabs",
     "columns",
     "column",
     "grid",
@@ -421,19 +514,28 @@ const PlasmicDescendants = {
     "bkgd",
     "navMenu",
     "section",
-    "menu",
-    "itemGroup",
+    "tabTitle",
     "svg",
+    "scenesTabs",
     "columns",
     "column",
     "grid"
   ],
 
   navMenu: ["navMenu"],
-  section: ["section", "menu", "itemGroup", "svg", "columns", "column", "grid"],
-  menu: ["menu", "itemGroup", "svg"],
-  itemGroup: ["itemGroup"],
+  section: [
+    "section",
+    "tabTitle",
+    "svg",
+    "scenesTabs",
+    "columns",
+    "column",
+    "grid"
+  ],
+
+  tabTitle: ["tabTitle", "svg"],
   svg: ["svg"],
+  scenesTabs: ["scenesTabs"],
   columns: ["columns", "column", "grid"],
   column: ["column", "grid"],
   grid: ["grid"],
@@ -475,9 +577,9 @@ export const PlasmicWorkspaces = Object.assign(
     bkgd: makeNodeComponent("bkgd"),
     navMenu: makeNodeComponent("navMenu"),
     section: makeNodeComponent("section"),
-    menu: makeNodeComponent("menu"),
-    itemGroup: makeNodeComponent("itemGroup"),
+    tabTitle: makeNodeComponent("tabTitle"),
     svg: makeNodeComponent("svg"),
+    scenesTabs: makeNodeComponent("scenesTabs"),
     columns: makeNodeComponent("columns"),
     column: makeNodeComponent("column"),
     grid: makeNodeComponent("grid"),

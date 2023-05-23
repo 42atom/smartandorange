@@ -25,10 +25,7 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicRegisterInput.module.css"; // plasmic-import: Sdxulv4_ssW/css
-import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: P8LQPjDHPd/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: AO1hQKEExk65Hm/icon
-import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: A0Me8Phykv/icon
-import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: JhZ3dtt_5DRD2s/icon
 import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: iQ4dltXyU_/icon
 
 export const PlasmicRegisterInput__VariantProps = new Array("mailState");
@@ -240,18 +237,6 @@ function PlasmicRegisterInput__RenderFunc(props) {
               }
             }}
             showStartIcon={true}
-            startIcon={
-              <Icon7Icon
-                className={classNames(projectcss.all, sty.svg__tXkvL, {
-                  [sty.svgmailState__tXkvLenDGo]: hasVariant(
-                    $state,
-                    "mailState",
-                    "mailState"
-                  )
-                })}
-                role={"img"}
-              />
-            }
             submitsForm={false}
           >
             <div
@@ -359,18 +344,6 @@ function PlasmicRegisterInput__RenderFunc(props) {
               }
             }}
             showStartIcon={true}
-            startIcon={
-              <Icon5Icon
-                className={classNames(projectcss.all, sty.svg__imK1, {
-                  [sty.svgmailState__imK1EnDGo]: hasVariant(
-                    $state,
-                    "mailState",
-                    "mailState"
-                  )
-                })}
-                role={"img"}
-              />
-            }
             submitsForm={false}
           >
             <div
@@ -724,12 +697,6 @@ function PlasmicRegisterInput__RenderFunc(props) {
                 />
               }
               link={`/workspaces`}
-              startIcon={
-                <ChecksvgIcon
-                  className={classNames(projectcss.all, sty.svg__zMwC4)}
-                  role={"img"}
-                />
-              }
               submitsForm={true}
             >
               <div

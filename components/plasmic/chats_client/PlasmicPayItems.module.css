@@ -13,20 +13,6 @@
   min-height: 0;
   padding: 8px;
 }
-.pricesHttpRequest:global(.__wab_instance) {
-  width: 100%;
-  max-width: 100%;
-  object-fit: cover;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-width: 0;
-}
-.text__itRj0 {
-  display: block;
-}
 .tabsContainer:global(.__wab_instance) {
   width: 100%;
   max-width: 100%;
@@ -107,18 +93,6 @@
   margin-right: 12px;
   min-width: 0;
 }
-.svg__nEZk1 {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.svg___6Gq32 {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .tabButton__ux9Rb:global(.__wab_instance) {
   width: auto;
   max-width: 100%;
@@ -133,18 +107,6 @@
   margin-right: 12px;
   min-width: 0;
 }
-.svg__rJrGt {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.svg__ng9Qf {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .tabButton___2Wk6H:global(.__wab_instance) {
   width: auto;
   max-width: 100%;
@@ -158,18 +120,6 @@
   margin-left: 12px;
   margin-right: 12px;
   min-width: 0;
-}
-.svg__b4Kmr {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.svg__yiKaa {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }
 .freeBox__ahXJ {
   display: flex;
@@ -235,12 +185,6 @@
   position: relative;
   width: 70%;
   margin-right: 0px;
-}
-.svg__symwk {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }
 .svg__tn449 {
   position: relative;
@@ -678,12 +622,6 @@
   width: 70%;
   margin-right: 0px;
 }
-.svg__czFo {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .svg__b43GM {
   position: relative;
   object-fit: cover;
@@ -1105,12 +1043,6 @@
   width: 70%;
   margin-right: 0px;
 }
-.svg___7AdaF {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .svg__hEwy {
   position: relative;
   object-fit: cover;
@@ -1525,12 +1457,6 @@
   max-width: 100%;
   position: relative;
 }
-.svg__iumfY {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .svg__aQhL {
   position: relative;
   object-fit: cover;
@@ -1540,12 +1466,6 @@
 .button__t0Ux:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
-}
-.svg__yiprP {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }
 .svg__iZ3LC {
   position: relative;

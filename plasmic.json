@@ -768,6 +768,19 @@
           "cssFilePath": "plasmic/chats_client/PlasmicPriceIcons.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "slY9K5ec7o",
+          "name": "ScenesTagMenuBtn",
+          "type": "managed",
+          "projectId": "gRaosoDicn4VUCndSzazbA",
+          "renderModuleFilePath": "plasmic/chats_client/PlasmicScenesTagMenuBtn.jsx",
+          "importSpec": {
+            "modulePath": "ScenesTagMenuBtn.jsx"
+          },
+          "cssFilePath": "plasmic/chats_client/PlasmicScenesTagMenuBtn.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

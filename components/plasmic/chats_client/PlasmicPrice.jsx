@@ -28,7 +28,6 @@ import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plas
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicPrice.module.css"; // plasmic-import: A7lxlJD3kKn/css
 import Icon14Icon from "./icons/PlasmicIcon__Icon14"; // plasmic-import: MTyawrbN6uF/icon
-import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: JhZ3dtt_5DRD2s/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: AO1hQKEExk65Hm/icon
 
 export const PlasmicPrice__VariantProps = new Array("switchOn");
@@ -416,12 +415,6 @@ function PlasmicPrice__RenderFunc(props) {
                   role={"img"}
                 />
               }
-              startIcon={
-                <ChecksvgIcon
-                  className={classNames(projectcss.all, sty.svg__mUjx)}
-                  role={"img"}
-                />
-              }
               submitsForm={true}
             >
               <div
@@ -729,12 +722,6 @@ function PlasmicPrice__RenderFunc(props) {
                   role={"img"}
                 />
               }
-              startIcon={
-                <ChecksvgIcon
-                  className={classNames(projectcss.all, sty.svg__fmeL6)}
-                  role={"img"}
-                />
-              }
               submitsForm={true}
             >
               <div
@@ -969,12 +956,6 @@ function PlasmicPrice__RenderFunc(props) {
               endIcon={
                 <IconIcon
                   className={classNames(projectcss.all, sty.svg__obP1)}
-                  role={"img"}
-                />
-              }
-              startIcon={
-                <ChecksvgIcon
-                  className={classNames(projectcss.all, sty.svg__lwao0)}
                   role={"img"}
                 />
               }

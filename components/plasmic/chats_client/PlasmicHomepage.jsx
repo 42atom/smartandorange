@@ -28,7 +28,6 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: AAi9AuCCbMra/css
-import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: JhZ3dtt_5DRD2s/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: AO1hQKEExk65Hm/icon
 import Icon14Icon from "./icons/PlasmicIcon__Icon14"; // plasmic-import: MTyawrbN6uF/icon
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: WYrTsWzQKYW/icon
@@ -231,12 +230,6 @@ function PlasmicHomepage__RenderFunc(props) {
                         );
                       }
                     }}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__bz3MI)}
-                        role={"img"}
-                      />
-                    }
                     submitsForm={true}
                   >
                     <div
@@ -304,12 +297,6 @@ function PlasmicHomepage__RenderFunc(props) {
                         );
                       }
                     }}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__gHyel)}
-                        role={"img"}
-                      />
-                    }
                     submitsForm={true}
                   >
                     <div
@@ -377,12 +364,6 @@ function PlasmicHomepage__RenderFunc(props) {
                         );
                       }
                     }}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg___3NgSh)}
-                        role={"img"}
-                      />
-                    }
                     submitsForm={true}
                   >
                     <div
@@ -406,12 +387,6 @@ function PlasmicHomepage__RenderFunc(props) {
                     }
                     link={`/register`}
                     size={"compact"}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__nrmNp)}
-                        role={"img"}
-                      />
-                    }
                     submitsForm={false}
                   >
                     <div
@@ -435,12 +410,6 @@ function PlasmicHomepage__RenderFunc(props) {
                     }
                     link={`/login`}
                     size={"compact"}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__fCi4L)}
-                        role={"img"}
-                      />
-                    }
                     submitsForm={true}
                   >
                     <div
@@ -480,15 +449,6 @@ function PlasmicHomepage__RenderFunc(props) {
                             className={classNames(
                               projectcss.all,
                               sty.svg__pQht0
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        startIcon={
-                          <ChecksvgIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg___9VItp
                             )}
                             role={"img"}
                           />
@@ -586,6 +546,15 @@ function PlasmicHomepage__RenderFunc(props) {
                     >
                       {"AI让创作者会走的更远..."}
                     </div>
+                    <Button
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button___8HFnL
+                      )}
+                      color={"green"}
+                    >
+                      {"马 上 体 验"}
+                    </Button>
                   </p.Stack>
                 </div>
               ) : null}
@@ -1315,12 +1284,6 @@ function PlasmicHomepage__RenderFunc(props) {
                       }
                     }}
                     size={"minimal"}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__zgHNf)}
-                        role={"img"}
-                      />
-                    }
                     submitsForm={true}
                   >
                     <div
@@ -1343,12 +1306,6 @@ function PlasmicHomepage__RenderFunc(props) {
                       />
                     }
                     size={"minimal"}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__ocgLh)}
-                        role={"img"}
-                      />
-                    }
                     submitsForm={true}
                   >
                     <div
@@ -1371,12 +1328,6 @@ function PlasmicHomepage__RenderFunc(props) {
                       />
                     }
                     size={"minimal"}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__vT4T4)}
-                        role={"img"}
-                      />
-                    }
                     submitsForm={true}
                   >
                     <div
@@ -1399,12 +1350,6 @@ function PlasmicHomepage__RenderFunc(props) {
                       />
                     }
                     size={"minimal"}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__zyLrg)}
-                        role={"img"}
-                      />
-                    }
                     submitsForm={true}
                   >
                     <div
@@ -1444,12 +1389,6 @@ function PlasmicHomepage__RenderFunc(props) {
                       />
                     }
                     size={"minimal"}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg___11TgO)}
-                        role={"img"}
-                      />
-                    }
                     submitsForm={true}
                   >
                     <div
@@ -1472,12 +1411,6 @@ function PlasmicHomepage__RenderFunc(props) {
                       />
                     }
                     size={"minimal"}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg___2Ggcw)}
-                        role={"img"}
-                      />
-                    }
                     submitsForm={true}
                   >
                     <div
@@ -1500,12 +1433,6 @@ function PlasmicHomepage__RenderFunc(props) {
                       />
                     }
                     size={"minimal"}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__bmuoe)}
-                        role={"img"}
-                      />
-                    }
                     submitsForm={true}
                   >
                     <div

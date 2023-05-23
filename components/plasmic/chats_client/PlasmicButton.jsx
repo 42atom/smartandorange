@@ -26,7 +26,6 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicButton.module.css"; // plasmic-import: YO5Bwb9purCqu/css
-import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: JhZ3dtt_5DRD2s/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: AO1hQKEExk65Hm/icon
 
 export const PlasmicButton__VariantProps = new Array(
@@ -40,7 +39,6 @@ export const PlasmicButton__VariantProps = new Array(
 
 export const PlasmicButton__ArgProps = new Array(
   "children",
-  "startIcon",
   "endIcon",
   "link",
   "submitsForm",
@@ -204,7 +202,7 @@ function PlasmicButton__RenderFunc(props) {
       )}
       data-plasmic-trigger-props={[triggerRootFocusVisibleWithinProps]}
     >
-      {(hasVariant($state, "showStartIcon", "showStartIcon") ? true : false) ? (
+      {(hasVariant($state, "showStartIcon", "showStartIcon") ? true : true) ? (
         <div
           data-plasmic-name={"startIconContainer"}
           data-plasmic-override={overrides.startIconContainer}
@@ -223,75 +221,7 @@ function PlasmicButton__RenderFunc(props) {
               hasVariant($state, "shape", "rounded") &&
               hasVariant($state, "showStartIcon", "showStartIcon")
           })}
-        >
-          {p.renderPlasmicSlot({
-            defaultContents: (
-              <ChecksvgIcon
-                className={classNames(projectcss.all, sty.svg__hdt1L)}
-                role={"img"}
-              />
-            ),
-
-            value: args.startIcon,
-            className: classNames(sty.slotTargetStartIcon, {
-              [sty.slotTargetStartIconcolor_blue]: hasVariant(
-                $state,
-                "color",
-                "blue"
-              ),
-              [sty.slotTargetStartIconcolor_clear]: hasVariant(
-                $state,
-                "color",
-                "clear"
-              ),
-              [sty.slotTargetStartIconcolor_link]: hasVariant(
-                $state,
-                "color",
-                "link"
-              ),
-              [sty.slotTargetStartIconcolor_softBlue]: hasVariant(
-                $state,
-                "color",
-                "softBlue"
-              ),
-              [sty.slotTargetStartIconcolor_softGreen]: hasVariant(
-                $state,
-                "color",
-                "softGreen"
-              ),
-              [sty.slotTargetStartIconcolor_softRed]: hasVariant(
-                $state,
-                "color",
-                "softRed"
-              ),
-              [sty.slotTargetStartIconcolor_softSand]: hasVariant(
-                $state,
-                "color",
-                "softSand"
-              ),
-              [sty.slotTargetStartIconcolor_softYellow]: hasVariant(
-                $state,
-                "color",
-                "softYellow"
-              ),
-              [sty.slotTargetStartIconcolor_white]: hasVariant(
-                $state,
-                "color",
-                "white"
-              ),
-              [sty.slotTargetStartIconcolor_yellow]: hasVariant(
-                $state,
-                "color",
-                "yellow"
-              ),
-              [sty.slotTargetStartIconshowStartIcon]: hasVariant(
-                $state,
-                "showStartIcon",
-                "showStartIcon"
-              )
-            })
-          })}
-        </div>
+        />
       ) : null}
       <div
         data-plasmic-name={"contentContainer"}

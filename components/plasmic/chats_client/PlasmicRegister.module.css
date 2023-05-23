@@ -77,12 +77,6 @@
   position: relative;
   margin-top: 0px;
 }
-.svg__xnPia {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
 .text {
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -98,7 +92,7 @@
   text-decoration-line: none !important;
   text-overflow: clip !important;
 }
-.svg__uZSuO {
+.svg {
   position: relative;
   object-fit: cover;
   width: 1em;
