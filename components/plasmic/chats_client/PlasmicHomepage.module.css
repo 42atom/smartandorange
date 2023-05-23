@@ -584,6 +584,11 @@
   position: relative;
   align-self: flex-start;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .button___8HFnL:global(.__wab_instance) {
+    align-self: center;
+  }
+}
 .svg___2Q5Vn {
   position: relative;
   object-fit: cover;

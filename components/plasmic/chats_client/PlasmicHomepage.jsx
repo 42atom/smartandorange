@@ -552,6 +552,11 @@ function PlasmicHomepage__RenderFunc(props) {
                         sty.button___8HFnL
                       )}
                       color={"green"}
+                      link={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? `/workspaces`
+                          : undefined
+                      }
                     >
                       {"马 上 体 验"}
                     </Button>

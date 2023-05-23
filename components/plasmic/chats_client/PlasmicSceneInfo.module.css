@@ -89,8 +89,13 @@
   object-fit: cover;
 }
 .slotTargetTitle {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .slotTargetTitle {
+    font-size: 13px;
+  }
 }
 .freeBox__gEu1T {
   position: relative;
@@ -105,6 +110,11 @@
 }
 .slotTargetDesc {
   font-size: 14px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .slotTargetDesc {
+    font-size: 12px;
+  }
 }
 .root:hover .slotTargetDesc {
   font-weight: 400;
