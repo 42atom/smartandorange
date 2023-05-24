@@ -177,15 +177,21 @@ function PlasmicMydocuments__RenderFunc(props) {
                     data-plasmic-override={overrides.itemGroup}
                     className={classNames("__wab_instance", sty.itemGroup)}
                     title={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__llNth
-                        )}
-                      >
-                        {"Group"}
-                      </div>
+                      (
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : true
+                      ) ? (
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__llNth
+                          )}
+                        >
+                          {"Group"}
+                        </div>
+                      ) : null
                     }
                   >
                     <AntdMenuItem
@@ -306,6 +312,7 @@ function PlasmicMydocuments__RenderFunc(props) {
                       data-plasmic-name={"search"}
                       data-plasmic-override={overrides.search}
                       className={classNames("__wab_instance", sty.search)}
+                      name={"search"}
                       onChange={(...eventArgs) => {
                         p.generateStateOnChangeProp($state, [
                           "search",

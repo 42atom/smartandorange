@@ -100,6 +100,52 @@ function PlasmicSceneInfo__RenderFunc(props) {
         plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root
       )}
+      onClick={async event => {
+        const $steps = {};
+        $steps["goToWorkspacesEdit"] = true
+          ? (() => {
+              const actionArgs = {
+                destination: __wrapUserFunction(
+                  {
+                    type: "InteractionArgLoc",
+                    actionName: "navigation",
+                    interactionUuid: "_XzAzSDH3",
+                    componentUuid: "Zf1zYQ7YK23by",
+                    argName: "destination"
+                  },
+                  () => `/workspaces/${"value"}`
+                )
+              };
+              return __wrapUserFunction(
+                {
+                  type: "InteractionLoc",
+                  actionName: "navigation",
+                  interactionUuid: "_XzAzSDH3",
+                  componentUuid: "Zf1zYQ7YK23by"
+                },
+                () =>
+                  (({ destination }) => {
+                    __nextRouter?.push(destination);
+                  })?.apply(null, [actionArgs]),
+                actionArgs
+              );
+            })()
+          : undefined;
+        if (
+          typeof $steps["goToWorkspacesEdit"] === "object" &&
+          typeof $steps["goToWorkspacesEdit"].then === "function"
+        ) {
+          $steps["goToWorkspacesEdit"] = await __wrapUserPromise(
+            {
+              type: "InteractionLoc",
+              actionName: "navigation",
+              interactionUuid: "_XzAzSDH3",
+              componentUuid: "Zf1zYQ7YK23by"
+            },
+            $steps["goToWorkspacesEdit"]
+          );
+        }
+      }}
     >
       {true ? (
         <p.Stack
@@ -278,9 +324,8 @@ function PlasmicSceneInfo__RenderFunc(props) {
                 );
               }
             }}
-            shape={"sharp"}
             size={"minimal"}
-            submitsForm={true}
+            submitsForm={false}
           >
             <div
               data-plasmic-name={"text"}

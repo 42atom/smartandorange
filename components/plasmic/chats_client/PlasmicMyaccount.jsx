@@ -22,9 +22,9 @@ import {
 } from "@plasmicapp/react-web";
 import NavMenu from "../../NavMenu"; // plasmic-import: 9cR2sxpykRjad/component
 import Button from "../../Button"; // plasmic-import: YO5Bwb9purCqu/component
-import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: EYHwZh9ILg/codeComponent
 import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponent
 import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: Vf5hntD2SZ5/codeComponentHelper
+import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: EYHwZh9ILg/codeComponent
 import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -301,32 +301,6 @@ function PlasmicMyaccount__RenderFunc(props) {
                       hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__kAo0A)}
                     >
-                      <FormItemWrapper
-                        data-plasmic-name={"formField"}
-                        data-plasmic-override={overrides.formField}
-                        className={classNames("__wab_instance", sty.formField)}
-                        label={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__fzxrF
-                            )}
-                          >
-                            {"账号状态"}
-                          </div>
-                        }
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__ix0Rc
-                          )}
-                        >
-                          {"免费版（正常）"}
-                        </div>
-                      </FormItemWrapper>
                       {(
                         hasVariant(globalVariants, "screen", "mobileOnly")
                           ? true
@@ -425,6 +399,41 @@ function PlasmicMyaccount__RenderFunc(props) {
                             </div>
                           </Button>
                         </p.Stack>
+                      ) : null}
+                      {(
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : true
+                      ) ? (
+                        <FormItemWrapper
+                          data-plasmic-name={"formField"}
+                          data-plasmic-override={overrides.formField}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.formField
+                          )}
+                          label={
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__fzxrF
+                              )}
+                            >
+                              {"账号状态"}
+                            </div>
+                          }
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__ix0Rc
+                            )}
+                          >
+                            {"免费版（正常）"}
+                          </div>
+                        </FormItemWrapper>
                       ) : null}
                     </p.Stack>
                   ) : null}
@@ -761,9 +770,9 @@ const PlasmicDescendants = {
     "navMenu",
     "bkgd",
     "quota",
-    "formField",
     "nicknameInput",
     "nicknameBtn",
+    "formField",
     "emailInput",
     "emailBtn",
     "phoneInput",
@@ -776,9 +785,9 @@ const PlasmicDescendants = {
   bkgd: [
     "bkgd",
     "quota",
-    "formField",
     "nicknameInput",
     "nicknameBtn",
+    "formField",
     "emailInput",
     "emailBtn",
     "phoneInput",
@@ -787,9 +796,9 @@ const PlasmicDescendants = {
   ],
 
   quota: ["quota"],
-  formField: ["formField"],
   nicknameInput: ["nicknameInput"],
   nicknameBtn: ["nicknameBtn"],
+  formField: ["formField"],
   emailInput: ["emailInput"],
   emailBtn: ["emailBtn"],
   phoneInput: ["phoneInput"],
@@ -833,9 +842,9 @@ export const PlasmicMyaccount = Object.assign(
     navMenu: makeNodeComponent("navMenu"),
     bkgd: makeNodeComponent("bkgd"),
     quota: makeNodeComponent("quota"),
-    formField: makeNodeComponent("formField"),
     nicknameInput: makeNodeComponent("nicknameInput"),
     nicknameBtn: makeNodeComponent("nicknameBtn"),
+    formField: makeNodeComponent("formField"),
     emailInput: makeNodeComponent("emailInput"),
     emailBtn: makeNodeComponent("emailBtn"),
     phoneInput: makeNodeComponent("phoneInput"),
