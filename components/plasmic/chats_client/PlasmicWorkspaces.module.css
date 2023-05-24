@@ -472,6 +472,20 @@
   left: auto;
   top: auto;
 }
+.text__miKH {
+  align-self: flex-start;
+  white-space: pre;
+  text-overflow: ellipsis !important;
+  overflow: hidden;
+}
+.text__lYmX8 {
+  margin-top: 4px;
+  white-space: pre-wrap;
+  user-select: none;
+  text-align: justify;
+  color: var(--token-rqDJQlRsV);
+  font-size: 13px;
+}
 .sceneInfo__ok60U:global(.__wab_instance) {
   left: auto;
   top: auto;

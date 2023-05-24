@@ -341,7 +341,19 @@ function PlasmicWorkspaces__RenderFunc(props) {
                                       "__wab_instance",
                                       sty.sceneInfo__zigmA
                                     )}
-                                    desc={"desc"}
+                                    desc={
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__lYmX8
+                                        )}
+                                      >
+                                        {
+                                          "小红书营销专用，网络社区小红书博主风格的语气"
+                                        }
+                                      </div>
+                                    }
                                     input={
                                       <div
                                         className={classNames(
@@ -354,7 +366,17 @@ function PlasmicWorkspaces__RenderFunc(props) {
                                       </div>
                                     }
                                     output={"Modal content"}
-                                    title={"场景标题"}
+                                    title={
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__miKH
+                                        )}
+                                      >
+                                        {"小红书营销短文和语气"}
+                                      </div>
+                                    }
                                   />
 
                                   <SceneInfo
