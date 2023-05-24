@@ -109,9 +109,9 @@ function PlasmicLogin__RenderFunc(props) {
             className={classNames(projectcss.all, sty.login)}
           >
             <LoginInput
-              data-plasmic-name={"loginInput"}
-              data-plasmic-override={overrides.loginInput}
-              className={classNames("__wab_instance", sty.loginInput)}
+              data-plasmic-name={"innerForm"}
+              data-plasmic-override={overrides.innerForm}
+              className={classNames("__wab_instance", sty.innerForm)}
               confirm={
                 <Button
                   data-plasmic-name={"confirm2"}
@@ -150,9 +150,9 @@ function PlasmicLogin__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  loginPage: ["loginPage", "login", "loginInput", "confirm2", "text", "svg"],
-  login: ["login", "loginInput", "confirm2", "text", "svg"],
-  loginInput: ["loginInput", "confirm2", "text", "svg"],
+  loginPage: ["loginPage", "login", "innerForm", "confirm2", "text", "svg"],
+  login: ["login", "innerForm", "confirm2", "text", "svg"],
+  innerForm: ["innerForm", "confirm2", "text", "svg"],
   confirm2: ["confirm2", "text", "svg"],
   text: ["text"],
   svg: ["svg"]
@@ -191,7 +191,7 @@ export const PlasmicLogin = Object.assign(
   {
     // Helper components rendering sub-elements
     login: makeNodeComponent("login"),
-    loginInput: makeNodeComponent("loginInput"),
+    innerForm: makeNodeComponent("innerForm"),
     confirm2: makeNodeComponent("confirm2"),
     text: makeNodeComponent("text"),
     svg: makeNodeComponent("svg"),

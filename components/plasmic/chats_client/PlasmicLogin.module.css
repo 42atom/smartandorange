@@ -67,7 +67,7 @@
     min-width: 0;
   }
 }
-.loginInput:global(.__wab_instance) {
+.innerForm:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;

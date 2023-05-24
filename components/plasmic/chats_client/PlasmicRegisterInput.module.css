@@ -253,7 +253,7 @@
 .mbRegisterInputmailState {
   display: none;
 }
-.mobileNumber {
+.phoneInput {
   width: 100%;
   position: relative;
   padding-top: 11px;

@@ -67,7 +67,7 @@ function PlasmicLoginInput__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "mobileNumber.value",
+        path: "phoneInput.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ``
@@ -413,36 +413,35 @@ function PlasmicLoginInput__RenderFunc(props) {
             })}
           >
             <input
-              data-plasmic-name={"mobileNumber"}
-              data-plasmic-override={overrides.mobileNumber}
+              data-plasmic-name={"phoneInput"}
+              data-plasmic-override={overrides.phoneInput}
               className={classNames(
                 projectcss.all,
                 projectcss.input,
-                sty.mobileNumber,
+                sty.phoneInput,
                 ``,
                 {
-                  [sty.mobileNumbermailState]: hasVariant(
+                  [sty.phoneInputmailState]: hasVariant(
                     $state,
                     "mailState",
                     "mailState"
                   )
                 }
               )}
-              name={"username"}
+              name={"phone"}
               onChange={e => {
-                p.generateStateOnChangeProp($state, ["mobileNumber", "value"])(
+                p.generateStateOnChangeProp($state, ["phoneInput", "value"])(
                   e.target.value
                 );
               }}
               placeholder={"手机号"}
               ref={ref => {
-                $refs["mobileNumber"] = ref;
+                $refs["phoneInput"] = ref;
               }}
               size={1}
               type={"tel"}
               value={
-                p.generateStateValueProp($state, ["mobileNumber", "value"]) ??
-                ""
+                p.generateStateValueProp($state, ["phoneInput", "value"]) ?? ""
               }
             />
 
@@ -486,10 +485,10 @@ function PlasmicLoginInput__RenderFunc(props) {
                 />
 
                 <Button
-                  data-plasmic-name={"getCode"}
-                  data-plasmic-override={overrides.getCode}
-                  className={classNames("__wab_instance", sty.getCode, {
-                    [sty.getCodemailState]: hasVariant(
+                  data-plasmic-name={"getCodeBtn"}
+                  data-plasmic-override={overrides.getCodeBtn}
+                  className={classNames("__wab_instance", sty.getCodeBtn, {
+                    [sty.getCodeBtnmailState]: hasVariant(
                       $state,
                       "mailState",
                       "mailState"
@@ -536,7 +535,7 @@ function PlasmicLoginInput__RenderFunc(props) {
                   )
                 }
               )}
-              name={"username"}
+              name={"email"}
               onChange={e => {
                 p.generateStateOnChangeProp($state, ["mail", "value"])(
                   e.target.value
@@ -672,19 +671,19 @@ const PlasmicDescendants = {
   register: [
     "register",
     "mbRegisterInput",
-    "mobileNumber",
+    "phoneInput",
     "code",
-    "getCode",
+    "getCodeBtn",
     "mailRegisterInput",
     "mail",
     "mailPassword",
     "link"
   ],
 
-  mbRegisterInput: ["mbRegisterInput", "mobileNumber", "code", "getCode"],
-  mobileNumber: ["mobileNumber"],
+  mbRegisterInput: ["mbRegisterInput", "phoneInput", "code", "getCodeBtn"],
+  phoneInput: ["phoneInput"],
   code: ["code"],
-  getCode: ["getCode"],
+  getCodeBtn: ["getCodeBtn"],
   mailRegisterInput: ["mailRegisterInput", "mail", "mailPassword"],
   mail: ["mail"],
   mailPassword: ["mailPassword"],
@@ -724,9 +723,9 @@ export const PlasmicLoginInput = Object.assign(
   {
     // Helper components rendering sub-elements
     mbRegisterInput: makeNodeComponent("mbRegisterInput"),
-    mobileNumber: makeNodeComponent("mobileNumber"),
+    phoneInput: makeNodeComponent("phoneInput"),
     code: makeNodeComponent("code"),
-    getCode: makeNodeComponent("getCode"),
+    getCodeBtn: makeNodeComponent("getCodeBtn"),
     mailRegisterInput: makeNodeComponent("mailRegisterInput"),
     mail: makeNodeComponent("mail"),
     mailPassword: makeNodeComponent("mailPassword"),

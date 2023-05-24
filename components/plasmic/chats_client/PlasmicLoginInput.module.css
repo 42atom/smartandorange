@@ -253,7 +253,7 @@
 .mbRegisterInputmailState {
   display: none;
 }
-.mobileNumber {
+.phoneInput {
   width: 100%;
   position: relative;
   padding-top: 11px;
@@ -302,7 +302,7 @@
   border-radius: 6px;
   border: 1px solid #e5e5ea;
 }
-.getCode:global(.__wab_instance) {
+.getCodeBtn:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }

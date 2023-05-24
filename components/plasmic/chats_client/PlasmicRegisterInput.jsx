@@ -66,7 +66,7 @@ function PlasmicRegisterInput__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "mobileNumber.value",
+        path: "phoneInput.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ``
@@ -407,15 +407,15 @@ function PlasmicRegisterInput__RenderFunc(props) {
             })}
           >
             <input
-              data-plasmic-name={"mobileNumber"}
-              data-plasmic-override={overrides.mobileNumber}
+              data-plasmic-name={"phoneInput"}
+              data-plasmic-override={overrides.phoneInput}
               className={classNames(
                 projectcss.all,
                 projectcss.input,
-                sty.mobileNumber,
+                sty.phoneInput,
                 ``,
                 {
-                  [sty.mobileNumbermailState]: hasVariant(
+                  [sty.phoneInputmailState]: hasVariant(
                     $state,
                     "mailState",
                     "mailState"
@@ -425,10 +425,9 @@ function PlasmicRegisterInput__RenderFunc(props) {
               name={"phone"}
               onChange={async (...eventArgs) => {
                 (e => {
-                  p.generateStateOnChangeProp($state, [
-                    "mobileNumber",
-                    "value"
-                  ])(e.target.value);
+                  p.generateStateOnChangeProp($state, ["phoneInput", "value"])(
+                    e.target.value
+                  );
                 }).apply(null, eventArgs);
                 (async event => {
                   const $steps = {};
@@ -436,13 +435,12 @@ function PlasmicRegisterInput__RenderFunc(props) {
               }}
               placeholder={"手机号"}
               ref={ref => {
-                $refs["mobileNumber"] = ref;
+                $refs["phoneInput"] = ref;
               }}
               size={1}
               type={"tel"}
               value={
-                p.generateStateValueProp($state, ["mobileNumber", "value"]) ??
-                ""
+                p.generateStateValueProp($state, ["phoneInput", "value"]) ?? ""
               }
             />
 
@@ -802,7 +800,7 @@ const PlasmicDescendants = {
   register: [
     "register",
     "mbRegisterInput",
-    "mobileNumber",
+    "phoneInput",
     "code",
     "getCodeBtn",
     "mailRegisterInput",
@@ -813,8 +811,8 @@ const PlasmicDescendants = {
     "p"
   ],
 
-  mbRegisterInput: ["mbRegisterInput", "mobileNumber", "code", "getCodeBtn"],
-  mobileNumber: ["mobileNumber"],
+  mbRegisterInput: ["mbRegisterInput", "phoneInput", "code", "getCodeBtn"],
+  phoneInput: ["phoneInput"],
   code: ["code"],
   getCodeBtn: ["getCodeBtn"],
   mailRegisterInput: ["mailRegisterInput", "mail", "mailPassword"],
@@ -858,7 +856,7 @@ export const PlasmicRegisterInput = Object.assign(
   {
     // Helper components rendering sub-elements
     mbRegisterInput: makeNodeComponent("mbRegisterInput"),
-    mobileNumber: makeNodeComponent("mobileNumber"),
+    phoneInput: makeNodeComponent("phoneInput"),
     code: makeNodeComponent("code"),
     getCodeBtn: makeNodeComponent("getCodeBtn"),
     mailRegisterInput: makeNodeComponent("mailRegisterInput"),

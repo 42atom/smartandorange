@@ -1015,6 +1015,11 @@
           "id": "8qKdjCAwo",
           "name": "header.png",
           "filePath": "../public/plasmic/chats_client/images/headerpng.png"
+        },
+        {
+          "id": "odtt7re7D",
+          "name": "banner1@2x.png",
+          "filePath": "../public/plasmic/chats_client/images/banner12Xpng.png"
         }
       ],
       "indirect": false,
