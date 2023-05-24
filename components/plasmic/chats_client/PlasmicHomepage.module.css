@@ -851,7 +851,7 @@
 }
 .text___5Mw {
   font-size: 16px;
-  color: #05050599;
+  color: var(--token-hS7e36A1nc);
   text-align: left;
   line-height: 1.3;
   font-family: "Inter", sans-serif;
@@ -1761,7 +1761,7 @@
 }
 .text__l5FPi {
   font-size: 20px;
-  color: var(--token-PrbJaIviCD);
+  color: var(--token-hS7e36A1nc);
   text-align: center;
   line-height: 28px;
   font-family: "Inter", sans-serif;
@@ -1865,30 +1865,9 @@
     text-align: center;
   }
 }
-.text__tIIzx {
-  height: auto;
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--token-mHGy3iJMuj);
-  line-height: 1;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  text-align: left;
-  text-transform: none;
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none;
-  text-overflow: clip;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .text__tIIzx {
-    text-align: center;
-  }
-}
 .text__sPTwg {
   font-size: 20px;
-  color: #05050599;
+  color: var(--token-hS7e36A1nc);
   line-height: 28px;
   font-family: "Inter", sans-serif;
   font-weight: 400;

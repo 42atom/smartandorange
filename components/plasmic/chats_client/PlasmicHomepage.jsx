@@ -550,27 +550,9 @@ function PlasmicHomepage__RenderFunc(props) {
                           className={
                             "plasmic_default__all plasmic_default__span"
                           }
-                          style={{ color: "#D77A00" }}
+                          style={{ color: "#FF9100" }}
                         >
-                          {"桔"}
-                        </span>
-                        <React.Fragment>{""}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#00D750" }}
-                        >
-                          {"子"}
-                        </span>
-                        <React.Fragment>{""}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#D77A00" }}
-                        >
-                          {" "}
+                          {"桔子 "}
                         </span>
                         <React.Fragment>{"\n"}</React.Fragment>
                         <span
@@ -1201,15 +1183,6 @@ function PlasmicHomepage__RenderFunc(props) {
                 )}
               >
                 {"乘上效率浪潮，成为超级个体！"}
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__tIIzx
-                )}
-              >
-                {"关于我们"}
               </div>
               <div
                 className={classNames(

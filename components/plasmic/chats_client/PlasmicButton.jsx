@@ -242,6 +242,11 @@ function PlasmicButton__RenderFunc(props) {
         className={classNames(projectcss.all, sty.contentContainer, {
           [sty.contentContainer___focusVisibleWithin]:
             triggers.focusVisibleWithin_root,
+          [sty.contentContainercolor_white]: hasVariant(
+            $state,
+            "color",
+            "white"
+          ),
           [sty.contentContainerisDisabled]: hasVariant(
             $state,
             "isDisabled",
