@@ -26,6 +26,7 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicButton.module.css"; // plasmic-import: YO5Bwb9purCqu/css
+import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: -3MO1z6kLjeMH2/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: AO1hQKEExk65Hm/icon
 
 export const PlasmicButton__VariantProps = new Array(
@@ -42,7 +43,8 @@ export const PlasmicButton__ArgProps = new Array(
   "endIcon",
   "link",
   "submitsForm",
-  "target"
+  "target",
+  "startIcon"
 );
 
 const __wrapUserFunction =
@@ -221,7 +223,18 @@ function PlasmicButton__RenderFunc(props) {
               hasVariant($state, "shape", "rounded") &&
               hasVariant($state, "showStartIcon", "showStartIcon")
           })}
-        />
+        >
+          {p.renderPlasmicSlot({
+            defaultContents: (
+              <SearchsvgIcon
+                className={classNames(projectcss.all, sty.svg__g9VXc)}
+                role={"img"}
+              />
+            ),
+
+            value: args.startIcon
+          })}
+        </div>
       ) : null}
       <div
         data-plasmic-name={"contentContainer"}

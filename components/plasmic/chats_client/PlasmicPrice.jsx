@@ -731,7 +731,7 @@ function PlasmicPrice__RenderFunc(props) {
                   sty.text__mj73
                 )}
               >
-                {"马上使用"}
+                {"成为会员"}
               </div>
             </Button>
           </p.Stack>

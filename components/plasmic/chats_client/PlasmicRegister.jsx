@@ -89,15 +89,15 @@ function PlasmicRegister__RenderFunc(props) {
         >
           <p.Stack
             as={"form"}
-            data-plasmic-name={"login"}
-            data-plasmic-override={overrides.login}
+            data-plasmic-name={"register"}
+            data-plasmic-override={overrides.register}
             hasGap={true}
-            className={classNames(projectcss.all, sty.login)}
+            className={classNames(projectcss.all, sty.register)}
           >
             <RegisterInput
-              data-plasmic-name={"regiesterInputs"}
-              data-plasmic-override={overrides.regiesterInputs}
-              className={classNames("__wab_instance", sty.regiesterInputs)}
+              data-plasmic-name={"innerForm"}
+              data-plasmic-override={overrides.innerForm}
+              className={classNames("__wab_instance", sty.innerForm)}
               confirm={
                 <Button
                   data-plasmic-name={"confirm"}
@@ -112,7 +112,6 @@ function PlasmicRegister__RenderFunc(props) {
                       role={"img"}
                     />
                   }
-                  link={`/workspaces`}
                   onClick={async event => {
                     const $steps = {};
                   }}
@@ -140,9 +139,9 @@ function PlasmicRegister__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "login", "regiesterInputs", "confirm", "text", "svg"],
-  login: ["login", "regiesterInputs", "confirm", "text", "svg"],
-  regiesterInputs: ["regiesterInputs", "confirm", "text", "svg"],
+  root: ["root", "register", "innerForm", "confirm", "text", "svg"],
+  register: ["register", "innerForm", "confirm", "text", "svg"],
+  innerForm: ["innerForm", "confirm", "text", "svg"],
   confirm: ["confirm", "text", "svg"],
   text: ["text"],
   svg: ["svg"]
@@ -180,8 +179,8 @@ export const PlasmicRegister = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    login: makeNodeComponent("login"),
-    regiesterInputs: makeNodeComponent("regiesterInputs"),
+    register: makeNodeComponent("register"),
+    innerForm: makeNodeComponent("innerForm"),
     confirm: makeNodeComponent("confirm"),
     text: makeNodeComponent("text"),
     svg: makeNodeComponent("svg"),

@@ -9,7 +9,7 @@
   justify-content: space-between;
   min-width: 0;
   border-radius: 16px;
-  padding: 20px;
+  padding: 16px;
   border: 1px solid var(--token-oG1h6iK0g);
 }
 .root:hover {
@@ -199,24 +199,46 @@
   width: 1em;
   height: 1em;
 }
+.svg__lAw5K {
+  color: var(--token-_w178omqxW);
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 1em;
+  height: 1em;
+}
 .modal:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   position: relative;
-  width: 642px;
+  width: auto;
+  height: 163px;
   align-self: center;
   left: auto;
   top: auto;
   z-index: 1;
   right: auto;
   bottom: auto;
-  margin-top: 40px;
+  margin-top: 64px;
+  flex-grow: 0;
   display: flex;
-  padding: 4px;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 4px 24px;
 }
 .modal__modal .ant-modal .ant-modal-content {
   font-family: "Inter", sans-serif;
   width: 100%;
+  text-align: left;
+  display: block;
+  line-height: var(--token-_K7eyous79ni);
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  position: relative;
+  align-self: stretch;
+  margin: 8px;
 }
 .modal__modal .ant-modal .ant-modal-close {
   top: 0;

@@ -26,6 +26,8 @@ import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plas
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicLoginInput.module.css"; // plasmic-import: KyDDGn4_M-r/css
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: AO1hQKEExk65Hm/icon
+import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: P8LQPjDHPd/icon
+import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: A0Me8Phykv/icon
 
 export const PlasmicLoginInput__VariantProps = new Array("mailState");
 
@@ -236,6 +238,18 @@ function PlasmicLoginInput__RenderFunc(props) {
               }
             }}
             showStartIcon={true}
+            startIcon={
+              <Icon7Icon
+                className={classNames(projectcss.all, sty.svg__mkJgO, {
+                  [sty.svgmailState__mkJgOilXmh]: hasVariant(
+                    $state,
+                    "mailState",
+                    "mailState"
+                  )
+                })}
+                role={"img"}
+              />
+            }
             submitsForm={false}
           >
             <div
@@ -343,6 +357,18 @@ function PlasmicLoginInput__RenderFunc(props) {
               }
             }}
             showStartIcon={true}
+            startIcon={
+              <Icon5Icon
+                className={classNames(projectcss.all, sty.svg__nnoy, {
+                  [sty.svgmailState__nnoyilXmh]: hasVariant(
+                    $state,
+                    "mailState",
+                    "mailState"
+                  )
+                })}
+                role={"img"}
+              />
+            }
             submitsForm={false}
           >
             <div

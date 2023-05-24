@@ -204,6 +204,15 @@
 .startIconContainershowStartIcon {
   display: flex;
 }
+.svg__g9VXc {
+  color: var(--token-_w178omqxW);
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 1em;
+  flex-shrink: 0;
+  height: 1em;
+}
 .contentContainer {
   display: flex;
   position: relative;

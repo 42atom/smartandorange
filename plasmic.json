@@ -195,8 +195,7 @@
           "name": "AntdSwitch",
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerSwitch"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "28Ba3BDvRe7EiWdfFNnLB6",
@@ -963,6 +962,36 @@
           "id": "69yPGVOe6C",
           "name": "Icon32Icon",
           "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon32.jsx"
+        },
+        {
+          "id": "XIRWRAcqHX",
+          "name": "Icon33Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon33.jsx"
+        },
+        {
+          "id": "ZbMsAnw-ze",
+          "name": "Icon34Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon34.jsx"
+        },
+        {
+          "id": "3YzAnJHjoB",
+          "name": "Icon35Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon35.jsx"
+        },
+        {
+          "id": "YzVIckEt_5",
+          "name": "Icon36Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon36.jsx"
+        },
+        {
+          "id": "eqEVTrEBm2",
+          "name": "Icon37Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon37.jsx"
+        },
+        {
+          "id": "s30yngpZn5",
+          "name": "Icon38Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon38.jsx"
         }
       ],
       "images": [
@@ -1033,8 +1062,7 @@
           "name": "RichDetails",
           "componentImportPath": "@plasmicpkgs/plasmic-rich-components"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "YUiM7yqBWAqsh8KSnrdj7",

@@ -53,6 +53,8 @@
   --plasmic-token-system-border-secondary: var(--token-inRKTKkFw--B);
   --token-WOxkaP-l-mKp: var(--antd-colorPrimary);
   --plasmic-token-system-primary: var(--token-WOxkaP-l-mKp);
+  --token-IwiySx9HX: var(--antd-colorFillQuaternary);
+  --plasmic-token-system-fill-quaternary: var(--token-IwiySx9HX);
 }
 
 .plasmic_tokens {

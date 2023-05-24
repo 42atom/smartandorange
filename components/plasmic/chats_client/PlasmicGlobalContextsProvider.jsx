@@ -53,6 +53,11 @@ export default function GlobalContextsProvider(props) {
           ? antdConfigProviderProps.controlHeight
           : 32
       }
+      defaultDark={
+        antdConfigProviderProps && "defaultDark" in antdConfigProviderProps
+          ? antdConfigProviderProps.defaultDark
+          : false
+      }
       lineWidth={
         antdConfigProviderProps && "lineWidth" in antdConfigProviderProps
           ? antdConfigProviderProps.lineWidth

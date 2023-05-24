@@ -26,6 +26,8 @@ import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plas
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicRegisterInput.module.css"; // plasmic-import: Sdxulv4_ssW/css
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: AO1hQKEExk65Hm/icon
+import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: P8LQPjDHPd/icon
+import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: A0Me8Phykv/icon
 import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: iQ4dltXyU_/icon
 
 export const PlasmicRegisterInput__VariantProps = new Array("mailState");
@@ -237,6 +239,18 @@ function PlasmicRegisterInput__RenderFunc(props) {
               }
             }}
             showStartIcon={true}
+            startIcon={
+              <Icon7Icon
+                className={classNames(projectcss.all, sty.svg__saaIi, {
+                  [sty.svgmailState__saaIienDGo]: hasVariant(
+                    $state,
+                    "mailState",
+                    "mailState"
+                  )
+                })}
+                role={"img"}
+              />
+            }
             submitsForm={false}
           >
             <div
@@ -344,6 +358,18 @@ function PlasmicRegisterInput__RenderFunc(props) {
               }
             }}
             showStartIcon={true}
+            startIcon={
+              <Icon5Icon
+                className={classNames(projectcss.all, sty.svg__wuXh, {
+                  [sty.svgmailState__wuXHenDGo]: hasVariant(
+                    $state,
+                    "mailState",
+                    "mailState"
+                  )
+                })}
+                role={"img"}
+              />
+            }
             submitsForm={false}
           >
             <div
@@ -387,6 +413,7 @@ function PlasmicRegisterInput__RenderFunc(props) {
                 projectcss.all,
                 projectcss.input,
                 sty.mobileNumber,
+                ``,
                 {
                   [sty.mobileNumbermailState]: hasVariant(
                     $state,
@@ -395,7 +422,7 @@ function PlasmicRegisterInput__RenderFunc(props) {
                   )
                 }
               )}
-              name={"mobile"}
+              name={"phone"}
               onChange={async (...eventArgs) => {
                 (e => {
                   p.generateStateOnChangeProp($state, [
@@ -441,7 +468,8 @@ function PlasmicRegisterInput__RenderFunc(props) {
                       )
                     }
                   )}
-                  name={"mcode"}
+                  defaultValue={``}
+                  name={"code"}
                   onChange={e => {
                     p.generateStateOnChangeProp($state, ["code", "value"])(
                       e.target.value
@@ -459,10 +487,10 @@ function PlasmicRegisterInput__RenderFunc(props) {
                 />
 
                 <Button
-                  data-plasmic-name={"getCode"}
-                  data-plasmic-override={overrides.getCode}
-                  className={classNames("__wab_instance", sty.getCode, {
-                    [sty.getCodemailState]: hasVariant(
+                  data-plasmic-name={"getCodeBtn"}
+                  data-plasmic-override={overrides.getCodeBtn}
+                  className={classNames("__wab_instance", sty.getCodeBtn, {
+                    [sty.getCodeBtnmailState]: hasVariant(
                       $state,
                       "mailState",
                       "mailState"
@@ -509,7 +537,7 @@ function PlasmicRegisterInput__RenderFunc(props) {
                   )
                 }
               )}
-              name={"mobile"}
+              name={"email"}
               onChange={e => {
                 p.generateStateOnChangeProp($state, ["mail", "value"])(
                   e.target.value
@@ -546,7 +574,7 @@ function PlasmicRegisterInput__RenderFunc(props) {
                       )
                     }
                   )}
-                  name={"mcode"}
+                  name={"password"}
                   onChange={e => {
                     p.generateStateOnChangeProp($state, [
                       "mailPassword",
@@ -776,7 +804,7 @@ const PlasmicDescendants = {
     "mbRegisterInput",
     "mobileNumber",
     "code",
-    "getCode",
+    "getCodeBtn",
     "mailRegisterInput",
     "mail",
     "mailPassword",
@@ -785,10 +813,10 @@ const PlasmicDescendants = {
     "p"
   ],
 
-  mbRegisterInput: ["mbRegisterInput", "mobileNumber", "code", "getCode"],
+  mbRegisterInput: ["mbRegisterInput", "mobileNumber", "code", "getCodeBtn"],
   mobileNumber: ["mobileNumber"],
   code: ["code"],
-  getCode: ["getCode"],
+  getCodeBtn: ["getCodeBtn"],
   mailRegisterInput: ["mailRegisterInput", "mail", "mailPassword"],
   mail: ["mail"],
   mailPassword: ["mailPassword"],
@@ -832,7 +860,7 @@ export const PlasmicRegisterInput = Object.assign(
     mbRegisterInput: makeNodeComponent("mbRegisterInput"),
     mobileNumber: makeNodeComponent("mobileNumber"),
     code: makeNodeComponent("code"),
-    getCode: makeNodeComponent("getCode"),
+    getCodeBtn: makeNodeComponent("getCodeBtn"),
     mailRegisterInput: makeNodeComponent("mailRegisterInput"),
     mail: makeNodeComponent("mail"),
     mailPassword: makeNodeComponent("mailPassword"),

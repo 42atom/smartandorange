@@ -29,11 +29,15 @@ import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plas
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: AAi9AuCCbMra/css
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: AO1hQKEExk65Hm/icon
-import Icon14Icon from "./icons/PlasmicIcon__Icon14"; // plasmic-import: MTyawrbN6uF/icon
+import Icon33Icon from "./icons/PlasmicIcon__Icon33"; // plasmic-import: XIRWRAcqHX/icon
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: WYrTsWzQKYW/icon
+import Icon34Icon from "./icons/PlasmicIcon__Icon34"; // plasmic-import: ZbMsAnw-ze/icon
+import Icon35Icon from "./icons/PlasmicIcon__Icon35"; // plasmic-import: 3YzAnJHjoB/icon
+import Icon36Icon from "./icons/PlasmicIcon__Icon36"; // plasmic-import: YzVIckEt_5/icon
+import Icon37Icon from "./icons/PlasmicIcon__Icon37"; // plasmic-import: eqEVTrEBm2/icon
+import Icon38Icon from "./icons/PlasmicIcon__Icon38"; // plasmic-import: s30yngpZn5/icon
 import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: KoY309Tgrjk/icon
 import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: IzwKr9-s2sD/icon
-import Icon28Icon from "./icons/PlasmicIcon__Icon28"; // plasmic-import: Pu_bRg2PBqC/icon
 
 export const PlasmicHomepage__VariantProps = new Array();
 
@@ -161,7 +165,11 @@ function PlasmicHomepage__RenderFunc(props) {
                   displayMaxWidth={"none"}
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
-                  displayWidth={"200px"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? "128px"
+                      : "200px"
+                  }
                   src={{
                     src: "/plasmic/chats_client/images/logofull2Xpng.png",
                     fullWidth: 346,
@@ -175,210 +183,237 @@ function PlasmicHomepage__RenderFunc(props) {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.freeBox__sXpnp)}
                 >
-                  <Button
-                    className={classNames("__wab_instance", sty.button__edLoX)}
-                    color={"clear"}
-                    endIcon={
-                      <IconIcon
-                        className={classNames(projectcss.all, sty.svg__l4HSf)}
-                        role={"img"}
-                      />
-                    }
-                    onClick={async event => {
-                      const $steps = {};
-                      $steps["goToDescValue"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              destination: __wrapUserFunction(
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <Button
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button__edLoX
+                      )}
+                      color={"clear"}
+                      endIcon={
+                        <IconIcon
+                          className={classNames(projectcss.all, sty.svg__l4HSf)}
+                          role={"img"}
+                        />
+                      }
+                      onClick={async event => {
+                        const $steps = {};
+                        $steps["goToDescValue"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                destination: __wrapUserFunction(
+                                  {
+                                    type: "InteractionArgLoc",
+                                    actionName: "navigation",
+                                    interactionUuid: "uPeGkQxTT",
+                                    componentUuid: "AAi9AuCCbMra",
+                                    argName: "destination"
+                                  },
+                                  () => "/#desc-value"
+                                )
+                              };
+                              return __wrapUserFunction(
                                 {
-                                  type: "InteractionArgLoc",
+                                  type: "InteractionLoc",
                                   actionName: "navigation",
                                   interactionUuid: "uPeGkQxTT",
-                                  componentUuid: "AAi9AuCCbMra",
-                                  argName: "destination"
+                                  componentUuid: "AAi9AuCCbMra"
                                 },
-                                () => "/#desc-value"
-                              )
-                            };
-                            return __wrapUserFunction(
-                              {
-                                type: "InteractionLoc",
-                                actionName: "navigation",
-                                interactionUuid: "uPeGkQxTT",
-                                componentUuid: "AAi9AuCCbMra"
-                              },
-                              () =>
-                                (({ destination }) => {
-                                  __nextRouter?.push(destination);
-                                })?.apply(null, [actionArgs]),
-                              actionArgs
-                            );
-                          })()
-                        : undefined;
-                      if (
-                        typeof $steps["goToDescValue"] === "object" &&
-                        typeof $steps["goToDescValue"].then === "function"
-                      ) {
-                        $steps["goToDescValue"] = await __wrapUserPromise(
-                          {
-                            type: "InteractionLoc",
-                            actionName: "navigation",
-                            interactionUuid: "uPeGkQxTT",
-                            componentUuid: "AAi9AuCCbMra"
-                          },
-                          $steps["goToDescValue"]
-                        );
-                      }
-                    }}
-                    submitsForm={true}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__yGBgA
-                      )}
+                                () =>
+                                  (({ destination }) => {
+                                    __nextRouter?.push(destination);
+                                  })?.apply(null, [actionArgs]),
+                                actionArgs
+                              );
+                            })()
+                          : undefined;
+                        if (
+                          typeof $steps["goToDescValue"] === "object" &&
+                          typeof $steps["goToDescValue"].then === "function"
+                        ) {
+                          $steps["goToDescValue"] = await __wrapUserPromise(
+                            {
+                              type: "InteractionLoc",
+                              actionName: "navigation",
+                              interactionUuid: "uPeGkQxTT",
+                              componentUuid: "AAi9AuCCbMra"
+                            },
+                            $steps["goToDescValue"]
+                          );
+                        }
+                      }}
+                      submitsForm={true}
                     >
-                      {"使用说明"}
-                    </div>
-                  </Button>
-                  <Button
-                    className={classNames("__wab_instance", sty.button__lwQFu)}
-                    color={"clear"}
-                    endIcon={
-                      <IconIcon
-                        className={classNames(projectcss.all, sty.svg__nj7SK)}
-                        role={"img"}
-                      />
-                    }
-                    onClick={async event => {
-                      const $steps = {};
-                      $steps["goToPriceCard"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              destination: __wrapUserFunction(
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__yGBgA
+                        )}
+                      >
+                        {"使用说明"}
+                      </div>
+                    </Button>
+                  ) : null}
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <Button
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button__lwQFu
+                      )}
+                      color={"clear"}
+                      endIcon={
+                        <IconIcon
+                          className={classNames(projectcss.all, sty.svg__nj7SK)}
+                          role={"img"}
+                        />
+                      }
+                      onClick={async event => {
+                        const $steps = {};
+                        $steps["goToPriceCard"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                destination: __wrapUserFunction(
+                                  {
+                                    type: "InteractionArgLoc",
+                                    actionName: "navigation",
+                                    interactionUuid: "DLyvrAo77",
+                                    componentUuid: "AAi9AuCCbMra",
+                                    argName: "destination"
+                                  },
+                                  () => "/#price-card"
+                                )
+                              };
+                              return __wrapUserFunction(
                                 {
-                                  type: "InteractionArgLoc",
+                                  type: "InteractionLoc",
                                   actionName: "navigation",
                                   interactionUuid: "DLyvrAo77",
-                                  componentUuid: "AAi9AuCCbMra",
-                                  argName: "destination"
+                                  componentUuid: "AAi9AuCCbMra"
                                 },
-                                () => "/#price-card"
-                              )
-                            };
-                            return __wrapUserFunction(
-                              {
-                                type: "InteractionLoc",
-                                actionName: "navigation",
-                                interactionUuid: "DLyvrAo77",
-                                componentUuid: "AAi9AuCCbMra"
-                              },
-                              () =>
-                                (({ destination }) => {
-                                  __nextRouter?.push(destination);
-                                })?.apply(null, [actionArgs]),
-                              actionArgs
-                            );
-                          })()
-                        : undefined;
-                      if (
-                        typeof $steps["goToPriceCard"] === "object" &&
-                        typeof $steps["goToPriceCard"].then === "function"
-                      ) {
-                        $steps["goToPriceCard"] = await __wrapUserPromise(
-                          {
-                            type: "InteractionLoc",
-                            actionName: "navigation",
-                            interactionUuid: "DLyvrAo77",
-                            componentUuid: "AAi9AuCCbMra"
-                          },
-                          $steps["goToPriceCard"]
-                        );
-                      }
-                    }}
-                    submitsForm={true}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__rdeBy
-                      )}
+                                () =>
+                                  (({ destination }) => {
+                                    __nextRouter?.push(destination);
+                                  })?.apply(null, [actionArgs]),
+                                actionArgs
+                              );
+                            })()
+                          : undefined;
+                        if (
+                          typeof $steps["goToPriceCard"] === "object" &&
+                          typeof $steps["goToPriceCard"].then === "function"
+                        ) {
+                          $steps["goToPriceCard"] = await __wrapUserPromise(
+                            {
+                              type: "InteractionLoc",
+                              actionName: "navigation",
+                              interactionUuid: "DLyvrAo77",
+                              componentUuid: "AAi9AuCCbMra"
+                            },
+                            $steps["goToPriceCard"]
+                          );
+                        }
+                      }}
+                      submitsForm={true}
                     >
-                      {"价格"}
-                    </div>
-                  </Button>
-                  <Button
-                    className={classNames("__wab_instance", sty.button__fDDk1)}
-                    color={"clear"}
-                    endIcon={
-                      <IconIcon
-                        className={classNames(projectcss.all, sty.svg__f9CPs)}
-                        role={"img"}
-                      />
-                    }
-                    onClick={async event => {
-                      const $steps = {};
-                      $steps["goToAboutus"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              destination: __wrapUserFunction(
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__rdeBy
+                        )}
+                      >
+                        {"价格"}
+                      </div>
+                    </Button>
+                  ) : null}
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <Button
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button__fDDk1
+                      )}
+                      color={"clear"}
+                      endIcon={
+                        <IconIcon
+                          className={classNames(projectcss.all, sty.svg__f9CPs)}
+                          role={"img"}
+                        />
+                      }
+                      onClick={async event => {
+                        const $steps = {};
+                        $steps["goToAboutus"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                destination: __wrapUserFunction(
+                                  {
+                                    type: "InteractionArgLoc",
+                                    actionName: "navigation",
+                                    interactionUuid: "t9EyezZeT",
+                                    componentUuid: "AAi9AuCCbMra",
+                                    argName: "destination"
+                                  },
+                                  () => "/aboutus"
+                                )
+                              };
+                              return __wrapUserFunction(
                                 {
-                                  type: "InteractionArgLoc",
+                                  type: "InteractionLoc",
                                   actionName: "navigation",
                                   interactionUuid: "t9EyezZeT",
-                                  componentUuid: "AAi9AuCCbMra",
-                                  argName: "destination"
+                                  componentUuid: "AAi9AuCCbMra"
                                 },
-                                () => "/aboutus"
-                              )
-                            };
-                            return __wrapUserFunction(
-                              {
-                                type: "InteractionLoc",
-                                actionName: "navigation",
-                                interactionUuid: "t9EyezZeT",
-                                componentUuid: "AAi9AuCCbMra"
-                              },
-                              () =>
-                                (({ destination }) => {
-                                  __nextRouter?.push(destination);
-                                })?.apply(null, [actionArgs]),
-                              actionArgs
-                            );
-                          })()
-                        : undefined;
-                      if (
-                        typeof $steps["goToAboutus"] === "object" &&
-                        typeof $steps["goToAboutus"].then === "function"
-                      ) {
-                        $steps["goToAboutus"] = await __wrapUserPromise(
-                          {
-                            type: "InteractionLoc",
-                            actionName: "navigation",
-                            interactionUuid: "t9EyezZeT",
-                            componentUuid: "AAi9AuCCbMra"
-                          },
-                          $steps["goToAboutus"]
-                        );
-                      }
-                    }}
-                    submitsForm={true}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__kNtlw
-                      )}
+                                () =>
+                                  (({ destination }) => {
+                                    __nextRouter?.push(destination);
+                                  })?.apply(null, [actionArgs]),
+                                actionArgs
+                              );
+                            })()
+                          : undefined;
+                        if (
+                          typeof $steps["goToAboutus"] === "object" &&
+                          typeof $steps["goToAboutus"].then === "function"
+                        ) {
+                          $steps["goToAboutus"] = await __wrapUserPromise(
+                            {
+                              type: "InteractionLoc",
+                              actionName: "navigation",
+                              interactionUuid: "t9EyezZeT",
+                              componentUuid: "AAi9AuCCbMra"
+                            },
+                            $steps["goToAboutus"]
+                          );
+                        }
+                      }}
+                      submitsForm={true}
                     >
-                      {"关于我们"}
-                    </div>
-                  </Button>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__kNtlw
+                        )}
+                      >
+                        {"关于我们"}
+                      </div>
+                    </Button>
+                  ) : null}
                   <Button
                     className={classNames("__wab_instance", sty.button__a1X34)}
-                    color={"softGreen"}
+                    color={"green"}
                     endIcon={
                       <IconIcon
                         className={classNames(projectcss.all, sty.svg__kzRcy)}
@@ -401,7 +436,7 @@ function PlasmicHomepage__RenderFunc(props) {
                   </Button>
                   <Button
                     className={classNames("__wab_instance", sty.button__t5W)}
-                    color={"green"}
+                    color={"softGreen"}
                     endIcon={
                       <IconIcon
                         className={classNames(projectcss.all, sty.svg__bEOsd)}
@@ -530,11 +565,53 @@ function PlasmicHomepage__RenderFunc(props) {
                           }
                           style={{ color: "#D77A00" }}
                         >
-                          {"机智桔子 "}
+                          {"机"}
                         </span>
-                        <React.Fragment>
-                          {"\n您的智能AI时代好助手！"}
-                        </React.Fragment>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#A100D7" }}
+                        >
+                          {"智"}
+                        </span>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#D77A00" }}
+                        >
+                          {"桔"}
+                        </span>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#00D750" }}
+                        >
+                          {"子"}
+                        </span>
+                        <React.Fragment>{""}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#D77A00" }}
+                        >
+                          {" "}
+                        </span>
+                        <React.Fragment>{"\n"}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#686868" }}
+                        >
+                          {"您的智能AI时代好助手！"}
+                        </span>
                       </React.Fragment>
                     </div>
                     <div
@@ -544,7 +621,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         sty.text__efmCb
                       )}
                     >
-                      {"AI让创作者会走的更远..."}
+                      {"更强大的赋能，AI让创作者会走的更远..."}
                     </div>
                     <Button
                       className={classNames(
@@ -637,7 +714,7 @@ function PlasmicHomepage__RenderFunc(props) {
                             sty.freeBox__gIlWv
                           )}
                         >
-                          <Icon14Icon
+                          <Icon33Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg__xWo1H
@@ -705,7 +782,7 @@ function PlasmicHomepage__RenderFunc(props) {
                             sty.freeBox__qMww
                           )}
                         >
-                          <Icon14Icon
+                          <Icon34Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg___3Cgqe
@@ -773,7 +850,7 @@ function PlasmicHomepage__RenderFunc(props) {
                             sty.freeBox__whIH
                           )}
                         >
-                          <Icon14Icon
+                          <Icon35Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg__nbUyu
@@ -853,7 +930,7 @@ function PlasmicHomepage__RenderFunc(props) {
                             sty.freeBox__jiJyo
                           )}
                         >
-                          <Icon14Icon
+                          <Icon36Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg__fu7BA
@@ -921,7 +998,7 @@ function PlasmicHomepage__RenderFunc(props) {
                             sty.freeBox__up9In
                           )}
                         >
-                          <Icon14Icon
+                          <Icon37Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg__kdMbn
@@ -989,7 +1066,7 @@ function PlasmicHomepage__RenderFunc(props) {
                             sty.freeBox__jJsQd
                           )}
                         >
-                          <Icon14Icon
+                          <Icon38Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg__cRj0
@@ -1054,7 +1131,6 @@ function PlasmicHomepage__RenderFunc(props) {
             data-plasmic-override={overrides.price}
             className={classNames(projectcss.all, sty.price)}
           >
-            <div className={classNames(projectcss.all, sty.freeBox___40G0O)} />
             <p.Stack
               as={"div"}
               data-plasmic-name={"foreground2"}
@@ -1078,7 +1154,7 @@ function PlasmicHomepage__RenderFunc(props) {
                       sty.text___9HD0J
                     )}
                   >
-                    {"免费加入会员，获取专属模板，提升字数额度"}
+                    {"加入会员，获取专属模板，提升字数额度"}
                   </div>
                 </div>
                 <div
@@ -1122,7 +1198,7 @@ function PlasmicHomepage__RenderFunc(props) {
                   sty.text__rfMyL
                 )}
               >
-                {"新时代重新出发！"}
+                {"乘上效率浪潮，成为超级个体！"}
               </div>
               <div
                 className={classNames(
@@ -1207,11 +1283,6 @@ function PlasmicHomepage__RenderFunc(props) {
 
                       <Icon4Icon
                         className={classNames(projectcss.all, sty.svg__vkxSo)}
-                        role={"img"}
-                      />
-
-                      <Icon28Icon
-                        className={classNames(projectcss.all, sty.svg__tG8FM)}
                         role={"img"}
                       />
                     </p.Stack>

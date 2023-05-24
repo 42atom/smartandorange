@@ -461,6 +461,27 @@ function PlasmicWorkspaces__RenderFunc(props) {
                                     output={"Modal content"}
                                     title={"场景标题"}
                                   />
+
+                                  <SceneInfo
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.sceneInfo__dKhQ2
+                                    )}
+                                    desc={"desc"}
+                                    input={
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__dLcox
+                                        )}
+                                      >
+                                        {"Modal content"}
+                                      </div>
+                                    }
+                                    output={"Modal content"}
+                                    title={"场景标题"}
+                                  />
                                 </React.Fragment>
                               ),
 

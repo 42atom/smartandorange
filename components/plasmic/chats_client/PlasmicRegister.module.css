@@ -31,7 +31,7 @@
     grid-column: 4;
   }
 }
-.login {
+.register {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -41,21 +41,25 @@
   justify-self: center;
   margin-top: 40px;
 }
-.login > :global(.__wab_flex-container) {
+.register > :global(.__wab_flex-container) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: calc(0px - 8px);
   height: calc(100% + 8px);
 }
-.login > :global(.__wab_flex-container) > *,
-.login > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.login > :global(.__wab_flex-container) > picture > img,
-.login > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+.register > :global(.__wab_flex-container) > *,
+.register > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.register > :global(.__wab_flex-container) > picture > img,
+.register
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
   margin-top: 8px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .login {
+  .register {
     max-width: 720px;
     width: 100%;
     margin-top: 20px;
@@ -63,11 +67,11 @@
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .login > :global(.__wab_flex-container) {
+  .register > :global(.__wab_flex-container) {
     min-width: 0;
   }
 }
-.regiesterInputs:global(.__wab_instance) {
+.innerForm:global(.__wab_instance) {
   position: relative;
   width: 100%;
   min-width: 0;
@@ -95,6 +99,14 @@
 .svg {
   position: relative;
   object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg__zLpxL {
+  color: var(--token-_w178omqxW);
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
   width: 1em;
   height: 1em;
 }
