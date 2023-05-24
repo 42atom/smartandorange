@@ -211,7 +211,8 @@ export const PlasmicRegister = Object.assign(
     internalArgProps: PlasmicRegister__ArgProps,
     // Key-value metadata
     metadata: {
-      viewport: "width=device-width,initial-scale=1.0,user-scalable=no"
+      viewport:
+        "width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
     },
     // Page metadata
     pageMetadata: {
