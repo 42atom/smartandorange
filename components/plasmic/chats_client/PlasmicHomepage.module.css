@@ -504,7 +504,7 @@
   flex-direction: column;
   width: 100%;
   min-width: 0;
-  padding: 12px 12px 0px 0px;
+  padding: 0px;
 }
 .freeBox__ruOkm > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -526,20 +526,36 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__ruOkm {
-    padding: 0px 0px 24px;
+    padding: 0px;
   }
 }
 .freeBox__eq44B {
   display: flex;
   position: relative;
   flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
   width: 100%;
   height: auto;
   max-width: 100%;
   min-width: 0;
   padding: 8px 0px 0px;
+}
+.freeBox__eq44B > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  margin-left: calc(0px - 24px);
+  width: calc(100% + 24px);
+}
+.freeBox__eq44B > :global(.__wab_flex-container) > *,
+.freeBox__eq44B > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__eq44B > :global(.__wab_flex-container) > picture > img,
+.freeBox__eq44B
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 24px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__eq44B {
@@ -547,37 +563,23 @@
     flex-direction: column;
   }
 }
-.img__vzl5 {
-  object-fit: contain;
-  max-width: 100%;
-  width: 45%;
-  object-position: left center;
-  height: 337px;
-}
-.img__vzl5 > picture > img {
-  object-fit: contain;
-  object-position: left center;
-}
-.img__vzl5 > :global(.__wab_img-spacer) > img {
-  object-fit: contain;
-  object-position: left center;
-}
 @media (min-width: 0px) and (max-width: 768px) {
-  .img__vzl5 {
-    width: 100%;
-    object-position: 50% center;
-    height: auto;
-    margin-bottom: 18px;
+  .freeBox__eq44B > :global(.__wab_flex-container) {
+    flex-direction: column;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .img__vzl5 > picture > img {
-    object-position: 50% center;
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .img__vzl5 > :global(.__wab_img-spacer) > img {
-    object-position: 50% center;
+  .freeBox__eq44B > :global(.__wab_flex-container) > *,
+  .freeBox__eq44B > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .freeBox__eq44B > :global(.__wab_flex-container) > picture > img,
+  .freeBox__eq44B
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
   }
 }
 .freeBox__dw9Bx {
@@ -664,6 +666,9 @@
     align-self: center;
   }
 }
+.text__ux5D {
+  font-size: 18px;
+}
 .svg___2Q5Vn {
   position: relative;
   object-fit: cover;
@@ -678,6 +683,39 @@
   width: 1em;
   height: 1em;
 }
+.img__vzl5 {
+  object-fit: contain;
+  max-width: 100%;
+  width: auto;
+  object-position: right center;
+  height: 337px;
+}
+.img__vzl5 > picture > img {
+  object-fit: contain;
+  object-position: right center;
+}
+.img__vzl5 > :global(.__wab_img-spacer) > img {
+  object-fit: contain;
+  object-position: right center;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .img__vzl5 {
+    width: 100%;
+    object-position: 50% center;
+    height: auto;
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .img__vzl5 > picture > img {
+    object-position: 50% center;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .img__vzl5 > :global(.__wab_img-spacer) > img {
+    object-position: 50% center;
+  }
+}
 .freeBox__qfCrU {
   display: flex;
   position: relative;
@@ -687,7 +725,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  background: var(--token-zy6xhYnWF8Y7);
+  background: var(--token-c0zcnmYwkA-M);
   grid-column-start: 1;
   grid-column-end: -1;
   padding: 8px 32px;
@@ -889,6 +927,8 @@
     flex-direction: column;
     margin-left: calc(0px - 0px);
     width: calc(100% + 0px);
+    margin-top: calc(0px - 12px);
+    height: calc(100% + 12px);
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -901,6 +941,7 @@
     > picture
     > img {
     margin-left: 0px;
+    margin-top: 12px;
   }
 }
 .freeBox__k8BRz {
@@ -1284,6 +1325,8 @@
     flex-direction: column;
     margin-left: calc(0px - 0px);
     width: calc(100% + 0px);
+    margin-top: calc(0px - 12px);
+    height: calc(100% + 12px);
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -1296,6 +1339,7 @@
     > picture
     > img {
     margin-left: 0px;
+    margin-top: 12px;
   }
 }
 .freeBox__l1Y79 {

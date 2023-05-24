@@ -519,33 +519,11 @@ function PlasmicHomepage__RenderFunc(props) {
               className={classNames(projectcss.all, sty.freeBox__ruOkm)}
             >
               {true ? (
-                <div className={classNames(projectcss.all, sty.freeBox__eq44B)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__vzl5)}
-                    displayHeight={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "auto"
-                        : "337px"
-                    }
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? "100%"
-                        : "45%"
-                    }
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/chats_client/images/headerpng.png",
-                      fullWidth: 1000,
-                      fullHeight: 733,
-                      aspectRatio: undefined
-                    }}
-                  />
-
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__eq44B)}
+                >
                   <p.Stack
                     as={"div"}
                     hasGap={true}
@@ -563,18 +541,9 @@ function PlasmicHomepage__RenderFunc(props) {
                           className={
                             "plasmic_default__all plasmic_default__span"
                           }
-                          style={{ color: "#D77A00" }}
+                          style={{ color: "#5F25A2" }}
                         >
-                          {"机"}
-                        </span>
-                        <React.Fragment>{""}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#A100D7" }}
-                        >
-                          {"智"}
+                          {"机智"}
                         </span>
                         <React.Fragment>{""}</React.Fragment>
                         <span
@@ -635,10 +604,43 @@ function PlasmicHomepage__RenderFunc(props) {
                           : undefined
                       }
                     >
-                      {"马 上 体 验"}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ux5D
+                        )}
+                      >
+                        {"马上体验"}
+                      </div>
                     </Button>
                   </p.Stack>
-                </div>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__vzl5)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "auto"
+                        : "337px"
+                    }
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "100%"
+                        : "auto"
+                    }
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/chats_client/images/headerpng.png",
+                      fullWidth: 1000,
+                      fullHeight: 733,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </p.Stack>
               ) : null}
             </p.Stack>
           </p.Stack>
