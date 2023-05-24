@@ -62,7 +62,21 @@ function PlasmicRegister__RenderFunc(props) {
   const [$queries, setDollarQueries] = React.useState({});
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicRegister.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicRegister.pageMetadata.title}
+        />
+
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicRegister.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -72,8 +86,8 @@ function PlasmicRegister__RenderFunc(props) {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"registerPage"}
+          data-plasmic-override={overrides.registerPage}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -84,7 +98,7 @@ function PlasmicRegister__RenderFunc(props) {
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
             plasmic_plasmic_rich_components_css.plasmic_tokens,
-            sty.root
+            sty.registerPage
           )}
         >
           <p.Stack
@@ -139,7 +153,15 @@ function PlasmicRegister__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "register", "innerForm", "confirm", "text", "svg"],
+  registerPage: [
+    "registerPage",
+    "register",
+    "innerForm",
+    "confirm",
+    "text",
+    "svg"
+  ],
+
   register: ["register", "innerForm", "confirm", "text", "svg"],
   innerForm: ["innerForm", "confirm", "text", "svg"],
   confirm: ["confirm", "text", "svg"],
@@ -166,7 +188,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "registerPage") {
     func.displayName = "PlasmicRegister";
   } else {
     func.displayName = `PlasmicRegister.${nodeName}`;
@@ -176,7 +198,7 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicRegister = Object.assign(
   // Top-level PlasmicRegister renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("registerPage"),
   {
     // Helper components rendering sub-elements
     register: makeNodeComponent("register"),
@@ -187,9 +209,13 @@ export const PlasmicRegister = Object.assign(
     // Metadata about props expected for PlasmicRegister
     internalVariantProps: PlasmicRegister__VariantProps,
     internalArgProps: PlasmicRegister__ArgProps,
+    // Key-value metadata
+    metadata: {
+      viewport: "width=device-width,initial-scale=1.0,user-scalable=no"
+    },
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "注册/REGISTER",
       description: "",
       ogImageSrc: "",
       canonical: ""

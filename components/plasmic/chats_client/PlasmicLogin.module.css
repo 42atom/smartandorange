@@ -1,4 +1,4 @@
-.root {
+.loginPage {
   display: grid;
   flex-direction: column;
   position: relative;
@@ -18,16 +18,16 @@
     )
     var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
 }
-:where(.root > *) {
+:where(.loginPage > *) {
   grid-column: 4;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .root {
+  .loginPage {
     padding: 0px;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  :where(.root > *) {
+  :where(.loginPage > *) {
     grid-column: 4;
   }
 }

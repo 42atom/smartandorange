@@ -62,7 +62,21 @@ function PlasmicLogin__RenderFunc(props) {
   const [$queries, setDollarQueries] = React.useState({});
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicLogin.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicLogin.pageMetadata.title}
+        />
+
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicLogin.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -72,8 +86,8 @@ function PlasmicLogin__RenderFunc(props) {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"loginPage"}
+          data-plasmic-override={overrides.loginPage}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -84,7 +98,7 @@ function PlasmicLogin__RenderFunc(props) {
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
             plasmic_plasmic_rich_components_css.plasmic_tokens,
-            sty.root
+            sty.loginPage
           )}
         >
           <p.Stack
@@ -136,7 +150,7 @@ function PlasmicLogin__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "login", "loginInput", "confirm2", "text", "svg"],
+  loginPage: ["loginPage", "login", "loginInput", "confirm2", "text", "svg"],
   login: ["login", "loginInput", "confirm2", "text", "svg"],
   loginInput: ["loginInput", "confirm2", "text", "svg"],
   confirm2: ["confirm2", "text", "svg"],
@@ -163,7 +177,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "loginPage") {
     func.displayName = "PlasmicLogin";
   } else {
     func.displayName = `PlasmicLogin.${nodeName}`;
@@ -173,7 +187,7 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicLogin = Object.assign(
   // Top-level PlasmicLogin renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("loginPage"),
   {
     // Helper components rendering sub-elements
     login: makeNodeComponent("login"),
@@ -184,9 +198,13 @@ export const PlasmicLogin = Object.assign(
     // Metadata about props expected for PlasmicLogin
     internalVariantProps: PlasmicLogin__VariantProps,
     internalArgProps: PlasmicLogin__ArgProps,
+    // Key-value metadata
+    metadata: {
+      viewport: "width=device-width,initial-scale=1.0,user-scalable=no"
+    },
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "登录/Login",
       description: "",
       ogImageSrc: "",
       canonical: ""
