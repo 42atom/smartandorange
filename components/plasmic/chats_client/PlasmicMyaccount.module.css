@@ -1018,7 +1018,7 @@
     margin-bottom: 0px;
     margin-left: calc(0px + 0px) !important;
     align-self: auto;
-    display: plasmic-content-layout;
+    display: grid;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {

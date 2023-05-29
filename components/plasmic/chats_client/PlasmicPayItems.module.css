@@ -13,6 +13,11 @@
   min-height: 0;
   padding: 8px;
 }
+.tabContent___7Zg3H:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+}
 .tabsContainer:global(.__wab_instance) {
   width: 100%;
   max-width: 100%;
@@ -169,30 +174,30 @@
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
-.priceBlock__lstXp:global(.__wab_instance) {
+.price1:global(.__wab_instance) {
   position: relative;
   min-width: 120px;
 }
 .text__yWjc3 {
   padding-right: 0px;
 }
-.priceBlock__gQbj:global(.__wab_instance) {
+.price2:global(.__wab_instance) {
   position: relative;
   min-width: 120px;
 }
-.button___1SCk:global(.__wab_instance) {
+.btn1:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 70%;
   margin-right: 0px;
 }
-.svg__tn449 {
+.svg__fkCkC {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.svg__c53Mt {
+.svg__xApM3 {
   color: var(--token-_w178omqxW);
   position: relative;
   object-fit: cover;
@@ -258,7 +263,7 @@
   margin-left: calc(0px + 8px) !important;
   margin-right: 0px;
 }
-.svg__dsAuE {
+.svg__bEk91 {
   object-fit: cover;
   max-width: 100%;
   color: var(--token-AbckxUHKx);
@@ -610,33 +615,33 @@
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
-.priceBlock__oy574:global(.__wab_instance) {
+.price3:global(.__wab_instance) {
   position: relative;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .priceBlock__oy574:global(.__wab_instance) {
+  .price3:global(.__wab_instance) {
     min-width: 120px;
   }
 }
 .text__gAub8 {
   padding-right: 0px;
 }
-.priceBlock__ysoh:global(.__wab_instance) {
+.price4:global(.__wab_instance) {
   position: relative;
 }
-.button__u6JFt:global(.__wab_instance) {
+.btn2:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 70%;
   margin-right: 0px;
 }
-.svg__b43GM {
+.svg__rsGGh {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.svg__k2Z9C {
+.svg___7Dk6G {
   color: var(--token-_w178omqxW);
   position: relative;
   object-fit: cover;
@@ -698,7 +703,7 @@
   margin-left: calc(0px + 8px) !important;
   margin-right: 0px;
 }
-.svg__qPOkV {
+.svg__ta4Af {
   object-fit: cover;
   max-width: 100%;
   color: var(--token-AbckxUHKx);
@@ -1044,28 +1049,28 @@
   margin-bottom: 40px;
   padding: 8px;
 }
-.priceBlock__ldIzI:global(.__wab_instance) {
+.price5:global(.__wab_instance) {
   position: relative;
 }
 .text__dkh1C {
   padding-right: 0px;
 }
-.priceBlock___9V3HF:global(.__wab_instance) {
+.price6:global(.__wab_instance) {
   position: relative;
 }
-.button___60PKn:global(.__wab_instance) {
+.btn3:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 70%;
   margin-right: 0px;
 }
-.svg__hEwy {
+.svg___1VvLu {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.svg__zDt0M {
+.svg__ukLy4 {
   color: var(--token-_w178omqxW);
   position: relative;
   object-fit: cover;
@@ -1126,7 +1131,7 @@
   margin-left: calc(0px + 8px) !important;
   margin-right: 0px;
 }
-.svg___5Esu9 {
+.svg__mYuSj {
   object-fit: cover;
   max-width: 100%;
   color: var(--token-AbckxUHKx);
@@ -1477,7 +1482,7 @@
   > img {
   margin-top: 20px;
 }
-.button__i2Od4:global(.__wab_instance) {
+.aliPayBtn:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
@@ -1495,7 +1500,7 @@
   width: 1em;
   height: 1em;
 }
-.button__t0Ux:global(.__wab_instance) {
+.wechatPayBtn:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }

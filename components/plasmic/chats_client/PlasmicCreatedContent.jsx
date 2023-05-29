@@ -19,11 +19,9 @@ import {
 } from "@plasmicapp/react-web";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
-import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicCreatedContent.module.css"; // plasmic-import: cHu398Tr36/css
 import Icon17Icon from "./icons/PlasmicIcon__Icon17"; // plasmic-import: Cuf7VN7o7/icon
-import Icon18Icon from "./icons/PlasmicIcon__Icon18"; // plasmic-import: pp41lU4ySO/icon
 
 export const PlasmicCreatedContent__VariantProps = new Array();
 
@@ -73,7 +71,6 @@ function PlasmicCreatedContent__RenderFunc(props) {
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
-        plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.gContent
       )}
     >
@@ -81,28 +78,20 @@ function PlasmicCreatedContent__RenderFunc(props) {
         {true ? (
           <div className={classNames(projectcss.all, sty.freeBox__cPsd)}>
             <Icon17Icon
-              data-plasmic-name={"icnCopy"}
-              data-plasmic-override={overrides.icnCopy}
+              data-plasmic-name={"copyBtn"}
+              data-plasmic-override={overrides.copyBtn}
               alt={"复制内容"}
-              className={classNames(projectcss.all, sty.icnCopy)}
-              role={"img"}
-            />
-
-            <Icon18Icon
-              data-plasmic-name={"icnTrashbin"}
-              data-plasmic-override={overrides.icnTrashbin}
-              alt={"删除"}
-              className={classNames(projectcss.all, sty.icnTrashbin)}
+              className={classNames(projectcss.all, sty.copyBtn)}
               role={"img"}
             />
 
             <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
+              data-plasmic-name={"txtCount"}
+              data-plasmic-override={overrides.txtCount}
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text
+                sty.txtCount
               )}
             >
               {"  782字  35秒前"}
@@ -120,10 +109,9 @@ function PlasmicCreatedContent__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  gContent: ["gContent", "icnCopy", "icnTrashbin", "text"],
-  icnCopy: ["icnCopy"],
-  icnTrashbin: ["icnTrashbin"],
-  text: ["text"]
+  gContent: ["gContent", "copyBtn", "txtCount"],
+  copyBtn: ["copyBtn"],
+  txtCount: ["txtCount"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -158,9 +146,8 @@ export const PlasmicCreatedContent = Object.assign(
   makeNodeComponent("gContent"),
   {
     // Helper components rendering sub-elements
-    icnCopy: makeNodeComponent("icnCopy"),
-    icnTrashbin: makeNodeComponent("icnTrashbin"),
-    text: makeNodeComponent("text"),
+    copyBtn: makeNodeComponent("copyBtn"),
+    txtCount: makeNodeComponent("txtCount"),
     // Metadata about props expected for PlasmicCreatedContent
     internalVariantProps: PlasmicCreatedContent__VariantProps,
     internalArgProps: PlasmicCreatedContent__ArgProps

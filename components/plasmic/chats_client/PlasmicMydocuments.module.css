@@ -170,6 +170,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
+  font-size: 13px;
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -180,12 +181,14 @@
 .menuItem__rLiC3:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
+  font-size: 14px;
 }
 .text__alE0 {
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
+  font-size: 14px;
   min-width: 0;
   padding: 0px;
 }
@@ -193,6 +196,7 @@
   max-width: 100%;
   object-fit: cover;
   width: auto;
+  font-size: 14px;
 }
 .text__jiH4S {
   position: relative;
@@ -204,6 +208,7 @@
 .menuItem__l38Zo:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
+  font-size: 14px;
 }
 .text__xZy9L {
   position: relative;
@@ -215,6 +220,7 @@
 .menuItem__xpdE:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
+  font-size: 14px;
 }
 .text__yd6Wg {
   position: relative;
@@ -226,6 +232,7 @@
 .menuItem__wdUnw:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
+  font-size: 14px;
 }
 .text__pOim {
   position: relative;
@@ -238,6 +245,7 @@
   max-width: 100%;
   object-fit: cover;
   height: auto;
+  font-size: 14px;
 }
 .text__cizFc {
   position: relative;
@@ -262,7 +270,7 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-  padding: 8px;
+  padding: 2px 8px 8px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__cmzPo {

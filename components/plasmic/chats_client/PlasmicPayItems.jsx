@@ -17,18 +17,17 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
+import { TabContent } from "@plasmicpkgs/plasmic-tabs"; // plasmic-import: KyRr6GQ_tPI/codeComponent
 import { TabsContainer } from "@plasmicpkgs/plasmic-tabs"; // plasmic-import: qT-BBamUwNg/codeComponent
 import { TabUnderline } from "@plasmicpkgs/plasmic-tabs"; // plasmic-import: 7uvxnLIBlo3/codeComponent
 import { TabButton } from "@plasmicpkgs/plasmic-tabs"; // plasmic-import: 5jaBI7A4_ak/codeComponent
 import Button from "../../Button"; // plasmic-import: lBHNzts6tFyj/component
-import { TabContent } from "@plasmicpkgs/plasmic-tabs"; // plasmic-import: KyRr6GQ_tPI/codeComponent
 import PriceBlock from "../../PriceBlock"; // plasmic-import: p-zh9SOwnv/component
 import Button2 from "../../Button"; // plasmic-import: YO5Bwb9purCqu/component
 import PriceIcons from "../../PriceIcons"; // plasmic-import: 8zXNIjCzZD/component
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal"; // plasmic-import: xx93QbkHH5i/codeComponent
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
-import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicPayItems.module.css"; // plasmic-import: l2Kc8Ybaed/css
 import Icon27Icon from "./icons/PlasmicIcon__Icon27"; // plasmic-import: 64FJ52jbDe/icon
@@ -96,1102 +95,1132 @@ function PlasmicPayItems__RenderFunc(props) {
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
-        plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root
       )}
     >
-      <TabsContainer
-        data-plasmic-name={"tabsContainer"}
-        data-plasmic-override={overrides.tabsContainer}
-        className={classNames("__wab_instance", sty.tabsContainer)}
-        initialKey={"tab1"}
-        previewAll={false}
+      <TabContent
+        className={classNames("__wab_instance", sty.tabContent___7Zg3H)}
       >
-        <ph.DataCtxReader>
-          {$ctx => (
-            <div className={classNames(projectcss.all, sty.freeBox__xyS2)}>
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__w6Qxw)}
-              >
-                {true ? (
-                  <TabUnderline
-                    data-plasmic-name={"tabUnderline"}
-                    data-plasmic-override={overrides.tabUnderline}
-                    className={classNames("__wab_instance", sty.tabUnderline)}
-                  />
-                ) : null}
-                <TabButton
-                  className={classNames("__wab_instance", sty.tabButton__m2R0D)}
-                  tabKey={"tab1"}
+        <TabsContainer
+          data-plasmic-name={"tabsContainer"}
+          data-plasmic-override={overrides.tabsContainer}
+          className={classNames("__wab_instance", sty.tabsContainer)}
+          initialKey={"tab1"}
+          previewAll={false}
+        >
+          <ph.DataCtxReader>
+            {$ctx => (
+              <div className={classNames(projectcss.all, sty.freeBox__xyS2)}>
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__w6Qxw)}
                 >
-                  <Button color={"softGreen"} endIcon={null} startIcon={null}>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___1YmY
-                      )}
-                    >
-                      {"普通版"}
-                    </div>
-                  </Button>
-                </TabButton>
-                <TabButton
-                  className={classNames("__wab_instance", sty.tabButton__ux9Rb)}
-                  tabKey={"tab2"}
-                >
-                  <Button color={"softGreen"} endIcon={null} startIcon={null}>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__wq7RA
-                      )}
-                    >
-                      {"会员版"}
-                    </div>
-                  </Button>
-                </TabButton>
-                <TabButton
-                  className={classNames(
-                    "__wab_instance",
-                    sty.tabButton___2Wk6H
-                  )}
-                  tabKey={"tab3"}
-                >
-                  <Button color={"softGreen"} endIcon={null} startIcon={null}>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___8BAdH
-                      )}
-                    >
-                      {"专业版"}
-                    </div>
-                  </Button>
-                </TabButton>
-              </p.Stack>
-              <div className={classNames(projectcss.all, sty.freeBox__ahXJ)}>
-                <TabContent
-                  className={classNames(
-                    "__wab_instance",
-                    sty.tabContent___9DMok
-                  )}
-                  tabKey={"tab1"}
-                >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__o36Si)}
+                  {true ? (
+                    <TabUnderline
+                      data-plasmic-name={"tabUnderline"}
+                      data-plasmic-override={overrides.tabUnderline}
+                      className={classNames("__wab_instance", sty.tabUnderline)}
+                    />
+                  ) : null}
+                  <TabButton
+                    className={classNames(
+                      "__wab_instance",
+                      sty.tabButton__m2R0D
+                    )}
+                    tabKey={"tab1"}
+                  >
+                    <Button color={"softGreen"} endIcon={null} startIcon={null}>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___1YmY
+                        )}
+                      >
+                        {"普通版"}
+                      </div>
+                    </Button>
+                  </TabButton>
+                  <TabButton
+                    className={classNames(
+                      "__wab_instance",
+                      sty.tabButton__ux9Rb
+                    )}
+                    tabKey={"tab2"}
+                  >
+                    <Button color={"softGreen"} endIcon={null} startIcon={null}>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__wq7RA
+                        )}
+                      >
+                        {"会员版"}
+                      </div>
+                    </Button>
+                  </TabButton>
+                  <TabButton
+                    className={classNames(
+                      "__wab_instance",
+                      sty.tabButton___2Wk6H
+                    )}
+                    tabKey={"tab3"}
+                  >
+                    <Button color={"softGreen"} endIcon={null} startIcon={null}>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___8BAdH
+                        )}
+                      >
+                        {"专业版"}
+                      </div>
+                    </Button>
+                  </TabButton>
+                </p.Stack>
+                <div className={classNames(projectcss.all, sty.freeBox__ahXJ)}>
+                  <TabContent
+                    className={classNames(
+                      "__wab_instance",
+                      sty.tabContent___9DMok
+                    )}
+                    tabKey={"tab1"}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__m5B91)}
+                      className={classNames(projectcss.all, sty.freeBox__o36Si)}
                     >
-                      {true ? (
-                        <PriceBlock
-                          className={classNames(
-                            "__wab_instance",
-                            sty.priceBlock__lstXp
-                          )}
-                          mainPrice={15}
-                          preDay={"折合2.43元每天"}
-                          selected={true}
-                          slot={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__m5B91
+                        )}
+                      >
+                        {true ? (
+                          <PriceBlock
+                            data-plasmic-name={"price1"}
+                            data-plasmic-override={overrides.price1}
+                            className={classNames("__wab_instance", sty.price1)}
+                            mainPrice={15}
+                            preDay={"折合2.43元每天"}
+                            selected={true}
+                            slot={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__yWjc3
+                                )}
+                              >
+                                {"1个月"}
+                              </div>
+                            }
+                          />
+                        ) : null}
+                        {true ? (
+                          <PriceBlock
+                            data-plasmic-name={"price2"}
+                            data-plasmic-override={overrides.price2}
+                            className={classNames("__wab_instance", sty.price2)}
+                            mainPrice={182}
+                            preDay={"折合2.43元每天"}
+                          />
+                        ) : null}
+                      </div>
+                      <Button2
+                        data-plasmic-name={"btn1"}
+                        data-plasmic-override={overrides.btn1}
+                        className={classNames("__wab_instance", sty.btn1)}
+                        color={"green"}
+                        link={undefined}
+                        onClick={async event => {
+                          const $steps = {};
+                          $steps["updateModalOpen"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: __wrapUserFunction(
+                                    {
+                                      type: "InteractionArgLoc",
+                                      actionName: "updateVariable",
+                                      interactionUuid: "bj5JutBcW",
+                                      componentUuid: "l2Kc8Ybaed",
+                                      argName: "variable"
+                                    },
+                                    () => ({
+                                      objRoot: $state,
+                                      variablePath: ["modal", "open"]
+                                    })
+                                  ),
+                                  operation: __wrapUserFunction(
+                                    {
+                                      type: "InteractionArgLoc",
+                                      actionName: "updateVariable",
+                                      interactionUuid: "bj5JutBcW",
+                                      componentUuid: "l2Kc8Ybaed",
+                                      argName: "operation"
+                                    },
+                                    () => 0
+                                  ),
+                                  value: __wrapUserFunction(
+                                    {
+                                      type: "InteractionArgLoc",
+                                      actionName: "updateVariable",
+                                      interactionUuid: "bj5JutBcW",
+                                      componentUuid: "l2Kc8Ybaed",
+                                      argName: "value"
+                                    },
+                                    () => true
+                                  )
+                                };
+                                return __wrapUserFunction(
+                                  {
+                                    type: "InteractionLoc",
+                                    actionName: "updateVariable",
+                                    interactionUuid: "bj5JutBcW",
+                                    componentUuid: "l2Kc8Ybaed"
+                                  },
+                                  () =>
+                                    (({
+                                      variable,
+                                      value,
+                                      startIndex,
+                                      deleteCount
+                                    }) => {
+                                      if (!variable) {
+                                        return;
+                                      }
+                                      const { objRoot, variablePath } =
+                                        variable;
+                                      p.set(objRoot, variablePath, value);
+                                      return value;
+                                    })?.apply(null, [actionArgs]),
+                                  actionArgs
+                                );
+                              })()
+                            : undefined;
+                          if (
+                            typeof $steps["updateModalOpen"] === "object" &&
+                            typeof $steps["updateModalOpen"].then === "function"
+                          ) {
+                            $steps["updateModalOpen"] = await __wrapUserPromise(
+                              {
+                                type: "InteractionLoc",
+                                actionName: "updateVariable",
+                                interactionUuid: "bj5JutBcW",
+                                componentUuid: "l2Kc8Ybaed"
+                              },
+                              $steps["updateModalOpen"]
+                            );
+                          }
+                        }}
+                      >
+                        {"确认并支付"}
+                      </Button2>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__qipE6
+                        )}
+                      >
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox___1CsOm
+                            )}
+                          >
+                            <PriceIcons
+                              data-plasmic-name={"icon"}
+                              data-plasmic-override={overrides.icon}
+                              className={classNames("__wab_instance", sty.icon)}
+                            />
+
                             <div
                               className={classNames(
                                 projectcss.all,
                                 projectcss.__wab_text,
-                                sty.text__yWjc3
+                                sty.text__tqUj
                               )}
                             >
-                              {"1个月"}
+                              {"20000字/月"}
                             </div>
-                          }
-                        />
-                      ) : null}
-                      {true ? (
-                        <PriceBlock
-                          className={classNames(
-                            "__wab_instance",
-                            sty.priceBlock__gQbj
-                          )}
-                          mainPrice={182}
-                          preDay={"折合2.43元每天"}
-                        />
-                      ) : null}
-                    </div>
-                    <Button2
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button___1SCk
-                      )}
-                      color={"green"}
-                      link={undefined}
-                      onClick={async event => {
-                        const $steps = {};
-                        $steps["updateModalOpen"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                variable: __wrapUserFunction(
-                                  {
-                                    type: "InteractionArgLoc",
-                                    actionName: "updateVariable",
-                                    interactionUuid: "bj5JutBcW",
-                                    componentUuid: "l2Kc8Ybaed",
-                                    argName: "variable"
-                                  },
-                                  () => ({
-                                    objRoot: $state,
-                                    variablePath: ["modal", "open"]
-                                  })
-                                ),
-                                operation: __wrapUserFunction(
-                                  {
-                                    type: "InteractionArgLoc",
-                                    actionName: "updateVariable",
-                                    interactionUuid: "bj5JutBcW",
-                                    componentUuid: "l2Kc8Ybaed",
-                                    argName: "operation"
-                                  },
-                                  () => 0
-                                ),
-                                value: __wrapUserFunction(
-                                  {
-                                    type: "InteractionArgLoc",
-                                    actionName: "updateVariable",
-                                    interactionUuid: "bj5JutBcW",
-                                    componentUuid: "l2Kc8Ybaed",
-                                    argName: "value"
-                                  },
-                                  () => true
-                                )
-                              };
-                              return __wrapUserFunction(
-                                {
-                                  type: "InteractionLoc",
-                                  actionName: "updateVariable",
-                                  interactionUuid: "bj5JutBcW",
-                                  componentUuid: "l2Kc8Ybaed"
-                                },
-                                () =>
-                                  (({
-                                    variable,
-                                    value,
-                                    startIndex,
-                                    deleteCount
-                                  }) => {
-                                    if (!variable) {
-                                      return;
-                                    }
-                                    const { objRoot, variablePath } = variable;
-                                    p.set(objRoot, variablePath, value);
-                                    return value;
-                                  })?.apply(null, [actionArgs]),
-                                actionArgs
-                              );
-                            })()
-                          : undefined;
-                        if (
-                          typeof $steps["updateModalOpen"] === "object" &&
-                          typeof $steps["updateModalOpen"].then === "function"
-                        ) {
-                          $steps["updateModalOpen"] = await __wrapUserPromise(
-                            {
-                              type: "InteractionLoc",
-                              actionName: "updateVariable",
-                              interactionUuid: "bj5JutBcW",
-                              componentUuid: "l2Kc8Ybaed"
-                            },
-                            $steps["updateModalOpen"]
-                          );
-                        }
-                      }}
-                    >
-                      {"确认并支付"}
-                    </Button2>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__qipE6)}
-                    >
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___1CsOm
-                          )}
-                        >
-                          <PriceIcons
-                            data-plasmic-name={"icon"}
-                            data-plasmic-override={overrides.icon}
-                            className={classNames("__wab_instance", sty.icon)}
-                          />
-
-                          <div
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__tqUj
+                              sty.freeBox___5W8Zo
                             )}
                           >
-                            {"20000字/月"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___5W8Zo
-                          )}
-                        >
-                          <PriceIcons
-                            data-plasmic-name={"icon2"}
-                            data-plasmic-override={overrides.icon2}
-                            className={classNames("__wab_instance", sty.icon2)}
-                          >
-                            <Icon27Icon
+                            <PriceIcons
+                              data-plasmic-name={"icon2"}
+                              data-plasmic-override={overrides.icon2}
                               className={classNames(
-                                projectcss.all,
-                                sty.svg__naa52
+                                "__wab_instance",
+                                sty.icon2
                               )}
-                              role={"img"}
-                            />
-                          </PriceIcons>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__jyl7D
-                            )}
-                          >
-                            {"AI续写文章"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__h90L
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__oZuAx
-                            )}
-                          >
-                            <Icon29Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__maicM
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___9AbeZ
-                            )}
-                          >
-                            {"语气设置"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__calxE
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__jlRK
-                            )}
-                          >
-                            <Icon30Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__mHlR
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__dUq9
-                            )}
-                          >
-                            {"实时保存"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__eJHsI
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__uq9Z
-                            )}
-                          >
-                            <Icon31Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__fxfUt
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__qENuG
-                            )}
-                          >
-                            {"全文翻新"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__a4UD8
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__ql3Z
-                            )}
-                          >
-                            <Icon32Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__jt6QT
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__ahe1N
-                            )}
-                          >
-                            {"全文生成"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                    </div>
-                  </div>
-                </TabContent>
-                <TabContent
-                  className={classNames(
-                    "__wab_instance",
-                    sty.tabContent___3YRlf
-                  )}
-                  tabKey={"tab2"}
-                >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__stUcM)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___0YoCn
-                      )}
-                    >
-                      {true ? (
-                        <PriceBlock
-                          className={classNames(
-                            "__wab_instance",
-                            sty.priceBlock__oy574
-                          )}
-                          mainPrice={50}
-                          preDay={"折合2.43元每天"}
-                          slot={
+                            >
+                              <Icon27Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__naa52
+                                )}
+                                role={"img"}
+                              />
+                            </PriceIcons>
                             <div
                               className={classNames(
                                 projectcss.all,
                                 projectcss.__wab_text,
-                                sty.text__gAub8
+                                sty.text__jyl7D
                               )}
                             >
-                              {"1个月"}
+                              {"AI续写文章"}
                             </div>
-                          }
-                        />
-                      ) : null}
-                      {true ? (
-                        <PriceBlock
-                          className={classNames(
-                            "__wab_instance",
-                            sty.priceBlock__ysoh
-                          )}
-                          mainPrice={480}
-                          preDay={"折合2.43元每天"}
-                        />
-                      ) : null}
-                    </div>
-                    <Button2
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button__u6JFt
-                      )}
-                      color={"green"}
-                      link={undefined}
-                      onClick={async event => {
-                        const $steps = {};
-                        $steps["updateModalOpen"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                variable: __wrapUserFunction(
-                                  {
-                                    type: "InteractionArgLoc",
-                                    actionName: "updateVariable",
-                                    interactionUuid: "Oc8y749fN",
-                                    componentUuid: "l2Kc8Ybaed",
-                                    argName: "variable"
-                                  },
-                                  () => ({
-                                    objRoot: $state,
-                                    variablePath: ["modal", "open"]
-                                  })
-                                ),
-                                operation: __wrapUserFunction(
-                                  {
-                                    type: "InteractionArgLoc",
-                                    actionName: "updateVariable",
-                                    interactionUuid: "Oc8y749fN",
-                                    componentUuid: "l2Kc8Ybaed",
-                                    argName: "operation"
-                                  },
-                                  () => 0
-                                ),
-                                value: __wrapUserFunction(
-                                  {
-                                    type: "InteractionArgLoc",
-                                    actionName: "updateVariable",
-                                    interactionUuid: "Oc8y749fN",
-                                    componentUuid: "l2Kc8Ybaed",
-                                    argName: "value"
-                                  },
-                                  () => true
-                                )
-                              };
-                              return __wrapUserFunction(
-                                {
-                                  type: "InteractionLoc",
-                                  actionName: "updateVariable",
-                                  interactionUuid: "Oc8y749fN",
-                                  componentUuid: "l2Kc8Ybaed"
-                                },
-                                () =>
-                                  (({
-                                    variable,
-                                    value,
-                                    startIndex,
-                                    deleteCount
-                                  }) => {
-                                    if (!variable) {
-                                      return;
-                                    }
-                                    const { objRoot, variablePath } = variable;
-                                    p.set(objRoot, variablePath, value);
-                                    return value;
-                                  })?.apply(null, [actionArgs]),
-                                actionArgs
-                              );
-                            })()
-                          : undefined;
-                        if (
-                          typeof $steps["updateModalOpen"] === "object" &&
-                          typeof $steps["updateModalOpen"].then === "function"
-                        ) {
-                          $steps["updateModalOpen"] = await __wrapUserPromise(
-                            {
-                              type: "InteractionLoc",
-                              actionName: "updateVariable",
-                              interactionUuid: "Oc8y749fN",
-                              componentUuid: "l2Kc8Ybaed"
-                            },
-                            $steps["updateModalOpen"]
-                          );
-                        }
-                      }}
-                    >
-                      {"确认并支付"}
-                    </Button2>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__cwcDz)}
-                    >
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__zev9G
-                          )}
-                        >
-                          <PriceIcons
-                            data-plasmic-name={"icon3"}
-                            data-plasmic-override={overrides.icon3}
-                            className={classNames("__wab_instance", sty.icon3)}
-                          />
-
-                          <div
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__c8NPc
+                              sty.freeBox__h90L
                             )}
                           >
-                            {"50000字/月"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__g9L3
-                          )}
-                        >
-                          <PriceIcons
-                            data-plasmic-name={"icon4"}
-                            data-plasmic-override={overrides.icon4}
-                            className={classNames("__wab_instance", sty.icon4)}
-                          >
-                            <Icon27Icon
+                            <div
                               className={classNames(
                                 projectcss.all,
-                                sty.svg__n1W3
+                                sty.freeBox__oZuAx
                               )}
-                              role={"img"}
-                            />
-                          </PriceIcons>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__h7Dm2
-                            )}
-                          >
-                            {"AI续写文章"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__siqNn
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__yLtIt
-                            )}
-                          >
-                            <Icon29Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__xDb3Z
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__v5HXt
-                            )}
-                          >
-                            {"语气设置"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__eJfg
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__ayVov
-                            )}
-                          >
-                            <Icon30Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__s6Gx0
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___3YFeb
-                            )}
-                          >
-                            {"实时保存"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__p80K0
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__zGYxJ
-                            )}
-                          >
-                            <Icon31Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__jL0Zs
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__q6Fi
-                            )}
-                          >
-                            {"全文翻新"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__gvUsz
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__yjeTq
-                            )}
-                          >
-                            <Icon32Icon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg___4SpGg
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__hN4Si
-                            )}
-                          >
-                            {"全文生成"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                    </div>
-                  </div>
-                </TabContent>
-                <TabContent
-                  className={classNames(
-                    "__wab_instance",
-                    sty.tabContent___6LOii
-                  )}
-                  tabKey={"tab3"}
-                >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__yrawp)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___6BbBz
-                      )}
-                    >
-                      {true ? (
-                        <PriceBlock
-                          className={classNames(
-                            "__wab_instance",
-                            sty.priceBlock__ldIzI
-                          )}
-                          mainPrice={190}
-                          preDay={"折合2.43元每天"}
-                          slot={
+                            >
+                              <Icon29Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__maicM
+                                )}
+                                role={"img"}
+                              />
+                            </div>
                             <div
                               className={classNames(
                                 projectcss.all,
                                 projectcss.__wab_text,
-                                sty.text__dkh1C
+                                sty.text___9AbeZ
                               )}
                             >
-                              {"1个月"}
+                              {"语气设置"}
                             </div>
-                          }
-                        />
-                      ) : null}
-                      {true ? (
-                        <PriceBlock
-                          className={classNames(
-                            "__wab_instance",
-                            sty.priceBlock___9V3HF
-                          )}
-                          mainPrice={1824}
-                          preDay={"折合2.43元每天"}
-                        />
-                      ) : null}
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__calxE
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__jlRK
+                              )}
+                            >
+                              <Icon30Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__mHlR
+                                )}
+                                role={"img"}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__dUq9
+                              )}
+                            >
+                              {"实时保存"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__eJHsI
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__uq9Z
+                              )}
+                            >
+                              <Icon31Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__fxfUt
+                                )}
+                                role={"img"}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__qENuG
+                              )}
+                            >
+                              {"全文翻新"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__a4UD8
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__ql3Z
+                              )}
+                            >
+                              <Icon32Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__jt6QT
+                                )}
+                                role={"img"}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__ahe1N
+                              )}
+                            >
+                              {"全文生成"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                      </div>
                     </div>
-                    <Button2
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button___60PKn
-                      )}
-                      color={"green"}
-                      link={undefined}
-                      onClick={async event => {
-                        const $steps = {};
-                        $steps["updateModalOpen"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                variable: __wrapUserFunction(
-                                  {
-                                    type: "InteractionArgLoc",
-                                    actionName: "updateVariable",
-                                    interactionUuid: "FZw943V7I",
-                                    componentUuid: "l2Kc8Ybaed",
-                                    argName: "variable"
-                                  },
-                                  () => ({
-                                    objRoot: $state,
-                                    variablePath: ["modal", "open"]
-                                  })
-                                ),
-                                operation: __wrapUserFunction(
-                                  {
-                                    type: "InteractionArgLoc",
-                                    actionName: "updateVariable",
-                                    interactionUuid: "FZw943V7I",
-                                    componentUuid: "l2Kc8Ybaed",
-                                    argName: "operation"
-                                  },
-                                  () => 0
-                                ),
-                                value: __wrapUserFunction(
-                                  {
-                                    type: "InteractionArgLoc",
-                                    actionName: "updateVariable",
-                                    interactionUuid: "FZw943V7I",
-                                    componentUuid: "l2Kc8Ybaed",
-                                    argName: "value"
-                                  },
-                                  () => true
-                                )
-                              };
-                              return __wrapUserFunction(
-                                {
-                                  type: "InteractionLoc",
-                                  actionName: "updateVariable",
-                                  interactionUuid: "FZw943V7I",
-                                  componentUuid: "l2Kc8Ybaed"
-                                },
-                                () =>
-                                  (({
-                                    variable,
-                                    value,
-                                    startIndex,
-                                    deleteCount
-                                  }) => {
-                                    if (!variable) {
-                                      return;
-                                    }
-                                    const { objRoot, variablePath } = variable;
-                                    p.set(objRoot, variablePath, value);
-                                    return value;
-                                  })?.apply(null, [actionArgs]),
-                                actionArgs
-                              );
-                            })()
-                          : undefined;
-                        if (
-                          typeof $steps["updateModalOpen"] === "object" &&
-                          typeof $steps["updateModalOpen"].then === "function"
-                        ) {
-                          $steps["updateModalOpen"] = await __wrapUserPromise(
-                            {
-                              type: "InteractionLoc",
-                              actionName: "updateVariable",
-                              interactionUuid: "FZw943V7I",
-                              componentUuid: "l2Kc8Ybaed"
-                            },
-                            $steps["updateModalOpen"]
-                          );
-                        }
-                      }}
-                    >
-                      {"确认并支付"}
-                    </Button2>
+                  </TabContent>
+                  <TabContent
+                    className={classNames(
+                      "__wab_instance",
+                      sty.tabContent___3YRlf
+                    )}
+                    tabKey={"tab2"}
+                  >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__mYsq)}
+                      className={classNames(projectcss.all, sty.freeBox__stUcM)}
                     >
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__eVxEw
-                          )}
-                        >
-                          <PriceIcons
-                            data-plasmic-name={"icon5"}
-                            data-plasmic-override={overrides.icon5}
-                            className={classNames("__wab_instance", sty.icon5)}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___0YoCn
+                        )}
+                      >
+                        {true ? (
+                          <PriceBlock
+                            data-plasmic-name={"price3"}
+                            data-plasmic-override={overrides.price3}
+                            className={classNames("__wab_instance", sty.price3)}
+                            mainPrice={50}
+                            preDay={"折合2.43元每天"}
+                            slot={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__gAub8
+                                )}
+                              >
+                                {"1个月"}
+                              </div>
+                            }
                           />
+                        ) : null}
+                        {true ? (
+                          <PriceBlock
+                            data-plasmic-name={"price4"}
+                            data-plasmic-override={overrides.price4}
+                            className={classNames("__wab_instance", sty.price4)}
+                            mainPrice={480}
+                            preDay={"折合2.43元每天"}
+                          />
+                        ) : null}
+                      </div>
+                      <Button2
+                        data-plasmic-name={"btn2"}
+                        data-plasmic-override={overrides.btn2}
+                        className={classNames("__wab_instance", sty.btn2)}
+                        color={"green"}
+                        link={undefined}
+                        onClick={async event => {
+                          const $steps = {};
+                          $steps["updateModalOpen"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: __wrapUserFunction(
+                                    {
+                                      type: "InteractionArgLoc",
+                                      actionName: "updateVariable",
+                                      interactionUuid: "Oc8y749fN",
+                                      componentUuid: "l2Kc8Ybaed",
+                                      argName: "variable"
+                                    },
+                                    () => ({
+                                      objRoot: $state,
+                                      variablePath: ["modal", "open"]
+                                    })
+                                  ),
+                                  operation: __wrapUserFunction(
+                                    {
+                                      type: "InteractionArgLoc",
+                                      actionName: "updateVariable",
+                                      interactionUuid: "Oc8y749fN",
+                                      componentUuid: "l2Kc8Ybaed",
+                                      argName: "operation"
+                                    },
+                                    () => 0
+                                  ),
+                                  value: __wrapUserFunction(
+                                    {
+                                      type: "InteractionArgLoc",
+                                      actionName: "updateVariable",
+                                      interactionUuid: "Oc8y749fN",
+                                      componentUuid: "l2Kc8Ybaed",
+                                      argName: "value"
+                                    },
+                                    () => true
+                                  )
+                                };
+                                return __wrapUserFunction(
+                                  {
+                                    type: "InteractionLoc",
+                                    actionName: "updateVariable",
+                                    interactionUuid: "Oc8y749fN",
+                                    componentUuid: "l2Kc8Ybaed"
+                                  },
+                                  () =>
+                                    (({
+                                      variable,
+                                      value,
+                                      startIndex,
+                                      deleteCount
+                                    }) => {
+                                      if (!variable) {
+                                        return;
+                                      }
+                                      const { objRoot, variablePath } =
+                                        variable;
+                                      p.set(objRoot, variablePath, value);
+                                      return value;
+                                    })?.apply(null, [actionArgs]),
+                                  actionArgs
+                                );
+                              })()
+                            : undefined;
+                          if (
+                            typeof $steps["updateModalOpen"] === "object" &&
+                            typeof $steps["updateModalOpen"].then === "function"
+                          ) {
+                            $steps["updateModalOpen"] = await __wrapUserPromise(
+                              {
+                                type: "InteractionLoc",
+                                actionName: "updateVariable",
+                                interactionUuid: "Oc8y749fN",
+                                componentUuid: "l2Kc8Ybaed"
+                              },
+                              $steps["updateModalOpen"]
+                            );
+                          }
+                        }}
+                      >
+                        {"确认并支付"}
+                      </Button2>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__cwcDz
+                        )}
+                      >
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__zev9G
+                            )}
+                          >
+                            <PriceIcons
+                              data-plasmic-name={"icon3"}
+                              data-plasmic-override={overrides.icon3}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.icon3
+                              )}
+                            />
 
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__as3C
-                            )}
-                          >
-                            {"300k字/月"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__sIn6A
-                          )}
-                        >
-                          <PriceIcons
-                            data-plasmic-name={"icon6"}
-                            data-plasmic-override={overrides.icon6}
-                            className={classNames("__wab_instance", sty.icon6)}
-                          >
-                            <Icon27Icon
+                            <div
                               className={classNames(
                                 projectcss.all,
-                                sty.svg__hf009
+                                projectcss.__wab_text,
+                                sty.text__c8NPc
                               )}
-                              role={"img"}
-                            />
-                          </PriceIcons>
-                          <div
+                            >
+                              {"50000字/月"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__qwUxm
+                              sty.freeBox__g9L3
                             )}
                           >
-                            {"AI续写文章"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___82V9H
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__ceSbu
-                            )}
-                          >
-                            <Icon29Icon
+                            <PriceIcons
+                              data-plasmic-name={"icon4"}
+                              data-plasmic-override={overrides.icon4}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.icon4
+                              )}
+                            >
+                              <Icon27Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__n1W3
+                                )}
+                                role={"img"}
+                              />
+                            </PriceIcons>
+                            <div
                               className={classNames(
                                 projectcss.all,
-                                sty.svg__kRcrg
+                                projectcss.__wab_text,
+                                sty.text__h7Dm2
                               )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
+                            >
+                              {"AI续写文章"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__nkQkX
+                              sty.freeBox__siqNn
                             )}
                           >
-                            {"语气设置"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__o67U
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__vPzy6
-                            )}
-                          >
-                            <Icon30Icon
+                            <div
                               className={classNames(
                                 projectcss.all,
-                                sty.svg__nsAoE
+                                sty.freeBox__yLtIt
                               )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__pYgGk
-                            )}
-                          >
-                            {"实时保存"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__syJ2O
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__c5Mq
-                            )}
-                          >
-                            <Icon31Icon
+                            >
+                              <Icon29Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__xDb3Z
+                                )}
+                                role={"img"}
+                              />
+                            </div>
+                            <div
                               className={classNames(
                                 projectcss.all,
-                                sty.svg__bvnei
+                                projectcss.__wab_text,
+                                sty.text__v5HXt
                               )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
+                            >
+                              {"语气设置"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__hSvjv
+                              sty.freeBox__eJfg
                             )}
                           >
-                            {"全文翻新"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
-                      {true ? (
-                        <p.Stack
-                          as={"div"}
-                          hasGap={true}
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___6Syly
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__m4LfM
-                            )}
-                          >
-                            <Icon32Icon
+                            <div
                               className={classNames(
                                 projectcss.all,
-                                sty.svg___25QMi
+                                sty.freeBox__ayVov
                               )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
+                            >
+                              <Icon30Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__s6Gx0
+                                )}
+                                role={"img"}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___3YFeb
+                              )}
+                            >
+                              {"实时保存"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__xta5E
+                              sty.freeBox__p80K0
                             )}
                           >
-                            {"全文生成"}
-                          </div>
-                        </p.Stack>
-                      ) : null}
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__zGYxJ
+                              )}
+                            >
+                              <Icon31Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__jL0Zs
+                                )}
+                                role={"img"}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__q6Fi
+                              )}
+                            >
+                              {"全文翻新"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__gvUsz
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__yjeTq
+                              )}
+                            >
+                              <Icon32Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg___4SpGg
+                                )}
+                                role={"img"}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__hN4Si
+                              )}
+                            >
+                              {"全文生成"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                      </div>
                     </div>
-                  </div>
-                </TabContent>
+                  </TabContent>
+                  <TabContent
+                    className={classNames(
+                      "__wab_instance",
+                      sty.tabContent___6LOii
+                    )}
+                    tabKey={"tab3"}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__yrawp)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___6BbBz
+                        )}
+                      >
+                        {true ? (
+                          <PriceBlock
+                            data-plasmic-name={"price5"}
+                            data-plasmic-override={overrides.price5}
+                            className={classNames("__wab_instance", sty.price5)}
+                            mainPrice={190}
+                            preDay={"折合2.43元每天"}
+                            slot={
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__dkh1C
+                                )}
+                              >
+                                {"1个月"}
+                              </div>
+                            }
+                          />
+                        ) : null}
+                        {true ? (
+                          <PriceBlock
+                            data-plasmic-name={"price6"}
+                            data-plasmic-override={overrides.price6}
+                            className={classNames("__wab_instance", sty.price6)}
+                            mainPrice={1824}
+                            preDay={"折合2.43元每天"}
+                          />
+                        ) : null}
+                      </div>
+                      <Button2
+                        data-plasmic-name={"btn3"}
+                        data-plasmic-override={overrides.btn3}
+                        className={classNames("__wab_instance", sty.btn3)}
+                        color={"green"}
+                        link={undefined}
+                        onClick={async event => {
+                          const $steps = {};
+                          $steps["updateModalOpen"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: __wrapUserFunction(
+                                    {
+                                      type: "InteractionArgLoc",
+                                      actionName: "updateVariable",
+                                      interactionUuid: "FZw943V7I",
+                                      componentUuid: "l2Kc8Ybaed",
+                                      argName: "variable"
+                                    },
+                                    () => ({
+                                      objRoot: $state,
+                                      variablePath: ["modal", "open"]
+                                    })
+                                  ),
+                                  operation: __wrapUserFunction(
+                                    {
+                                      type: "InteractionArgLoc",
+                                      actionName: "updateVariable",
+                                      interactionUuid: "FZw943V7I",
+                                      componentUuid: "l2Kc8Ybaed",
+                                      argName: "operation"
+                                    },
+                                    () => 0
+                                  ),
+                                  value: __wrapUserFunction(
+                                    {
+                                      type: "InteractionArgLoc",
+                                      actionName: "updateVariable",
+                                      interactionUuid: "FZw943V7I",
+                                      componentUuid: "l2Kc8Ybaed",
+                                      argName: "value"
+                                    },
+                                    () => true
+                                  )
+                                };
+                                return __wrapUserFunction(
+                                  {
+                                    type: "InteractionLoc",
+                                    actionName: "updateVariable",
+                                    interactionUuid: "FZw943V7I",
+                                    componentUuid: "l2Kc8Ybaed"
+                                  },
+                                  () =>
+                                    (({
+                                      variable,
+                                      value,
+                                      startIndex,
+                                      deleteCount
+                                    }) => {
+                                      if (!variable) {
+                                        return;
+                                      }
+                                      const { objRoot, variablePath } =
+                                        variable;
+                                      p.set(objRoot, variablePath, value);
+                                      return value;
+                                    })?.apply(null, [actionArgs]),
+                                  actionArgs
+                                );
+                              })()
+                            : undefined;
+                          if (
+                            typeof $steps["updateModalOpen"] === "object" &&
+                            typeof $steps["updateModalOpen"].then === "function"
+                          ) {
+                            $steps["updateModalOpen"] = await __wrapUserPromise(
+                              {
+                                type: "InteractionLoc",
+                                actionName: "updateVariable",
+                                interactionUuid: "FZw943V7I",
+                                componentUuid: "l2Kc8Ybaed"
+                              },
+                              $steps["updateModalOpen"]
+                            );
+                          }
+                        }}
+                      >
+                        {"确认并支付"}
+                      </Button2>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__mYsq
+                        )}
+                      >
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__eVxEw
+                            )}
+                          >
+                            <PriceIcons
+                              data-plasmic-name={"icon5"}
+                              data-plasmic-override={overrides.icon5}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.icon5
+                              )}
+                            />
+
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__as3C
+                              )}
+                            >
+                              {"300k字/月"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__sIn6A
+                            )}
+                          >
+                            <PriceIcons
+                              data-plasmic-name={"icon6"}
+                              data-plasmic-override={overrides.icon6}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.icon6
+                              )}
+                            >
+                              <Icon27Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__hf009
+                                )}
+                                role={"img"}
+                              />
+                            </PriceIcons>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__qwUxm
+                              )}
+                            >
+                              {"AI续写文章"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox___82V9H
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__ceSbu
+                              )}
+                            >
+                              <Icon29Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__kRcrg
+                                )}
+                                role={"img"}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__nkQkX
+                              )}
+                            >
+                              {"语气设置"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__o67U
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__vPzy6
+                              )}
+                            >
+                              <Icon30Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__nsAoE
+                                )}
+                                role={"img"}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__pYgGk
+                              )}
+                            >
+                              {"实时保存"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__syJ2O
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__c5Mq
+                              )}
+                            >
+                              <Icon31Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__bvnei
+                                )}
+                                role={"img"}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__hSvjv
+                              )}
+                            >
+                              {"全文翻新"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                        {true ? (
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox___6Syly
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__m4LfM
+                              )}
+                            >
+                              <Icon32Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg___25QMi
+                                )}
+                                role={"img"}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__xta5E
+                              )}
+                            >
+                              {"全文生成"}
+                            </div>
+                          </p.Stack>
+                        ) : null}
+                      </div>
+                    </div>
+                  </TabContent>
+                </div>
               </div>
-            </div>
-          )}
-        </ph.DataCtxReader>
-      </TabsContainer>
+            )}
+          </ph.DataCtxReader>
+        </TabsContainer>
+      </TabContent>
       <AntdModal
         data-plasmic-name={"modal"}
         data-plasmic-override={overrides.modal}
@@ -1201,8 +1230,7 @@ function PlasmicPayItems__RenderFunc(props) {
           projectcss.plasmic_default_styles,
           projectcss.plasmic_mixins,
           projectcss.plasmic_tokens,
-          plasmic_antd_5_hostless_css.plasmic_tokens,
-          plasmic_plasmic_rich_components_css.plasmic_tokens
+          plasmic_antd_5_hostless_css.plasmic_tokens
         )}
         footer={
           <div
@@ -1226,13 +1254,17 @@ function PlasmicPayItems__RenderFunc(props) {
           className={classNames(projectcss.all, sty.freeBox__qChkw)}
         >
           <Button2
-            className={classNames("__wab_instance", sty.button__i2Od4)}
+            data-plasmic-name={"aliPayBtn"}
+            data-plasmic-override={overrides.aliPayBtn}
+            className={classNames("__wab_instance", sty.aliPayBtn)}
             color={"blue"}
           >
             {"支付宝支付"}
           </Button2>
           <Button2
-            className={classNames("__wab_instance", sty.button__t0Ux)}
+            data-plasmic-name={"wechatPayBtn"}
+            data-plasmic-override={overrides.wechatPayBtn}
+            className={classNames("__wab_instance", sty.wechatPayBtn)}
             color={"green"}
           >
             {"微 信 支 付"}
@@ -1248,34 +1280,65 @@ const PlasmicDescendants = {
     "root",
     "tabsContainer",
     "tabUnderline",
+    "price1",
+    "price2",
+    "btn1",
     "icon",
     "icon2",
+    "price3",
+    "price4",
+    "btn2",
     "icon3",
     "icon4",
+    "price5",
+    "price6",
+    "btn3",
     "icon5",
     "icon6",
-    "modal"
+    "modal",
+    "aliPayBtn",
+    "wechatPayBtn"
   ],
 
   tabsContainer: [
     "tabsContainer",
     "tabUnderline",
+    "price1",
+    "price2",
+    "btn1",
     "icon",
     "icon2",
+    "price3",
+    "price4",
+    "btn2",
     "icon3",
     "icon4",
+    "price5",
+    "price6",
+    "btn3",
     "icon5",
     "icon6"
   ],
 
   tabUnderline: ["tabUnderline"],
+  price1: ["price1"],
+  price2: ["price2"],
+  btn1: ["btn1"],
   icon: ["icon"],
   icon2: ["icon2"],
+  price3: ["price3"],
+  price4: ["price4"],
+  btn2: ["btn2"],
   icon3: ["icon3"],
   icon4: ["icon4"],
+  price5: ["price5"],
+  price6: ["price6"],
+  btn3: ["btn3"],
   icon5: ["icon5"],
   icon6: ["icon6"],
-  modal: ["modal"]
+  modal: ["modal", "aliPayBtn", "wechatPayBtn"],
+  aliPayBtn: ["aliPayBtn"],
+  wechatPayBtn: ["wechatPayBtn"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -1312,13 +1375,24 @@ export const PlasmicPayItems = Object.assign(
     // Helper components rendering sub-elements
     tabsContainer: makeNodeComponent("tabsContainer"),
     tabUnderline: makeNodeComponent("tabUnderline"),
+    price1: makeNodeComponent("price1"),
+    price2: makeNodeComponent("price2"),
+    btn1: makeNodeComponent("btn1"),
     icon: makeNodeComponent("icon"),
     icon2: makeNodeComponent("icon2"),
+    price3: makeNodeComponent("price3"),
+    price4: makeNodeComponent("price4"),
+    btn2: makeNodeComponent("btn2"),
     icon3: makeNodeComponent("icon3"),
     icon4: makeNodeComponent("icon4"),
+    price5: makeNodeComponent("price5"),
+    price6: makeNodeComponent("price6"),
+    btn3: makeNodeComponent("btn3"),
     icon5: makeNodeComponent("icon5"),
     icon6: makeNodeComponent("icon6"),
     modal: makeNodeComponent("modal"),
+    aliPayBtn: makeNodeComponent("aliPayBtn"),
+    wechatPayBtn: makeNodeComponent("wechatPayBtn"),
     // Metadata about props expected for PlasmicPayItems
     internalVariantProps: PlasmicPayItems__VariantProps,
     internalArgProps: PlasmicPayItems__ArgProps

@@ -689,6 +689,7 @@
   width: auto;
   object-position: right center;
   height: 337px;
+  transform: translateX(0px) translateY(0px) translateZ(0px);
 }
 .img__vzl5 > picture > img {
   object-fit: contain;
@@ -725,7 +726,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  background: var(--token-c0zcnmYwkA-M);
+  background: var(--token-w-bBaEPI6iX);
   grid-column-start: 1;
   grid-column-end: -1;
   padding: 8px 32px;

@@ -121,6 +121,10 @@
   height: auto;
   max-width: 100%;
   align-self: center;
+  transition-property: all;
+  transition-duration: 0.2s;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.2s;
   padding: 8px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
