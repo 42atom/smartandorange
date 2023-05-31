@@ -188,7 +188,7 @@
 .btn1:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
-  width: 70%;
+  width: auto;
   margin-right: 0px;
 }
 .svg__fkCkC {

@@ -63,7 +63,7 @@
     {
       "name": "System: Bg Layout 2",
       "type": "color",
-      "value": "#F2F9E3",
+      "value": "#F5F5F5",
       "category": "color",
       "meta": {
         "projectId": "gRaosoDicn4VUCndSzazbA",
@@ -1191,6 +1191,16 @@
       }
     },
     {
+      "name": "Unnamed Style Token",
+      "type": "color",
+      "value": "#FFFFFF",
+      "category": "color",
+      "meta": {
+        "projectId": "gRaosoDicn4VUCndSzazbA",
+        "id": "DK0jYmftD"
+      }
+    },
+    {
       "name": "Unnamed Style Token 2",
       "type": "color",
       "value": "#ACACAC",
@@ -1253,7 +1263,7 @@
     {
       "name": "c1",
       "type": "color",
-      "value": "#DDFECB",
+      "value": "#DDFECB38",
       "category": "color",
       "meta": {
         "projectId": "gRaosoDicn4VUCndSzazbA",

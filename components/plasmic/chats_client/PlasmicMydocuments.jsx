@@ -22,8 +22,9 @@ import {
 } from "@plasmicapp/react-web";
 import NavMenu from "../../NavMenu"; // plasmic-import: 9cR2sxpykRjad/component
 import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: fo-n3xHvdqt/codeComponent
-import { AntdMenuItemGroup } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: 6ySly9jzXsR/codeComponent
 import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: QSmezaW-Gyu/codeComponent
+import { AntdMenuDivider } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: pwJcAbVYC4M/codeComponent
+import { AntdMenuItemGroup } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: 6ySly9jzXsR/codeComponent
 import TextInput from "../../TextInput"; // plasmic-import: -yvQMrhCsV3Q78/component
 import DocumentList from "../../DocumentList"; // plasmic-import: DuwZXCRDJh/component
 import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
@@ -32,6 +33,8 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicMydocuments.module.css"; // plasmic-import: EKtCmtXn8XaxGh/css
+import Icon16Icon from "./icons/PlasmicIcon__Icon16"; // plasmic-import: XtoxUOCTka/icon
+import ChevronDownsvgIcon from "./icons/PlasmicIcon__ChevronDownsvg"; // plasmic-import: S8FNX_2RcWwpyX/icon
 import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: dkiK7MvBVR/icon
 import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: -3MO1z6kLjeMH2/icon
 
@@ -152,6 +155,201 @@ function PlasmicMydocuments__RenderFunc(props) {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__te5Fk)}
             >
+              <AntdMenu
+                data-plasmic-name={"sideTagsMenu"}
+                data-plasmic-override={overrides.sideTagsMenu}
+                className={classNames("__wab_instance", sty.sideTagsMenu)}
+                expandIcon={
+                  <ChevronDownsvgIcon
+                    className={classNames(projectcss.all, sty.svg__wBfvr)}
+                    role={"img"}
+                  />
+                }
+                mode={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "vertical"
+                    : undefined
+                }
+                triggerSubMenuAction={"click"}
+              >
+                <AntdMenuItem
+                  className={classNames("__wab_instance", sty.menuItem__x5N3V)}
+                  key={"menuItemKey0"}
+                >
+                  {true ? (
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__mVAe1)}
+                    >
+                      {true ? (
+                        <Icon16Icon
+                          className={classNames(projectcss.all, sty.svg__gCsJj)}
+                          role={"img"}
+                        />
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__mGkpg
+                        )}
+                      >
+                        {"收藏文档"}
+                      </div>
+                    </p.Stack>
+                  ) : null}
+                </AntdMenuItem>
+                <AntdMenuDivider
+                  data-plasmic-name={"menuDivider"}
+                  data-plasmic-override={overrides.menuDivider}
+                  className={classNames("__wab_instance", sty.menuDivider)}
+                />
+
+                <AntdMenuItem
+                  className={classNames("__wab_instance", sty.menuItem__shbVw)}
+                  key={"menuItemKey1"}
+                >
+                  {true ? (
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__fVjZb)}
+                    >
+                      {true ? (
+                        <Icon16Icon
+                          className={classNames(projectcss.all, sty.svg__hAsuD)}
+                          role={"img"}
+                        />
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__mlS4O
+                        )}
+                      >
+                        {"今天"}
+                      </div>
+                    </p.Stack>
+                  ) : null}
+                </AntdMenuItem>
+                <AntdMenuItem
+                  className={classNames("__wab_instance", sty.menuItem__pHCet)}
+                  key={"menuItemKey2"}
+                >
+                  {true ? (
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__lixvZ)}
+                    >
+                      {true ? (
+                        <Icon16Icon
+                          className={classNames(
+                            projectcss.all,
+                            sty.svg___9Ckdx
+                          )}
+                          role={"img"}
+                        />
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ouVxl
+                        )}
+                      >
+                        {"最近3天"}
+                      </div>
+                    </p.Stack>
+                  ) : null}
+                </AntdMenuItem>
+                <AntdMenuItem
+                  className={classNames("__wab_instance", sty.menuItem__jgPi5)}
+                  key={"menuItemKey3"}
+                >
+                  {true ? (
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__hk1Ui)}
+                    >
+                      {true ? (
+                        <Icon16Icon
+                          className={classNames(projectcss.all, sty.svg__tkObm)}
+                          role={"img"}
+                        />
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__lxfI
+                        )}
+                      >
+                        {"最近1周"}
+                      </div>
+                    </p.Stack>
+                  ) : null}
+                </AntdMenuItem>
+                <AntdMenuItem
+                  className={classNames("__wab_instance", sty.menuItem__fjz2D)}
+                  key={"menuItemKey4"}
+                >
+                  {true ? (
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__wCqRo)}
+                    >
+                      {true ? (
+                        <Icon16Icon
+                          className={classNames(projectcss.all, sty.svg__ujpqA)}
+                          role={"img"}
+                        />
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__y9OyE
+                        )}
+                      >
+                        {"最近1月"}
+                      </div>
+                    </p.Stack>
+                  ) : null}
+                </AntdMenuItem>
+                <AntdMenuItem
+                  className={classNames("__wab_instance", sty.menuItem___942At)}
+                  key={"menuItemKey5"}
+                >
+                  {true ? (
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__yEtc1)}
+                    >
+                      {true ? (
+                        <Icon16Icon
+                          className={classNames(projectcss.all, sty.svg__j6H6R)}
+                          role={"img"}
+                        />
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__gExpa
+                        )}
+                      >
+                        {"全部"}
+                      </div>
+                    </p.Stack>
+                  ) : null}
+                </AntdMenuItem>
+              </AntdMenu>
               {true ? (
                 <AntdMenu
                   data-plasmic-name={"menu"}
@@ -408,6 +606,8 @@ const PlasmicDescendants = {
     "root",
     "navMenu",
     "bkgd",
+    "sideTagsMenu",
+    "menuDivider",
     "menu",
     "itemGroup",
     "search",
@@ -420,6 +620,8 @@ const PlasmicDescendants = {
   navMenu: ["navMenu"],
   bkgd: [
     "bkgd",
+    "sideTagsMenu",
+    "menuDivider",
     "menu",
     "itemGroup",
     "search",
@@ -428,6 +630,8 @@ const PlasmicDescendants = {
     "docTxt"
   ],
 
+  sideTagsMenu: ["sideTagsMenu", "menuDivider"],
+  menuDivider: ["menuDivider"],
   menu: ["menu", "itemGroup"],
   itemGroup: ["itemGroup"],
   search: ["search"],
@@ -471,6 +675,8 @@ export const PlasmicMydocuments = Object.assign(
     // Helper components rendering sub-elements
     navMenu: makeNodeComponent("navMenu"),
     bkgd: makeNodeComponent("bkgd"),
+    sideTagsMenu: makeNodeComponent("sideTagsMenu"),
+    menuDivider: makeNodeComponent("menuDivider"),
     menu: makeNodeComponent("menu"),
     itemGroup: makeNodeComponent("itemGroup"),
     search: makeNodeComponent("search"),

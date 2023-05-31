@@ -12,7 +12,7 @@
   min-width: 120px;
   border-radius: 16px;
   padding: 20px 8px;
-  border: 1px solid #e7e193;
+  border: 3px solid var(--token-LJzy5WSR2);
 }
 .rootselected {
   padding-top: 20px;

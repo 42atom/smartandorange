@@ -268,7 +268,7 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                             ]}
                             labelCol={{ span: 8, horizontalOnly: true }}
                             layout={"vertical"}
-                            mode={"simplified"}
+                            mode={undefined}
                             wrapperCol={{ span: 16, horizontalOnly: true }}
                           >
                             <FormItemWrapper

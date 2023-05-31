@@ -65,7 +65,7 @@
   background: #ffffff00;
 }
 .rootcolor_link {
-  background: #ffffff00;
+  background: var(--token-SmdgsD8KK);
 }
 .rootisDisabled {
   cursor: not-allowed;
@@ -262,7 +262,7 @@
   color: #1b1b18;
 }
 .slotTargetChildrencolor_link {
-  color: #0091ff;
+  color: var(--token-sn6Zb6km7CqW);
 }
 .slotTargetChildrencolor_blue {
   color: #ffffff;

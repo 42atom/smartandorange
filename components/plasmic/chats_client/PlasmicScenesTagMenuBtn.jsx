@@ -22,10 +22,11 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicScenesTagMenuBtn.module.css"; // plasmic-import: slY9K5ec7o/css
+import Icon36Icon from "./icons/PlasmicIcon__Icon36"; // plasmic-import: YzVIckEt_5/icon
 
 export const PlasmicScenesTagMenuBtn__VariantProps = new Array("isActive");
 
-export const PlasmicScenesTagMenuBtn__ArgProps = new Array("children");
+export const PlasmicScenesTagMenuBtn__ArgProps = new Array("icon2", "children");
 
 const __wrapUserFunction =
   globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
@@ -86,117 +87,48 @@ function PlasmicScenesTagMenuBtn__RenderFunc(props) {
         { [sty.baseisActive]: hasVariant($state, "isActive", "isActive") }
       )}
     >
-      {true ? (
+      <label
+        data-plasmic-name={"label"}
+        data-plasmic-override={overrides.label}
+        className={classNames(projectcss.all, sty.label)}
+      >
         <div
-          data-plasmic-name={"btn"}
-          data-plasmic-override={overrides.btn}
-          className={classNames(projectcss.all, sty.btn, {
-            [sty.btnisActive]: hasVariant($state, "isActive", "isActive")
-          })}
-          onClick={async event => {
-            const $steps = {};
-            $steps["updateIsActive"] = true
-              ? (() => {
-                  const actionArgs = {
-                    variable: __wrapUserFunction(
-                      {
-                        type: "InteractionArgLoc",
-                        actionName: "updateVariable",
-                        interactionUuid: "HVS9PYNiX",
-                        componentUuid: "slY9K5ec7o",
-                        argName: "variable"
-                      },
-                      () => ({
-                        objRoot: $state,
-                        variablePath: ["isActive"]
-                      })
-                    ),
-                    operation: __wrapUserFunction(
-                      {
-                        type: "InteractionArgLoc",
-                        actionName: "updateVariable",
-                        interactionUuid: "HVS9PYNiX",
-                        componentUuid: "slY9K5ec7o",
-                        argName: "operation"
-                      },
-                      () => 0
-                    ),
-                    value: __wrapUserFunction(
-                      {
-                        type: "InteractionArgLoc",
-                        actionName: "updateVariable",
-                        interactionUuid: "HVS9PYNiX",
-                        componentUuid: "slY9K5ec7o",
-                        argName: "value"
-                      },
-                      () => true
-                    )
-                  };
-                  return __wrapUserFunction(
-                    {
-                      type: "InteractionLoc",
-                      actionName: "updateVariable",
-                      interactionUuid: "HVS9PYNiX",
-                      componentUuid: "slY9K5ec7o"
-                    },
-                    () =>
-                      (({ variable, value, startIndex, deleteCount }) => {
-                        if (!variable) {
-                          return;
-                        }
-                        const { objRoot, variablePath } = variable;
-                        p.set(objRoot, variablePath, value);
-                        return value;
-                      })?.apply(null, [actionArgs]),
-                    actionArgs
-                  );
-                })()
-              : undefined;
-            if (
-              typeof $steps["updateIsActive"] === "object" &&
-              typeof $steps["updateIsActive"].then === "function"
-            ) {
-              $steps["updateIsActive"] = await __wrapUserPromise(
-                {
-                  type: "InteractionLoc",
-                  actionName: "updateVariable",
-                  interactionUuid: "HVS9PYNiX",
-                  componentUuid: "slY9K5ec7o"
-                },
-                $steps["updateIsActive"]
-              );
-            }
-          }}
+          data-plasmic-name={"icon2"}
+          data-plasmic-override={overrides.icon2}
+          className={classNames(projectcss.all, sty.icon2)}
         >
-          <div
-            data-plasmic-name={"freeBox"}
-            data-plasmic-override={overrides.freeBox}
-            className={classNames(projectcss.all, sty.freeBox, {
-              [sty.freeBoxisActive]: hasVariant($state, "isActive", "isActive")
-            })}
-          >
-            {p.renderPlasmicSlot({
-              defaultContents: "收藏",
-              value: args.children,
-              className: classNames(sty.slotTargetChildren, {
-                [sty.slotTargetChildrenisActive]: hasVariant(
-                  $state,
-                  "isActive",
-                  "isActive"
-                )
-              })
-            })}
-          </div>
+          {p.renderPlasmicSlot({
+            defaultContents: (
+              <Icon36Icon
+                className={classNames(projectcss.all, sty.svg__ok1Hx)}
+                role={"img"}
+              />
+            ),
+
+            value: args.icon2
+          })}
         </div>
-      ) : null}
+        <div
+          data-plasmic-name={"text"}
+          data-plasmic-override={overrides.text}
+          className={classNames(projectcss.all, sty.text)}
+        >
+          {p.renderPlasmicSlot({
+            defaultContents: "收藏",
+            value: args.children,
+            className: classNames(sty.slotTargetChildren)
+          })}
+        </div>
+      </label>
     </div>
   );
 }
 
 const PlasmicDescendants = {
-  base: ["base", "btn", "freeBox"],
-  btn: ["btn", "freeBox"],
-  freeBox: ["freeBox"]
+  base: ["base", "label", "icon2", "text"],
+  label: ["label", "icon2", "text"],
+  icon2: ["icon2"],
+  text: ["text"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -231,8 +163,9 @@ export const PlasmicScenesTagMenuBtn = Object.assign(
   makeNodeComponent("base"),
   {
     // Helper components rendering sub-elements
-    btn: makeNodeComponent("btn"),
-    freeBox: makeNodeComponent("freeBox"),
+    label: makeNodeComponent("label"),
+    icon2: makeNodeComponent("icon2"),
+    text: makeNodeComponent("text"),
     // Metadata about props expected for PlasmicScenesTagMenuBtn
     internalVariantProps: PlasmicScenesTagMenuBtn__VariantProps,
     internalArgProps: PlasmicScenesTagMenuBtn__ArgProps

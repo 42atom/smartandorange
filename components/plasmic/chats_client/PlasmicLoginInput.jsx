@@ -465,7 +465,7 @@ function PlasmicLoginInput__RenderFunc(props) {
                       )
                     }
                   )}
-                  name={"captcha"}
+                  name={"code"}
                   onChange={e => {
                     p.generateStateOnChangeProp($state, ["code", "value"])(
                       e.target.value

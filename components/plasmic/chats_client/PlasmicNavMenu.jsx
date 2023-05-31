@@ -149,7 +149,7 @@ function PlasmicNavMenu__RenderFunc(props) {
                     sty.text__pXwwu
                   )}
                 >
-                  {"Beta版"}
+                  {"Beta"}
                 </div>
               </p.Stack>
             ) : null}
