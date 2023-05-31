@@ -22,8 +22,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicFav.module.css"; // plasmic-import: P6DuufdWKR/css
-import Icon19Icon from "./icons/PlasmicIcon__Icon19"; // plasmic-import: Qv4aqJsvqQ/icon
-import Icon20Icon from "./icons/PlasmicIcon__Icon20"; // plasmic-import: 6_oKYAuIan/icon
+import Icon16Icon from "./icons/PlasmicIcon__Icon16"; // plasmic-import: XtoxUOCTka/icon
 
 export const PlasmicFav__VariantProps = new Array("checked");
 
@@ -78,7 +77,7 @@ function PlasmicFav__RenderFunc(props) {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       PlasmicIconType={
-        hasVariant($state, "checked", "checked") ? Icon20Icon : Icon19Icon
+        hasVariant($state, "checked", "checked") ? Icon16Icon : Icon16Icon
       }
       className={classNames(
         projectcss.all,

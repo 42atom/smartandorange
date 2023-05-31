@@ -31,7 +31,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicWorkspaces.module.css"; // plasmic-import: PlpIcihQhaX91/css
-import Icon12Icon from "./icons/PlasmicIcon__Icon12"; // plasmic-import: C_0-pDO_5g/icon
+import Icon30Icon from "./icons/PlasmicIcon__Icon30"; // plasmic-import: 2o24QZW282/icon
 import Icon16Icon from "./icons/PlasmicIcon__Icon16"; // plasmic-import: XtoxUOCTka/icon
 import ChevronDownsvgIcon from "./icons/PlasmicIcon__ChevronDownsvg"; // plasmic-import: S8FNX_2RcWwpyX/icon
 
@@ -165,7 +165,7 @@ function PlasmicWorkspaces__RenderFunc(props) {
                             >
                               {"场景分类"}
                             </div>
-                            <Icon12Icon
+                            <Icon30Icon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__w7V4K

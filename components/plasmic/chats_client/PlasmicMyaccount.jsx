@@ -582,44 +582,48 @@ function PlasmicMyaccount__RenderFunc(props) {
                           );
                         })()}
                       </p.Stack>
-                      <Button
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button__tN1Mn
-                        )}
-                        color={"softGreen"}
-                        size={"compact"}
-                        submitsForm={true}
-                      >
-                        <div
+                      {true ? (
+                        <Button
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___5Lqnl
+                            "__wab_instance",
+                            sty.button__tN1Mn
                           )}
+                          color={"softGreen"}
+                          size={"compact"}
+                          submitsForm={true}
                         >
-                          {"手机换绑"}
-                        </div>
-                      </Button>
-                      <Button
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button__nSdSx
-                        )}
-                        color={"softGreen"}
-                        size={"compact"}
-                        submitsForm={true}
-                      >
-                        <div
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___5Lqnl
+                            )}
+                          >
+                            {"手机换绑"}
+                          </div>
+                        </Button>
+                      ) : null}
+                      {true ? (
+                        <Button
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___9Isb0
+                            "__wab_instance",
+                            sty.button__nSdSx
                           )}
+                          color={"softGreen"}
+                          size={"compact"}
+                          submitsForm={true}
                         >
-                          {"修改密码"}
-                        </div>
-                      </Button>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___9Isb0
+                            )}
+                          >
+                            {"修改密码"}
+                          </div>
+                        </Button>
+                      ) : null}
                     </p.Stack>
                   ) : null}
                   {true ? (

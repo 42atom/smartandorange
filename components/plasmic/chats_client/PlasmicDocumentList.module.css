@@ -122,6 +122,7 @@
   white-space: pre;
   font-size: 11px;
   color: #a2a2a2;
+  user-select: none;
 }
 .sceneName {
   width: auto;
@@ -131,6 +132,10 @@
   color: var(--token-WgGKuDBDe);
   background: var(--token-oG1h6iK0g);
   align-self: flex-start;
+  user-select: none;
+  white-space: pre;
+  text-overflow: ellipsis;
+  overflow: hidden;
   border-radius: 8px;
   padding: 0px 4px;
 }
@@ -146,6 +151,7 @@
 .favIcon:global(.__wab_instance) {
   position: relative;
   align-self: center;
+  z-index: 1000;
   flex-shrink: 0;
   margin: 4px 0px 4px 4px;
 }
@@ -156,7 +162,32 @@
   align-self: center;
   margin-left: 8px;
   color: var(--token-FMGQEiyNQ);
+  cursor: pointer;
+  z-index: 1000;
   width: 1em;
   flex-shrink: 0;
+  height: 1em;
+}
+.modalDelete:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.freeBox__w8N3X {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.svg {
+  object-fit: cover;
+  max-width: 100%;
+  width: 1em;
   height: 1em;
 }
