@@ -649,6 +649,300 @@ function PlasmicWorkspaces__RenderFunc(props) {
                                   output={"Modal content"}
                                   title={"场景标题"}
                                 />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__eGbut
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__vg7IN
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__tyaSy
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__xWhDk
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__hlwVs
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__fUcGn
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__s39J
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__z4Na4
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__cOfkd
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__nwpwv
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__zbJkA
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__ya6O
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__lsOs6
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text___3HoS
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__yxIXy
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__tCiz
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__hjdX2
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text___8Aul8
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__gdgKx
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__cbLsw
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__gmpNj
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__y4TTi
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__sC1Lq
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__b5LuS
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__wnQhi
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__rQdSy
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
+
+                                <SceneInfo
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.sceneInfo__shpYm
+                                  )}
+                                  desc={"desc"}
+                                  input={
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__sK7C
+                                      )}
+                                    >
+                                      {"Modal content"}
+                                    </div>
+                                  }
+                                  output={"Modal content"}
+                                  title={"场景标题"}
+                                />
                               </React.Fragment>
                             ),
 

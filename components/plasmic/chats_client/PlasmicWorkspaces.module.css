@@ -6,6 +6,7 @@
   align-content: flex-start;
   justify-items: center;
   overflow: auto;
+  background: var(--token-LJzy5WSR2);
   min-width: 0;
   grid-template-columns:
     1fr minmax(0, var(--plsmc-wide-chunk)) var(--plsmc-viewport-gap)
@@ -33,7 +34,7 @@
   width: 100%;
   height: 100%;
   max-width: 100%;
-  background: var(--token-8jk2BfOx3);
+  background: none;
   grid-column-start: 1;
   grid-column-end: -1;
   min-height: 0;
@@ -813,6 +814,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
+  overflow: auto;
   min-width: 0;
   padding: 0px 8px 8px;
 }
@@ -893,6 +895,90 @@
   position: relative;
 }
 .sceneInfo__dKhQ2:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__eGbut:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__tyaSy:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__hlwVs:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__s39J:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__cOfkd:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__zbJkA:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__lsOs6:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__yxIXy:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__hjdX2:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__gdgKx:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__gmpNj:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__sC1Lq:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__wnQhi:global(.__wab_instance) {
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  position: relative;
+}
+.sceneInfo__shpYm:global(.__wab_instance) {
   left: auto;
   top: auto;
   max-width: 100%;
