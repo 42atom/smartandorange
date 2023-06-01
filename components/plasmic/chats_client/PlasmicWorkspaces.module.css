@@ -5,7 +5,6 @@
   height: 100vh;
   align-content: flex-start;
   justify-items: center;
-  overflow: auto;
   background: var(--token-LJzy5WSR2);
   min-width: 0;
   grid-template-columns:
@@ -786,7 +785,7 @@
   flex-shrink: 1;
   flex-wrap: nowrap;
   min-width: 0;
-  padding: 8px 0px;
+  padding: 8px 0px 0px;
 }
 .columns > :nth-child(1n + 1) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
@@ -816,7 +815,7 @@
   align-items: center;
   overflow: auto;
   min-width: 0;
-  padding: 0px 8px 8px;
+  padding: 0px 8px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .column {
@@ -994,7 +993,7 @@
     position: fixed;
     left: 0;
     top: auto;
-    z-index: 1;
+    z-index: 1001;
     right: 0;
     bottom: 0;
     display: flex;
