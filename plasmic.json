@@ -231,8 +231,7 @@
           "displayName": "plasmic-antd5-date-picker",
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerDatePicker"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "28Ba3BDvRe7EiWdfFNnLB6",
@@ -817,6 +816,45 @@
           "cssFilePath": "plasmic/chats_client/PlasmicScenesTagMenuBtn.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "uLABqFF5hL",
+          "name": "AsideMenuGroup",
+          "type": "managed",
+          "projectId": "gRaosoDicn4VUCndSzazbA",
+          "renderModuleFilePath": "plasmic/chats_client/PlasmicAsideMenuGroup.jsx",
+          "importSpec": {
+            "modulePath": "AsideMenuGroup.jsx"
+          },
+          "cssFilePath": "plasmic/chats_client/PlasmicAsideMenuGroup.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "M4gUwXUTik",
+          "name": "AsideMenuItem",
+          "type": "managed",
+          "projectId": "gRaosoDicn4VUCndSzazbA",
+          "renderModuleFilePath": "plasmic/chats_client/PlasmicAsideMenuItem.jsx",
+          "importSpec": {
+            "modulePath": "AsideMenuItem.jsx"
+          },
+          "cssFilePath": "plasmic/chats_client/PlasmicAsideMenuItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "hUUIM8PBMb",
+          "name": "MenuItem",
+          "type": "managed",
+          "projectId": "gRaosoDicn4VUCndSzazbA",
+          "renderModuleFilePath": "plasmic/chats_client/PlasmicMenuItem.jsx",
+          "importSpec": {
+            "modulePath": "MenuItem.jsx"
+          },
+          "cssFilePath": "plasmic/chats_client/PlasmicMenuItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -856,19 +894,9 @@
           "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon6.jsx"
         },
         {
-          "id": "KoY309Tgrjk",
-          "name": "Icon3Icon",
-          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon3.jsx"
-        },
-        {
           "id": "IzwKr9-s2sD",
           "name": "Icon4Icon",
           "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon4.jsx"
-        },
-        {
-          "id": "Pu_bRg2PBqC",
-          "name": "Icon28Icon",
-          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon28.jsx"
         },
         {
           "id": "MTyawrbN6uF",
@@ -1108,9 +1136,14 @@
           "name": "RichDetails",
           "displayName": "hostless-rich-details",
           "componentImportPath": "@plasmicpkgs/plasmic-rich-components"
+        },
+        {
+          "id": "Hh2OL1EveIF",
+          "name": "RichList",
+          "displayName": "hostless-rich-list",
+          "componentImportPath": "@plasmicpkgs/plasmic-rich-components"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "YUiM7yqBWAqsh8KSnrdj7",
@@ -1258,6 +1291,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.286",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.286/dist/plasmic.schema.json"
+  "cliVersion": "0.1.287",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.287/dist/plasmic.schema.json"
 }

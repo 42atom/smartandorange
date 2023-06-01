@@ -164,7 +164,10 @@ function PlasmicNavMenu__RenderFunc(props) {
               try {
                 return $props.menu1;
               } catch (e) {
-                if (e instanceof TypeError) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
                   return "selectedItem";
                 }
                 throw e;
@@ -181,7 +184,10 @@ function PlasmicNavMenu__RenderFunc(props) {
               try {
                 return $props.menu2;
               } catch (e) {
-                if (e instanceof TypeError) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
                   return "selectedItem";
                 }
                 throw e;
@@ -198,7 +204,10 @@ function PlasmicNavMenu__RenderFunc(props) {
               try {
                 return $props.menu3;
               } catch (e) {
-                if (e instanceof TypeError) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
                   return "selectedItem";
                 }
                 throw e;
@@ -215,7 +224,10 @@ function PlasmicNavMenu__RenderFunc(props) {
               try {
                 return $props.menu4;
               } catch (e) {
-                if (e instanceof TypeError) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
                   return "selectedItem";
                 }
                 throw e;

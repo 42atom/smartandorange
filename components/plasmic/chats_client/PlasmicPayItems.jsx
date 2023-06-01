@@ -13,9 +13,11 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import { TabContent } from "@plasmicpkgs/plasmic-tabs"; // plasmic-import: KyRr6GQ_tPI/codeComponent
 import { TabsContainer } from "@plasmicpkgs/plasmic-tabs"; // plasmic-import: qT-BBamUwNg/codeComponent
@@ -26,6 +28,7 @@ import PriceBlock from "../../PriceBlock"; // plasmic-import: p-zh9SOwnv/compone
 import Button2 from "../../Button"; // plasmic-import: YO5Bwb9purCqu/component
 import PriceIcons from "../../PriceIcons"; // plasmic-import: 8zXNIjCzZD/component
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal"; // plasmic-import: xx93QbkHH5i/codeComponent
+import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
@@ -38,7 +41,10 @@ import Icon32Icon from "./icons/PlasmicIcon__Icon32"; // plasmic-import: 69yPGVO
 
 export const PlasmicPayItems__VariantProps = new Array();
 
-export const PlasmicPayItems__ArgProps = new Array();
+export const PlasmicPayItems__ArgProps = new Array(
+  "valueId",
+  "onValueIdChange"
+);
 
 const __wrapUserFunction =
   globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
@@ -76,16 +82,176 @@ function PlasmicPayItems__RenderFunc(props) {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "price1.isSelected",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $state.valueId === $state.price1.pid;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return [];
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "price2.isSelected",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $state.valueId === $state.price2.pid;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return [];
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "price3.isSelected",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $state.valueId === $state.price3.pid;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return [];
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "price4.isSelected",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $state.valueId === $state.price4.pid;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return [];
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "price5.isSelected",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $state.valueId === $state.price5.pid;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return [];
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "price6.isSelected",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $state.valueId === $state.price6.pid;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return [];
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "valueId",
+        type: "writable",
+        variableType: "number",
+        valueProp: "valueId",
+        onChangeProp: "onValueIdChange"
+      },
+      {
+        path: "price1.pid",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 1
+      },
+      {
+        path: "price2.pid",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 2
+      },
+      {
+        path: "price3.pid",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 3
+      },
+      {
+        path: "price4.pid",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 4
+      },
+      {
+        path: "price5.pid",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 5
+      },
+      {
+        path: "price6.pid",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 6
       }
     ],
 
     [$props, $ctx]
   );
   const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsnl9I0Oib3VOwY()
+  });
   return true ? (
     <div
-      data-plasmic-name={"root"}
-      data-plasmic-override={overrides.root}
+      data-plasmic-name={"payPanel"}
+      data-plasmic-override={overrides.payPanel}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
@@ -95,7 +261,7 @@ function PlasmicPayItems__RenderFunc(props) {
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
-        sty.root
+        sty.payPanel
       )}
     >
       <TabContent
@@ -106,1116 +272,1810 @@ function PlasmicPayItems__RenderFunc(props) {
           data-plasmic-override={overrides.tabsContainer}
           className={classNames("__wab_instance", sty.tabsContainer)}
           initialKey={"tab1"}
-          previewAll={false}
+          previewAll={
+            hasVariant(globalVariants, "screen", "mobileOnly") ? true : false
+          }
+          previewKey={
+            hasVariant(globalVariants, "screen", "mobileOnly") ? "tab2" : "tab2"
+          }
         >
           <ph.DataCtxReader>
             {$ctx => (
               <div className={classNames(projectcss.all, sty.freeBox__xyS2)}>
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__w6Qxw)}
-                >
-                  {true ? (
-                    <TabUnderline
-                      data-plasmic-name={"tabUnderline"}
-                      data-plasmic-override={overrides.tabUnderline}
-                      className={classNames("__wab_instance", sty.tabUnderline)}
-                    />
-                  ) : null}
-                  <TabButton
-                    className={classNames(
-                      "__wab_instance",
-                      sty.tabButton__m2R0D
-                    )}
-                    tabKey={"tab1"}
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : true
+                ) ? (
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__w6Qxw)}
                   >
-                    <Button color={"softGreen"} endIcon={null} startIcon={null}>
-                      <div
+                    {true ? (
+                      <TabUnderline
+                        data-plasmic-name={"tabUnderline"}
+                        data-plasmic-override={overrides.tabUnderline}
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___1YmY
+                          "__wab_instance",
+                          sty.tabUnderline
                         )}
+                      />
+                    ) : null}
+                    <TabButton
+                      className={classNames(
+                        "__wab_instance",
+                        sty.tabButton__m2R0D
+                      )}
+                      tabKey={"tab1"}
+                    >
+                      <Button
+                        color={"softGreen"}
+                        endIcon={null}
+                        startIcon={null}
                       >
-                        {"普通版"}
-                      </div>
-                    </Button>
-                  </TabButton>
-                  <TabButton
-                    className={classNames(
-                      "__wab_instance",
-                      sty.tabButton__ux9Rb
-                    )}
-                    tabKey={"tab2"}
-                  >
-                    <Button color={"softGreen"} endIcon={null} startIcon={null}>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__wq7RA
-                        )}
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___1YmY
+                          )}
+                        >
+                          {"普通版"}
+                        </div>
+                      </Button>
+                    </TabButton>
+                    <TabButton
+                      className={classNames(
+                        "__wab_instance",
+                        sty.tabButton__ux9Rb
+                      )}
+                      tabKey={"tab2"}
+                    >
+                      <Button
+                        color={"softGreen"}
+                        endIcon={null}
+                        startIcon={null}
                       >
-                        {"会员版"}
-                      </div>
-                    </Button>
-                  </TabButton>
-                  <TabButton
-                    className={classNames(
-                      "__wab_instance",
-                      sty.tabButton___2Wk6H
-                    )}
-                    tabKey={"tab3"}
-                  >
-                    <Button color={"softGreen"} endIcon={null} startIcon={null}>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___8BAdH
-                        )}
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__wq7RA
+                          )}
+                        >
+                          {"会员版"}
+                        </div>
+                      </Button>
+                    </TabButton>
+                    <TabButton
+                      className={classNames(
+                        "__wab_instance",
+                        sty.tabButton___2Wk6H
+                      )}
+                      tabKey={"tab3"}
+                    >
+                      <Button
+                        color={"softGreen"}
+                        endIcon={null}
+                        startIcon={null}
                       >
-                        {"专业版"}
-                      </div>
-                    </Button>
-                  </TabButton>
-                </p.Stack>
-                <div className={classNames(projectcss.all, sty.freeBox__ahXJ)}>
-                  <TabContent
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___8BAdH
+                          )}
+                        >
+                          {"专业版"}
+                        </div>
+                      </Button>
+                    </TabButton>
+                  </p.Stack>
+                ) : null}
+                <div className={classNames(projectcss.all, sty.freeBox__tSjli)}>
+                  <div
                     className={classNames(
-                      "__wab_instance",
-                      sty.tabContent___9DMok
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___8UdWd
                     )}
-                    tabKey={"tab1"}
                   >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__o36Si)}
+                    {(() => {
+                      try {
+                        return "您已选中产品id " + $state.valueId;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "测试期间，充值会员价格九折，活动时间6月1日-6月30日";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </div>
+                </div>
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : true
+                ) ? (
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__ahXJ)}
+                  >
+                    <TabContent
+                      className={classNames(
+                        "__wab_instance",
+                        sty.tabContent___9DMok
+                      )}
+                      tabKey={"tab1"}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__m5B91
+                          sty.freeBox__o36Si
                         )}
                       >
-                        {true ? (
-                          <PriceBlock
-                            data-plasmic-name={"price1"}
-                            data-plasmic-override={overrides.price1}
-                            className={classNames("__wab_instance", sty.price1)}
-                            mainPrice={15}
-                            preDay={"折合2.43元每天"}
-                            selected={true}
-                            slot={
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__yWjc3
-                                )}
-                              >
-                                {"1个月"}
-                              </div>
-                            }
-                          />
-                        ) : null}
-                        {true ? (
-                          <PriceBlock
-                            data-plasmic-name={"price2"}
-                            data-plasmic-override={overrides.price2}
-                            className={classNames("__wab_instance", sty.price2)}
-                            mainPrice={182}
-                            preDay={"折合2.43元每天"}
-                          />
-                        ) : null}
-                      </div>
-                      <Button2
-                        data-plasmic-name={"btn1"}
-                        data-plasmic-override={overrides.btn1}
-                        className={classNames("__wab_instance", sty.btn1)}
-                        color={"green"}
-                        link={undefined}
-                        onClick={async event => {
-                          const $steps = {};
-                          $steps["updateModalOpen"] = true
-                            ? (() => {
-                                const actionArgs = {
-                                  variable: __wrapUserFunction(
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__m5B91
+                          )}
+                        >
+                          {true ? (
+                            <PriceBlock
+                              data-plasmic-name={"price1"}
+                              data-plasmic-override={overrides.price1}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.price1
+                              )}
+                              isDiscount={"discountOn"}
+                              isSelected={p.generateStateValueProp($state, [
+                                "price1",
+                                "isSelected"
+                              ])}
+                              mainPrice={19}
+                              onClick={async event => {
+                                const $steps = {};
+                                $steps["updateValueId"] = true
+                                  ? (() => {
+                                      const actionArgs = {
+                                        variable: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "zHbgQJPtu",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "variable"
+                                          },
+                                          () => ({
+                                            objRoot: $state,
+                                            variablePath: ["valueId"]
+                                          })
+                                        ),
+                                        operation: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "zHbgQJPtu",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "operation"
+                                          },
+                                          () => 0
+                                        ),
+                                        value: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "zHbgQJPtu",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "value"
+                                          },
+                                          () =>
+                                            ($state.valueId = $state.price1.pid)
+                                        )
+                                      };
+                                      return __wrapUserFunction(
+                                        {
+                                          type: "InteractionLoc",
+                                          actionName: "updateVariable",
+                                          interactionUuid: "zHbgQJPtu",
+                                          componentUuid: "l2Kc8Ybaed"
+                                        },
+                                        () =>
+                                          (({
+                                            variable,
+                                            value,
+                                            startIndex,
+                                            deleteCount
+                                          }) => {
+                                            if (!variable) {
+                                              return;
+                                            }
+                                            const { objRoot, variablePath } =
+                                              variable;
+                                            p.set(objRoot, variablePath, value);
+                                            return value;
+                                          })?.apply(null, [actionArgs]),
+                                        actionArgs
+                                      );
+                                    })()
+                                  : undefined;
+                                if (
+                                  typeof $steps["updateValueId"] === "object" &&
+                                  typeof $steps["updateValueId"].then ===
+                                    "function"
+                                ) {
+                                  $steps["updateValueId"] =
+                                    await __wrapUserPromise(
+                                      {
+                                        type: "InteractionLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "zHbgQJPtu",
+                                        componentUuid: "l2Kc8Ybaed"
+                                      },
+                                      $steps["updateValueId"]
+                                    );
+                                }
+                              }}
+                              onIsSelectedChange={p.generateStateOnChangeProp(
+                                $state,
+                                ["price1", "isSelected"]
+                              )}
+                              onPidChange={p.generateStateOnChangeProp($state, [
+                                "price1",
+                                "pid"
+                              ])}
+                              pid={p.generateStateValueProp($state, [
+                                "price1",
+                                "pid"
+                              ])}
+                              preDay={"折合0.6元每天"}
+                              slot={
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__yWjc3
+                                  )}
+                                >
+                                  {"1个月"}
+                                </div>
+                              }
+                              version={"普通版月付"}
+                            />
+                          ) : null}
+                          {true ? (
+                            <PriceBlock
+                              data-plasmic-name={"price2"}
+                              data-plasmic-override={overrides.price2}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.price2
+                              )}
+                              isSelected={p.generateStateValueProp($state, [
+                                "price2",
+                                "isSelected"
+                              ])}
+                              mainPrice={182}
+                              onClick={async event => {
+                                const $steps = {};
+                                $steps["updateValueId"] = true
+                                  ? (() => {
+                                      const actionArgs = {
+                                        variable: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "9trCcUumI",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "variable"
+                                          },
+                                          () => ({
+                                            objRoot: $state,
+                                            variablePath: ["valueId"]
+                                          })
+                                        ),
+                                        operation: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "9trCcUumI",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "operation"
+                                          },
+                                          () => 0
+                                        ),
+                                        value: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "9trCcUumI",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "value"
+                                          },
+                                          () =>
+                                            ($state.valueId = $state.price2.pid)
+                                        )
+                                      };
+                                      return __wrapUserFunction(
+                                        {
+                                          type: "InteractionLoc",
+                                          actionName: "updateVariable",
+                                          interactionUuid: "9trCcUumI",
+                                          componentUuid: "l2Kc8Ybaed"
+                                        },
+                                        () =>
+                                          (({
+                                            variable,
+                                            value,
+                                            startIndex,
+                                            deleteCount
+                                          }) => {
+                                            if (!variable) {
+                                              return;
+                                            }
+                                            const { objRoot, variablePath } =
+                                              variable;
+                                            p.set(objRoot, variablePath, value);
+                                            return value;
+                                          })?.apply(null, [actionArgs]),
+                                        actionArgs
+                                      );
+                                    })()
+                                  : undefined;
+                                if (
+                                  typeof $steps["updateValueId"] === "object" &&
+                                  typeof $steps["updateValueId"].then ===
+                                    "function"
+                                ) {
+                                  $steps["updateValueId"] =
+                                    await __wrapUserPromise(
+                                      {
+                                        type: "InteractionLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "9trCcUumI",
+                                        componentUuid: "l2Kc8Ybaed"
+                                      },
+                                      $steps["updateValueId"]
+                                    );
+                                }
+                              }}
+                              onIsSelectedChange={p.generateStateOnChangeProp(
+                                $state,
+                                ["price2", "isSelected"]
+                              )}
+                              onPidChange={p.generateStateOnChangeProp($state, [
+                                "price2",
+                                "pid"
+                              ])}
+                              pid={p.generateStateValueProp($state, [
+                                "price2",
+                                "pid"
+                              ])}
+                              preDay={"折合0.5元每天"}
+                              version={"普通版年付"}
+                            />
+                          ) : null}
+                        </div>
+                        <Button2
+                          data-plasmic-name={"btn1"}
+                          data-plasmic-override={overrides.btn1}
+                          className={classNames("__wab_instance", sty.btn1)}
+                          color={"green"}
+                          link={undefined}
+                          onClick={async event => {
+                            const $steps = {};
+                            $steps["updateModalOpen"] = true
+                              ? (() => {
+                                  const actionArgs = {
+                                    variable: __wrapUserFunction(
+                                      {
+                                        type: "InteractionArgLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "bj5JutBcW",
+                                        componentUuid: "l2Kc8Ybaed",
+                                        argName: "variable"
+                                      },
+                                      () => ({
+                                        objRoot: $state,
+                                        variablePath: ["modal", "open"]
+                                      })
+                                    ),
+                                    operation: __wrapUserFunction(
+                                      {
+                                        type: "InteractionArgLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "bj5JutBcW",
+                                        componentUuid: "l2Kc8Ybaed",
+                                        argName: "operation"
+                                      },
+                                      () => 0
+                                    ),
+                                    value: __wrapUserFunction(
+                                      {
+                                        type: "InteractionArgLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "bj5JutBcW",
+                                        componentUuid: "l2Kc8Ybaed",
+                                        argName: "value"
+                                      },
+                                      () => true
+                                    )
+                                  };
+                                  return __wrapUserFunction(
                                     {
-                                      type: "InteractionArgLoc",
+                                      type: "InteractionLoc",
                                       actionName: "updateVariable",
                                       interactionUuid: "bj5JutBcW",
-                                      componentUuid: "l2Kc8Ybaed",
-                                      argName: "variable"
+                                      componentUuid: "l2Kc8Ybaed"
                                     },
-                                    () => ({
-                                      objRoot: $state,
-                                      variablePath: ["modal", "open"]
-                                    })
-                                  ),
-                                  operation: __wrapUserFunction(
-                                    {
-                                      type: "InteractionArgLoc",
-                                      actionName: "updateVariable",
-                                      interactionUuid: "bj5JutBcW",
-                                      componentUuid: "l2Kc8Ybaed",
-                                      argName: "operation"
-                                    },
-                                    () => 0
-                                  ),
-                                  value: __wrapUserFunction(
-                                    {
-                                      type: "InteractionArgLoc",
-                                      actionName: "updateVariable",
-                                      interactionUuid: "bj5JutBcW",
-                                      componentUuid: "l2Kc8Ybaed",
-                                      argName: "value"
-                                    },
-                                    () => true
-                                  )
-                                };
-                                return __wrapUserFunction(
+                                    () =>
+                                      (({
+                                        variable,
+                                        value,
+                                        startIndex,
+                                        deleteCount
+                                      }) => {
+                                        if (!variable) {
+                                          return;
+                                        }
+                                        const { objRoot, variablePath } =
+                                          variable;
+                                        p.set(objRoot, variablePath, value);
+                                        return value;
+                                      })?.apply(null, [actionArgs]),
+                                    actionArgs
+                                  );
+                                })()
+                              : undefined;
+                            if (
+                              typeof $steps["updateModalOpen"] === "object" &&
+                              typeof $steps["updateModalOpen"].then ===
+                                "function"
+                            ) {
+                              $steps["updateModalOpen"] =
+                                await __wrapUserPromise(
                                   {
                                     type: "InteractionLoc",
                                     actionName: "updateVariable",
                                     interactionUuid: "bj5JutBcW",
                                     componentUuid: "l2Kc8Ybaed"
                                   },
-                                  () =>
-                                    (({
-                                      variable,
-                                      value,
-                                      startIndex,
-                                      deleteCount
-                                    }) => {
-                                      if (!variable) {
-                                        return;
-                                      }
-                                      const { objRoot, variablePath } =
-                                        variable;
-                                      p.set(objRoot, variablePath, value);
-                                      return value;
-                                    })?.apply(null, [actionArgs]),
-                                  actionArgs
+                                  $steps["updateModalOpen"]
                                 );
-                              })()
-                            : undefined;
-                          if (
-                            typeof $steps["updateModalOpen"] === "object" &&
-                            typeof $steps["updateModalOpen"].then === "function"
-                          ) {
-                            $steps["updateModalOpen"] = await __wrapUserPromise(
-                              {
-                                type: "InteractionLoc",
-                                actionName: "updateVariable",
-                                interactionUuid: "bj5JutBcW",
-                                componentUuid: "l2Kc8Ybaed"
-                              },
-                              $steps["updateModalOpen"]
-                            );
-                          }
-                        }}
-                      >
-                        {"确认并支付"}
-                      </Button2>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__qipE6
-                        )}
-                      >
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___1CsOm
-                            )}
-                          >
-                            <PriceIcons
-                              data-plasmic-name={"icon"}
-                              data-plasmic-override={overrides.icon}
-                              className={classNames("__wab_instance", sty.icon)}
-                            />
+                            }
+                          }}
+                        >
+                          {"确认并支付"}
+                        </Button2>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__qipE6
+                          )}
+                        >
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox___1CsOm
+                              )}
+                            >
+                              <PriceIcons
+                                data-plasmic-name={"icon"}
+                                data-plasmic-override={overrides.icon}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.icon
+                                )}
+                              />
 
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__tqUj
-                              )}
-                            >
-                              {"20000字/月"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___5W8Zo
-                            )}
-                          >
-                            <PriceIcons
-                              data-plasmic-name={"icon2"}
-                              data-plasmic-override={overrides.icon2}
-                              className={classNames(
-                                "__wab_instance",
-                                sty.icon2
-                              )}
-                            >
-                              <Icon27Icon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__naa52
-                                )}
-                                role={"img"}
-                              />
-                            </PriceIcons>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__jyl7D
-                              )}
-                            >
-                              {"AI续写文章"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__h90L
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__oZuAx
-                              )}
-                            >
-                              <Icon29Icon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__maicM
-                                )}
-                                role={"img"}
-                              />
-                            </div>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text___9AbeZ
-                              )}
-                            >
-                              {"语气设置"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__calxE
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__jlRK
-                              )}
-                            >
-                              <Icon30Icon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__mHlR
-                                )}
-                                role={"img"}
-                              />
-                            </div>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__dUq9
-                              )}
-                            >
-                              {"实时保存"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__eJHsI
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__uq9Z
-                              )}
-                            >
-                              <Icon31Icon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__fxfUt
-                                )}
-                                role={"img"}
-                              />
-                            </div>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__qENuG
-                              )}
-                            >
-                              {"全文翻新"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__a4UD8
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__ql3Z
-                              )}
-                            >
-                              <Icon32Icon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__jt6QT
-                                )}
-                                role={"img"}
-                              />
-                            </div>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__ahe1N
-                              )}
-                            >
-                              {"全文生成"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                      </div>
-                    </div>
-                  </TabContent>
-                  <TabContent
-                    className={classNames(
-                      "__wab_instance",
-                      sty.tabContent___3YRlf
-                    )}
-                    tabKey={"tab2"}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__stUcM)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___0YoCn
-                        )}
-                      >
-                        {true ? (
-                          <PriceBlock
-                            data-plasmic-name={"price3"}
-                            data-plasmic-override={overrides.price3}
-                            className={classNames("__wab_instance", sty.price3)}
-                            mainPrice={50}
-                            preDay={"折合2.43元每天"}
-                            slot={
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__gAub8
+                                  sty.text__tqUj
                                 )}
                               >
-                                {"1个月"}
+                                {"20000字/月"}
                               </div>
-                            }
-                          />
-                        ) : null}
-                        {true ? (
-                          <PriceBlock
-                            data-plasmic-name={"price4"}
-                            data-plasmic-override={overrides.price4}
-                            className={classNames("__wab_instance", sty.price4)}
-                            mainPrice={480}
-                            preDay={"折合2.43元每天"}
-                          />
-                        ) : null}
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox___5W8Zo
+                              )}
+                            >
+                              <PriceIcons
+                                data-plasmic-name={"icon2"}
+                                data-plasmic-override={overrides.icon2}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.icon2
+                                )}
+                              >
+                                <Icon27Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__naa52
+                                  )}
+                                  role={"img"}
+                                />
+                              </PriceIcons>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__jyl7D
+                                )}
+                              >
+                                {"AI续写文章"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__h90L
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__oZuAx
+                                )}
+                              >
+                                <Icon29Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__maicM
+                                  )}
+                                  role={"img"}
+                                />
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text___9AbeZ
+                                )}
+                              >
+                                {"语气设置"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__calxE
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__jlRK
+                                )}
+                              >
+                                <Icon30Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__mHlR
+                                  )}
+                                  role={"img"}
+                                />
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__dUq9
+                                )}
+                              >
+                                {"实时保存"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__eJHsI
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__uq9Z
+                                )}
+                              >
+                                <Icon31Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__fxfUt
+                                  )}
+                                  role={"img"}
+                                />
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__qENuG
+                                )}
+                              >
+                                {"全文翻新"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__a4UD8
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__ql3Z
+                                )}
+                              >
+                                <Icon32Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__jt6QT
+                                  )}
+                                  role={"img"}
+                                />
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__ahe1N
+                                )}
+                              >
+                                {"全文生成"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                        </div>
                       </div>
-                      <Button2
-                        data-plasmic-name={"btn2"}
-                        data-plasmic-override={overrides.btn2}
-                        className={classNames("__wab_instance", sty.btn2)}
-                        color={"green"}
-                        link={undefined}
-                        onClick={async event => {
-                          const $steps = {};
-                          $steps["updateModalOpen"] = true
-                            ? (() => {
-                                const actionArgs = {
-                                  variable: __wrapUserFunction(
+                    </TabContent>
+                    <TabContent
+                      className={classNames(
+                        "__wab_instance",
+                        sty.tabContent___3YRlf
+                      )}
+                      tabKey={"tab2"}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__stUcM
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___0YoCn
+                          )}
+                        >
+                          {true ? (
+                            <PriceBlock
+                              data-plasmic-name={"price3"}
+                              data-plasmic-override={overrides.price3}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.price3
+                              )}
+                              isDiscount={"discountOn"}
+                              isSelected={p.generateStateValueProp($state, [
+                                "price3",
+                                "isSelected"
+                              ])}
+                              mainPrice={50}
+                              onClick={async event => {
+                                const $steps = {};
+                                $steps["updateValueId"] = true
+                                  ? (() => {
+                                      const actionArgs = {
+                                        variable: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "0NiRGJILB",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "variable"
+                                          },
+                                          () => ({
+                                            objRoot: $state,
+                                            variablePath: ["valueId"]
+                                          })
+                                        ),
+                                        operation: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "0NiRGJILB",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "operation"
+                                          },
+                                          () => 0
+                                        ),
+                                        value: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "0NiRGJILB",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "value"
+                                          },
+                                          () =>
+                                            ($state.valueId = $state.price3.pid)
+                                        )
+                                      };
+                                      return __wrapUserFunction(
+                                        {
+                                          type: "InteractionLoc",
+                                          actionName: "updateVariable",
+                                          interactionUuid: "0NiRGJILB",
+                                          componentUuid: "l2Kc8Ybaed"
+                                        },
+                                        () =>
+                                          (({
+                                            variable,
+                                            value,
+                                            startIndex,
+                                            deleteCount
+                                          }) => {
+                                            if (!variable) {
+                                              return;
+                                            }
+                                            const { objRoot, variablePath } =
+                                              variable;
+                                            p.set(objRoot, variablePath, value);
+                                            return value;
+                                          })?.apply(null, [actionArgs]),
+                                        actionArgs
+                                      );
+                                    })()
+                                  : undefined;
+                                if (
+                                  typeof $steps["updateValueId"] === "object" &&
+                                  typeof $steps["updateValueId"].then ===
+                                    "function"
+                                ) {
+                                  $steps["updateValueId"] =
+                                    await __wrapUserPromise(
+                                      {
+                                        type: "InteractionLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "0NiRGJILB",
+                                        componentUuid: "l2Kc8Ybaed"
+                                      },
+                                      $steps["updateValueId"]
+                                    );
+                                }
+                              }}
+                              onIsSelectedChange={p.generateStateOnChangeProp(
+                                $state,
+                                ["price3", "isSelected"]
+                              )}
+                              onPidChange={p.generateStateOnChangeProp($state, [
+                                "price3",
+                                "pid"
+                              ])}
+                              pid={p.generateStateValueProp($state, [
+                                "price3",
+                                "pid"
+                              ])}
+                              preDay={"折合1.6元每天"}
+                              slot={
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__gAub8
+                                  )}
+                                >
+                                  {"1个月"}
+                                </div>
+                              }
+                              version={"高级版"}
+                            />
+                          ) : null}
+                          {true ? (
+                            <PriceBlock
+                              data-plasmic-name={"price4"}
+                              data-plasmic-override={overrides.price4}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.price4
+                              )}
+                              isSelected={p.generateStateValueProp($state, [
+                                "price4",
+                                "isSelected"
+                              ])}
+                              mainPrice={480}
+                              onClick={async event => {
+                                const $steps = {};
+                                $steps["updateValueId"] = true
+                                  ? (() => {
+                                      const actionArgs = {
+                                        variable: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "meBUAb6LL",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "variable"
+                                          },
+                                          () => ({
+                                            objRoot: $state,
+                                            variablePath: ["valueId"]
+                                          })
+                                        ),
+                                        operation: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "meBUAb6LL",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "operation"
+                                          },
+                                          () => 0
+                                        ),
+                                        value: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "meBUAb6LL",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "value"
+                                          },
+                                          () =>
+                                            ($state.valueId = $state.price4.pid)
+                                        )
+                                      };
+                                      return __wrapUserFunction(
+                                        {
+                                          type: "InteractionLoc",
+                                          actionName: "updateVariable",
+                                          interactionUuid: "meBUAb6LL",
+                                          componentUuid: "l2Kc8Ybaed"
+                                        },
+                                        () =>
+                                          (({
+                                            variable,
+                                            value,
+                                            startIndex,
+                                            deleteCount
+                                          }) => {
+                                            if (!variable) {
+                                              return;
+                                            }
+                                            const { objRoot, variablePath } =
+                                              variable;
+                                            p.set(objRoot, variablePath, value);
+                                            return value;
+                                          })?.apply(null, [actionArgs]),
+                                        actionArgs
+                                      );
+                                    })()
+                                  : undefined;
+                                if (
+                                  typeof $steps["updateValueId"] === "object" &&
+                                  typeof $steps["updateValueId"].then ===
+                                    "function"
+                                ) {
+                                  $steps["updateValueId"] =
+                                    await __wrapUserPromise(
+                                      {
+                                        type: "InteractionLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "meBUAb6LL",
+                                        componentUuid: "l2Kc8Ybaed"
+                                      },
+                                      $steps["updateValueId"]
+                                    );
+                                }
+                              }}
+                              onIsSelectedChange={p.generateStateOnChangeProp(
+                                $state,
+                                ["price4", "isSelected"]
+                              )}
+                              onPidChange={p.generateStateOnChangeProp($state, [
+                                "price4",
+                                "pid"
+                              ])}
+                              pid={p.generateStateValueProp($state, [
+                                "price4",
+                                "pid"
+                              ])}
+                              preDay={"折合1.3元每天"}
+                              version={"高级版"}
+                            />
+                          ) : null}
+                        </div>
+                        <Button2
+                          data-plasmic-name={"btn2"}
+                          data-plasmic-override={overrides.btn2}
+                          className={classNames("__wab_instance", sty.btn2)}
+                          color={"green"}
+                          link={undefined}
+                          onClick={async event => {
+                            const $steps = {};
+                            $steps["updateModalOpen"] = true
+                              ? (() => {
+                                  const actionArgs = {
+                                    variable: __wrapUserFunction(
+                                      {
+                                        type: "InteractionArgLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "Oc8y749fN",
+                                        componentUuid: "l2Kc8Ybaed",
+                                        argName: "variable"
+                                      },
+                                      () => ({
+                                        objRoot: $state,
+                                        variablePath: ["modal", "open"]
+                                      })
+                                    ),
+                                    operation: __wrapUserFunction(
+                                      {
+                                        type: "InteractionArgLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "Oc8y749fN",
+                                        componentUuid: "l2Kc8Ybaed",
+                                        argName: "operation"
+                                      },
+                                      () => 0
+                                    ),
+                                    value: __wrapUserFunction(
+                                      {
+                                        type: "InteractionArgLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "Oc8y749fN",
+                                        componentUuid: "l2Kc8Ybaed",
+                                        argName: "value"
+                                      },
+                                      () => true
+                                    )
+                                  };
+                                  return __wrapUserFunction(
                                     {
-                                      type: "InteractionArgLoc",
+                                      type: "InteractionLoc",
                                       actionName: "updateVariable",
                                       interactionUuid: "Oc8y749fN",
-                                      componentUuid: "l2Kc8Ybaed",
-                                      argName: "variable"
+                                      componentUuid: "l2Kc8Ybaed"
                                     },
-                                    () => ({
-                                      objRoot: $state,
-                                      variablePath: ["modal", "open"]
-                                    })
-                                  ),
-                                  operation: __wrapUserFunction(
-                                    {
-                                      type: "InteractionArgLoc",
-                                      actionName: "updateVariable",
-                                      interactionUuid: "Oc8y749fN",
-                                      componentUuid: "l2Kc8Ybaed",
-                                      argName: "operation"
-                                    },
-                                    () => 0
-                                  ),
-                                  value: __wrapUserFunction(
-                                    {
-                                      type: "InteractionArgLoc",
-                                      actionName: "updateVariable",
-                                      interactionUuid: "Oc8y749fN",
-                                      componentUuid: "l2Kc8Ybaed",
-                                      argName: "value"
-                                    },
-                                    () => true
-                                  )
-                                };
-                                return __wrapUserFunction(
+                                    () =>
+                                      (({
+                                        variable,
+                                        value,
+                                        startIndex,
+                                        deleteCount
+                                      }) => {
+                                        if (!variable) {
+                                          return;
+                                        }
+                                        const { objRoot, variablePath } =
+                                          variable;
+                                        p.set(objRoot, variablePath, value);
+                                        return value;
+                                      })?.apply(null, [actionArgs]),
+                                    actionArgs
+                                  );
+                                })()
+                              : undefined;
+                            if (
+                              typeof $steps["updateModalOpen"] === "object" &&
+                              typeof $steps["updateModalOpen"].then ===
+                                "function"
+                            ) {
+                              $steps["updateModalOpen"] =
+                                await __wrapUserPromise(
                                   {
                                     type: "InteractionLoc",
                                     actionName: "updateVariable",
                                     interactionUuid: "Oc8y749fN",
                                     componentUuid: "l2Kc8Ybaed"
                                   },
-                                  () =>
-                                    (({
-                                      variable,
-                                      value,
-                                      startIndex,
-                                      deleteCount
-                                    }) => {
-                                      if (!variable) {
-                                        return;
-                                      }
-                                      const { objRoot, variablePath } =
-                                        variable;
-                                      p.set(objRoot, variablePath, value);
-                                      return value;
-                                    })?.apply(null, [actionArgs]),
-                                  actionArgs
+                                  $steps["updateModalOpen"]
                                 );
-                              })()
-                            : undefined;
-                          if (
-                            typeof $steps["updateModalOpen"] === "object" &&
-                            typeof $steps["updateModalOpen"].then === "function"
-                          ) {
-                            $steps["updateModalOpen"] = await __wrapUserPromise(
-                              {
-                                type: "InteractionLoc",
-                                actionName: "updateVariable",
-                                interactionUuid: "Oc8y749fN",
-                                componentUuid: "l2Kc8Ybaed"
-                              },
-                              $steps["updateModalOpen"]
-                            );
-                          }
-                        }}
-                      >
-                        {"确认并支付"}
-                      </Button2>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__cwcDz
-                        )}
-                      >
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__zev9G
-                            )}
-                          >
-                            <PriceIcons
-                              data-plasmic-name={"icon3"}
-                              data-plasmic-override={overrides.icon3}
+                            }
+                          }}
+                        >
+                          {"确认并支付"}
+                        </Button2>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__cwcDz
+                          )}
+                        >
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
                               className={classNames(
-                                "__wab_instance",
-                                sty.icon3
+                                projectcss.all,
+                                sty.freeBox__zev9G
                               )}
-                            />
+                            >
+                              <PriceIcons
+                                data-plasmic-name={"icon3"}
+                                data-plasmic-override={overrides.icon3}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.icon3
+                                )}
+                              />
 
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__c8NPc
-                              )}
-                            >
-                              {"50000字/月"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__g9L3
-                            )}
-                          >
-                            <PriceIcons
-                              data-plasmic-name={"icon4"}
-                              data-plasmic-override={overrides.icon4}
-                              className={classNames(
-                                "__wab_instance",
-                                sty.icon4
-                              )}
-                            >
-                              <Icon27Icon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__n1W3
-                                )}
-                                role={"img"}
-                              />
-                            </PriceIcons>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__h7Dm2
-                              )}
-                            >
-                              {"AI续写文章"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__siqNn
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__yLtIt
-                              )}
-                            >
-                              <Icon29Icon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__xDb3Z
-                                )}
-                                role={"img"}
-                              />
-                            </div>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__v5HXt
-                              )}
-                            >
-                              {"语气设置"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__eJfg
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__ayVov
-                              )}
-                            >
-                              <Icon30Icon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__s6Gx0
-                                )}
-                                role={"img"}
-                              />
-                            </div>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text___3YFeb
-                              )}
-                            >
-                              {"实时保存"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__p80K0
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__zGYxJ
-                              )}
-                            >
-                              <Icon31Icon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg__jL0Zs
-                                )}
-                                role={"img"}
-                              />
-                            </div>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__q6Fi
-                              )}
-                            >
-                              {"全文翻新"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__gvUsz
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__yjeTq
-                              )}
-                            >
-                              <Icon32Icon
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.svg___4SpGg
-                                )}
-                                role={"img"}
-                              />
-                            </div>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__hN4Si
-                              )}
-                            >
-                              {"全文生成"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                      </div>
-                    </div>
-                  </TabContent>
-                  <TabContent
-                    className={classNames(
-                      "__wab_instance",
-                      sty.tabContent___6LOii
-                    )}
-                    tabKey={"tab3"}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__yrawp)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___6BbBz
-                        )}
-                      >
-                        {true ? (
-                          <PriceBlock
-                            data-plasmic-name={"price5"}
-                            data-plasmic-override={overrides.price5}
-                            className={classNames("__wab_instance", sty.price5)}
-                            mainPrice={190}
-                            preDay={"折合2.43元每天"}
-                            slot={
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__dkh1C
+                                  sty.text__c8NPc
                                 )}
                               >
-                                {"1个月"}
+                                {"50000字/月"}
                               </div>
-                            }
-                          />
-                        ) : null}
-                        {true ? (
-                          <PriceBlock
-                            data-plasmic-name={"price6"}
-                            data-plasmic-override={overrides.price6}
-                            className={classNames("__wab_instance", sty.price6)}
-                            mainPrice={1824}
-                            preDay={"折合2.43元每天"}
-                          />
-                        ) : null}
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__g9L3
+                              )}
+                            >
+                              <PriceIcons
+                                data-plasmic-name={"icon4"}
+                                data-plasmic-override={overrides.icon4}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.icon4
+                                )}
+                              >
+                                <Icon27Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__n1W3
+                                  )}
+                                  role={"img"}
+                                />
+                              </PriceIcons>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__h7Dm2
+                                )}
+                              >
+                                {"所有普通版功能"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__siqNn
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__yLtIt
+                                )}
+                              >
+                                <Icon29Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__xDb3Z
+                                  )}
+                                  role={"img"}
+                                />
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__v5HXt
+                                )}
+                              >
+                                {"语气设置"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__eJfg
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__ayVov
+                                )}
+                              >
+                                <Icon30Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__s6Gx0
+                                  )}
+                                  role={"img"}
+                                />
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text___3YFeb
+                                )}
+                              >
+                                {"实时保存"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__p80K0
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__zGYxJ
+                                )}
+                              >
+                                <Icon31Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__jL0Zs
+                                  )}
+                                  role={"img"}
+                                />
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__q6Fi
+                                )}
+                              >
+                                {"全文翻新"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__gvUsz
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__yjeTq
+                                )}
+                              >
+                                <Icon32Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg___4SpGg
+                                  )}
+                                  role={"img"}
+                                />
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__hN4Si
+                                )}
+                              >
+                                {"全文生成"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                        </div>
                       </div>
-                      <Button2
-                        data-plasmic-name={"btn3"}
-                        data-plasmic-override={overrides.btn3}
-                        className={classNames("__wab_instance", sty.btn3)}
-                        color={"green"}
-                        link={undefined}
-                        onClick={async event => {
-                          const $steps = {};
-                          $steps["updateModalOpen"] = true
-                            ? (() => {
-                                const actionArgs = {
-                                  variable: __wrapUserFunction(
+                    </TabContent>
+                    <TabContent
+                      className={classNames(
+                        "__wab_instance",
+                        sty.tabContent___6LOii
+                      )}
+                      tabKey={"tab3"}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__yrawp
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___6BbBz
+                          )}
+                        >
+                          {true ? (
+                            <PriceBlock
+                              data-plasmic-name={"price5"}
+                              data-plasmic-override={overrides.price5}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.price5
+                              )}
+                              isSelected={p.generateStateValueProp($state, [
+                                "price5",
+                                "isSelected"
+                              ])}
+                              mainPrice={190}
+                              onClick={async event => {
+                                const $steps = {};
+                                $steps["updateValueId"] = true
+                                  ? (() => {
+                                      const actionArgs = {
+                                        variable: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "sd1r7iL10",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "variable"
+                                          },
+                                          () => ({
+                                            objRoot: $state,
+                                            variablePath: ["valueId"]
+                                          })
+                                        ),
+                                        operation: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "sd1r7iL10",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "operation"
+                                          },
+                                          () => 0
+                                        ),
+                                        value: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "sd1r7iL10",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "value"
+                                          },
+                                          () =>
+                                            ($state.valueId = $state.price5.pid)
+                                        )
+                                      };
+                                      return __wrapUserFunction(
+                                        {
+                                          type: "InteractionLoc",
+                                          actionName: "updateVariable",
+                                          interactionUuid: "sd1r7iL10",
+                                          componentUuid: "l2Kc8Ybaed"
+                                        },
+                                        () =>
+                                          (({
+                                            variable,
+                                            value,
+                                            startIndex,
+                                            deleteCount
+                                          }) => {
+                                            if (!variable) {
+                                              return;
+                                            }
+                                            const { objRoot, variablePath } =
+                                              variable;
+                                            p.set(objRoot, variablePath, value);
+                                            return value;
+                                          })?.apply(null, [actionArgs]),
+                                        actionArgs
+                                      );
+                                    })()
+                                  : undefined;
+                                if (
+                                  typeof $steps["updateValueId"] === "object" &&
+                                  typeof $steps["updateValueId"].then ===
+                                    "function"
+                                ) {
+                                  $steps["updateValueId"] =
+                                    await __wrapUserPromise(
+                                      {
+                                        type: "InteractionLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "sd1r7iL10",
+                                        componentUuid: "l2Kc8Ybaed"
+                                      },
+                                      $steps["updateValueId"]
+                                    );
+                                }
+                              }}
+                              onIsSelectedChange={p.generateStateOnChangeProp(
+                                $state,
+                                ["price5", "isSelected"]
+                              )}
+                              onPidChange={p.generateStateOnChangeProp($state, [
+                                "price5",
+                                "pid"
+                              ])}
+                              pid={p.generateStateValueProp($state, [
+                                "price5",
+                                "pid"
+                              ])}
+                              preDay={"折合6.3元每天"}
+                              slot={
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__dkh1C
+                                  )}
+                                >
+                                  {"1个月"}
+                                </div>
+                              }
+                              version={"专业版"}
+                            />
+                          ) : null}
+                          {true ? (
+                            <PriceBlock
+                              data-plasmic-name={"price6"}
+                              data-plasmic-override={overrides.price6}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.price6
+                              )}
+                              isSelected={p.generateStateValueProp($state, [
+                                "price6",
+                                "isSelected"
+                              ])}
+                              mainPrice={1824}
+                              onClick={async event => {
+                                const $steps = {};
+                                $steps["updateValueId"] = true
+                                  ? (() => {
+                                      const actionArgs = {
+                                        variable: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "E_ThMTM6z",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "variable"
+                                          },
+                                          () => ({
+                                            objRoot: $state,
+                                            variablePath: ["valueId"]
+                                          })
+                                        ),
+                                        operation: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "E_ThMTM6z",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "operation"
+                                          },
+                                          () => 0
+                                        ),
+                                        value: __wrapUserFunction(
+                                          {
+                                            type: "InteractionArgLoc",
+                                            actionName: "updateVariable",
+                                            interactionUuid: "E_ThMTM6z",
+                                            componentUuid: "l2Kc8Ybaed",
+                                            argName: "value"
+                                          },
+                                          () =>
+                                            ($state.valueId = $state.price6.pid)
+                                        )
+                                      };
+                                      return __wrapUserFunction(
+                                        {
+                                          type: "InteractionLoc",
+                                          actionName: "updateVariable",
+                                          interactionUuid: "E_ThMTM6z",
+                                          componentUuid: "l2Kc8Ybaed"
+                                        },
+                                        () =>
+                                          (({
+                                            variable,
+                                            value,
+                                            startIndex,
+                                            deleteCount
+                                          }) => {
+                                            if (!variable) {
+                                              return;
+                                            }
+                                            const { objRoot, variablePath } =
+                                              variable;
+                                            p.set(objRoot, variablePath, value);
+                                            return value;
+                                          })?.apply(null, [actionArgs]),
+                                        actionArgs
+                                      );
+                                    })()
+                                  : undefined;
+                                if (
+                                  typeof $steps["updateValueId"] === "object" &&
+                                  typeof $steps["updateValueId"].then ===
+                                    "function"
+                                ) {
+                                  $steps["updateValueId"] =
+                                    await __wrapUserPromise(
+                                      {
+                                        type: "InteractionLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "E_ThMTM6z",
+                                        componentUuid: "l2Kc8Ybaed"
+                                      },
+                                      $steps["updateValueId"]
+                                    );
+                                }
+                              }}
+                              onIsSelectedChange={p.generateStateOnChangeProp(
+                                $state,
+                                ["price6", "isSelected"]
+                              )}
+                              onPidChange={p.generateStateOnChangeProp($state, [
+                                "price6",
+                                "pid"
+                              ])}
+                              pid={p.generateStateValueProp($state, [
+                                "price6",
+                                "pid"
+                              ])}
+                              preDay={"折合5.1元每天"}
+                              version={"专业版"}
+                            />
+                          ) : null}
+                        </div>
+                        <Button2
+                          data-plasmic-name={"btn3"}
+                          data-plasmic-override={overrides.btn3}
+                          className={classNames("__wab_instance", sty.btn3)}
+                          color={"green"}
+                          link={undefined}
+                          onClick={async event => {
+                            const $steps = {};
+                            $steps["updateModalOpen"] = true
+                              ? (() => {
+                                  const actionArgs = {
+                                    variable: __wrapUserFunction(
+                                      {
+                                        type: "InteractionArgLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "FZw943V7I",
+                                        componentUuid: "l2Kc8Ybaed",
+                                        argName: "variable"
+                                      },
+                                      () => ({
+                                        objRoot: $state,
+                                        variablePath: ["modal", "open"]
+                                      })
+                                    ),
+                                    operation: __wrapUserFunction(
+                                      {
+                                        type: "InteractionArgLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "FZw943V7I",
+                                        componentUuid: "l2Kc8Ybaed",
+                                        argName: "operation"
+                                      },
+                                      () => 0
+                                    ),
+                                    value: __wrapUserFunction(
+                                      {
+                                        type: "InteractionArgLoc",
+                                        actionName: "updateVariable",
+                                        interactionUuid: "FZw943V7I",
+                                        componentUuid: "l2Kc8Ybaed",
+                                        argName: "value"
+                                      },
+                                      () => true
+                                    )
+                                  };
+                                  return __wrapUserFunction(
                                     {
-                                      type: "InteractionArgLoc",
+                                      type: "InteractionLoc",
                                       actionName: "updateVariable",
                                       interactionUuid: "FZw943V7I",
-                                      componentUuid: "l2Kc8Ybaed",
-                                      argName: "variable"
+                                      componentUuid: "l2Kc8Ybaed"
                                     },
-                                    () => ({
-                                      objRoot: $state,
-                                      variablePath: ["modal", "open"]
-                                    })
-                                  ),
-                                  operation: __wrapUserFunction(
-                                    {
-                                      type: "InteractionArgLoc",
-                                      actionName: "updateVariable",
-                                      interactionUuid: "FZw943V7I",
-                                      componentUuid: "l2Kc8Ybaed",
-                                      argName: "operation"
-                                    },
-                                    () => 0
-                                  ),
-                                  value: __wrapUserFunction(
-                                    {
-                                      type: "InteractionArgLoc",
-                                      actionName: "updateVariable",
-                                      interactionUuid: "FZw943V7I",
-                                      componentUuid: "l2Kc8Ybaed",
-                                      argName: "value"
-                                    },
-                                    () => true
-                                  )
-                                };
-                                return __wrapUserFunction(
+                                    () =>
+                                      (({
+                                        variable,
+                                        value,
+                                        startIndex,
+                                        deleteCount
+                                      }) => {
+                                        if (!variable) {
+                                          return;
+                                        }
+                                        const { objRoot, variablePath } =
+                                          variable;
+                                        p.set(objRoot, variablePath, value);
+                                        return value;
+                                      })?.apply(null, [actionArgs]),
+                                    actionArgs
+                                  );
+                                })()
+                              : undefined;
+                            if (
+                              typeof $steps["updateModalOpen"] === "object" &&
+                              typeof $steps["updateModalOpen"].then ===
+                                "function"
+                            ) {
+                              $steps["updateModalOpen"] =
+                                await __wrapUserPromise(
                                   {
                                     type: "InteractionLoc",
                                     actionName: "updateVariable",
                                     interactionUuid: "FZw943V7I",
                                     componentUuid: "l2Kc8Ybaed"
                                   },
-                                  () =>
-                                    (({
-                                      variable,
-                                      value,
-                                      startIndex,
-                                      deleteCount
-                                    }) => {
-                                      if (!variable) {
-                                        return;
-                                      }
-                                      const { objRoot, variablePath } =
-                                        variable;
-                                      p.set(objRoot, variablePath, value);
-                                      return value;
-                                    })?.apply(null, [actionArgs]),
-                                  actionArgs
+                                  $steps["updateModalOpen"]
                                 );
-                              })()
-                            : undefined;
-                          if (
-                            typeof $steps["updateModalOpen"] === "object" &&
-                            typeof $steps["updateModalOpen"].then === "function"
-                          ) {
-                            $steps["updateModalOpen"] = await __wrapUserPromise(
-                              {
-                                type: "InteractionLoc",
-                                actionName: "updateVariable",
-                                interactionUuid: "FZw943V7I",
-                                componentUuid: "l2Kc8Ybaed"
-                              },
-                              $steps["updateModalOpen"]
-                            );
-                          }
-                        }}
-                      >
-                        {"确认并支付"}
-                      </Button2>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__mYsq
-                        )}
-                      >
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__eVxEw
-                            )}
-                          >
-                            <PriceIcons
-                              data-plasmic-name={"icon5"}
-                              data-plasmic-override={overrides.icon5}
+                            }
+                          }}
+                        >
+                          {"确认并支付"}
+                        </Button2>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__mYsq
+                          )}
+                        >
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
                               className={classNames(
-                                "__wab_instance",
-                                sty.icon5
+                                projectcss.all,
+                                sty.freeBox__eVxEw
                               )}
-                            />
+                            >
+                              <PriceIcons
+                                data-plasmic-name={"icon5"}
+                                data-plasmic-override={overrides.icon5}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.icon5
+                                )}
+                              />
 
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__as3C
-                              )}
-                            >
-                              {"300k字/月"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__sIn6A
-                            )}
-                          >
-                            <PriceIcons
-                              data-plasmic-name={"icon6"}
-                              data-plasmic-override={overrides.icon6}
-                              className={classNames(
-                                "__wab_instance",
-                                sty.icon6
-                              )}
-                            >
-                              <Icon27Icon
+                              <div
                                 className={classNames(
                                   projectcss.all,
-                                  sty.svg__hf009
+                                  projectcss.__wab_text,
+                                  sty.text__as3C
                                 )}
-                                role={"img"}
-                              />
-                            </PriceIcons>
-                            <div
+                              >
+                                {"300k字/月"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
                               className={classNames(
                                 projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__qwUxm
+                                sty.freeBox__sIn6A
                               )}
                             >
-                              {"AI续写文章"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___82V9H
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__ceSbu
-                              )}
-                            >
-                              <Icon29Icon
+                              <PriceIcons
+                                data-plasmic-name={"icon6"}
+                                data-plasmic-override={overrides.icon6}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.icon6
+                                )}
+                              >
+                                <Icon27Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__hf009
+                                  )}
+                                  role={"img"}
+                                />
+                              </PriceIcons>
+                              <div
                                 className={classNames(
                                   projectcss.all,
-                                  sty.svg__kRcrg
+                                  projectcss.__wab_text,
+                                  sty.text__qwUxm
                                 )}
-                                role={"img"}
-                              />
-                            </div>
-                            <div
+                              >
+                                {"AI续写文章"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
                               className={classNames(
                                 projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__nkQkX
+                                sty.freeBox___82V9H
                               )}
                             >
-                              {"语气设置"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__o67U
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__vPzy6
-                              )}
-                            >
-                              <Icon30Icon
+                              <div
                                 className={classNames(
                                   projectcss.all,
-                                  sty.svg__nsAoE
+                                  sty.freeBox__ceSbu
                                 )}
-                                role={"img"}
-                              />
-                            </div>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__pYgGk
-                              )}
-                            >
-                              {"实时保存"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__syJ2O
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__c5Mq
-                              )}
-                            >
-                              <Icon31Icon
+                              >
+                                <Icon29Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__kRcrg
+                                  )}
+                                  role={"img"}
+                                />
+                              </div>
+                              <div
                                 className={classNames(
                                   projectcss.all,
-                                  sty.svg__bvnei
+                                  projectcss.__wab_text,
+                                  sty.text__nkQkX
                                 )}
-                                role={"img"}
-                              />
-                            </div>
-                            <div
+                              >
+                                {"语气设置"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
                               className={classNames(
                                 projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__hSvjv
+                                sty.freeBox__o67U
                               )}
                             >
-                              {"全文翻新"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
-                        {true ? (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___6Syly
-                            )}
-                          >
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__m4LfM
-                              )}
-                            >
-                              <Icon32Icon
+                              <div
                                 className={classNames(
                                   projectcss.all,
-                                  sty.svg___25QMi
+                                  sty.freeBox__vPzy6
                                 )}
-                                role={"img"}
-                              />
-                            </div>
-                            <div
+                              >
+                                <Icon30Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__nsAoE
+                                  )}
+                                  role={"img"}
+                                />
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__pYgGk
+                                )}
+                              >
+                                {"实时保存"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
                               className={classNames(
                                 projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__xta5E
+                                sty.freeBox__syJ2O
                               )}
                             >
-                              {"全文生成"}
-                            </div>
-                          </p.Stack>
-                        ) : null}
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__c5Mq
+                                )}
+                              >
+                                <Icon31Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__bvnei
+                                  )}
+                                  role={"img"}
+                                />
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__hSvjv
+                                )}
+                              >
+                                {"全文翻新"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox___6Syly
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__m4LfM
+                                )}
+                              >
+                                <Icon32Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg___25QMi
+                                  )}
+                                  role={"img"}
+                                />
+                              </div>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__xta5E
+                                )}
+                              >
+                                {"全文生成"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                        </div>
                       </div>
-                    </div>
-                  </TabContent>
-                </div>
+                    </TabContent>
+                  </div>
+                ) : null}
               </div>
             )}
           </ph.DataCtxReader>
@@ -1276,8 +2136,8 @@ function PlasmicPayItems__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
+  payPanel: [
+    "payPanel",
     "tabsContainer",
     "tabUnderline",
     "price1",
@@ -1360,7 +2220,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "payPanel") {
     func.displayName = "PlasmicPayItems";
   } else {
     func.displayName = `PlasmicPayItems.${nodeName}`;
@@ -1370,7 +2230,7 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicPayItems = Object.assign(
   // Top-level PlasmicPayItems renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("payPanel"),
   {
     // Helper components rendering sub-elements
     tabsContainer: makeNodeComponent("tabsContainer"),

@@ -23,12 +23,20 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicPriceBlock.module.css"; // plasmic-import: p-zh9SOwnv/css
 
-export const PlasmicPriceBlock__VariantProps = new Array("selected");
+export const PlasmicPriceBlock__VariantProps = new Array(
+  "isSelected",
+  "isDiscount"
+);
 
 export const PlasmicPriceBlock__ArgProps = new Array(
   "mainPrice",
   "slot",
-  "preDay"
+  "preDay",
+  "onIsSelectedChange",
+  "pid",
+  "onPidChange",
+  "onClick",
+  "version"
 );
 
 const __wrapUserFunction =
@@ -72,10 +80,24 @@ function PlasmicPriceBlock__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "selected",
+        path: "isSelected",
+        type: "writable",
+        variableType: "variant",
+        valueProp: "isSelected",
+        onChangeProp: "onIsSelectedChange"
+      },
+      {
+        path: "pid",
+        type: "writable",
+        variableType: "number",
+        valueProp: "pid",
+        onChangeProp: "onPidChange"
+      },
+      {
+        path: "isDiscount",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.selected
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.isDiscount
       }
     ],
 
@@ -97,80 +119,35 @@ function PlasmicPriceBlock__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         sty.root,
-        { [sty.rootselected]: hasVariant($state, "selected", "selected") }
-      )}
-      onClick={async event => {
-        const $steps = {};
-        $steps["updateSelected"] = true
-          ? (() => {
-              const actionArgs = {
-                vgroup: __wrapUserFunction(
-                  {
-                    type: "InteractionArgLoc",
-                    actionName: "updateVariant",
-                    interactionUuid: "_NZglvJKp",
-                    componentUuid: "p-zh9SOwnv",
-                    argName: "vgroup"
-                  },
-                  () => "selected"
-                ),
-                operation: __wrapUserFunction(
-                  {
-                    type: "InteractionArgLoc",
-                    actionName: "updateVariant",
-                    interactionUuid: "_NZglvJKp",
-                    componentUuid: "p-zh9SOwnv",
-                    argName: "operation"
-                  },
-                  () => 2
-                ),
-                value: __wrapUserFunction(
-                  {
-                    type: "InteractionArgLoc",
-                    actionName: "updateVariant",
-                    interactionUuid: "_NZglvJKp",
-                    componentUuid: "p-zh9SOwnv",
-                    argName: "value"
-                  },
-                  () => "selected"
-                )
-              };
-              return __wrapUserFunction(
-                {
-                  type: "InteractionLoc",
-                  actionName: "updateVariant",
-                  interactionUuid: "_NZglvJKp",
-                  componentUuid: "p-zh9SOwnv"
-                },
-                () =>
-                  (({ vgroup, value }) => {
-                    if (typeof value === "string") {
-                      value = [value];
-                    }
-                    const oldValue = p.get($state, vgroup);
-                    p.set($state, vgroup, !oldValue);
-                    return !oldValue;
-                  })?.apply(null, [actionArgs]),
-                actionArgs
-              );
-            })()
-          : undefined;
-        if (
-          typeof $steps["updateSelected"] === "object" &&
-          typeof $steps["updateSelected"].then === "function"
-        ) {
-          $steps["updateSelected"] = await __wrapUserPromise(
-            {
-              type: "InteractionLoc",
-              actionName: "updateVariant",
-              interactionUuid: "_NZglvJKp",
-              componentUuid: "p-zh9SOwnv"
-            },
-            $steps["updateSelected"]
-          );
+        {
+          [sty.rootisDiscount_discountOn]: hasVariant(
+            $state,
+            "isDiscount",
+            "discountOn"
+          ),
+          [sty.rootisSelected]: hasVariant($state, "isSelected", "isSelected")
         }
-      }}
+      )}
+      onClick={args.onClick}
     >
+      {(hasVariant($state, "isDiscount", "discountOn") ? true : true) ? (
+        <div
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text__eFQh,
+            {
+              [sty.textisDiscount_discountOn__eFQhSa11I]: hasVariant(
+                $state,
+                "isDiscount",
+                "discountOn"
+              )
+            }
+          )}
+        >
+          {"9.2折"}
+        </div>
+      ) : null}
       {true ? (
         <div className={classNames(projectcss.all, sty.freeBox___1QeT7)}>
           {p.renderPlasmicSlot({
@@ -199,10 +176,10 @@ function PlasmicPriceBlock__RenderFunc(props) {
                 projectcss.__wab_text,
                 sty.text__gpUs6,
                 {
-                  [sty.textselected__gpUs6MIrx4]: hasVariant(
+                  [sty.textisSelected__gpUs6MIrx4]: hasVariant(
                     $state,
-                    "selected",
-                    "selected"
+                    "isSelected",
+                    "isSelected"
                   )
                 }
               )}
@@ -211,7 +188,10 @@ function PlasmicPriceBlock__RenderFunc(props) {
                 try {
                   return $props.mainPrice;
                 } catch (e) {
-                  if (e instanceof TypeError) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
                     return "...";
                   }
                   throw e;
@@ -227,15 +207,22 @@ function PlasmicPriceBlock__RenderFunc(props) {
             defaultContents: "...",
             value: args.preDay,
             className: classNames(sty.slotTargetPreDay, {
-              [sty.slotTargetPreDayselected]: hasVariant(
+              [sty.slotTargetPreDayisSelected]: hasVariant(
                 $state,
-                "selected",
-                "selected"
+                "isSelected",
+                "isSelected"
               )
             })
           })}
         </div>
       ) : null}
+      <div className={classNames(projectcss.all, sty.freeBox__iiZZ)}>
+        {p.renderPlasmicSlot({
+          defaultContents: "会员版本",
+          value: args.version,
+          className: classNames(sty.slotTargetVersion)
+        })}
+      </div>
     </button>
   ) : null;
 }

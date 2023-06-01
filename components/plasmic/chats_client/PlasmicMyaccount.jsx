@@ -727,7 +727,11 @@ function PlasmicMyaccount__RenderFunc(props) {
                       data-plasmic-override={overrides.img}
                       alt={""}
                       className={classNames(sty.img)}
-                      displayHeight={"590px"}
+                      displayHeight={
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? "357px"
+                          : "590px"
+                      }
                       displayMaxHeight={"none"}
                       displayMaxWidth={"100%"}
                       displayMinHeight={"0"}

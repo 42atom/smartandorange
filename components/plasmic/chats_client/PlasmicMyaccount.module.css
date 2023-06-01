@@ -608,7 +608,6 @@
   }
 }
 .freeBox___4Tv5 {
-  display: flex;
   position: relative;
   flex-direction: row;
   width: 100%;
@@ -617,6 +616,7 @@
   margin-bottom: 8px;
   align-self: auto;
   min-width: 0;
+  display: none;
   padding: 0px 8px;
 }
 .freeBox___4Tv5 > :global(.__wab_flex-container) {
@@ -1046,6 +1046,7 @@
     justify-self: auto;
     object-fit: contain;
     flex-shrink: 0;
+    height: 357px;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {

@@ -476,7 +476,7 @@ function PlasmicPrice__RenderFunc(props) {
                     }
                   )}
                 >
-                  {hasVariant($state, "switchOn", "switchOn") ? "160" : "16"}
+                  {hasVariant($state, "switchOn", "switchOn") ? "182" : "19"}
                 </div>
               </div>
               <div
@@ -769,7 +769,7 @@ function PlasmicPrice__RenderFunc(props) {
                     }
                   )}
                 >
-                  {hasVariant($state, "switchOn", "switchOn") ? "1900" : "192"}
+                  {hasVariant($state, "switchOn", "switchOn") ? "480" : "50"}
                 </div>
               </div>
               <div

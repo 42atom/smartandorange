@@ -6,20 +6,38 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
-  background: var(--token-26pFRJH-g);
+  background: var(--token-DbGdjBpQ6R_X);
   box-shadow: inset 0px 0px 24px 0px #0000000d;
   position: relative;
   min-width: 120px;
   border-radius: 16px;
   padding: 20px 8px;
-  border: 3px solid var(--token-LJzy5WSR2);
+  border: 2px solid var(--token-LJzy5WSR2);
 }
-.rootselected {
+.rootisSelected {
   padding-top: 20px;
   background: linear-gradient(var(--token-tsAjOKoWUS), var(--token-tsAjOKoWUS)),
     var(--token-26pFRJH-g);
   padding-bottom: 20px;
-  border: 3px solid var(--token-hS7e36A1nc);
+  border: 2px solid var(--token-hS7e36A1nc);
+}
+.text__eFQh {
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  left: -2px;
+  top: 7px;
+  background: var(--token-47ovROB-Xr2C);
+  color: var(--token-_w178omqxW);
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 11px;
+  display: none;
+  border-radius: 0px 8px 8px 0px;
+}
+.textisDiscount_discountOn__eFQhSa11I {
+  display: block;
 }
 .freeBox___1QeT7 {
   position: relative;
@@ -72,4 +90,19 @@
 .slotTargetPreDay {
   color: var(--token-hS7e36A1nc);
   font-size: 12px;
+}
+.freeBox__iiZZ {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+}
+.slotTargetVersion {
+  font-size: 11px;
+  color: var(--token-rqDJQlRsV);
+  text-align: center;
 }

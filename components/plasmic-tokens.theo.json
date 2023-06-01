@@ -43,7 +43,7 @@
     {
       "name": "System: Bg Layout",
       "type": "color",
-      "value": "#FFFBFB",
+      "value": "#FBFFFF",
       "category": "color",
       "meta": {
         "projectId": "gRaosoDicn4VUCndSzazbA",
@@ -1243,7 +1243,7 @@
     {
       "name": "bkgd1",
       "type": "color",
-      "value": "#FFFBFB",
+      "value": "#FBFFFF",
       "category": "color",
       "meta": {
         "projectId": "gRaosoDicn4VUCndSzazbA",

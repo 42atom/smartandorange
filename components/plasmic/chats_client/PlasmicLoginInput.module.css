@@ -1,13 +1,14 @@
 .register {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
   overflow: hidden;
   box-shadow: none;
   max-width: 600px;
-  width: auto;
+  width: 100%;
   position: relative;
+  min-width: 0;
   border-radius: 8px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -16,6 +17,10 @@
     grid-column-start: 1;
     grid-column-end: -1;
   }
+}
+.registermailState {
+  width: 100%;
+  min-width: 0;
 }
 .freeBox__jvDde {
   display: flex;
@@ -51,6 +56,13 @@
   .freeBox__jvDde > :global(.__wab_flex-container) {
     min-width: 0;
   }
+}
+.freeBoxmailState__jvDdeilXmh {
+  width: 100%;
+  min-width: 0;
+}
+.freeBoxmailState__jvDdeilXmh > :global(.__wab_flex-container) {
+  min-width: 0;
 }
 .freeBox__lEnd {
   display: flex;
@@ -97,6 +109,7 @@
   text-decoration-line: none;
   text-overflow: clip;
   width: 100%;
+  height: auto;
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -114,9 +127,9 @@
   min-width: 0;
 }
 .freeBox__yP6Rq {
-  display: flex;
   position: relative;
   flex-direction: row;
+  display: none;
 }
 .freeBox__yP6Rq > :global(.__wab_flex-container) {
   flex-direction: row;

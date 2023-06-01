@@ -139,7 +139,10 @@ function PlasmicNavMenuItem__RenderFunc(props) {
                         try {
                           return $props.url;
                         } catch (e) {
-                          if (e instanceof TypeError) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
                             return undefined;
                           }
                           throw e;

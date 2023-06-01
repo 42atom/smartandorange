@@ -35,8 +35,6 @@ import Icon35Icon from "./icons/PlasmicIcon__Icon35"; // plasmic-import: 3YzAnJH
 import Icon36Icon from "./icons/PlasmicIcon__Icon36"; // plasmic-import: YzVIckEt_5/icon
 import Icon37Icon from "./icons/PlasmicIcon__Icon37"; // plasmic-import: eqEVTrEBm2/icon
 import Icon38Icon from "./icons/PlasmicIcon__Icon38"; // plasmic-import: s30yngpZn5/icon
-import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: KoY309Tgrjk/icon
-import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: IzwKr9-s2sD/icon
 
 export const PlasmicHomepage__VariantProps = new Array();
 
@@ -666,9 +664,9 @@ function PlasmicHomepage__RenderFunc(props) {
                           sty.text___5Mw
                         )}
                       >
-                        {
-                          "帮助您提高工作效率，节约时间和精力，同时提高文章质量和发掘更多独到创意"
-                        }
+                        {hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? "帮助您提高工作效率，节约时间和精力，同时提高文章质量和更多独到创意"
+                          : "帮助您提高工作效率，节约时间和精力，同时提高文章质量和更多独到创意"}
                       </div>
                     </div>
                   </p.Stack>
@@ -1244,21 +1242,6 @@ function PlasmicHomepage__RenderFunc(props) {
                     >
                       {"联系我们"}
                     </div>
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__sZ37Y)}
-                    >
-                      <Icon3Icon
-                        className={classNames(projectcss.all, sty.svg__gepwy)}
-                        role={"img"}
-                      />
-
-                      <Icon4Icon
-                        className={classNames(projectcss.all, sty.svg__vkxSo)}
-                        role={"img"}
-                      />
-                    </p.Stack>
                   </p.Stack>
                 </p.Stack>
               </div>

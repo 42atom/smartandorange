@@ -16,6 +16,7 @@ import {
   hasVariant,
   classNames,
   createPlasmicElementProxy,
+  useTrigger,
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
@@ -73,13 +74,18 @@ function PlasmicSceneInfo__RenderFunc(props) {
         path: "modal.open",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          triggers.hover_root ? false : false
       }
     ],
 
     [$props, $ctx]
   );
   const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
+  const [isRootHover, triggerRootHoverProps] = useTrigger("useHover", {});
+  const triggers = {
+    hover_root: isRootHover
+  };
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsnl9I0Oib3VOwY()
   });
@@ -98,6 +104,7 @@ function PlasmicSceneInfo__RenderFunc(props) {
         plasmic_antd_5_hostless_css.plasmic_tokens,
         sty.root
       )}
+      data-plasmic-trigger-props={[triggerRootHoverProps]}
     >
       {true ? (
         <p.Stack
@@ -108,7 +115,18 @@ function PlasmicSceneInfo__RenderFunc(props) {
             const $steps = {};
             $steps["goToWorkspacesEdit"] = true
               ? (() => {
-                  const actionArgs = {};
+                  const actionArgs = {
+                    destination: __wrapUserFunction(
+                      {
+                        type: "InteractionArgLoc",
+                        actionName: "navigation",
+                        interactionUuid: "GUBJnxW2T",
+                        componentUuid: "Zf1zYQ7YK23by",
+                        argName: "destination"
+                      },
+                      () => `/workspaces/${"value"}`
+                    )
+                  };
                   return __wrapUserFunction(
                     {
                       type: "InteractionLoc",
@@ -318,6 +336,52 @@ function PlasmicSceneInfo__RenderFunc(props) {
           modalClassName={classNames({ [sty["pcls_RHxxyFPA0"]]: true })}
           modalScopeClassName={sty["modal__modal"]}
           okText={"使用模版"}
+          onOk={async () => {
+            const $steps = {};
+            $steps["goToWorkspacesEdit"] = true
+              ? (() => {
+                  const actionArgs = {
+                    destination: __wrapUserFunction(
+                      {
+                        type: "InteractionArgLoc",
+                        actionName: "navigation",
+                        interactionUuid: "QGI1p-z6m",
+                        componentUuid: "Zf1zYQ7YK23by",
+                        argName: "destination"
+                      },
+                      () => `/workspaces/${"value"}`
+                    )
+                  };
+                  return __wrapUserFunction(
+                    {
+                      type: "InteractionLoc",
+                      actionName: "navigation",
+                      interactionUuid: "QGI1p-z6m",
+                      componentUuid: "Zf1zYQ7YK23by"
+                    },
+                    () =>
+                      (({ destination }) => {
+                        __nextRouter?.push(destination);
+                      })?.apply(null, [actionArgs]),
+                    actionArgs
+                  );
+                })()
+              : undefined;
+            if (
+              typeof $steps["goToWorkspacesEdit"] === "object" &&
+              typeof $steps["goToWorkspacesEdit"].then === "function"
+            ) {
+              $steps["goToWorkspacesEdit"] = await __wrapUserPromise(
+                {
+                  type: "InteractionLoc",
+                  actionName: "navigation",
+                  interactionUuid: "QGI1p-z6m",
+                  componentUuid: "Zf1zYQ7YK23by"
+                },
+                $steps["goToWorkspacesEdit"]
+              );
+            }
+          }}
           onOpenChange={p.generateStateOnChangeProp($state, ["modal", "open"])}
           open={p.generateStateValueProp($state, ["modal", "open"])}
           title={"Modal title"}

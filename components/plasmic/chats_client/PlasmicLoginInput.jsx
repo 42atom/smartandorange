@@ -125,7 +125,13 @@ function PlasmicLoginInput__RenderFunc(props) {
       <p.Stack
         as={"div"}
         hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__jvDde)}
+        className={classNames(projectcss.all, sty.freeBox__jvDde, {
+          [sty.freeBoxmailState__jvDdeilXmh]: hasVariant(
+            $state,
+            "mailState",
+            "mailState"
+          )
+        })}
       >
         <p.Stack
           as={"div"}
@@ -146,256 +152,188 @@ function PlasmicLoginInput__RenderFunc(props) {
               sty.text__auRyk
             )}
           >
-            {"欢迎登录"}
+            {"使用手机登录"}
           </div>
           <div className={classNames(projectcss.all, sty.freeBox__st9Mq)} />
         </p.Stack>
-        <p.Stack
-          as={"div"}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox__yP6Rq)}
-        >
-          <Button
-            className={classNames("__wab_instance", sty.button__mbQty, {
-              [sty.buttonmailState__mbQtYilXmh]: hasVariant(
-                $state,
-                "mailState",
-                "mailState"
-              )
-            })}
-            color={"white"}
-            endIcon={
-              <IconIcon
-                className={classNames(projectcss.all, sty.svg__c07P)}
-                role={"img"}
-              />
-            }
-            onClick={async event => {
-              const $steps = {};
-              $steps["updateMailRegister"] = true
-                ? (() => {
-                    const actionArgs = {
-                      vgroup: __wrapUserFunction(
-                        {
-                          type: "InteractionArgLoc",
-                          actionName: "updateVariant",
-                          interactionUuid: "35-iQhq43l2",
-                          componentUuid: "KyDDGn4_M-r",
-                          argName: "vgroup"
-                        },
-                        () => "mailState"
-                      ),
-                      operation: __wrapUserFunction(
-                        {
-                          type: "InteractionArgLoc",
-                          actionName: "updateVariant",
-                          interactionUuid: "35-iQhq43l2",
-                          componentUuid: "KyDDGn4_M-r",
-                          argName: "operation"
-                        },
-                        () => 6
-                      ),
-                      value: __wrapUserFunction(
-                        {
-                          type: "InteractionArgLoc",
-                          actionName: "updateVariant",
-                          interactionUuid: "35-iQhq43l2",
-                          componentUuid: "KyDDGn4_M-r",
-                          argName: "value"
-                        },
-                        () => "mailState"
-                      )
-                    };
-                    return __wrapUserFunction(
-                      {
-                        type: "InteractionLoc",
-                        actionName: "updateVariant",
-                        interactionUuid: "35-iQhq43l2",
-                        componentUuid: "KyDDGn4_M-r"
-                      },
-                      () =>
-                        (({ vgroup, value }) => {
-                          if (typeof value === "string") {
-                            value = [value];
-                          }
-                          p.set($state, vgroup, false);
-                          return false;
-                        })?.apply(null, [actionArgs]),
-                      actionArgs
-                    );
-                  })()
-                : undefined;
-              if (
-                typeof $steps["updateMailRegister"] === "object" &&
-                typeof $steps["updateMailRegister"].then === "function"
-              ) {
-                $steps["updateMailRegister"] = await __wrapUserPromise(
-                  {
-                    type: "InteractionLoc",
-                    actionName: "updateVariant",
-                    interactionUuid: "35-iQhq43l2",
-                    componentUuid: "KyDDGn4_M-r"
-                  },
-                  $steps["updateMailRegister"]
-                );
-              }
-            }}
-            showStartIcon={true}
-            startIcon={
-              <Icon7Icon
-                className={classNames(projectcss.all, sty.svg__mkJgO, {
-                  [sty.svgmailState__mkJgOilXmh]: hasVariant(
-                    $state,
-                    "mailState",
-                    "mailState"
-                  )
-                })}
-                role={"img"}
-              />
-            }
-            submitsForm={false}
+        {true ? (
+          <p.Stack
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__yP6Rq)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__eu2F,
-                {
-                  [sty.textmailState__eu2FilXmh]: hasVariant(
-                    $state,
-                    "mailState",
-                    "mailState"
-                  )
-                }
-              )}
-            >
-              {hasVariant($state, "mailState", "mailState")
-                ? "手机登录"
-                : hasVariant(globalVariants, "screen", "mobileOnly")
-                ? "手机登录"
-                : "手机登录"}
-            </div>
-          </Button>
-          <Button
-            className={classNames("__wab_instance", sty.button__bikem, {
-              [sty.buttonmailState__bikemilXmh]: hasVariant(
-                $state,
-                "mailState",
-                "mailState"
-              )
-            })}
-            color={"white"}
-            endIcon={
-              <IconIcon
-                className={classNames(projectcss.all, sty.svg___9K9Yh)}
-                role={"img"}
-              />
-            }
-            onClick={async event => {
-              const $steps = {};
-              $steps["updateMailRegister"] = true
-                ? (() => {
-                    const actionArgs = {
-                      vgroup: __wrapUserFunction(
-                        {
-                          type: "InteractionArgLoc",
-                          actionName: "updateVariant",
-                          interactionUuid: "6z6XPUaNJU8",
-                          componentUuid: "KyDDGn4_M-r",
-                          argName: "vgroup"
-                        },
-                        () => "mailState"
-                      ),
-                      operation: __wrapUserFunction(
-                        {
-                          type: "InteractionArgLoc",
-                          actionName: "updateVariant",
-                          interactionUuid: "6z6XPUaNJU8",
-                          componentUuid: "KyDDGn4_M-r",
-                          argName: "operation"
-                        },
-                        () => 4
-                      ),
-                      value: __wrapUserFunction(
-                        {
-                          type: "InteractionArgLoc",
-                          actionName: "updateVariant",
-                          interactionUuid: "6z6XPUaNJU8",
-                          componentUuid: "KyDDGn4_M-r",
-                          argName: "value"
-                        },
-                        () => "mailState"
-                      )
-                    };
-                    return __wrapUserFunction(
-                      {
-                        type: "InteractionLoc",
-                        actionName: "updateVariant",
-                        interactionUuid: "6z6XPUaNJU8",
-                        componentUuid: "KyDDGn4_M-r"
-                      },
-                      () =>
-                        (({ vgroup, value }) => {
-                          if (typeof value === "string") {
-                            value = [value];
-                          }
-                          p.set($state, vgroup, true);
-                          return true;
-                        })?.apply(null, [actionArgs]),
-                      actionArgs
-                    );
-                  })()
-                : undefined;
-              if (
-                typeof $steps["updateMailRegister"] === "object" &&
-                typeof $steps["updateMailRegister"].then === "function"
-              ) {
-                $steps["updateMailRegister"] = await __wrapUserPromise(
-                  {
-                    type: "InteractionLoc",
-                    actionName: "updateVariant",
-                    interactionUuid: "6z6XPUaNJU8",
-                    componentUuid: "KyDDGn4_M-r"
-                  },
-                  $steps["updateMailRegister"]
-                );
+            <Button
+              className={classNames("__wab_instance", sty.button__mbQty, {
+                [sty.buttonmailState__mbQtYilXmh]: hasVariant(
+                  $state,
+                  "mailState",
+                  "mailState"
+                )
+              })}
+              color={"white"}
+              endIcon={
+                <IconIcon
+                  className={classNames(projectcss.all, sty.svg__c07P)}
+                  role={"img"}
+                />
               }
-            }}
-            showStartIcon={true}
-            startIcon={
-              <Icon5Icon
-                className={classNames(projectcss.all, sty.svg__nnoy, {
-                  [sty.svgmailState__nnoyilXmh]: hasVariant(
-                    $state,
-                    "mailState",
-                    "mailState"
-                  )
-                })}
-                role={"img"}
-              />
-            }
-            submitsForm={false}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__eaUqw,
-                {
-                  [sty.textmailState__eaUqwilXmh]: hasVariant(
-                    $state,
-                    "mailState",
-                    "mailState"
-                  )
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateMailRegister"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: __wrapUserFunction(
+                          {
+                            type: "InteractionArgLoc",
+                            actionName: "updateVariant",
+                            interactionUuid: "35-iQhq43l2",
+                            componentUuid: "KyDDGn4_M-r",
+                            argName: "vgroup"
+                          },
+                          () => "mailState"
+                        ),
+                        operation: __wrapUserFunction(
+                          {
+                            type: "InteractionArgLoc",
+                            actionName: "updateVariant",
+                            interactionUuid: "35-iQhq43l2",
+                            componentUuid: "KyDDGn4_M-r",
+                            argName: "operation"
+                          },
+                          () => 6
+                        ),
+                        value: __wrapUserFunction(
+                          {
+                            type: "InteractionArgLoc",
+                            actionName: "updateVariant",
+                            interactionUuid: "35-iQhq43l2",
+                            componentUuid: "KyDDGn4_M-r",
+                            argName: "value"
+                          },
+                          () => "mailState"
+                        )
+                      };
+                      return __wrapUserFunction(
+                        {
+                          type: "InteractionLoc",
+                          actionName: "updateVariant",
+                          interactionUuid: "35-iQhq43l2",
+                          componentUuid: "KyDDGn4_M-r"
+                        },
+                        () =>
+                          (({ vgroup, value }) => {
+                            if (typeof value === "string") {
+                              value = [value];
+                            }
+                            p.set($state, vgroup, false);
+                            return false;
+                          })?.apply(null, [actionArgs]),
+                        actionArgs
+                      );
+                    })()
+                  : undefined;
+                if (
+                  typeof $steps["updateMailRegister"] === "object" &&
+                  typeof $steps["updateMailRegister"].then === "function"
+                ) {
+                  $steps["updateMailRegister"] = await __wrapUserPromise(
+                    {
+                      type: "InteractionLoc",
+                      actionName: "updateVariant",
+                      interactionUuid: "35-iQhq43l2",
+                      componentUuid: "KyDDGn4_M-r"
+                    },
+                    $steps["updateMailRegister"]
+                  );
                 }
-              )}
+              }}
+              showStartIcon={true}
+              startIcon={
+                <Icon7Icon
+                  className={classNames(projectcss.all, sty.svg__mkJgO, {
+                    [sty.svgmailState__mkJgOilXmh]: hasVariant(
+                      $state,
+                      "mailState",
+                      "mailState"
+                    )
+                  })}
+                  role={"img"}
+                />
+              }
+              submitsForm={false}
             >
-              {hasVariant($state, "mailState", "mailState")
-                ? "邮箱登录"
-                : "邮箱登录"}
-            </div>
-          </Button>
-        </p.Stack>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__eu2F,
+                  {
+                    [sty.textmailState__eu2FilXmh]: hasVariant(
+                      $state,
+                      "mailState",
+                      "mailState"
+                    )
+                  }
+                )}
+              >
+                {hasVariant($state, "mailState", "mailState")
+                  ? "手机登录"
+                  : hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "手机登录"
+                  : "手机登录"}
+              </div>
+            </Button>
+            <Button
+              className={classNames("__wab_instance", sty.button__bikem, {
+                [sty.buttonmailState__bikemilXmh]: hasVariant(
+                  $state,
+                  "mailState",
+                  "mailState"
+                )
+              })}
+              color={"white"}
+              endIcon={
+                <IconIcon
+                  className={classNames(projectcss.all, sty.svg___9K9Yh)}
+                  role={"img"}
+                />
+              }
+              showStartIcon={true}
+              startIcon={
+                <Icon5Icon
+                  className={classNames(projectcss.all, sty.svg__nnoy, {
+                    [sty.svgmailState__nnoyilXmh]: hasVariant(
+                      $state,
+                      "mailState",
+                      "mailState"
+                    )
+                  })}
+                  role={"img"}
+                />
+              }
+              submitsForm={false}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__eaUqw,
+                  {
+                    [sty.textmailState__eaUqwilXmh]: hasVariant(
+                      $state,
+                      "mailState",
+                      "mailState"
+                    )
+                  }
+                )}
+              >
+                {hasVariant($state, "mailState", "mailState")
+                  ? "邮箱登录"
+                  : "邮箱登录"}
+              </div>
+            </Button>
+          </p.Stack>
+        ) : null}
         {(hasVariant($state, "mailState", "mailState") ? true : true) ? (
           <p.Stack
             as={"div"}
