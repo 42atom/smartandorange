@@ -103,11 +103,19 @@ function PlasmicAsideMenuItem__RenderFunc(props) {
       )}
       onClick={args.onIsCurrentChange}
     >
-      {p.renderPlasmicSlot({
-        defaultContents: null,
-        value: args.icon,
-        className: classNames(sty.slotTargetIcon)
-      })}
+      {(hasVariant($state, "isCurrent", "isCurrent") ? true : true)
+        ? p.renderPlasmicSlot({
+            defaultContents: null,
+            value: args.icon,
+            className: classNames(sty.slotTargetIcon, {
+              [sty.slotTargetIconisCurrent]: hasVariant(
+                $state,
+                "isCurrent",
+                "isCurrent"
+              )
+            })
+          })
+        : null}
       <div
         data-plasmic-name={"label"}
         data-plasmic-override={overrides.label}
@@ -127,19 +135,21 @@ function PlasmicAsideMenuItem__RenderFunc(props) {
             }
           )}
         >
-          {(() => {
-            try {
-              return $props.label;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return "label";
+          <React.Fragment>
+            {(() => {
+              try {
+                return $props.label;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return "label";
+                }
+                throw e;
               }
-              throw e;
-            }
-          })()}
+            })()}
+          </React.Fragment>
         </div>
       </div>
     </p.Stack>

@@ -49,10 +49,11 @@
   align-content: flex-start;
   justify-items: center;
   width: 100%;
-  height: 818px;
+  height: 100%;
   background: var(--token-IwiySx9HX);
   grid-column-start: 1;
   grid-column-end: -1;
+  min-height: 0;
   grid-template-columns:
     1fr minmax(0, var(--plsmc-wide-chunk)) var(--plsmc-viewport-gap)
     min(

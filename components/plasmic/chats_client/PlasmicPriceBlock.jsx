@@ -29,14 +29,11 @@ export const PlasmicPriceBlock__VariantProps = new Array(
 );
 
 export const PlasmicPriceBlock__ArgProps = new Array(
-  "mainPrice",
   "slot",
   "preDay",
   "onIsSelectedChange",
-  "pid",
-  "onPidChange",
-  "onClick",
-  "version"
+  "version",
+  "price"
 );
 
 const __wrapUserFunction =
@@ -59,16 +56,7 @@ function PlasmicPriceBlock__RenderFunc(props) {
   const { variants, overrides, forNode } = props;
   const __nextRouter = useNextRouter();
   const $ctx = ph.useDataEnv?.() || {};
-  const args = React.useMemo(
-    () =>
-      Object.assign(
-        {
-          mainPrice: 888
-        },
-        props.args
-      ),
-    [props.args]
-  );
+  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
   const $props = {
     ...args,
     ...variants
@@ -85,13 +73,6 @@ function PlasmicPriceBlock__RenderFunc(props) {
         variableType: "variant",
         valueProp: "isSelected",
         onChangeProp: "onIsSelectedChange"
-      },
-      {
-        path: "pid",
-        type: "writable",
-        variableType: "number",
-        valueProp: "pid",
-        onChangeProp: "onPidChange"
       },
       {
         path: "isDiscount",
@@ -128,7 +109,6 @@ function PlasmicPriceBlock__RenderFunc(props) {
           [sty.rootisSelected]: hasVariant($state, "isSelected", "isSelected")
         }
       )}
-      onClick={args.onClick}
     >
       {(hasVariant($state, "isDiscount", "discountOn") ? true : true) ? (
         <div
@@ -171,32 +151,25 @@ function PlasmicPriceBlock__RenderFunc(props) {
           ) : null}
           {true ? (
             <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__gpUs6,
-                {
-                  [sty.textisSelected__gpUs6MIrx4]: hasVariant(
+              className={classNames(projectcss.all, sty.freeBox__gpUs6, {
+                [sty.freeBoxisSelected__gpUs6MIrx4]: hasVariant(
+                  $state,
+                  "isSelected",
+                  "isSelected"
+                )
+              })}
+            >
+              {p.renderPlasmicSlot({
+                defaultContents: "...",
+                value: args.price,
+                className: classNames(sty.slotTargetPrice, {
+                  [sty.slotTargetPriceisSelected]: hasVariant(
                     $state,
                     "isSelected",
                     "isSelected"
                   )
-                }
-              )}
-            >
-              {(() => {
-                try {
-                  return $props.mainPrice;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return "...";
-                  }
-                  throw e;
-                }
-              })()}
+                })
+              })}
             </div>
           ) : null}
         </div>

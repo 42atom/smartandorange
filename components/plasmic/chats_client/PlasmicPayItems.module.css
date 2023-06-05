@@ -149,6 +149,9 @@
   height: auto;
   max-width: 100%;
   text-align: center;
+  font-size: 13px;
+  background: var(--token-tsAjOKoWUS);
+  color: var(--token-mHGy3iJMuj);
   min-width: 0;
 }
 .freeBox__ahXJ {

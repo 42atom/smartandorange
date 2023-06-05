@@ -41,10 +41,7 @@ import Icon32Icon from "./icons/PlasmicIcon__Icon32"; // plasmic-import: 69yPGVO
 
 export const PlasmicPayItems__VariantProps = new Array();
 
-export const PlasmicPayItems__ArgProps = new Array(
-  "valueId",
-  "onValueIdChange"
-);
+export const PlasmicPayItems__ArgProps = new Array();
 
 const __wrapUserFunction =
   globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
@@ -87,158 +84,37 @@ function PlasmicPayItems__RenderFunc(props) {
         path: "price1.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
-          (() => {
-            try {
-              return $state.valueId === $state.price1.pid;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return [];
-              }
-              throw e;
-            }
-          })()
+        initFunc: ({ $props, $state, $queries, $ctx }) => "isSelected"
       },
       {
         path: "price2.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
-          (() => {
-            try {
-              return $state.valueId === $state.price2.pid;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return [];
-              }
-              throw e;
-            }
-          })()
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "price3.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
-          (() => {
-            try {
-              return $state.valueId === $state.price3.pid;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return [];
-              }
-              throw e;
-            }
-          })()
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "price4.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
-          (() => {
-            try {
-              return $state.valueId === $state.price4.pid;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return [];
-              }
-              throw e;
-            }
-          })()
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "price5.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
-          (() => {
-            try {
-              return $state.valueId === $state.price5.pid;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return [];
-              }
-              throw e;
-            }
-          })()
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "price6.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
-          (() => {
-            try {
-              return $state.valueId === $state.price6.pid;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return [];
-              }
-              throw e;
-            }
-          })()
-      },
-      {
-        path: "valueId",
-        type: "writable",
-        variableType: "number",
-        valueProp: "valueId",
-        onChangeProp: "onValueIdChange"
-      },
-      {
-        path: "price1.pid",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 1
-      },
-      {
-        path: "price2.pid",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 2
-      },
-      {
-        path: "price3.pid",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 3
-      },
-      {
-        path: "price4.pid",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 4
-      },
-      {
-        path: "price5.pid",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 5
-      },
-      {
-        path: "price6.pid",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 6
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       }
     ],
 
@@ -273,7 +149,7 @@ function PlasmicPayItems__RenderFunc(props) {
           className={classNames("__wab_instance", sty.tabsContainer)}
           initialKey={"tab1"}
           previewAll={
-            hasVariant(globalVariants, "screen", "mobileOnly") ? true : false
+            hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
           }
           previewKey={
             hasVariant(globalVariants, "screen", "mobileOnly") ? "tab2" : "tab2"
@@ -381,19 +257,7 @@ function PlasmicPayItems__RenderFunc(props) {
                       sty.text___8UdWd
                     )}
                   >
-                    {(() => {
-                      try {
-                        return "您已选中产品id " + $state.valueId;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "测试期间，充值会员价格九折，活动时间6月1日-6月30日";
-                        }
-                        throw e;
-                      }
-                    })()}
+                    {"测试期间，充值会员价格优惠，活动时间6月1日-6月30日"}
                   </div>
                 </div>
                 {(
@@ -436,103 +300,12 @@ function PlasmicPayItems__RenderFunc(props) {
                                 "price1",
                                 "isSelected"
                               ])}
-                              mainPrice={19}
-                              onClick={async event => {
-                                const $steps = {};
-                                $steps["updateValueId"] = true
-                                  ? (() => {
-                                      const actionArgs = {
-                                        variable: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "zHbgQJPtu",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "variable"
-                                          },
-                                          () => ({
-                                            objRoot: $state,
-                                            variablePath: ["valueId"]
-                                          })
-                                        ),
-                                        operation: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "zHbgQJPtu",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "operation"
-                                          },
-                                          () => 0
-                                        ),
-                                        value: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "zHbgQJPtu",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "value"
-                                          },
-                                          () =>
-                                            ($state.valueId = $state.price1.pid)
-                                        )
-                                      };
-                                      return __wrapUserFunction(
-                                        {
-                                          type: "InteractionLoc",
-                                          actionName: "updateVariable",
-                                          interactionUuid: "zHbgQJPtu",
-                                          componentUuid: "l2Kc8Ybaed"
-                                        },
-                                        () =>
-                                          (({
-                                            variable,
-                                            value,
-                                            startIndex,
-                                            deleteCount
-                                          }) => {
-                                            if (!variable) {
-                                              return;
-                                            }
-                                            const { objRoot, variablePath } =
-                                              variable;
-                                            p.set(objRoot, variablePath, value);
-                                            return value;
-                                          })?.apply(null, [actionArgs]),
-                                        actionArgs
-                                      );
-                                    })()
-                                  : undefined;
-                                if (
-                                  typeof $steps["updateValueId"] === "object" &&
-                                  typeof $steps["updateValueId"].then ===
-                                    "function"
-                                ) {
-                                  $steps["updateValueId"] =
-                                    await __wrapUserPromise(
-                                      {
-                                        type: "InteractionLoc",
-                                        actionName: "updateVariable",
-                                        interactionUuid: "zHbgQJPtu",
-                                        componentUuid: "l2Kc8Ybaed"
-                                      },
-                                      $steps["updateValueId"]
-                                    );
-                                }
-                              }}
                               onIsSelectedChange={p.generateStateOnChangeProp(
                                 $state,
                                 ["price1", "isSelected"]
                               )}
-                              onPidChange={p.generateStateOnChangeProp($state, [
-                                "price1",
-                                "pid"
-                              ])}
-                              pid={p.generateStateValueProp($state, [
-                                "price1",
-                                "pid"
-                              ])}
                               preDay={"折合0.6元每天"}
+                              price={"19"}
                               slot={
                                 <div
                                   className={classNames(
@@ -559,103 +332,12 @@ function PlasmicPayItems__RenderFunc(props) {
                                 "price2",
                                 "isSelected"
                               ])}
-                              mainPrice={182}
-                              onClick={async event => {
-                                const $steps = {};
-                                $steps["updateValueId"] = true
-                                  ? (() => {
-                                      const actionArgs = {
-                                        variable: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "9trCcUumI",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "variable"
-                                          },
-                                          () => ({
-                                            objRoot: $state,
-                                            variablePath: ["valueId"]
-                                          })
-                                        ),
-                                        operation: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "9trCcUumI",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "operation"
-                                          },
-                                          () => 0
-                                        ),
-                                        value: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "9trCcUumI",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "value"
-                                          },
-                                          () =>
-                                            ($state.valueId = $state.price2.pid)
-                                        )
-                                      };
-                                      return __wrapUserFunction(
-                                        {
-                                          type: "InteractionLoc",
-                                          actionName: "updateVariable",
-                                          interactionUuid: "9trCcUumI",
-                                          componentUuid: "l2Kc8Ybaed"
-                                        },
-                                        () =>
-                                          (({
-                                            variable,
-                                            value,
-                                            startIndex,
-                                            deleteCount
-                                          }) => {
-                                            if (!variable) {
-                                              return;
-                                            }
-                                            const { objRoot, variablePath } =
-                                              variable;
-                                            p.set(objRoot, variablePath, value);
-                                            return value;
-                                          })?.apply(null, [actionArgs]),
-                                        actionArgs
-                                      );
-                                    })()
-                                  : undefined;
-                                if (
-                                  typeof $steps["updateValueId"] === "object" &&
-                                  typeof $steps["updateValueId"].then ===
-                                    "function"
-                                ) {
-                                  $steps["updateValueId"] =
-                                    await __wrapUserPromise(
-                                      {
-                                        type: "InteractionLoc",
-                                        actionName: "updateVariable",
-                                        interactionUuid: "9trCcUumI",
-                                        componentUuid: "l2Kc8Ybaed"
-                                      },
-                                      $steps["updateValueId"]
-                                    );
-                                }
-                              }}
                               onIsSelectedChange={p.generateStateOnChangeProp(
                                 $state,
                                 ["price2", "isSelected"]
                               )}
-                              onPidChange={p.generateStateOnChangeProp($state, [
-                                "price2",
-                                "pid"
-                              ])}
-                              pid={p.generateStateValueProp($state, [
-                                "price2",
-                                "pid"
-                              ])}
                               preDay={"折合0.5元每天"}
+                              price={"182"}
                               version={"普通版年付"}
                             />
                           ) : null}
@@ -988,108 +670,16 @@ function PlasmicPayItems__RenderFunc(props) {
                                 "__wab_instance",
                                 sty.price3
                               )}
-                              isDiscount={"discountOn"}
                               isSelected={p.generateStateValueProp($state, [
                                 "price3",
                                 "isSelected"
                               ])}
-                              mainPrice={50}
-                              onClick={async event => {
-                                const $steps = {};
-                                $steps["updateValueId"] = true
-                                  ? (() => {
-                                      const actionArgs = {
-                                        variable: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "0NiRGJILB",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "variable"
-                                          },
-                                          () => ({
-                                            objRoot: $state,
-                                            variablePath: ["valueId"]
-                                          })
-                                        ),
-                                        operation: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "0NiRGJILB",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "operation"
-                                          },
-                                          () => 0
-                                        ),
-                                        value: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "0NiRGJILB",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "value"
-                                          },
-                                          () =>
-                                            ($state.valueId = $state.price3.pid)
-                                        )
-                                      };
-                                      return __wrapUserFunction(
-                                        {
-                                          type: "InteractionLoc",
-                                          actionName: "updateVariable",
-                                          interactionUuid: "0NiRGJILB",
-                                          componentUuid: "l2Kc8Ybaed"
-                                        },
-                                        () =>
-                                          (({
-                                            variable,
-                                            value,
-                                            startIndex,
-                                            deleteCount
-                                          }) => {
-                                            if (!variable) {
-                                              return;
-                                            }
-                                            const { objRoot, variablePath } =
-                                              variable;
-                                            p.set(objRoot, variablePath, value);
-                                            return value;
-                                          })?.apply(null, [actionArgs]),
-                                        actionArgs
-                                      );
-                                    })()
-                                  : undefined;
-                                if (
-                                  typeof $steps["updateValueId"] === "object" &&
-                                  typeof $steps["updateValueId"].then ===
-                                    "function"
-                                ) {
-                                  $steps["updateValueId"] =
-                                    await __wrapUserPromise(
-                                      {
-                                        type: "InteractionLoc",
-                                        actionName: "updateVariable",
-                                        interactionUuid: "0NiRGJILB",
-                                        componentUuid: "l2Kc8Ybaed"
-                                      },
-                                      $steps["updateValueId"]
-                                    );
-                                }
-                              }}
                               onIsSelectedChange={p.generateStateOnChangeProp(
                                 $state,
                                 ["price3", "isSelected"]
                               )}
-                              onPidChange={p.generateStateOnChangeProp($state, [
-                                "price3",
-                                "pid"
-                              ])}
-                              pid={p.generateStateValueProp($state, [
-                                "price3",
-                                "pid"
-                              ])}
                               preDay={"折合1.6元每天"}
+                              price={"50"}
                               slot={
                                 <div
                                   className={classNames(
@@ -1116,103 +706,12 @@ function PlasmicPayItems__RenderFunc(props) {
                                 "price4",
                                 "isSelected"
                               ])}
-                              mainPrice={480}
-                              onClick={async event => {
-                                const $steps = {};
-                                $steps["updateValueId"] = true
-                                  ? (() => {
-                                      const actionArgs = {
-                                        variable: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "meBUAb6LL",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "variable"
-                                          },
-                                          () => ({
-                                            objRoot: $state,
-                                            variablePath: ["valueId"]
-                                          })
-                                        ),
-                                        operation: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "meBUAb6LL",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "operation"
-                                          },
-                                          () => 0
-                                        ),
-                                        value: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "meBUAb6LL",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "value"
-                                          },
-                                          () =>
-                                            ($state.valueId = $state.price4.pid)
-                                        )
-                                      };
-                                      return __wrapUserFunction(
-                                        {
-                                          type: "InteractionLoc",
-                                          actionName: "updateVariable",
-                                          interactionUuid: "meBUAb6LL",
-                                          componentUuid: "l2Kc8Ybaed"
-                                        },
-                                        () =>
-                                          (({
-                                            variable,
-                                            value,
-                                            startIndex,
-                                            deleteCount
-                                          }) => {
-                                            if (!variable) {
-                                              return;
-                                            }
-                                            const { objRoot, variablePath } =
-                                              variable;
-                                            p.set(objRoot, variablePath, value);
-                                            return value;
-                                          })?.apply(null, [actionArgs]),
-                                        actionArgs
-                                      );
-                                    })()
-                                  : undefined;
-                                if (
-                                  typeof $steps["updateValueId"] === "object" &&
-                                  typeof $steps["updateValueId"].then ===
-                                    "function"
-                                ) {
-                                  $steps["updateValueId"] =
-                                    await __wrapUserPromise(
-                                      {
-                                        type: "InteractionLoc",
-                                        actionName: "updateVariable",
-                                        interactionUuid: "meBUAb6LL",
-                                        componentUuid: "l2Kc8Ybaed"
-                                      },
-                                      $steps["updateValueId"]
-                                    );
-                                }
-                              }}
                               onIsSelectedChange={p.generateStateOnChangeProp(
                                 $state,
                                 ["price4", "isSelected"]
                               )}
-                              onPidChange={p.generateStateOnChangeProp($state, [
-                                "price4",
-                                "pid"
-                              ])}
-                              pid={p.generateStateValueProp($state, [
-                                "price4",
-                                "pid"
-                              ])}
                               preDay={"折合1.3元每天"}
+                              price={"480"}
                               version={"高级版"}
                             />
                           ) : null}
@@ -1549,103 +1048,12 @@ function PlasmicPayItems__RenderFunc(props) {
                                 "price5",
                                 "isSelected"
                               ])}
-                              mainPrice={190}
-                              onClick={async event => {
-                                const $steps = {};
-                                $steps["updateValueId"] = true
-                                  ? (() => {
-                                      const actionArgs = {
-                                        variable: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "sd1r7iL10",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "variable"
-                                          },
-                                          () => ({
-                                            objRoot: $state,
-                                            variablePath: ["valueId"]
-                                          })
-                                        ),
-                                        operation: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "sd1r7iL10",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "operation"
-                                          },
-                                          () => 0
-                                        ),
-                                        value: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "sd1r7iL10",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "value"
-                                          },
-                                          () =>
-                                            ($state.valueId = $state.price5.pid)
-                                        )
-                                      };
-                                      return __wrapUserFunction(
-                                        {
-                                          type: "InteractionLoc",
-                                          actionName: "updateVariable",
-                                          interactionUuid: "sd1r7iL10",
-                                          componentUuid: "l2Kc8Ybaed"
-                                        },
-                                        () =>
-                                          (({
-                                            variable,
-                                            value,
-                                            startIndex,
-                                            deleteCount
-                                          }) => {
-                                            if (!variable) {
-                                              return;
-                                            }
-                                            const { objRoot, variablePath } =
-                                              variable;
-                                            p.set(objRoot, variablePath, value);
-                                            return value;
-                                          })?.apply(null, [actionArgs]),
-                                        actionArgs
-                                      );
-                                    })()
-                                  : undefined;
-                                if (
-                                  typeof $steps["updateValueId"] === "object" &&
-                                  typeof $steps["updateValueId"].then ===
-                                    "function"
-                                ) {
-                                  $steps["updateValueId"] =
-                                    await __wrapUserPromise(
-                                      {
-                                        type: "InteractionLoc",
-                                        actionName: "updateVariable",
-                                        interactionUuid: "sd1r7iL10",
-                                        componentUuid: "l2Kc8Ybaed"
-                                      },
-                                      $steps["updateValueId"]
-                                    );
-                                }
-                              }}
                               onIsSelectedChange={p.generateStateOnChangeProp(
                                 $state,
                                 ["price5", "isSelected"]
                               )}
-                              onPidChange={p.generateStateOnChangeProp($state, [
-                                "price5",
-                                "pid"
-                              ])}
-                              pid={p.generateStateValueProp($state, [
-                                "price5",
-                                "pid"
-                              ])}
                               preDay={"折合6.3元每天"}
+                              price={"190"}
                               slot={
                                 <div
                                   className={classNames(
@@ -1672,103 +1080,12 @@ function PlasmicPayItems__RenderFunc(props) {
                                 "price6",
                                 "isSelected"
                               ])}
-                              mainPrice={1824}
-                              onClick={async event => {
-                                const $steps = {};
-                                $steps["updateValueId"] = true
-                                  ? (() => {
-                                      const actionArgs = {
-                                        variable: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "E_ThMTM6z",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "variable"
-                                          },
-                                          () => ({
-                                            objRoot: $state,
-                                            variablePath: ["valueId"]
-                                          })
-                                        ),
-                                        operation: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "E_ThMTM6z",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "operation"
-                                          },
-                                          () => 0
-                                        ),
-                                        value: __wrapUserFunction(
-                                          {
-                                            type: "InteractionArgLoc",
-                                            actionName: "updateVariable",
-                                            interactionUuid: "E_ThMTM6z",
-                                            componentUuid: "l2Kc8Ybaed",
-                                            argName: "value"
-                                          },
-                                          () =>
-                                            ($state.valueId = $state.price6.pid)
-                                        )
-                                      };
-                                      return __wrapUserFunction(
-                                        {
-                                          type: "InteractionLoc",
-                                          actionName: "updateVariable",
-                                          interactionUuid: "E_ThMTM6z",
-                                          componentUuid: "l2Kc8Ybaed"
-                                        },
-                                        () =>
-                                          (({
-                                            variable,
-                                            value,
-                                            startIndex,
-                                            deleteCount
-                                          }) => {
-                                            if (!variable) {
-                                              return;
-                                            }
-                                            const { objRoot, variablePath } =
-                                              variable;
-                                            p.set(objRoot, variablePath, value);
-                                            return value;
-                                          })?.apply(null, [actionArgs]),
-                                        actionArgs
-                                      );
-                                    })()
-                                  : undefined;
-                                if (
-                                  typeof $steps["updateValueId"] === "object" &&
-                                  typeof $steps["updateValueId"].then ===
-                                    "function"
-                                ) {
-                                  $steps["updateValueId"] =
-                                    await __wrapUserPromise(
-                                      {
-                                        type: "InteractionLoc",
-                                        actionName: "updateVariable",
-                                        interactionUuid: "E_ThMTM6z",
-                                        componentUuid: "l2Kc8Ybaed"
-                                      },
-                                      $steps["updateValueId"]
-                                    );
-                                }
-                              }}
                               onIsSelectedChange={p.generateStateOnChangeProp(
                                 $state,
                                 ["price6", "isSelected"]
                               )}
-                              onPidChange={p.generateStateOnChangeProp($state, [
-                                "price6",
-                                "pid"
-                              ])}
-                              pid={p.generateStateValueProp($state, [
-                                "price6",
-                                "pid"
-                              ])}
                               preDay={"折合5.1元每天"}
+                              price={"1824"}
                               version={"专业版"}
                             />
                           ) : null}

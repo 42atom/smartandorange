@@ -62,19 +62,6 @@ function PlasmicShop__RenderFunc(props) {
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
-  const stateSpecs = React.useMemo(
-    () => [
-      {
-        path: "payItems.valueId",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0
-      }
-    ],
-
-    [$props, $ctx]
-  );
-  const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsnl9I0Oib3VOwY()
   });
@@ -141,14 +128,6 @@ function PlasmicShop__RenderFunc(props) {
               data-plasmic-name={"payItems"}
               data-plasmic-override={overrides.payItems}
               className={classNames("__wab_instance", sty.payItems)}
-              onValueIdChange={p.generateStateOnChangeProp($state, [
-                "payItems",
-                "valueId"
-              ])}
-              valueId={p.generateStateValueProp($state, [
-                "payItems",
-                "valueId"
-              ])}
             />
           </section>
           {(

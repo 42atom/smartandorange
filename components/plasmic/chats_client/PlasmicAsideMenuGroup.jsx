@@ -13,11 +13,14 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import AsideMenuItem from "../../AsideMenuItem"; // plasmic-import: M4gUwXUTik/component
+import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
@@ -27,12 +30,7 @@ import Icon19Icon from "./icons/PlasmicIcon__Icon19"; // plasmic-import: Qv4aqJs
 
 export const PlasmicAsideMenuGroup__VariantProps = new Array();
 
-export const PlasmicAsideMenuGroup__ArgProps = new Array(
-  "itemsMenu",
-  "onItemsMenuChange",
-  "valueId",
-  "onValueIdChange"
-);
+export const PlasmicAsideMenuGroup__ArgProps = new Array();
 
 const __wrapUserFunction =
   globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
@@ -66,26 +64,25 @@ function PlasmicAsideMenuGroup__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "itemsMenu",
-        type: "writable",
-        variableType: "array",
-        valueProp: "itemsMenu",
-        onChangeProp: "onItemsMenuChange"
-      },
-      {
-        path: "valueId",
-        type: "writable",
-        variableType: "number",
-        valueProp: "valueId",
-        onChangeProp: "onValueIdChange"
-      },
-      {
-        path: "asideMenuItem[].isCurrent",
+        path: "asideMenuItem.isCurrent",
         type: "private",
-        variableType: "boolean"
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "asideMenuItem2.isCurrent",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "asideMenuItem3.isCurrent",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "isCurrent"
+      },
+      {
+        path: "asideMenuItem4.isCurrent",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
@@ -95,6 +92,9 @@ function PlasmicAsideMenuGroup__RenderFunc(props) {
     [$props, $ctx]
   );
   const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsnl9I0Oib3VOwY()
+  });
   return (
     <p.Stack
       as={"div"}
@@ -113,25 +113,6 @@ function PlasmicAsideMenuGroup__RenderFunc(props) {
         sty.root
       )}
     >
-      <div
-        data-plasmic-name={"text"}
-        data-plasmic-override={overrides.text}
-        className={classNames(projectcss.all, projectcss.__wab_text, sty.text)}
-      >
-        {(() => {
-          try {
-            return "当前选择 " + $state.valueId;
-          } catch (e) {
-            if (
-              e instanceof TypeError ||
-              e?.plasmicType === "PlasmicUndefinedDataError"
-            ) {
-              return "";
-            }
-            throw e;
-          }
-        })()}
-      </div>
       <AsideMenuItem
         data-plasmic-name={"asideMenuItem2"}
         data-plasmic-override={overrides.asideMenuItem2}
@@ -147,263 +128,113 @@ function PlasmicAsideMenuGroup__RenderFunc(props) {
           "isCurrent"
         ])}
         label={"我的收藏"}
+        onIsCurrentChange={p.generateStateOnChangeProp($state, [
+          "asideMenuItem2",
+          "isCurrent"
+        ])}
+      />
+
+      {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
+        <div
+          data-plasmic-name={"line"}
+          data-plasmic-override={overrides.line}
+          className={classNames(projectcss.all, sty.line)}
+        />
+      ) : null}
+      {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
+        <AsideMenuItem
+          data-plasmic-name={"asideMenuItem"}
+          data-plasmic-override={overrides.asideMenuItem}
+          className={classNames("__wab_instance", sty.asideMenuItem)}
+          icon={
+            <Icon19Icon
+              className={classNames(projectcss.all, sty.svg___0Vnsy)}
+              role={"img"}
+            />
+          }
+          isCurrent={p.generateStateValueProp($state, [
+            "asideMenuItem",
+            "isCurrent"
+          ])}
+          onIsCurrentChange={async (...eventArgs) => {
+            p.generateStateOnChangeProp($state, [
+              "asideMenuItem",
+              "isCurrent"
+            ]).apply(null, eventArgs);
+            (async val => {
+              const $steps = {};
+            }).apply(null, eventArgs);
+          }}
+        />
+      ) : null}
+      <AsideMenuItem
+        data-plasmic-name={"asideMenuItem3"}
+        data-plasmic-override={overrides.asideMenuItem3}
+        className={classNames("__wab_instance", sty.asideMenuItem3)}
+        icon={
+          <Icon19Icon
+            className={classNames(projectcss.all, sty.svg__hyyDm)}
+            role={"img"}
+          />
+        }
+        isCurrent={p.generateStateValueProp($state, [
+          "asideMenuItem3",
+          "isCurrent"
+        ])}
         onIsCurrentChange={async (...eventArgs) => {
           p.generateStateOnChangeProp($state, [
-            "asideMenuItem2",
+            "asideMenuItem3",
             "isCurrent"
           ]).apply(null, eventArgs);
           (async val => {
             const $steps = {};
-            $steps["updateValueId2"] = true
-              ? (() => {
-                  const actionArgs = {
-                    variable: __wrapUserFunction(
-                      {
-                        type: "InteractionArgLoc",
-                        actionName: "updateVariable",
-                        interactionUuid: "V8PBhad2U",
-                        componentUuid: "uLABqFF5hL",
-                        argName: "variable"
-                      },
-                      () => ({
-                        objRoot: $state,
-                        variablePath: ["valueId"]
-                      })
-                    ),
-                    operation: __wrapUserFunction(
-                      {
-                        type: "InteractionArgLoc",
-                        actionName: "updateVariable",
-                        interactionUuid: "V8PBhad2U",
-                        componentUuid: "uLABqFF5hL",
-                        argName: "operation"
-                      },
-                      () => 0
-                    ),
-                    value: __wrapUserFunction(
-                      {
-                        type: "InteractionArgLoc",
-                        actionName: "updateVariable",
-                        interactionUuid: "V8PBhad2U",
-                        componentUuid: "uLABqFF5hL",
-                        argName: "value"
-                      },
-                      () => ($state.valueId = 9)
-                    )
-                  };
-                  return __wrapUserFunction(
-                    {
-                      type: "InteractionLoc",
-                      actionName: "updateVariable",
-                      interactionUuid: "V8PBhad2U",
-                      componentUuid: "uLABqFF5hL"
-                    },
-                    () =>
-                      (({ variable, value, startIndex, deleteCount }) => {
-                        if (!variable) {
-                          return;
-                        }
-                        const { objRoot, variablePath } = variable;
-                        p.set(objRoot, variablePath, value);
-                        return value;
-                      })?.apply(null, [actionArgs]),
-                    actionArgs
-                  );
-                })()
-              : undefined;
-            if (
-              typeof $steps["updateValueId2"] === "object" &&
-              typeof $steps["updateValueId2"].then === "function"
-            ) {
-              $steps["updateValueId2"] = await __wrapUserPromise(
-                {
-                  type: "InteractionLoc",
-                  actionName: "updateVariable",
-                  interactionUuid: "V8PBhad2U",
-                  componentUuid: "uLABqFF5hL"
-                },
-                $steps["updateValueId2"]
-              );
-            }
           }).apply(null, eventArgs);
         }}
       />
 
-      <div
-        data-plasmic-name={"line"}
-        data-plasmic-override={overrides.line}
-        className={classNames(projectcss.all, sty.line)}
+      <AsideMenuItem
+        data-plasmic-name={"asideMenuItem4"}
+        data-plasmic-override={overrides.asideMenuItem4}
+        className={classNames("__wab_instance", sty.asideMenuItem4)}
+        icon={
+          <Icon19Icon
+            className={classNames(projectcss.all, sty.svg__mkyN)}
+            role={"img"}
+          />
+        }
+        isCurrent={p.generateStateValueProp($state, [
+          "asideMenuItem4",
+          "isCurrent"
+        ])}
+        onIsCurrentChange={async (...eventArgs) => {
+          p.generateStateOnChangeProp($state, [
+            "asideMenuItem4",
+            "isCurrent"
+          ]).apply(null, eventArgs);
+          (async val => {
+            const $steps = {};
+          }).apply(null, eventArgs);
+        }}
       />
-
-      {(
-        (() => {
-          try {
-            return $state.itemsMenu;
-          } catch (e) {
-            if (
-              e instanceof TypeError ||
-              e?.plasmicType === "PlasmicUndefinedDataError"
-            ) {
-              return [];
-            }
-            throw e;
-          }
-        })() ?? []
-      ).map((currentItem, currentIndex) =>
-        (() => {
-          const child$Props = {
-            className: classNames("__wab_instance", sty.asideMenuItem),
-            icon: (
-              <Icon19Icon
-                className={classNames(projectcss.all, sty.svg___0Vnsy)}
-                role={"img"}
-              />
-            ),
-
-            isCurrent: p.generateStateValueProp($state, [
-              "asideMenuItem",
-              currentIndex,
-              "isCurrent"
-            ]),
-            key: currentIndex,
-            label: (() => {
-              try {
-                return currentItem.label;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })(),
-            onIsCurrentChange: async (...eventArgs) => {
-              p.generateStateOnChangeProp($state, [
-                "asideMenuItem",
-                currentIndex,
-                "isCurrent"
-              ]).apply(null, eventArgs);
-              (async val => {
-                const $steps = {};
-                $steps["updateValueId"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        variable: __wrapUserFunction(
-                          {
-                            type: "InteractionArgLoc",
-                            actionName: "updateVariable",
-                            interactionUuid: "OPlxXYsB0",
-                            componentUuid: "uLABqFF5hL",
-                            argName: "variable"
-                          },
-                          () => ({
-                            objRoot: $state,
-                            variablePath: ["valueId"]
-                          })
-                        ),
-                        operation: __wrapUserFunction(
-                          {
-                            type: "InteractionArgLoc",
-                            actionName: "updateVariable",
-                            interactionUuid: "OPlxXYsB0",
-                            componentUuid: "uLABqFF5hL",
-                            argName: "operation"
-                          },
-                          () => 0
-                        ),
-                        value: __wrapUserFunction(
-                          {
-                            type: "InteractionArgLoc",
-                            actionName: "updateVariable",
-                            interactionUuid: "OPlxXYsB0",
-                            componentUuid: "uLABqFF5hL",
-                            argName: "value"
-                          },
-                          () => ($state.valueId = currentItem.id)
-                        )
-                      };
-                      return __wrapUserFunction(
-                        {
-                          type: "InteractionLoc",
-                          actionName: "updateVariable",
-                          interactionUuid: "OPlxXYsB0",
-                          componentUuid: "uLABqFF5hL"
-                        },
-                        () =>
-                          (({ variable, value, startIndex, deleteCount }) => {
-                            if (!variable) {
-                              return;
-                            }
-                            const { objRoot, variablePath } = variable;
-                            p.set(objRoot, variablePath, value);
-                            return value;
-                          })?.apply(null, [actionArgs]),
-                        actionArgs
-                      );
-                    })()
-                  : undefined;
-                if (
-                  typeof $steps["updateValueId"] === "object" &&
-                  typeof $steps["updateValueId"].then === "function"
-                ) {
-                  $steps["updateValueId"] = await __wrapUserPromise(
-                    {
-                      type: "InteractionLoc",
-                      actionName: "updateVariable",
-                      interactionUuid: "OPlxXYsB0",
-                      componentUuid: "uLABqFF5hL"
-                    },
-                    $steps["updateValueId"]
-                  );
-                }
-              }).apply(null, eventArgs);
-            }
-          };
-          p.initializePlasmicStates(
-            $state,
-            [
-              {
-                name: "asideMenuItem[].isCurrent",
-                initFunc: ({ $props, $state, $queries }) =>
-                  (() => {
-                    try {
-                      return $state.valueId === currentItem.id;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return [];
-                      }
-                      throw e;
-                    }
-                  })()
-              }
-            ],
-
-            [currentIndex]
-          );
-          return (
-            <AsideMenuItem
-              data-plasmic-name={"asideMenuItem"}
-              data-plasmic-override={overrides.asideMenuItem}
-              {...child$Props}
-            />
-          );
-        })()
-      )}
     </p.Stack>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "text", "asideMenuItem2", "line", "asideMenuItem"],
-  text: ["text"],
+  root: [
+    "root",
+    "asideMenuItem2",
+    "line",
+    "asideMenuItem",
+    "asideMenuItem3",
+    "asideMenuItem4"
+  ],
+
   asideMenuItem2: ["asideMenuItem2"],
   line: ["line"],
-  asideMenuItem: ["asideMenuItem"]
+  asideMenuItem: ["asideMenuItem"],
+  asideMenuItem3: ["asideMenuItem3"],
+  asideMenuItem4: ["asideMenuItem4"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -438,10 +269,11 @@ export const PlasmicAsideMenuGroup = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    text: makeNodeComponent("text"),
     asideMenuItem2: makeNodeComponent("asideMenuItem2"),
     line: makeNodeComponent("line"),
     asideMenuItem: makeNodeComponent("asideMenuItem"),
+    asideMenuItem3: makeNodeComponent("asideMenuItem3"),
+    asideMenuItem4: makeNodeComponent("asideMenuItem4"),
     // Metadata about props expected for PlasmicAsideMenuGroup
     internalVariantProps: PlasmicAsideMenuGroup__VariantProps,
     internalArgProps: PlasmicAsideMenuGroup__ArgProps
