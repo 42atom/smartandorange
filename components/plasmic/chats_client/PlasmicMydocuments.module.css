@@ -5,6 +5,7 @@
   height: 100%;
   align-content: flex-start;
   justify-items: center;
+  background: var(--token-8jk2BfOx3);
   min-width: 0;
   min-height: 0;
   grid-template-columns:
@@ -687,7 +688,7 @@
 .freeBox__z6B9T {
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: 300px;
   height: auto;
   max-width: 100%;
   flex-shrink: 0;
@@ -764,6 +765,7 @@
   .docTxt {
     margin-right: 0px;
     height: 530px;
+    font-size: 12px;
     padding: 8px;
   }
 }

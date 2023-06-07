@@ -11,10 +11,11 @@
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@ant-design/pro-components": "^2.4.14",
-    "@plasmicapp/cli": "^0.1.290",
+    "@plasmicapp/cli": "^0.1.291",
     "@plasmicapp/react-web": "^0.2.221",
     "@plasmicpkgs/antd": "^2.0.50",
     "@plasmicpkgs/antd5": "^0.0.55",
+    "@plasmicpkgs/lottie-react": "^0.0.132",
     "@plasmicpkgs/plasmic-basic-components": "^0.0.144",
     "@plasmicpkgs/plasmic-query": "^0.0.150",
     "@plasmicpkgs/plasmic-rich-components": "^1.0.67",

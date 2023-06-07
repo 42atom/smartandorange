@@ -883,7 +883,7 @@
     {
       "name": "System: Success",
       "type": "color",
-      "value": "var(--antd-colorSuccess)",
+      "value": "#12D61A",
       "category": "color",
       "meta": {
         "projectId": "gRaosoDicn4VUCndSzazbA",
@@ -1258,6 +1258,16 @@
       "meta": {
         "projectId": "gRaosoDicn4VUCndSzazbA",
         "id": "LJzy5WSR2"
+      }
+    },
+    {
+      "name": "btn_bg",
+      "type": "color",
+      "value": "#2CD500",
+      "category": "color",
+      "meta": {
+        "projectId": "gRaosoDicn4VUCndSzazbA",
+        "id": "Y4QO8nCPF"
       }
     },
     {

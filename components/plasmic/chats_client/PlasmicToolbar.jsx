@@ -108,18 +108,7 @@ function PlasmicToolbar__RenderFunc(props) {
           const $steps = {};
           $steps["goToWorkspaces"] = true
             ? (() => {
-                const actionArgs = {
-                  destination: __wrapUserFunction(
-                    {
-                      type: "InteractionArgLoc",
-                      actionName: "navigation",
-                      interactionUuid: "Pe1KFQ-fn",
-                      componentUuid: "UlyQXoohOO",
-                      argName: "destination"
-                    },
-                    () => `/workspaces`
-                  )
-                };
+                const actionArgs = {};
                 return __wrapUserFunction(
                   {
                     type: "InteractionLoc",
@@ -166,18 +155,7 @@ function PlasmicToolbar__RenderFunc(props) {
           const $steps = {};
           $steps["goToMydocuments"] = true
             ? (() => {
-                const actionArgs = {
-                  destination: __wrapUserFunction(
-                    {
-                      type: "InteractionArgLoc",
-                      actionName: "navigation",
-                      interactionUuid: "pL6abd_FG",
-                      componentUuid: "UlyQXoohOO",
-                      argName: "destination"
-                    },
-                    () => `/mydocuments`
-                  )
-                };
+                const actionArgs = {};
                 return __wrapUserFunction(
                   {
                     type: "InteractionLoc",
@@ -224,18 +202,7 @@ function PlasmicToolbar__RenderFunc(props) {
           const $steps = {};
           $steps["goToMyaccount"] = true
             ? (() => {
-                const actionArgs = {
-                  destination: __wrapUserFunction(
-                    {
-                      type: "InteractionArgLoc",
-                      actionName: "navigation",
-                      interactionUuid: "cliTG91jk",
-                      componentUuid: "UlyQXoohOO",
-                      argName: "destination"
-                    },
-                    () => `/myaccount`
-                  )
-                };
+                const actionArgs = {};
                 return __wrapUserFunction(
                   {
                     type: "InteractionLoc",
@@ -282,18 +249,7 @@ function PlasmicToolbar__RenderFunc(props) {
           const $steps = {};
           $steps["goToShop"] = true
             ? (() => {
-                const actionArgs = {
-                  destination: __wrapUserFunction(
-                    {
-                      type: "InteractionArgLoc",
-                      actionName: "navigation",
-                      interactionUuid: "YR3qTFjlc",
-                      componentUuid: "UlyQXoohOO",
-                      argName: "destination"
-                    },
-                    () => `/shop`
-                  )
-                };
+                const actionArgs = {};
                 return __wrapUserFunction(
                   {
                     type: "InteractionLoc",

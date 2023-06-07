@@ -111,52 +111,6 @@ function PlasmicSceneInfo__RenderFunc(props) {
           as={"div"}
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox__o9AcT)}
-          onClick={async event => {
-            const $steps = {};
-            $steps["goToWorkspacesEdit"] = true
-              ? (() => {
-                  const actionArgs = {
-                    destination: __wrapUserFunction(
-                      {
-                        type: "InteractionArgLoc",
-                        actionName: "navigation",
-                        interactionUuid: "GUBJnxW2T",
-                        componentUuid: "Zf1zYQ7YK23by",
-                        argName: "destination"
-                      },
-                      () => `/workspaces/${"value"}`
-                    )
-                  };
-                  return __wrapUserFunction(
-                    {
-                      type: "InteractionLoc",
-                      actionName: "navigation",
-                      interactionUuid: "GUBJnxW2T",
-                      componentUuid: "Zf1zYQ7YK23by"
-                    },
-                    () =>
-                      (({ destination }) => {
-                        __nextRouter?.push(destination);
-                      })?.apply(null, [actionArgs]),
-                    actionArgs
-                  );
-                })()
-              : undefined;
-            if (
-              typeof $steps["goToWorkspacesEdit"] === "object" &&
-              typeof $steps["goToWorkspacesEdit"].then === "function"
-            ) {
-              $steps["goToWorkspacesEdit"] = await __wrapUserPromise(
-                {
-                  type: "InteractionLoc",
-                  actionName: "navigation",
-                  interactionUuid: "GUBJnxW2T",
-                  componentUuid: "Zf1zYQ7YK23by"
-                },
-                $steps["goToWorkspacesEdit"]
-              );
-            }
-          }}
         >
           <p.Stack
             as={"div"}
@@ -215,85 +169,10 @@ function PlasmicSceneInfo__RenderFunc(props) {
           />
 
           <Button
-            data-plasmic-name={"button"}
-            data-plasmic-override={overrides.button}
-            className={classNames("__wab_instance", sty.button)}
+            data-plasmic-name={"sampleBtn"}
+            data-plasmic-override={overrides.sampleBtn}
+            className={classNames("__wab_instance", sty.sampleBtn)}
             color={"link"}
-            onClick={async event => {
-              const $steps = {};
-              $steps["updateModalOpen"] = true
-                ? (() => {
-                    const actionArgs = {
-                      variable: __wrapUserFunction(
-                        {
-                          type: "InteractionArgLoc",
-                          actionName: "updateVariable",
-                          interactionUuid: "p7ZmQ5cB_",
-                          componentUuid: "Zf1zYQ7YK23by",
-                          argName: "variable"
-                        },
-                        () => ({
-                          objRoot: $state,
-                          variablePath: ["modal", "open"]
-                        })
-                      ),
-                      operation: __wrapUserFunction(
-                        {
-                          type: "InteractionArgLoc",
-                          actionName: "updateVariable",
-                          interactionUuid: "p7ZmQ5cB_",
-                          componentUuid: "Zf1zYQ7YK23by",
-                          argName: "operation"
-                        },
-                        () => 4
-                      ),
-                      value: __wrapUserFunction(
-                        {
-                          type: "InteractionArgLoc",
-                          actionName: "updateVariable",
-                          interactionUuid: "p7ZmQ5cB_",
-                          componentUuid: "Zf1zYQ7YK23by",
-                          argName: "value"
-                        },
-                        () => true
-                      )
-                    };
-                    return __wrapUserFunction(
-                      {
-                        type: "InteractionLoc",
-                        actionName: "updateVariable",
-                        interactionUuid: "p7ZmQ5cB_",
-                        componentUuid: "Zf1zYQ7YK23by"
-                      },
-                      () =>
-                        (({ variable, value, startIndex, deleteCount }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-                          const oldValue = p.get(objRoot, variablePath);
-                          p.set(objRoot, variablePath, !oldValue);
-                          return !oldValue;
-                        })?.apply(null, [actionArgs]),
-                      actionArgs
-                    );
-                  })()
-                : undefined;
-              if (
-                typeof $steps["updateModalOpen"] === "object" &&
-                typeof $steps["updateModalOpen"].then === "function"
-              ) {
-                $steps["updateModalOpen"] = await __wrapUserPromise(
-                  {
-                    type: "InteractionLoc",
-                    actionName: "updateVariable",
-                    interactionUuid: "p7ZmQ5cB_",
-                    componentUuid: "Zf1zYQ7YK23by"
-                  },
-                  $steps["updateModalOpen"]
-                );
-              }
-            }}
             size={"minimal"}
             submitsForm={false}
           >
@@ -336,52 +215,6 @@ function PlasmicSceneInfo__RenderFunc(props) {
           modalClassName={classNames({ [sty["pcls_RHxxyFPA0"]]: true })}
           modalScopeClassName={sty["modal__modal"]}
           okText={"使用模版"}
-          onOk={async () => {
-            const $steps = {};
-            $steps["goToWorkspacesEdit"] = true
-              ? (() => {
-                  const actionArgs = {
-                    destination: __wrapUserFunction(
-                      {
-                        type: "InteractionArgLoc",
-                        actionName: "navigation",
-                        interactionUuid: "QGI1p-z6m",
-                        componentUuid: "Zf1zYQ7YK23by",
-                        argName: "destination"
-                      },
-                      () => `/workspaces/${"value"}`
-                    )
-                  };
-                  return __wrapUserFunction(
-                    {
-                      type: "InteractionLoc",
-                      actionName: "navigation",
-                      interactionUuid: "QGI1p-z6m",
-                      componentUuid: "Zf1zYQ7YK23by"
-                    },
-                    () =>
-                      (({ destination }) => {
-                        __nextRouter?.push(destination);
-                      })?.apply(null, [actionArgs]),
-                    actionArgs
-                  );
-                })()
-              : undefined;
-            if (
-              typeof $steps["goToWorkspacesEdit"] === "object" &&
-              typeof $steps["goToWorkspacesEdit"].then === "function"
-            ) {
-              $steps["goToWorkspacesEdit"] = await __wrapUserPromise(
-                {
-                  type: "InteractionLoc",
-                  actionName: "navigation",
-                  interactionUuid: "QGI1p-z6m",
-                  componentUuid: "Zf1zYQ7YK23by"
-                },
-                $steps["goToWorkspacesEdit"]
-              );
-            }
-          }}
           onOpenChange={p.generateStateOnChangeProp($state, ["modal", "open"])}
           open={p.generateStateValueProp($state, ["modal", "open"])}
           title={"Modal title"}
@@ -430,7 +263,7 @@ const PlasmicDescendants = {
     "root",
     "img",
     "fav",
-    "button",
+    "sampleBtn",
     "text",
     "modal",
     "inputs",
@@ -440,7 +273,7 @@ const PlasmicDescendants = {
 
   img: ["img"],
   fav: ["fav"],
-  button: ["button", "text"],
+  sampleBtn: ["sampleBtn", "text"],
   text: ["text"],
   modal: ["modal", "inputs", "output", "svg"],
   inputs: ["inputs"],
@@ -482,7 +315,7 @@ export const PlasmicSceneInfo = Object.assign(
     // Helper components rendering sub-elements
     img: makeNodeComponent("img"),
     fav: makeNodeComponent("fav"),
-    button: makeNodeComponent("button"),
+    sampleBtn: makeNodeComponent("sampleBtn"),
     text: makeNodeComponent("text"),
     modal: makeNodeComponent("modal"),
     inputs: makeNodeComponent("inputs"),

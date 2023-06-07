@@ -5,7 +5,7 @@
   height: 100vh;
   align-content: flex-start;
   justify-items: center;
-  background: var(--token-LJzy5WSR2);
+  background: var(--token-8jk2BfOx3);
   min-width: 0;
   grid-template-columns:
     1fr minmax(0, var(--plsmc-wide-chunk)) var(--plsmc-viewport-gap)
@@ -91,7 +91,7 @@
     grid-column: 4;
   }
 }
-.freeBox__xEHmj {
+.freeBox {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -102,17 +102,17 @@
   grid-column-end: -1;
   padding: 0px 8px 8px 0px;
 }
-.freeBox__xEHmj > :global(.__wab_flex-container) {
+.freeBox > :global(.__wab_flex-container) {
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
   margin-left: calc(0px - 16px);
   width: calc(100% + 16px);
 }
-.freeBox__xEHmj > :global(.__wab_flex-container) > *,
-.freeBox__xEHmj > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox__xEHmj > :global(.__wab_flex-container) > picture > img,
-.freeBox__xEHmj
+.freeBox > :global(.__wab_flex-container) > *,
+.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox > :global(.__wab_flex-container) > picture > img,
+.freeBox
   > :global(.__wab_flex-container)
   > :global(.__wab_slot)
   > picture
@@ -120,7 +120,7 @@
   margin-left: 16px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__xEHmj {
+  .freeBox {
     display: flex;
     flex-direction: column;
     padding-right: 0px;
@@ -129,7 +129,7 @@
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__xEHmj > :global(.__wab_flex-container) {
+  .freeBox > :global(.__wab_flex-container) {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
@@ -139,10 +139,10 @@
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__xEHmj > :global(.__wab_flex-container) > *,
-  .freeBox__xEHmj > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-  .freeBox__xEHmj > :global(.__wab_flex-container) > picture > img,
-  .freeBox__xEHmj
+  .freeBox > :global(.__wab_flex-container) > *,
+  .freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .freeBox > :global(.__wab_flex-container) > picture > img,
+  .freeBox
     > :global(.__wab_flex-container)
     > :global(.__wab_slot)
     > picture
@@ -209,7 +209,7 @@
     display: flex;
   }
 }
-.text___1Lu3A {
+.text {
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -220,7 +220,7 @@
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .text___1Lu3A {
+  .text {
     display: none;
   }
 }
@@ -233,6 +233,7 @@
   align-self: center;
   color: var(--token-WgGKuDBDe);
   flex-shrink: 0;
+  display: none;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .svg {
@@ -314,95 +315,18 @@
   height: 100%;
   min-height: 0;
 }
-.freeBox__aWlrv {
-  display: flex;
+.userInfoBlock:global(.__wab_instance) {
   position: absolute;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  left: 0;
   top: auto;
-  right: 3px;
+  left: 0;
   bottom: 0;
-  flex-direction: column;
-  background: linear-gradient(98deg, #e2f9e2 0%, #fdffe9 100%) 0% 0% / 100% 100%
-      repeat,
-    #ededed;
-  min-width: 100px;
-  justify-content: space-evenly;
-  border-radius: 4px;
-  padding: 12px 10px;
-  margin: 4px 4px 16px;
-  border: 1px solid var(--token-R0SUfsNirUr0);
+  right: 3px;
+  margin: 4px 4px 16px 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__aWlrv {
+  .userInfoBlock:global(.__wab_instance) {
     display: none;
   }
-}
-.text__li5Gw {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  left: auto;
-  top: auto;
-  font-size: 10px;
-  background: none;
-  color: var(--token-WgGKuDBDe);
-  min-width: 0;
-  padding: 0px 4px;
-}
-.text___6A5Pc {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  left: auto;
-  top: auto;
-  font-size: 11px;
-  background: none;
-  min-width: 0;
-  padding: 0px 4px;
-}
-.line {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 1px;
-  max-width: 100%;
-  background: var(--token-oG1h6iK0g);
-  margin-left: 4px;
-  margin-right: 4px;
-  min-width: 0;
-  flex-shrink: 0;
-  padding: 0px;
-}
-.text__ieywc {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  left: auto;
-  top: auto;
-  font-size: 14px;
-  min-width: 0;
-  padding: 4px;
-}
-.text___2Ov4U {
-  position: relative;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  left: auto;
-  top: auto;
-  font-size: 11px;
-  padding-left: 8px;
-  background: var(--token-hS7e36A1nc);
-  padding-right: 8px;
-  align-self: flex-start;
-  color: #ffffff;
-  border-radius: 12px;
 }
 .columns {
   --plsmc-rc-col-gap: 0px;

@@ -22,6 +22,7 @@ import {
 } from "@plasmicapp/react-web";
 import NavMenu from "../../NavMenu"; // plasmic-import: 9cR2sxpykRjad/component
 import AsideMenuGroup from "../../AsideMenuGroup"; // plasmic-import: uLABqFF5hL/component
+import UserInfoBlock from "../../UserInfoBlock"; // plasmic-import: LJU-ZQ2OaH/component
 import SceneInfo from "../../SceneInfo"; // plasmic-import: Zf1zYQ7YK23by/component
 import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
 import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
@@ -130,8 +131,10 @@ function PlasmicWorkspaces__RenderFunc(props) {
               {true ? (
                 <p.Stack
                   as={"div"}
+                  data-plasmic-name={"freeBox"}
+                  data-plasmic-override={overrides.freeBox}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__xEHmj)}
+                  className={classNames(projectcss.all, sty.freeBox)}
                 >
                   {true ? (
                     <div
@@ -157,10 +160,12 @@ function PlasmicWorkspaces__RenderFunc(props) {
                               : true
                           ) ? (
                             <div
+                              data-plasmic-name={"text"}
+                              data-plasmic-override={overrides.text}
                               className={classNames(
                                 projectcss.all,
                                 projectcss.__wab_text,
-                                sty.text___1Lu3A
+                                sty.text
                               )}
                             >
                               {"场景分类"}
@@ -207,55 +212,14 @@ function PlasmicWorkspaces__RenderFunc(props) {
                           ? true
                           : true
                       ) ? (
-                        <div
+                        <UserInfoBlock
+                          data-plasmic-name={"userInfoBlock"}
+                          data-plasmic-override={overrides.userInfoBlock}
                           className={classNames(
-                            projectcss.all,
-                            sty.freeBox__aWlrv
+                            "__wab_instance",
+                            sty.userInfoBlock
                           )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__li5Gw
-                            )}
-                          >
-                            {"剩余字数"}
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___6A5Pc
-                            )}
-                          >
-                            {"999999999999 字"}
-                          </div>
-                          <div
-                            data-plasmic-name={"line"}
-                            data-plasmic-override={overrides.line}
-                            className={classNames(projectcss.all, sty.line)}
-                          />
-
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__ieywc
-                            )}
-                          >
-                            {"用户小黄帽"}
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___2Ov4U
-                            )}
-                          >
-                            {"免费用户"}
-                          </div>
-                        </div>
+                        />
                       ) : null}
                     </div>
                   ) : null}
@@ -777,12 +741,14 @@ const PlasmicDescendants = {
     "bkgd",
     "navMenu",
     "section",
+    "freeBox",
     "aside",
     "tabTitle",
+    "text",
     "svg",
     "scenesTabs",
     "asideMenuGroup",
-    "line",
+    "userInfoBlock",
     "columns",
     "column",
     "grid",
@@ -793,12 +759,14 @@ const PlasmicDescendants = {
     "bkgd",
     "navMenu",
     "section",
+    "freeBox",
     "aside",
     "tabTitle",
+    "text",
     "svg",
     "scenesTabs",
     "asideMenuGroup",
-    "line",
+    "userInfoBlock",
     "columns",
     "column",
     "grid"
@@ -807,23 +775,49 @@ const PlasmicDescendants = {
   navMenu: ["navMenu"],
   section: [
     "section",
+    "freeBox",
     "aside",
     "tabTitle",
+    "text",
     "svg",
     "scenesTabs",
     "asideMenuGroup",
-    "line",
+    "userInfoBlock",
     "columns",
     "column",
     "grid"
   ],
 
-  aside: ["aside", "tabTitle", "svg", "scenesTabs", "asideMenuGroup", "line"],
-  tabTitle: ["tabTitle", "svg"],
+  freeBox: [
+    "freeBox",
+    "aside",
+    "tabTitle",
+    "text",
+    "svg",
+    "scenesTabs",
+    "asideMenuGroup",
+    "userInfoBlock",
+    "columns",
+    "column",
+    "grid"
+  ],
+
+  aside: [
+    "aside",
+    "tabTitle",
+    "text",
+    "svg",
+    "scenesTabs",
+    "asideMenuGroup",
+    "userInfoBlock"
+  ],
+
+  tabTitle: ["tabTitle", "text", "svg"],
+  text: ["text"],
   svg: ["svg"],
   scenesTabs: ["scenesTabs", "asideMenuGroup"],
   asideMenuGroup: ["asideMenuGroup"],
-  line: ["line"],
+  userInfoBlock: ["userInfoBlock"],
   columns: ["columns", "column", "grid"],
   column: ["column", "grid"],
   grid: ["grid"],
@@ -865,12 +859,14 @@ export const PlasmicWorkspaces = Object.assign(
     bkgd: makeNodeComponent("bkgd"),
     navMenu: makeNodeComponent("navMenu"),
     section: makeNodeComponent("section"),
+    freeBox: makeNodeComponent("freeBox"),
     aside: makeNodeComponent("aside"),
     tabTitle: makeNodeComponent("tabTitle"),
+    text: makeNodeComponent("text"),
     svg: makeNodeComponent("svg"),
     scenesTabs: makeNodeComponent("scenesTabs"),
     asideMenuGroup: makeNodeComponent("asideMenuGroup"),
-    line: makeNodeComponent("line"),
+    userInfoBlock: makeNodeComponent("userInfoBlock"),
     columns: makeNodeComponent("columns"),
     column: makeNodeComponent("column"),
     grid: makeNodeComponent("grid"),

@@ -239,7 +239,7 @@
 .root:hover .fav:global(.__wab_instance) {
   flex-shrink: 0;
 }
-.button:global(.__wab_instance) {
+.sampleBtn:global(.__wab_instance) {
   max-width: 100%;
   width: 30%;
   align-self: center;

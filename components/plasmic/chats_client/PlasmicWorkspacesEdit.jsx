@@ -33,7 +33,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicWorkspacesEdit.module.css"; // plasmic-import: -2p_ZIYW-pY/css
-import Icon12Icon from "./icons/PlasmicIcon__Icon12"; // plasmic-import: C_0-pDO_5g/icon
 
 export const PlasmicWorkspacesEdit__VariantProps = new Array();
 
@@ -196,10 +195,10 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                             )}
                             color={"white"}
                             link={`/workspaces`}
-                            showStartIcon={true}
+                            shape={"rounded"}
                             size={"compact"}
                             startIcon={
-                              <Icon12Icon
+                              <svg
                                 data-plasmic-name={"svg"}
                                 data-plasmic-override={overrides.svg}
                                 className={classNames(projectcss.all, sty.svg)}
@@ -208,7 +207,15 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                             }
                             submitsForm={true}
                           >
-                            {"返  回"}
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__u4Gln
+                              )}
+                            >
+                              {"返  回"}
+                            </div>
                           </Button>
                           <div
                             data-plasmic-name={"title"}
@@ -244,7 +251,7 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                               sty.text__z1MK
                             )}
                           >
-                            {"输入关键词，点击生成即可获得结果"}
+                            {"输入提示关键词，点击生成即可获得结果"}
                           </div>
                           <FormWrapper
                             data-plasmic-name={"form"}
@@ -488,19 +495,27 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                               </div>
                             </AntdButton>
                           </FormWrapper>
-                          {true ? (
-                            <CreatedContent
-                              data-plasmic-name={"contents"}
-                              data-plasmic-override={overrides.contents}
-                              className={classNames(
-                                "__wab_instance",
-                                sty.contents
-                              )}
-                            />
-                          ) : null}
                         </p.Stack>
                       </div>
                     </p.Stack>
+                  ) : null}
+                  {true ? (
+                    <CreatedContent
+                      data-plasmic-name={"contents"}
+                      data-plasmic-override={overrides.contents}
+                      className={classNames("__wab_instance", sty.contents)}
+                      loading={true}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__y4XMv
+                        )}
+                      >
+                        {"即将开始生成文字"}
+                      </div>
+                    </CreatedContent>
                   ) : null}
                 </p.Stack>
               </section>
