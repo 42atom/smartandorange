@@ -28,7 +28,8 @@ export const PlasmicAsideMenuItem__VariantProps = new Array("isCurrent");
 export const PlasmicAsideMenuItem__ArgProps = new Array(
   "icon",
   "onIsCurrentChange",
-  "label"
+  "label",
+  "labeltext"
 );
 
 const __wrapUserFunction =
@@ -123,43 +124,25 @@ function PlasmicAsideMenuItem__RenderFunc(props) {
           [sty.labelisCurrent]: hasVariant($state, "isCurrent", "isCurrent")
         })}
       >
-        <div
-          data-plasmic-name={"text"}
-          data-plasmic-override={overrides.text}
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text,
-            {
-              [sty.textisCurrent]: hasVariant($state, "isCurrent", "isCurrent")
-            }
-          )}
-        >
-          <React.Fragment>
-            {(() => {
-              try {
-                return $props.label;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return "label";
-                }
-                throw e;
-              }
-            })()}
-          </React.Fragment>
-        </div>
+        {p.renderPlasmicSlot({
+          defaultContents: "label",
+          value: args.labeltext,
+          className: classNames(sty.slotTargetLabeltext, {
+            [sty.slotTargetLabeltextisCurrent]: hasVariant(
+              $state,
+              "isCurrent",
+              "isCurrent"
+            )
+          })
+        })}
       </div>
     </p.Stack>
   );
 }
 
 const PlasmicDescendants = {
-  item: ["item", "label", "text"],
-  label: ["label", "text"],
-  text: ["text"]
+  item: ["item", "label"],
+  label: ["label"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -195,7 +178,6 @@ export const PlasmicAsideMenuItem = Object.assign(
   {
     // Helper components rendering sub-elements
     label: makeNodeComponent("label"),
-    text: makeNodeComponent("text"),
     // Metadata about props expected for PlasmicAsideMenuItem
     internalVariantProps: PlasmicAsideMenuItem__VariantProps,
     internalArgProps: PlasmicAsideMenuItem__ArgProps

@@ -231,7 +231,8 @@
           "displayName": "plasmic-antd5-date-picker",
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerDatePicker"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "28Ba3BDvRe7EiWdfFNnLB6",
@@ -1070,6 +1071,11 @@
           "id": "s30yngpZn5",
           "name": "Icon38Icon",
           "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon38.jsx"
+        },
+        {
+          "id": "9vHobJ_2KC",
+          "name": "Icon3Icon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon3.jsx"
         }
       ],
       "images": [
@@ -1308,7 +1314,8 @@
           "displayName": "hostless-lottie-react",
           "componentImportPath": "@plasmicpkgs/lottie-react"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
@@ -1325,6 +1332,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.291",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.291/dist/plasmic.schema.json"
+  "cliVersion": "0.1.292",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.292/dist/plasmic.schema.json"
 }

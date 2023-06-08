@@ -14,6 +14,7 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -33,6 +34,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicWorkspacesEdit.module.css"; // plasmic-import: -2p_ZIYW-pY/css
+import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: 9vHobJ_2KC/icon
 
 export const PlasmicWorkspacesEdit__VariantProps = new Array();
 
@@ -156,13 +158,16 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
               data-plasmic-override={overrides.bkgd}
               className={classNames(projectcss.all, sty.bkgd)}
             >
-              <NavMenu
-                data-plasmic-name={"navMenu"}
-                data-plasmic-override={overrides.navMenu}
-                className={classNames("__wab_instance", sty.navMenu)}
-                menu1={true}
-              />
-
+              {(
+                hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+              ) ? (
+                <NavMenu
+                  data-plasmic-name={"navMenu"}
+                  data-plasmic-override={overrides.navMenu}
+                  className={classNames("__wab_instance", sty.navMenu)}
+                  menu1={true}
+                />
+              ) : null}
               <section
                 data-plasmic-name={"section"}
                 data-plasmic-override={overrides.section}
@@ -193,17 +198,22 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                               "__wab_instance",
                               sty.button__zmrW
                             )}
-                            color={"white"}
+                            color={"clear"}
                             link={`/workspaces`}
-                            shape={"rounded"}
-                            size={"compact"}
+                            showStartIcon={true}
+                            size={"minimal"}
                             startIcon={
-                              <svg
-                                data-plasmic-name={"svg"}
-                                data-plasmic-override={overrides.svg}
-                                className={classNames(projectcss.all, sty.svg)}
-                                role={"img"}
-                              />
+                              true ? (
+                                <Icon3Icon
+                                  data-plasmic-name={"svg"}
+                                  data-plasmic-override={overrides.svg}
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg
+                                  )}
+                                  role={"img"}
+                                />
+                              ) : null
                             }
                             submitsForm={true}
                           >
@@ -214,7 +224,7 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                                 sty.text__u4Gln
                               )}
                             >
-                              {"返  回"}
+                              {"返回"}
                             </div>
                           </Button>
                           <div
@@ -226,7 +236,7 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                               sty.title
                             )}
                           >
-                            {"小红书营销短文"}
+                            {"场景名称"}
                           </div>
                         </p.Stack>
                       ) : null}

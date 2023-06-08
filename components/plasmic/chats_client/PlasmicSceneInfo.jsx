@@ -126,7 +126,7 @@ function PlasmicSceneInfo__RenderFunc(props) {
                 displayHeight={
                   hasVariant(globalVariants, "screen", "mobileOnly")
                     ? "18px"
-                    : "24px"
+                    : "20px"
                 }
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
@@ -135,7 +135,7 @@ function PlasmicSceneInfo__RenderFunc(props) {
                 displayWidth={
                   hasVariant(globalVariants, "screen", "mobileOnly")
                     ? "18px"
-                    : "24px"
+                    : "20px"
                 }
                 loading={"lazy"}
                 src={"https://www.svgrepo.com/show/492649/rice.svg"}

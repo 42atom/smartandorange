@@ -24,10 +24,11 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .root {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
-    width: auto;
+    width: 100%;
     justify-self: flex-start;
+    min-width: 0;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -35,6 +36,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    min-width: 0;
     margin-left: calc(0px - 8px);
     width: calc(100% + 8px);
     margin-top: calc(0px - 0px);
@@ -72,6 +74,11 @@
   color: var(--token-FMGQEiyNQ);
   width: 1em;
   height: 1em;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .svg___0Ynep {
+    width: 16px;
+  }
 }
 .line {
   display: block;
