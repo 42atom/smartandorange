@@ -3,10 +3,8 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  background: linear-gradient(147.84770485871763deg, #ce9fff 0%, #56b9ff 100%)
-      0% 0% / 100% 100% repeat,
-    var(--token-47ovROB-Xr2C);
   position: relative;
+  background: #95da98;
   border-radius: 14px;
   padding: 6px;
 }

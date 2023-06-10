@@ -1,7 +1,7 @@
 .item {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
-  width: 100%;
+  width: auto;
   height: 32px;
   max-width: 100%;
   position: relative;
@@ -10,9 +10,9 @@
   transition-property: all;
   transition-duration: 0.2s;
   background: #ffffff;
-  min-width: 0;
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.2s;
+  border-radius: 2px;
   padding: 4px 12px;
   border-width: 0px;
 }
@@ -20,7 +20,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  min-width: 0;
   margin-left: calc(0px - 8px);
   width: calc(100% + 8px);
 }
@@ -32,12 +31,13 @@
 }
 .itemisCurrent {
   background: var(--token-Y4QO8nCPF);
-  width: 100%;
-  min-width: 0;
-  border-radius: 8px;
+  width: auto;
+  justify-self: flex-start;
+  display: inline-flex;
+  border-radius: 2px;
 }
-.itemisCurrent > :global(.__wab_flex-container) {
-  min-width: 0;
+.item:hover {
+  background: #f1fff4;
 }
 .slotTargetIcon {
   color: var(--token-AbckxUHKx);
@@ -55,6 +55,8 @@
 }
 .slotTargetLabeltext {
   font-size: 13px;
+  user-select: none;
+  white-space: pre;
 }
 .slotTargetLabeltextisCurrent {
   color: var(--token-_w178omqxW);

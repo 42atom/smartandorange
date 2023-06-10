@@ -8,12 +8,12 @@
   background: var(--token-8jk2BfOx3);
   min-width: 0;
   grid-template-columns:
-    1fr minmax(0, var(--plsmc-wide-chunk)) var(--plsmc-viewport-gap)
+    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
     min(
       var(--plsmc-standard-width),
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
-    var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
+    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
   padding: 0px;
 }
 :where(.root > *) {
@@ -65,12 +65,12 @@
   min-width: 0;
   min-height: 0;
   grid-template-columns:
-    1fr minmax(0, var(--plsmc-wide-chunk)) var(--plsmc-viewport-gap)
+    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
     min(
       var(--plsmc-standard-width),
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
-    var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
+    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
   padding: 8px 8px 0px;
 }
 :where(.section > *) {
@@ -78,12 +78,12 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .section {
-    padding-left: 0px;
     max-width: 445px;
     width: 100%;
-    padding-right: 0px;
-    padding-top: 0px;
+    height: 100%;
     min-width: 0;
+    min-height: 0;
+    padding: 0px 0px 16px;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -274,7 +274,7 @@
     flex-direction: row;
     width: 100%;
     background: #ffffff;
-    padding-top: 4px;
+    padding-top: 0px;
     padding-bottom: 0px;
     overflow: auto;
     left: 0px;
@@ -315,6 +315,13 @@
   height: 100%;
   min-height: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .asideMenuGroup:global(.__wab_instance) {
+    align-self: flex-start;
+    width: 100%;
+    min-width: 0;
+  }
+}
 .userInfoBlock:global(.__wab_instance) {
   position: absolute;
   top: auto;
@@ -351,10 +358,11 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .columns {
     width: 100%;
-    height: auto;
+    height: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 0;
+    min-height: 0;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -379,6 +387,7 @@
   .column {
     padding-left: 0px;
     padding-right: 0px;
+    justify-content: flex-start;
   }
 }
 .grid {

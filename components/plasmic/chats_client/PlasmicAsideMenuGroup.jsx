@@ -135,13 +135,6 @@ function PlasmicAsideMenuGroup__RenderFunc(props) {
       />
 
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
-        <div
-          data-plasmic-name={"line"}
-          data-plasmic-override={overrides.line}
-          className={classNames(projectcss.all, sty.line)}
-        />
-      ) : null}
-      {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
         <AsideMenuItem
           data-plasmic-name={"asideMenuItem"}
           data-plasmic-override={overrides.asideMenuItem}
@@ -224,14 +217,12 @@ const PlasmicDescendants = {
   root: [
     "root",
     "asideMenuItem2",
-    "line",
     "asideMenuItem",
     "asideMenuItem3",
     "asideMenuItem4"
   ],
 
   asideMenuItem2: ["asideMenuItem2"],
-  line: ["line"],
   asideMenuItem: ["asideMenuItem"],
   asideMenuItem3: ["asideMenuItem3"],
   asideMenuItem4: ["asideMenuItem4"]
@@ -270,7 +261,6 @@ export const PlasmicAsideMenuGroup = Object.assign(
   {
     // Helper components rendering sub-elements
     asideMenuItem2: makeNodeComponent("asideMenuItem2"),
-    line: makeNodeComponent("line"),
     asideMenuItem: makeNodeComponent("asideMenuItem"),
     asideMenuItem3: makeNodeComponent("asideMenuItem3"),
     asideMenuItem4: makeNodeComponent("asideMenuItem4"),

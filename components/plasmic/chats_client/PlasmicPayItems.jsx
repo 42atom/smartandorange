@@ -33,6 +33,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicPayItems.module.css"; // plasmic-import: l2Kc8Ybaed/css
+import Icon26Icon from "./icons/PlasmicIcon__Icon26"; // plasmic-import: 6SiL4R3w_-/icon
 import Icon27Icon from "./icons/PlasmicIcon__Icon27"; // plasmic-import: 64FJ52jbDe/icon
 import Icon29Icon from "./icons/PlasmicIcon__Icon29"; // plasmic-import: KwgRFQ7Ftc/icon
 import Icon30Icon from "./icons/PlasmicIcon__Icon30"; // plasmic-import: 2o24QZW282/icon
@@ -197,7 +198,17 @@ function PlasmicPayItems__RenderFunc(props) {
                             sty.text___1YmY
                           )}
                         >
-                          {"普通版"}
+                          <React.Fragment>
+                            <React.Fragment>{"会员版 \n"}</React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ fontWeight: 200 }}
+                            >
+                              {"VIP 1"}
+                            </span>
+                          </React.Fragment>
                         </div>
                       </Button>
                     </TabButton>
@@ -220,7 +231,17 @@ function PlasmicPayItems__RenderFunc(props) {
                             sty.text__wq7RA
                           )}
                         >
-                          {"会员版"}
+                          <React.Fragment>
+                            <React.Fragment>{"高级版\n"}</React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ fontWeight: 100 }}
+                            >
+                              {"VIP 2"}
+                            </span>
+                          </React.Fragment>
                         </div>
                       </Button>
                     </TabButton>
@@ -243,7 +264,17 @@ function PlasmicPayItems__RenderFunc(props) {
                             sty.text___8BAdH
                           )}
                         >
-                          {"专业版"}
+                          <React.Fragment>
+                            <React.Fragment>{"专业版\n"}</React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ fontWeight: 100 }}
+                            >
+                              {"VIP 3"}
+                            </span>
+                          </React.Fragment>
                         </div>
                       </Button>
                     </TabButton>
@@ -474,6 +505,87 @@ function PlasmicPayItems__RenderFunc(props) {
                               hasGap={true}
                               className={classNames(
                                 projectcss.all,
+                                sty.freeBox___2SEy1
+                              )}
+                            >
+                              <PriceIcons
+                                data-plasmic-name={"icon7"}
+                                data-plasmic-override={overrides.icon7}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.icon7
+                                )}
+                              >
+                                <p.PlasmicIcon
+                                  PlasmicIconType={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobileOnly"
+                                    )
+                                      ? Icon27Icon
+                                      : Icon26Icon
+                                  }
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__xoUY
+                                  )}
+                                  role={"img"}
+                                />
+                              </PriceIcons>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text___9X0Z3
+                                )}
+                              >
+                                {"20000字/月"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox___1RjDd
+                              )}
+                            >
+                              <PriceIcons
+                                data-plasmic-name={"icon8"}
+                                data-plasmic-override={overrides.icon8}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.icon8
+                                )}
+                              >
+                                <Icon29Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__zhMmy
+                                  )}
+                                  role={"img"}
+                                />
+                              </PriceIcons>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__xGsea
+                                )}
+                              >
+                                {"语气设置"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
                                 sty.freeBox___5W8Zo
                               )}
                             >
@@ -485,7 +597,7 @@ function PlasmicPayItems__RenderFunc(props) {
                                   sty.icon2
                                 )}
                               >
-                                <Icon27Icon
+                                <Icon30Icon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__naa52
@@ -500,74 +612,6 @@ function PlasmicPayItems__RenderFunc(props) {
                                   sty.text__jyl7D
                                 )}
                               >
-                                {"AI续写文章"}
-                              </div>
-                            </p.Stack>
-                          ) : null}
-                          {true ? (
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__h90L
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__oZuAx
-                                )}
-                              >
-                                <Icon29Icon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg__maicM
-                                  )}
-                                  role={"img"}
-                                />
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text___9AbeZ
-                                )}
-                              >
-                                {"语气设置"}
-                              </div>
-                            </p.Stack>
-                          ) : null}
-                          {true ? (
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__calxE
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__jlRK
-                                )}
-                              >
-                                <Icon30Icon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg__mHlR
-                                  )}
-                                  role={"img"}
-                                />
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__dUq9
-                                )}
-                              >
                                 {"实时保存"}
                               </div>
                             </p.Stack>
@@ -578,31 +622,33 @@ function PlasmicPayItems__RenderFunc(props) {
                               hasGap={true}
                               className={classNames(
                                 projectcss.all,
-                                sty.freeBox__eJHsI
+                                sty.freeBox___9Z8X
                               )}
                             >
-                              <div
+                              <PriceIcons
+                                data-plasmic-name={"icon9"}
+                                data-plasmic-override={overrides.icon9}
                                 className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__uq9Z
+                                  "__wab_instance",
+                                  sty.icon9
                                 )}
                               >
                                 <Icon31Icon
                                   className={classNames(
                                     projectcss.all,
-                                    sty.svg__fxfUt
+                                    sty.svg___7TOjv
                                   )}
                                   role={"img"}
                                 />
-                              </div>
+                              </PriceIcons>
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__qENuG
+                                  sty.text__rGacQ
                                 )}
                               >
-                                {"全文翻新"}
+                                {"智能助手"}
                               </div>
                             </p.Stack>
                           ) : null}
@@ -612,28 +658,30 @@ function PlasmicPayItems__RenderFunc(props) {
                               hasGap={true}
                               className={classNames(
                                 projectcss.all,
-                                sty.freeBox__a4UD8
+                                sty.freeBox__aRsus
                               )}
                             >
-                              <div
+                              <PriceIcons
+                                data-plasmic-name={"icon10"}
+                                data-plasmic-override={overrides.icon10}
                                 className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__ql3Z
+                                  "__wab_instance",
+                                  sty.icon10
                                 )}
                               >
                                 <Icon32Icon
                                   className={classNames(
                                     projectcss.all,
-                                    sty.svg__jt6QT
+                                    sty.svg__fwBx8
                                   )}
                                   role={"img"}
                                 />
-                              </div>
+                              </PriceIcons>
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__ahe1N
+                                  sty.text__hsuq6
                                 )}
                               >
                                 {"全文生成"}
@@ -884,99 +932,33 @@ function PlasmicPayItems__RenderFunc(props) {
                               hasGap={true}
                               className={classNames(
                                 projectcss.all,
-                                sty.freeBox__siqNn
+                                sty.freeBox__imd39
                               )}
                             >
-                              <div
+                              <PriceIcons
+                                data-plasmic-name={"icon11"}
+                                data-plasmic-override={overrides.icon11}
                                 className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__yLtIt
-                                )}
-                              >
-                                <Icon29Icon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg__xDb3Z
-                                  )}
-                                  role={"img"}
-                                />
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__v5HXt
-                                )}
-                              >
-                                {"语气设置"}
-                              </div>
-                            </p.Stack>
-                          ) : null}
-                          {true ? (
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__eJfg
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__ayVov
-                                )}
-                              >
-                                <Icon30Icon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg__s6Gx0
-                                  )}
-                                  role={"img"}
-                                />
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text___3YFeb
-                                )}
-                              >
-                                {"实时保存"}
-                              </div>
-                            </p.Stack>
-                          ) : null}
-                          {true ? (
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__p80K0
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__zGYxJ
+                                  "__wab_instance",
+                                  sty.icon11
                                 )}
                               >
                                 <Icon31Icon
                                   className={classNames(
                                     projectcss.all,
-                                    sty.svg__jL0Zs
+                                    sty.svg__eotp0
                                   )}
                                   role={"img"}
                                 />
-                              </div>
+                              </PriceIcons>
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__q6Fi
+                                  sty.text__wnRGc
                                 )}
                               >
-                                {"全文翻新"}
+                                {"字数控制"}
                               </div>
                             </p.Stack>
                           ) : null}
@@ -986,31 +968,33 @@ function PlasmicPayItems__RenderFunc(props) {
                               hasGap={true}
                               className={classNames(
                                 projectcss.all,
-                                sty.freeBox__gvUsz
+                                sty.freeBox__cHcNx
                               )}
                             >
-                              <div
+                              <PriceIcons
+                                data-plasmic-name={"icon12"}
+                                data-plasmic-override={overrides.icon12}
                                 className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__yjeTq
+                                  "__wab_instance",
+                                  sty.icon12
                                 )}
                               >
                                 <Icon32Icon
                                   className={classNames(
                                     projectcss.all,
-                                    sty.svg___4SpGg
+                                    sty.svg__yccT
                                   )}
                                   role={"img"}
                                 />
-                              </div>
+                              </PriceIcons>
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__hN4Si
+                                  sty.text__mNy5X
                                 )}
                               >
-                                {"全文生成"}
+                                {"高级模版"}
                               </div>
                             </p.Stack>
                           ) : null}
@@ -1248,7 +1232,7 @@ function PlasmicPayItems__RenderFunc(props) {
                                   sty.text__qwUxm
                                 )}
                               >
-                                {"AI续写文章"}
+                                {"所有高级版功能"}
                               </div>
                             </p.Stack>
                           ) : null}
@@ -1258,133 +1242,69 @@ function PlasmicPayItems__RenderFunc(props) {
                               hasGap={true}
                               className={classNames(
                                 projectcss.all,
-                                sty.freeBox___82V9H
+                                sty.freeBox__sUkS7
                               )}
                             >
-                              <div
+                              <PriceIcons
+                                data-plasmic-name={"icon13"}
+                                data-plasmic-override={overrides.icon13}
                                 className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__ceSbu
-                                )}
-                              >
-                                <Icon29Icon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg__kRcrg
-                                  )}
-                                  role={"img"}
-                                />
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__nkQkX
-                                )}
-                              >
-                                {"语气设置"}
-                              </div>
-                            </p.Stack>
-                          ) : null}
-                          {true ? (
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__o67U
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__vPzy6
-                                )}
-                              >
-                                <Icon30Icon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg__nsAoE
-                                  )}
-                                  role={"img"}
-                                />
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__pYgGk
-                                )}
-                              >
-                                {"实时保存"}
-                              </div>
-                            </p.Stack>
-                          ) : null}
-                          {true ? (
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__syJ2O
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__c5Mq
-                                )}
-                              >
-                                <Icon31Icon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg__bvnei
-                                  )}
-                                  role={"img"}
-                                />
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__hSvjv
-                                )}
-                              >
-                                {"全文翻新"}
-                              </div>
-                            </p.Stack>
-                          ) : null}
-                          {true ? (
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox___6Syly
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__m4LfM
+                                  "__wab_instance",
+                                  sty.icon13
                                 )}
                               >
                                 <Icon32Icon
                                   className={classNames(
                                     projectcss.all,
-                                    sty.svg___25QMi
+                                    sty.svg__vifXb
                                   )}
                                   role={"img"}
                                 />
-                              </div>
+                              </PriceIcons>
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__xta5E
+                                  sty.text__avz3I
                                 )}
                               >
-                                {"全文生成"}
+                                {"专用问答"}
+                              </div>
+                            </p.Stack>
+                          ) : null}
+                          {true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__xpINl
+                              )}
+                            >
+                              <PriceIcons
+                                data-plasmic-name={"icon14"}
+                                data-plasmic-override={overrides.icon14}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.icon14
+                                )}
+                              >
+                                <Icon31Icon
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.svg__uJp8
+                                  )}
+                                  role={"img"}
+                                />
+                              </PriceIcons>
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__rzVx
+                                )}
+                              >
+                                {"高级实用模版"}
                               </div>
                             </p.Stack>
                           ) : null}
@@ -1461,17 +1381,25 @@ const PlasmicDescendants = {
     "price2",
     "btn1",
     "icon",
+    "icon7",
+    "icon8",
     "icon2",
+    "icon9",
+    "icon10",
     "price3",
     "price4",
     "btn2",
     "icon3",
     "icon4",
+    "icon11",
+    "icon12",
     "price5",
     "price6",
     "btn3",
     "icon5",
     "icon6",
+    "icon13",
+    "icon14",
     "modal",
     "aliPayBtn",
     "wechatPayBtn"
@@ -1484,17 +1412,25 @@ const PlasmicDescendants = {
     "price2",
     "btn1",
     "icon",
+    "icon7",
+    "icon8",
     "icon2",
+    "icon9",
+    "icon10",
     "price3",
     "price4",
     "btn2",
     "icon3",
     "icon4",
+    "icon11",
+    "icon12",
     "price5",
     "price6",
     "btn3",
     "icon5",
-    "icon6"
+    "icon6",
+    "icon13",
+    "icon14"
   ],
 
   tabUnderline: ["tabUnderline"],
@@ -1502,17 +1438,25 @@ const PlasmicDescendants = {
   price2: ["price2"],
   btn1: ["btn1"],
   icon: ["icon"],
+  icon7: ["icon7"],
+  icon8: ["icon8"],
   icon2: ["icon2"],
+  icon9: ["icon9"],
+  icon10: ["icon10"],
   price3: ["price3"],
   price4: ["price4"],
   btn2: ["btn2"],
   icon3: ["icon3"],
   icon4: ["icon4"],
+  icon11: ["icon11"],
+  icon12: ["icon12"],
   price5: ["price5"],
   price6: ["price6"],
   btn3: ["btn3"],
   icon5: ["icon5"],
   icon6: ["icon6"],
+  icon13: ["icon13"],
+  icon14: ["icon14"],
   modal: ["modal", "aliPayBtn", "wechatPayBtn"],
   aliPayBtn: ["aliPayBtn"],
   wechatPayBtn: ["wechatPayBtn"]
@@ -1556,17 +1500,25 @@ export const PlasmicPayItems = Object.assign(
     price2: makeNodeComponent("price2"),
     btn1: makeNodeComponent("btn1"),
     icon: makeNodeComponent("icon"),
+    icon7: makeNodeComponent("icon7"),
+    icon8: makeNodeComponent("icon8"),
     icon2: makeNodeComponent("icon2"),
+    icon9: makeNodeComponent("icon9"),
+    icon10: makeNodeComponent("icon10"),
     price3: makeNodeComponent("price3"),
     price4: makeNodeComponent("price4"),
     btn2: makeNodeComponent("btn2"),
     icon3: makeNodeComponent("icon3"),
     icon4: makeNodeComponent("icon4"),
+    icon11: makeNodeComponent("icon11"),
+    icon12: makeNodeComponent("icon12"),
     price5: makeNodeComponent("price5"),
     price6: makeNodeComponent("price6"),
     btn3: makeNodeComponent("btn3"),
     icon5: makeNodeComponent("icon5"),
     icon6: makeNodeComponent("icon6"),
+    icon13: makeNodeComponent("icon13"),
+    icon14: makeNodeComponent("icon14"),
     modal: makeNodeComponent("modal"),
     aliPayBtn: makeNodeComponent("aliPayBtn"),
     wechatPayBtn: makeNodeComponent("wechatPayBtn"),

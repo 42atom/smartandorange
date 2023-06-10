@@ -1566,7 +1566,8 @@ export const PlasmicHomepage = Object.assign(
     metadata: {
       charset: "utf-8",
       name: "viewport",
-      content: "width=750,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      content: "width=750,inital-scale=1.0,maximum-scale=1.0,user-scalable=no",
+      colorScheme: "light dark"
     },
     // Page metadata
     pageMetadata: {
