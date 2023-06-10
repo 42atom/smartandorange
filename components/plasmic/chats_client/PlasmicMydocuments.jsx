@@ -21,10 +21,10 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import NavMenu from "../../NavMenu"; // plasmic-import: 9cR2sxpykRjad/component
+import AsideMenuItem from "../../AsideMenuItem"; // plasmic-import: M4gUwXUTik/component
 import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: fo-n3xHvdqt/codeComponent
-import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: QSmezaW-Gyu/codeComponent
-import { AntdMenuDivider } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: pwJcAbVYC4M/codeComponent
 import { AntdMenuItemGroup } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: 6ySly9jzXsR/codeComponent
+import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: QSmezaW-Gyu/codeComponent
 import TextInput from "../../TextInput"; // plasmic-import: -yvQMrhCsV3Q78/component
 import DocumentList from "../../DocumentList"; // plasmic-import: DuwZXCRDJh/component
 import Toolbar from "../../Toolbar"; // plasmic-import: UlyQXoohOO/component
@@ -34,7 +34,7 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicMydocuments.module.css"; // plasmic-import: EKtCmtXn8XaxGh/css
 import Icon16Icon from "./icons/PlasmicIcon__Icon16"; // plasmic-import: XtoxUOCTka/icon
-import ChevronDownsvgIcon from "./icons/PlasmicIcon__ChevronDownsvg"; // plasmic-import: S8FNX_2RcWwpyX/icon
+import Icon32Icon from "./icons/PlasmicIcon__Icon32"; // plasmic-import: 69yPGVOe6C/icon
 import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: dkiK7MvBVR/icon
 import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: -3MO1z6kLjeMH2/icon
 
@@ -85,6 +85,20 @@ function PlasmicMydocuments__RenderFunc(props) {
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) =>
           "嘿！各位亲亲粉丝们，我又来了！今天我们要来聊一聊一个冬季必备单品——苏特儿牌羊绒大衣！啵儿，听着名字就觉得暖暖的~首先得说一句，这衣服Diao炸了！用的是顶级羊绒材料，毛茸茸的手感真的超好！大衣的设计也非常时尚，穿起来还能显瘦，女孩们小细腰儿也能展现出来！男孩们更不要错过此物，给心爱的女孩送一个苏特儿牌羊绒大衣，保证她对你更加痴迷！再说一下这大衣的保暖能力，呼呼，真的暖到爆炸啊！穿在身上，就像有一床暖暖的被窝裹着一样，什么寒冷都不怕啦！这个冬季不来一件苏特儿牌羊绒大衣，你都不好意思说自己走过！小伙伴们，现在是享受冬日温暖最棒的方法——苏特儿牌羊绒大衣！抓紧时间把它买回家吧！"
+      },
+      {
+        path: "asideMenuItem[].isCurrent",
+        type: "private",
+        variableType: "boolean"
+      },
+      {
+        path: "asideMenuItem2.isCurrent",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          hasVariant(globalVariants, "screen", "mobileOnly")
+            ? "isCurrent"
+            : "isCurrent"
       }
     ],
 
@@ -155,201 +169,126 @@ function PlasmicMydocuments__RenderFunc(props) {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__te5Fk)}
             >
-              <AntdMenu
-                data-plasmic-name={"sideTagsMenu"}
-                data-plasmic-override={overrides.sideTagsMenu}
-                className={classNames("__wab_instance", sty.sideTagsMenu)}
-                expandIcon={
-                  <ChevronDownsvgIcon
-                    className={classNames(projectcss.all, sty.svg__wBfvr)}
-                    role={"img"}
+              {true ? (
+                <p.Stack
+                  as={"div"}
+                  data-plasmic-name={"aside"}
+                  data-plasmic-override={overrides.aside}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.aside)}
+                >
+                  <AsideMenuItem
+                    data-plasmic-name={"asideMenuItem2"}
+                    data-plasmic-override={overrides.asideMenuItem2}
+                    className={classNames("__wab_instance", sty.asideMenuItem2)}
+                    icon={
+                      <Icon16Icon
+                        className={classNames(projectcss.all, sty.svg__czd6N)}
+                        role={"img"}
+                      />
+                    }
+                    isCurrent={p.generateStateValueProp($state, [
+                      "asideMenuItem2",
+                      "isCurrent"
+                    ])}
+                    labeltext={"文档收藏"}
+                    onIsCurrentChange={p.generateStateOnChangeProp($state, [
+                      "asideMenuItem2",
+                      "isCurrent"
+                    ])}
                   />
-                }
-                mode={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? "vertical"
-                    : undefined
-                }
-                triggerSubMenuAction={"click"}
-              >
-                <AntdMenuItem
-                  className={classNames("__wab_instance", sty.menuItem__x5N3V)}
-                  key={"menuItemKey0"}
-                >
-                  {true ? (
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__mVAe1)}
-                    >
-                      {true ? (
-                        <Icon16Icon
-                          className={classNames(projectcss.all, sty.svg__gCsJj)}
-                          role={"img"}
-                        />
-                      ) : null}
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__mGkpg
-                        )}
-                      >
-                        {"收藏文档"}
-                      </div>
-                    </p.Stack>
-                  ) : null}
-                </AntdMenuItem>
-                <AntdMenuDivider
-                  data-plasmic-name={"menuDivider"}
-                  data-plasmic-override={overrides.menuDivider}
-                  className={classNames("__wab_instance", sty.menuDivider)}
-                />
 
-                <AntdMenuItem
-                  className={classNames("__wab_instance", sty.menuItem__shbVw)}
-                  key={"menuItemKey1"}
-                >
-                  {true ? (
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__fVjZb)}
-                    >
-                      {true ? (
-                        <Icon16Icon
-                          className={classNames(projectcss.all, sty.svg__hAsuD)}
-                          role={"img"}
+                  {(
+                    (() => {
+                      try {
+                        return [
+                          "全部",
+                          "今天",
+                          "昨天",
+                          "近3天",
+                          "近一周",
+                          "近一月"
+                        ];
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return [];
+                        }
+                        throw e;
+                      }
+                    })() ?? []
+                  ).map((currentItem, currentIndex) =>
+                    (() => {
+                      const child$Props = {
+                        className: classNames(
+                          "__wab_instance",
+                          sty.asideMenuItem
+                        ),
+                        icon: (
+                          <Icon32Icon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__btP5G
+                            )}
+                            role={"img"}
+                          />
+                        ),
+
+                        isCurrent: p.generateStateValueProp($state, [
+                          "asideMenuItem",
+                          currentIndex,
+                          "isCurrent"
+                        ]),
+                        key: currentIndex,
+                        labeltext: (
+                          <React.Fragment>
+                            {(() => {
+                              try {
+                                return currentItem;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "收藏";
+                                }
+                                throw e;
+                              }
+                            })()}
+                          </React.Fragment>
+                        ),
+
+                        onIsCurrentChange: p.generateStateOnChangeProp($state, [
+                          "asideMenuItem",
+                          currentIndex,
+                          "isCurrent"
+                        ])
+                      };
+                      p.initializePlasmicStates(
+                        $state,
+                        [
+                          {
+                            name: "asideMenuItem[].isCurrent",
+                            initFunc: ({ $props, $state, $queries }) =>
+                              undefined
+                          }
+                        ],
+
+                        [currentIndex]
+                      );
+                      return (
+                        <AsideMenuItem
+                          data-plasmic-name={"asideMenuItem"}
+                          data-plasmic-override={overrides.asideMenuItem}
+                          {...child$Props}
                         />
-                      ) : null}
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__mlS4O
-                        )}
-                      >
-                        {"今天"}
-                      </div>
-                    </p.Stack>
-                  ) : null}
-                </AntdMenuItem>
-                <AntdMenuItem
-                  className={classNames("__wab_instance", sty.menuItem__pHCet)}
-                  key={"menuItemKey2"}
-                >
-                  {true ? (
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__lixvZ)}
-                    >
-                      {true ? (
-                        <Icon16Icon
-                          className={classNames(
-                            projectcss.all,
-                            sty.svg___9Ckdx
-                          )}
-                          role={"img"}
-                        />
-                      ) : null}
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__ouVxl
-                        )}
-                      >
-                        {"最近3天"}
-                      </div>
-                    </p.Stack>
-                  ) : null}
-                </AntdMenuItem>
-                <AntdMenuItem
-                  className={classNames("__wab_instance", sty.menuItem__jgPi5)}
-                  key={"menuItemKey3"}
-                >
-                  {true ? (
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__hk1Ui)}
-                    >
-                      {true ? (
-                        <Icon16Icon
-                          className={classNames(projectcss.all, sty.svg__tkObm)}
-                          role={"img"}
-                        />
-                      ) : null}
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__lxfI
-                        )}
-                      >
-                        {"最近1周"}
-                      </div>
-                    </p.Stack>
-                  ) : null}
-                </AntdMenuItem>
-                <AntdMenuItem
-                  className={classNames("__wab_instance", sty.menuItem__fjz2D)}
-                  key={"menuItemKey4"}
-                >
-                  {true ? (
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__wCqRo)}
-                    >
-                      {true ? (
-                        <Icon16Icon
-                          className={classNames(projectcss.all, sty.svg__ujpqA)}
-                          role={"img"}
-                        />
-                      ) : null}
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__y9OyE
-                        )}
-                      >
-                        {"最近1月"}
-                      </div>
-                    </p.Stack>
-                  ) : null}
-                </AntdMenuItem>
-                <AntdMenuItem
-                  className={classNames("__wab_instance", sty.menuItem___942At)}
-                  key={"menuItemKey5"}
-                >
-                  {true ? (
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__yEtc1)}
-                    >
-                      {true ? (
-                        <Icon16Icon
-                          className={classNames(projectcss.all, sty.svg__j6H6R)}
-                          role={"img"}
-                        />
-                      ) : null}
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__gExpa
-                        )}
-                      >
-                        {"全部"}
-                      </div>
-                    </p.Stack>
-                  ) : null}
-                </AntdMenuItem>
-              </AntdMenu>
+                      );
+                    })()
+                  )}
+                </p.Stack>
+              ) : null}
               {true ? (
                 <AntdMenu
                   data-plasmic-name={"menu"}
@@ -542,6 +481,14 @@ function PlasmicMydocuments__RenderFunc(props) {
                         hasGap={true}
                         className={classNames(projectcss.all, sty.docsWrap)}
                       >
+                        <DocumentList
+                          className={classNames(
+                            "__wab_instance",
+                            sty.documentList__l4Zkc
+                          )}
+                          currentState={true}
+                        />
+
                         {(
                           (() => {
                             try {
@@ -558,11 +505,9 @@ function PlasmicMydocuments__RenderFunc(props) {
                           })() ?? []
                         ).map((currentItem, currentIndex) => (
                           <DocumentList
-                            data-plasmic-name={"documentList"}
-                            data-plasmic-override={overrides.documentList}
                             className={classNames(
                               "__wab_instance",
-                              sty.documentList
+                              sty.documentList__gJbV5
                             )}
                             key={currentIndex}
                           />
@@ -625,13 +570,13 @@ const PlasmicDescendants = {
     "root",
     "navMenu",
     "bkgd",
-    "sideTagsMenu",
-    "menuDivider",
+    "aside",
+    "asideMenuItem2",
+    "asideMenuItem",
     "menu",
     "itemGroup",
     "search",
     "docsWrap",
-    "documentList",
     "docTxt",
     "toolbar"
   ],
@@ -639,23 +584,23 @@ const PlasmicDescendants = {
   navMenu: ["navMenu"],
   bkgd: [
     "bkgd",
-    "sideTagsMenu",
-    "menuDivider",
+    "aside",
+    "asideMenuItem2",
+    "asideMenuItem",
     "menu",
     "itemGroup",
     "search",
     "docsWrap",
-    "documentList",
     "docTxt"
   ],
 
-  sideTagsMenu: ["sideTagsMenu", "menuDivider"],
-  menuDivider: ["menuDivider"],
+  aside: ["aside", "asideMenuItem2", "asideMenuItem"],
+  asideMenuItem2: ["asideMenuItem2"],
+  asideMenuItem: ["asideMenuItem"],
   menu: ["menu", "itemGroup"],
   itemGroup: ["itemGroup"],
   search: ["search"],
-  docsWrap: ["docsWrap", "documentList"],
-  documentList: ["documentList"],
+  docsWrap: ["docsWrap"],
   docTxt: ["docTxt"],
   toolbar: ["toolbar"]
 };
@@ -694,13 +639,13 @@ export const PlasmicMydocuments = Object.assign(
     // Helper components rendering sub-elements
     navMenu: makeNodeComponent("navMenu"),
     bkgd: makeNodeComponent("bkgd"),
-    sideTagsMenu: makeNodeComponent("sideTagsMenu"),
-    menuDivider: makeNodeComponent("menuDivider"),
+    aside: makeNodeComponent("aside"),
+    asideMenuItem2: makeNodeComponent("asideMenuItem2"),
+    asideMenuItem: makeNodeComponent("asideMenuItem"),
     menu: makeNodeComponent("menu"),
     itemGroup: makeNodeComponent("itemGroup"),
     search: makeNodeComponent("search"),
     docsWrap: makeNodeComponent("docsWrap"),
-    documentList: makeNodeComponent("documentList"),
     docTxt: makeNodeComponent("docTxt"),
     toolbar: makeNodeComponent("toolbar"),
     // Metadata about props expected for PlasmicMydocuments

@@ -109,6 +109,7 @@ function PlasmicDocumentList__RenderFunc(props) {
               <Fav
                 data-plasmic-name={"favIcon"}
                 data-plasmic-override={overrides.favIcon}
+                checked={true}
                 className={classNames("__wab_instance", sty.favIcon)}
               />
 
