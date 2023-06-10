@@ -63,12 +63,6 @@ function PlasmicDocumentList__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "current",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
-      },
-      {
         path: "currentState",
         type: "private",
         variableType: "variant",
@@ -107,100 +101,17 @@ function PlasmicDocumentList__RenderFunc(props) {
           )
         }
       )}
-      onClick={async event => {
-        const $steps = {};
-        $steps["updateCurrentState"] = true
-          ? (() => {
-              const actionArgs = {
-                vgroup: __wrapUserFunction(
-                  {
-                    type: "InteractionArgLoc",
-                    actionName: "updateVariant",
-                    interactionUuid: "L1WBLILNt",
-                    componentUuid: "DuwZXCRDJh",
-                    argName: "vgroup"
-                  },
-                  () => "currentState"
-                ),
-                operation: __wrapUserFunction(
-                  {
-                    type: "InteractionArgLoc",
-                    actionName: "updateVariant",
-                    interactionUuid: "L1WBLILNt",
-                    componentUuid: "DuwZXCRDJh",
-                    argName: "operation"
-                  },
-                  () => 2
-                ),
-                value: __wrapUserFunction(
-                  {
-                    type: "InteractionArgLoc",
-                    actionName: "updateVariant",
-                    interactionUuid: "L1WBLILNt",
-                    componentUuid: "DuwZXCRDJh",
-                    argName: "value"
-                  },
-                  () => "currentState"
-                )
-              };
-              return __wrapUserFunction(
-                {
-                  type: "InteractionLoc",
-                  actionName: "updateVariant",
-                  interactionUuid: "L1WBLILNt",
-                  componentUuid: "DuwZXCRDJh"
-                },
-                () =>
-                  (({ vgroup, value }) => {
-                    if (typeof value === "string") {
-                      value = [value];
-                    }
-                    const oldValue = p.get($state, vgroup);
-                    p.set($state, vgroup, !oldValue);
-                    return !oldValue;
-                  })?.apply(null, [actionArgs]),
-                actionArgs
-              );
-            })()
-          : undefined;
-        if (
-          typeof $steps["updateCurrentState"] === "object" &&
-          typeof $steps["updateCurrentState"].then === "function"
-        ) {
-          $steps["updateCurrentState"] = await __wrapUserPromise(
-            {
-              type: "InteractionLoc",
-              actionName: "updateVariant",
-              interactionUuid: "L1WBLILNt",
-              componentUuid: "DuwZXCRDJh"
-            },
-            $steps["updateCurrentState"]
-          );
-        }
-      }}
     >
-      <div
-        data-plasmic-name={"prompt"}
-        data-plasmic-override={overrides.prompt}
-        className={classNames(
-          projectcss.all,
-          projectcss.__wab_text,
-          sty.prompt,
-          {
-            [sty.promptcurrentState]: hasVariant(
-              $state,
-              "currentState",
-              "currentState"
-            )
-          }
-        )}
-      >
-        {"羊绒大衣 保暖 冬季 "}
-      </div>
       {true ? (
         <div className={classNames(projectcss.all, sty.freeBox__yp9Pl)}>
           {true ? (
             <div className={classNames(projectcss.all, sty.freeBox__kfXdL)}>
+              <Fav
+                data-plasmic-name={"favIcon"}
+                data-plasmic-override={overrides.favIcon}
+                className={classNames("__wab_instance", sty.favIcon)}
+              />
+
               {true ? (
                 <p.Stack
                   as={"div"}
@@ -251,12 +162,6 @@ function PlasmicDocumentList__RenderFunc(props) {
                   </div>
                 </p.Stack>
               ) : null}
-              <Fav
-                data-plasmic-name={"favIcon"}
-                data-plasmic-override={overrides.favIcon}
-                className={classNames("__wab_instance", sty.favIcon)}
-              />
-
               <Icon18Icon
                 data-plasmic-name={"deleteIcon"}
                 data-plasmic-override={overrides.deleteIcon}
@@ -359,6 +264,24 @@ function PlasmicDocumentList__RenderFunc(props) {
           ) : null}
         </div>
       ) : null}
+      <div
+        data-plasmic-name={"prompt"}
+        data-plasmic-override={overrides.prompt}
+        className={classNames(
+          projectcss.all,
+          projectcss.__wab_text,
+          sty.prompt,
+          {
+            [sty.promptcurrentState]: hasVariant(
+              $state,
+              "currentState",
+              "currentState"
+            )
+          }
+        )}
+      >
+        {"已生成的内容\n等等\n文网文"}
+      </div>
     </div>
   );
 }
@@ -366,24 +289,24 @@ function PlasmicDocumentList__RenderFunc(props) {
 const PlasmicDescendants = {
   blockText: [
     "blockText",
-    "prompt",
+    "favIcon",
     "createdAt",
     "sceneName",
-    "favIcon",
     "deleteIcon",
     "modalDelete",
     "text",
-    "svg"
+    "svg",
+    "prompt"
   ],
 
-  prompt: ["prompt"],
+  favIcon: ["favIcon"],
   createdAt: ["createdAt"],
   sceneName: ["sceneName"],
-  favIcon: ["favIcon"],
   deleteIcon: ["deleteIcon"],
   modalDelete: ["modalDelete", "text", "svg"],
   text: ["text"],
-  svg: ["svg"]
+  svg: ["svg"],
+  prompt: ["prompt"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -418,14 +341,14 @@ export const PlasmicDocumentList = Object.assign(
   makeNodeComponent("blockText"),
   {
     // Helper components rendering sub-elements
-    prompt: makeNodeComponent("prompt"),
+    favIcon: makeNodeComponent("favIcon"),
     createdAt: makeNodeComponent("createdAt"),
     sceneName: makeNodeComponent("sceneName"),
-    favIcon: makeNodeComponent("favIcon"),
     deleteIcon: makeNodeComponent("deleteIcon"),
     modalDelete: makeNodeComponent("modalDelete"),
     text: makeNodeComponent("text"),
     svg: makeNodeComponent("svg"),
+    prompt: makeNodeComponent("prompt"),
     // Metadata about props expected for PlasmicDocumentList
     internalVariantProps: PlasmicDocumentList__VariantProps,
     internalArgProps: PlasmicDocumentList__ArgProps

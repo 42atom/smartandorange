@@ -1076,6 +1076,11 @@
           "id": "9vHobJ_2KC",
           "name": "Icon3Icon",
           "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__Icon3.jsx"
+        },
+        {
+          "id": "sDTNAhnKMO",
+          "name": "SuitcaseMenusvgIcon",
+          "moduleFilePath": "plasmic/chats_client/icons/PlasmicIcon__SuitcaseMenusvg.jsx"
         }
       ],
       "images": [

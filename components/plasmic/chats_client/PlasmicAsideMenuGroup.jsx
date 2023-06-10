@@ -13,7 +13,6 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import {
-  hasVariant,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -25,8 +24,8 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
 import sty from "./PlasmicAsideMenuGroup.module.css"; // plasmic-import: uLABqFF5hL/css
-import Icon20Icon from "./icons/PlasmicIcon__Icon20"; // plasmic-import: 6_oKYAuIan/icon
-import Icon19Icon from "./icons/PlasmicIcon__Icon19"; // plasmic-import: Qv4aqJsvqQ/icon
+import Icon16Icon from "./icons/PlasmicIcon__Icon16"; // plasmic-import: XtoxUOCTka/icon
+import SuitcaseMenusvgIcon from "./icons/PlasmicIcon__SuitcaseMenusvg"; // plasmic-import: sDTNAhnKMO/icon
 
 export const PlasmicAsideMenuGroup__VariantProps = new Array();
 
@@ -73,19 +72,7 @@ function PlasmicAsideMenuGroup__RenderFunc(props) {
         path: "asideMenuItem2.isCurrent",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "asideMenuItem3.isCurrent",
-        type: "private",
-        variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => "isCurrent"
-      },
-      {
-        path: "asideMenuItem4.isCurrent",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       }
     ],
 
@@ -114,12 +101,33 @@ function PlasmicAsideMenuGroup__RenderFunc(props) {
       )}
     >
       <AsideMenuItem
+        data-plasmic-name={"asideMenuItem"}
+        data-plasmic-override={overrides.asideMenuItem}
+        className={classNames("__wab_instance", sty.asideMenuItem)}
+        icon={
+          <Icon16Icon
+            className={classNames(projectcss.all, sty.svg___8K3Js)}
+            role={"img"}
+          />
+        }
+        isCurrent={p.generateStateValueProp($state, [
+          "asideMenuItem",
+          "isCurrent"
+        ])}
+        labeltext={"收藏"}
+        onIsCurrentChange={p.generateStateOnChangeProp($state, [
+          "asideMenuItem",
+          "isCurrent"
+        ])}
+      />
+
+      <AsideMenuItem
         data-plasmic-name={"asideMenuItem2"}
         data-plasmic-override={overrides.asideMenuItem2}
         className={classNames("__wab_instance", sty.asideMenuItem2)}
         icon={
-          <Icon20Icon
-            className={classNames(projectcss.all, sty.svg___0Ynep)}
+          <SuitcaseMenusvgIcon
+            className={classNames(projectcss.all, sty.svg__b4TFb)}
             role={"img"}
           />
         }
@@ -127,105 +135,20 @@ function PlasmicAsideMenuGroup__RenderFunc(props) {
           "asideMenuItem2",
           "isCurrent"
         ])}
-        label={"我的收藏"}
+        labeltext={"全部"}
         onIsCurrentChange={p.generateStateOnChangeProp($state, [
           "asideMenuItem2",
           "isCurrent"
         ])}
-      />
-
-      {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : true) ? (
-        <AsideMenuItem
-          data-plasmic-name={"asideMenuItem"}
-          data-plasmic-override={overrides.asideMenuItem}
-          className={classNames("__wab_instance", sty.asideMenuItem)}
-          icon={
-            <Icon19Icon
-              className={classNames(projectcss.all, sty.svg___0Vnsy)}
-              role={"img"}
-            />
-          }
-          isCurrent={p.generateStateValueProp($state, [
-            "asideMenuItem",
-            "isCurrent"
-          ])}
-          onIsCurrentChange={async (...eventArgs) => {
-            p.generateStateOnChangeProp($state, [
-              "asideMenuItem",
-              "isCurrent"
-            ]).apply(null, eventArgs);
-            (async val => {
-              const $steps = {};
-            }).apply(null, eventArgs);
-          }}
-        />
-      ) : null}
-      <AsideMenuItem
-        data-plasmic-name={"asideMenuItem3"}
-        data-plasmic-override={overrides.asideMenuItem3}
-        className={classNames("__wab_instance", sty.asideMenuItem3)}
-        icon={
-          <Icon19Icon
-            className={classNames(projectcss.all, sty.svg__hyyDm)}
-            role={"img"}
-          />
-        }
-        isCurrent={p.generateStateValueProp($state, [
-          "asideMenuItem3",
-          "isCurrent"
-        ])}
-        onIsCurrentChange={async (...eventArgs) => {
-          p.generateStateOnChangeProp($state, [
-            "asideMenuItem3",
-            "isCurrent"
-          ]).apply(null, eventArgs);
-          (async val => {
-            const $steps = {};
-          }).apply(null, eventArgs);
-        }}
-      />
-
-      <AsideMenuItem
-        data-plasmic-name={"asideMenuItem4"}
-        data-plasmic-override={overrides.asideMenuItem4}
-        className={classNames("__wab_instance", sty.asideMenuItem4)}
-        icon={
-          <Icon19Icon
-            className={classNames(projectcss.all, sty.svg__mkyN)}
-            role={"img"}
-          />
-        }
-        isCurrent={p.generateStateValueProp($state, [
-          "asideMenuItem4",
-          "isCurrent"
-        ])}
-        onIsCurrentChange={async (...eventArgs) => {
-          p.generateStateOnChangeProp($state, [
-            "asideMenuItem4",
-            "isCurrent"
-          ]).apply(null, eventArgs);
-          (async val => {
-            const $steps = {};
-          }).apply(null, eventArgs);
-        }}
       />
     </p.Stack>
   );
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "asideMenuItem2",
-    "asideMenuItem",
-    "asideMenuItem3",
-    "asideMenuItem4"
-  ],
-
-  asideMenuItem2: ["asideMenuItem2"],
+  root: ["root", "asideMenuItem", "asideMenuItem2"],
   asideMenuItem: ["asideMenuItem"],
-  asideMenuItem3: ["asideMenuItem3"],
-  asideMenuItem4: ["asideMenuItem4"]
+  asideMenuItem2: ["asideMenuItem2"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -260,10 +183,8 @@ export const PlasmicAsideMenuGroup = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    asideMenuItem2: makeNodeComponent("asideMenuItem2"),
     asideMenuItem: makeNodeComponent("asideMenuItem"),
-    asideMenuItem3: makeNodeComponent("asideMenuItem3"),
-    asideMenuItem4: makeNodeComponent("asideMenuItem4"),
+    asideMenuItem2: makeNodeComponent("asideMenuItem2"),
     // Metadata about props expected for PlasmicAsideMenuGroup
     internalVariantProps: PlasmicAsideMenuGroup__VariantProps,
     internalArgProps: PlasmicAsideMenuGroup__ArgProps

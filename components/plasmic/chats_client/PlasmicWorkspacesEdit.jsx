@@ -514,6 +514,7 @@ function PlasmicWorkspacesEdit__RenderFunc(props) {
                       data-plasmic-name={"contents"}
                       data-plasmic-override={overrides.contents}
                       className={classNames("__wab_instance", sty.contents)}
+                      loading={true}
                     >
                       <div
                         className={classNames(
