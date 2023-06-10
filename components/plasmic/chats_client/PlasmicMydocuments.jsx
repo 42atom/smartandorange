@@ -22,6 +22,7 @@ import {
 } from "@plasmicapp/react-web";
 import NavMenu from "../../NavMenu"; // plasmic-import: 9cR2sxpykRjad/component
 import AsideMenuItem from "../../AsideMenuItem"; // plasmic-import: M4gUwXUTik/component
+import UserInfoBlock from "../../UserInfoBlock"; // plasmic-import: LJU-ZQ2OaH/component
 import { AntdMenu } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: fo-n3xHvdqt/codeComponent
 import { AntdMenuItemGroup } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: 6ySly9jzXsR/codeComponent
 import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu"; // plasmic-import: QSmezaW-Gyu/codeComponent
@@ -204,7 +205,7 @@ function PlasmicMydocuments__RenderFunc(props) {
                         return [
                           "全部",
                           "今天",
-                          "昨天",
+                          "两天",
                           "近3天",
                           "近一周",
                           "近一月"
@@ -287,6 +288,20 @@ function PlasmicMydocuments__RenderFunc(props) {
                       );
                     })()
                   )}
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <UserInfoBlock
+                      data-plasmic-name={"userInfoBlock"}
+                      data-plasmic-override={overrides.userInfoBlock}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.userInfoBlock
+                      )}
+                    />
+                  ) : null}
                 </p.Stack>
               ) : null}
               {true ? (
@@ -541,7 +556,7 @@ function PlasmicMydocuments__RenderFunc(props) {
             </p.Stack>
           </section>
           {(
-            hasVariant(globalVariants, "screen", "mobileOnly") ? true : false
+            hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
           ) ? (
             <Toolbar
               data-plasmic-name={"toolbar"}
@@ -573,6 +588,7 @@ const PlasmicDescendants = {
     "aside",
     "asideMenuItem2",
     "asideMenuItem",
+    "userInfoBlock",
     "menu",
     "itemGroup",
     "search",
@@ -587,6 +603,7 @@ const PlasmicDescendants = {
     "aside",
     "asideMenuItem2",
     "asideMenuItem",
+    "userInfoBlock",
     "menu",
     "itemGroup",
     "search",
@@ -594,9 +611,10 @@ const PlasmicDescendants = {
     "docTxt"
   ],
 
-  aside: ["aside", "asideMenuItem2", "asideMenuItem"],
+  aside: ["aside", "asideMenuItem2", "asideMenuItem", "userInfoBlock"],
   asideMenuItem2: ["asideMenuItem2"],
   asideMenuItem: ["asideMenuItem"],
+  userInfoBlock: ["userInfoBlock"],
   menu: ["menu", "itemGroup"],
   itemGroup: ["itemGroup"],
   search: ["search"],
@@ -642,6 +660,7 @@ export const PlasmicMydocuments = Object.assign(
     aside: makeNodeComponent("aside"),
     asideMenuItem2: makeNodeComponent("asideMenuItem2"),
     asideMenuItem: makeNodeComponent("asideMenuItem"),
+    userInfoBlock: makeNodeComponent("userInfoBlock"),
     menu: makeNodeComponent("menu"),
     itemGroup: makeNodeComponent("itemGroup"),
     search: makeNodeComponent("search"),

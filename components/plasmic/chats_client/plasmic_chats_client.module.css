@@ -47,7 +47,7 @@
   --plasmic-token-system-bg-layout-2: var(--token-0tej4Zeiesvz);
   --token-2B9kEbcE-zaF: var(--antd-colorError);
   --plasmic-token-system-error: var(--token-2B9kEbcE-zaF);
-  --token-QRin4DwcgZ4-: var(--antd-colorBgElevated);
+  --token-QRin4DwcgZ4-: #f9f9f9;
   --plasmic-token-system-bg-elevated: var(--token-QRin4DwcgZ4-);
   --token-inRKTKkFw--B: var(--antd-colorBorderSecondary);
   --plasmic-token-system-border-secondary: var(--token-inRKTKkFw--B);

@@ -33,7 +33,7 @@
     {
       "name": "System: Bg Elevated",
       "type": "color",
-      "value": "var(--antd-colorBgElevated)",
+      "value": "#F9F9F9",
       "category": "color",
       "meta": {
         "projectId": "gRaosoDicn4VUCndSzazbA",
