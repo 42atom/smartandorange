@@ -26,7 +26,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 32px 16px;
+  padding: 32px 16px 64px;
 }
 .freeBox__jvDde > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -423,6 +423,10 @@
   text-decoration-line: none;
   text-overflow: clip;
   margin-bottom: 20px;
+}
+.link {
+  width: 100%;
+  min-width: 0;
 }
 .button___6B0Vj:global(.__wab_instance) {
   max-width: 100%;

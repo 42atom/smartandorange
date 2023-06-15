@@ -108,7 +108,7 @@ function PlasmicUserInfoBlock__RenderFunc(props) {
           }
         )}
       >
-        {"剩余字数"}
+        {"剩余"}
       </div>
       <div
         data-plasmic-name={"limit"}

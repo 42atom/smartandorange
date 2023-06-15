@@ -579,7 +579,7 @@ function PlasmicHomepage__RenderFunc(props) {
                       link={
                         hasVariant(globalVariants, "screen", "mobileOnly")
                           ? `/workspaces`
-                          : undefined
+                          : `/login`
                       }
                     >
                       <div
@@ -1153,6 +1153,7 @@ function PlasmicHomepage__RenderFunc(props) {
                 data-plasmic-name={"price2"}
                 data-plasmic-override={overrides.price2}
                 className={classNames("__wab_instance", sty.price2)}
+                switchOn={true}
               />
             </p.Stack>
           </div>

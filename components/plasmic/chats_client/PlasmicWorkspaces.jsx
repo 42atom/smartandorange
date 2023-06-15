@@ -219,6 +219,19 @@ function PlasmicWorkspaces__RenderFunc(props) {
                             "__wab_instance",
                             sty.userInfoBlock
                           )}
+                          limit={
+                            <div
+                              data-plasmic-name={"userQuota"}
+                              data-plasmic-override={overrides.userQuota}
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.userQuota
+                              )}
+                            >
+                              {"999999999999 字"}
+                            </div>
+                          }
                         />
                       ) : null}
                     </div>
@@ -749,6 +762,7 @@ const PlasmicDescendants = {
     "scenesTabs",
     "asideMenuGroup",
     "userInfoBlock",
+    "userQuota",
     "columns",
     "column",
     "grid",
@@ -767,6 +781,7 @@ const PlasmicDescendants = {
     "scenesTabs",
     "asideMenuGroup",
     "userInfoBlock",
+    "userQuota",
     "columns",
     "column",
     "grid"
@@ -783,6 +798,7 @@ const PlasmicDescendants = {
     "scenesTabs",
     "asideMenuGroup",
     "userInfoBlock",
+    "userQuota",
     "columns",
     "column",
     "grid"
@@ -797,6 +813,7 @@ const PlasmicDescendants = {
     "scenesTabs",
     "asideMenuGroup",
     "userInfoBlock",
+    "userQuota",
     "columns",
     "column",
     "grid"
@@ -809,7 +826,8 @@ const PlasmicDescendants = {
     "svg",
     "scenesTabs",
     "asideMenuGroup",
-    "userInfoBlock"
+    "userInfoBlock",
+    "userQuota"
   ],
 
   tabTitle: ["tabTitle", "text", "svg"],
@@ -817,7 +835,8 @@ const PlasmicDescendants = {
   svg: ["svg"],
   scenesTabs: ["scenesTabs", "asideMenuGroup"],
   asideMenuGroup: ["asideMenuGroup"],
-  userInfoBlock: ["userInfoBlock"],
+  userInfoBlock: ["userInfoBlock", "userQuota"],
+  userQuota: ["userQuota"],
   columns: ["columns", "column", "grid"],
   column: ["column", "grid"],
   grid: ["grid"],
@@ -867,6 +886,7 @@ export const PlasmicWorkspaces = Object.assign(
     scenesTabs: makeNodeComponent("scenesTabs"),
     asideMenuGroup: makeNodeComponent("asideMenuGroup"),
     userInfoBlock: makeNodeComponent("userInfoBlock"),
+    userQuota: makeNodeComponent("userQuota"),
     columns: makeNodeComponent("columns"),
     column: makeNodeComponent("column"),
     grid: makeNodeComponent("grid"),

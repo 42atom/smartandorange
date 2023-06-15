@@ -16,10 +16,12 @@ import {
   hasVariant,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Fav from "../../Fav"; // plasmic-import: P6DuufdWKR/component
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal"; // plasmic-import: xx93QbkHH5i/codeComponent
+import { useScreenVariants as useScreenVariantsnl9I0Oib3VOwY } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: nl9_I0oib3VOwY/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_chats_client.module.css"; // plasmic-import: gRaosoDicn4VUCndSzazbA/projectcss
@@ -79,6 +81,9 @@ function PlasmicDocumentList__RenderFunc(props) {
     [$props, $ctx]
   );
   const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsnl9I0Oib3VOwY()
+  });
   return (
     <div
       data-plasmic-name={"blockText"}
@@ -109,7 +114,6 @@ function PlasmicDocumentList__RenderFunc(props) {
               <Fav
                 data-plasmic-name={"favIcon"}
                 data-plasmic-override={overrides.favIcon}
-                checked={true}
                 className={classNames("__wab_instance", sty.favIcon)}
               />
 

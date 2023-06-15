@@ -178,116 +178,130 @@ function PlasmicMydocuments__RenderFunc(props) {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.aside)}
                 >
-                  <AsideMenuItem
-                    data-plasmic-name={"asideMenuItem2"}
-                    data-plasmic-override={overrides.asideMenuItem2}
-                    className={classNames("__wab_instance", sty.asideMenuItem2)}
-                    icon={
-                      <Icon16Icon
-                        className={classNames(projectcss.all, sty.svg__czd6N)}
-                        role={"img"}
-                      />
-                    }
-                    isCurrent={p.generateStateValueProp($state, [
-                      "asideMenuItem2",
-                      "isCurrent"
-                    ])}
-                    labeltext={"文档收藏"}
-                    onIsCurrentChange={p.generateStateOnChangeProp($state, [
-                      "asideMenuItem2",
-                      "isCurrent"
-                    ])}
-                  />
-
-                  {(
-                    (() => {
-                      try {
-                        return [
-                          "全部",
-                          "今天",
-                          "两天",
-                          "近3天",
-                          "近一周",
-                          "近一月"
-                        ];
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return [];
-                        }
-                        throw e;
-                      }
-                    })() ?? []
-                  ).map((currentItem, currentIndex) =>
-                    (() => {
-                      const child$Props = {
-                        className: classNames(
+                  {true ? (
+                    <div
+                      data-plasmic-name={"asideMenuGroup"}
+                      data-plasmic-override={overrides.asideMenuGroup}
+                      className={classNames(projectcss.all, sty.asideMenuGroup)}
+                    >
+                      <AsideMenuItem
+                        data-plasmic-name={"asideMenuItem2"}
+                        data-plasmic-override={overrides.asideMenuItem2}
+                        className={classNames(
                           "__wab_instance",
-                          sty.asideMenuItem
-                        ),
-                        icon: (
-                          <Icon32Icon
+                          sty.asideMenuItem2
+                        )}
+                        icon={
+                          <Icon16Icon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__btP5G
+                              sty.svg__czd6N
                             )}
                             role={"img"}
                           />
-                        ),
-
-                        isCurrent: p.generateStateValueProp($state, [
-                          "asideMenuItem",
-                          currentIndex,
+                        }
+                        isCurrent={p.generateStateValueProp($state, [
+                          "asideMenuItem2",
                           "isCurrent"
-                        ]),
-                        key: currentIndex,
-                        labeltext: (
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return currentItem;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "收藏";
-                                }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
-                        ),
-
-                        onIsCurrentChange: p.generateStateOnChangeProp($state, [
-                          "asideMenuItem",
-                          currentIndex,
+                        ])}
+                        labeltext={"文档收藏"}
+                        onIsCurrentChange={p.generateStateOnChangeProp($state, [
+                          "asideMenuItem2",
                           "isCurrent"
-                        ])
-                      };
-                      p.initializePlasmicStates(
-                        $state,
-                        [
-                          {
-                            name: "asideMenuItem[].isCurrent",
-                            initFunc: ({ $props, $state, $queries }) =>
-                              undefined
+                        ])}
+                      />
+
+                      {(
+                        (() => {
+                          try {
+                            return [
+                              "全部",
+                              "今天",
+                              "两天",
+                              "近3天",
+                              "近一周",
+                              "近一月"
+                            ];
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return [];
+                            }
+                            throw e;
                           }
-                        ],
+                        })() ?? []
+                      ).map((currentItem, currentIndex) =>
+                        (() => {
+                          const child$Props = {
+                            className: classNames(
+                              "__wab_instance",
+                              sty.asideMenuItem
+                            ),
+                            icon: (
+                              <Icon32Icon
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.svg__btP5G
+                                )}
+                                role={"img"}
+                              />
+                            ),
 
-                        [currentIndex]
-                      );
-                      return (
-                        <AsideMenuItem
-                          data-plasmic-name={"asideMenuItem"}
-                          data-plasmic-override={overrides.asideMenuItem}
-                          {...child$Props}
-                        />
-                      );
-                    })()
-                  )}
+                            isCurrent: p.generateStateValueProp($state, [
+                              "asideMenuItem",
+                              currentIndex,
+                              "isCurrent"
+                            ]),
+                            key: currentIndex,
+                            labeltext: (
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return currentItem;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "收藏";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </React.Fragment>
+                            ),
+
+                            onIsCurrentChange: p.generateStateOnChangeProp(
+                              $state,
+                              ["asideMenuItem", currentIndex, "isCurrent"]
+                            )
+                          };
+                          p.initializePlasmicStates(
+                            $state,
+                            [
+                              {
+                                name: "asideMenuItem[].isCurrent",
+                                initFunc: ({ $props, $state, $queries }) =>
+                                  undefined
+                              }
+                            ],
+
+                            [currentIndex]
+                          );
+                          return (
+                            <AsideMenuItem
+                              data-plasmic-name={"asideMenuItem"}
+                              data-plasmic-override={overrides.asideMenuItem}
+                              {...child$Props}
+                            />
+                          );
+                        })()
+                      )}
+                    </div>
+                  ) : null}
                   {(
                     hasVariant(globalVariants, "screen", "mobileOnly")
                       ? true
@@ -300,6 +314,19 @@ function PlasmicMydocuments__RenderFunc(props) {
                         "__wab_instance",
                         sty.userInfoBlock
                       )}
+                      limit={
+                        <div
+                          data-plasmic-name={"userQuota"}
+                          data-plasmic-override={overrides.userQuota}
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.userQuota
+                          )}
+                        >
+                          {"999999999999 字"}
+                        </div>
+                      }
                     />
                   ) : null}
                 </p.Stack>
@@ -501,7 +528,6 @@ function PlasmicMydocuments__RenderFunc(props) {
                             "__wab_instance",
                             sty.documentList__l4Zkc
                           )}
-                          currentState={true}
                         />
 
                         {(
@@ -586,9 +612,11 @@ const PlasmicDescendants = {
     "navMenu",
     "bkgd",
     "aside",
+    "asideMenuGroup",
     "asideMenuItem2",
     "asideMenuItem",
     "userInfoBlock",
+    "userQuota",
     "menu",
     "itemGroup",
     "search",
@@ -601,9 +629,11 @@ const PlasmicDescendants = {
   bkgd: [
     "bkgd",
     "aside",
+    "asideMenuGroup",
     "asideMenuItem2",
     "asideMenuItem",
     "userInfoBlock",
+    "userQuota",
     "menu",
     "itemGroup",
     "search",
@@ -611,10 +641,20 @@ const PlasmicDescendants = {
     "docTxt"
   ],
 
-  aside: ["aside", "asideMenuItem2", "asideMenuItem", "userInfoBlock"],
+  aside: [
+    "aside",
+    "asideMenuGroup",
+    "asideMenuItem2",
+    "asideMenuItem",
+    "userInfoBlock",
+    "userQuota"
+  ],
+
+  asideMenuGroup: ["asideMenuGroup", "asideMenuItem2", "asideMenuItem"],
   asideMenuItem2: ["asideMenuItem2"],
   asideMenuItem: ["asideMenuItem"],
-  userInfoBlock: ["userInfoBlock"],
+  userInfoBlock: ["userInfoBlock", "userQuota"],
+  userQuota: ["userQuota"],
   menu: ["menu", "itemGroup"],
   itemGroup: ["itemGroup"],
   search: ["search"],
@@ -658,9 +698,11 @@ export const PlasmicMydocuments = Object.assign(
     navMenu: makeNodeComponent("navMenu"),
     bkgd: makeNodeComponent("bkgd"),
     aside: makeNodeComponent("aside"),
+    asideMenuGroup: makeNodeComponent("asideMenuGroup"),
     asideMenuItem2: makeNodeComponent("asideMenuItem2"),
     asideMenuItem: makeNodeComponent("asideMenuItem"),
     userInfoBlock: makeNodeComponent("userInfoBlock"),
+    userQuota: makeNodeComponent("userQuota"),
     menu: makeNodeComponent("menu"),
     itemGroup: makeNodeComponent("itemGroup"),
     search: makeNodeComponent("search"),

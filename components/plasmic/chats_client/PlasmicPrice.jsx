@@ -101,7 +101,15 @@ function PlasmicPrice__RenderFunc(props) {
         sty.root
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__wpdfR)}>
+      <div
+        className={classNames(projectcss.all, sty.freeBox__wpdfR, {
+          [sty.freeBoxswitchOn__wpdfRETDa]: hasVariant(
+            $state,
+            "switchOn",
+            "switchOn"
+          )
+        })}
+      >
         <Switch
           data-plasmic-name={"_switch"}
           data-plasmic-override={overrides._switch}
@@ -212,7 +220,7 @@ function PlasmicPrice__RenderFunc(props) {
                 sty.text__nwzQf
               )}
             >
-              {"免费"}
+              {"免费/注册即可使用"}
             </div>
             <p.Stack
               as={"div"}
@@ -660,56 +668,6 @@ function PlasmicPrice__RenderFunc(props) {
                   </div>
                 </p.Stack>
               </p.Stack>
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__wEvDc)}
-              >
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___32ReA)}
-                >
-                  <Icon14Icon
-                    className={classNames(projectcss.all, sty.svg__tzixf)}
-                    role={"img"}
-                  />
-                </div>
-                {false ? (
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__imt2P)}
-                  >
-                    <Icon14Icon
-                      className={classNames(projectcss.all, sty.svg___7Mjx9)}
-                      role={"img"}
-                    />
-                  </div>
-                ) : null}
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox___5P0Ao)}
-                >
-                  {false ? (
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__xw5Se
-                      )}
-                    >
-                      {"Label"}
-                    </div>
-                  ) : null}
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__yzIC
-                    )}
-                  >
-                    {"智能绘画生成(即将到来)"}
-                  </div>
-                </p.Stack>
-              </p.Stack>
             </p.Stack>
             <Button
               className={classNames("__wab_instance", sty.button__m9VWj)}
@@ -769,7 +727,7 @@ function PlasmicPrice__RenderFunc(props) {
                     }
                   )}
                 >
-                  {hasVariant($state, "switchOn", "switchOn") ? "480" : "50"}
+                  {hasVariant($state, "switchOn", "switchOn") ? "1824" : "190"}
                 </div>
               </div>
               <div
@@ -902,20 +860,20 @@ function PlasmicPrice__RenderFunc(props) {
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__hZfRu)}
+                className={classNames(projectcss.all, sty.freeBox__gzSex)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__shVs2)}>
+                <div className={classNames(projectcss.all, sty.freeBox__pui3J)}>
                   <Icon14Icon
-                    className={classNames(projectcss.all, sty.svg__r48Ra)}
+                    className={classNames(projectcss.all, sty.svg__qBTc)}
                     role={"img"}
                   />
                 </div>
                 {false ? (
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__zrNtf)}
+                    className={classNames(projectcss.all, sty.freeBox__dCipR)}
                   >
                     <Icon14Icon
-                      className={classNames(projectcss.all, sty.svg__mBCzu)}
+                      className={classNames(projectcss.all, sty.svg__o2Rb)}
                       role={"img"}
                     />
                   </div>
@@ -923,14 +881,14 @@ function PlasmicPrice__RenderFunc(props) {
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__aSTen)}
+                  className={classNames(projectcss.all, sty.freeBox__lNlVs)}
                 >
                   {false ? (
                     <div
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text___0Lg1I
+                        sty.text__s4Qad
                       )}
                     >
                       {"Label"}
@@ -940,10 +898,10 @@ function PlasmicPrice__RenderFunc(props) {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__xSwx
+                      sty.text__dvVxq
                     )}
                   >
-                    {"自定义问答上下文关联对话"}
+                    {"智能绘画生成(即将到来)"}
                   </div>
                 </p.Stack>
               </p.Stack>

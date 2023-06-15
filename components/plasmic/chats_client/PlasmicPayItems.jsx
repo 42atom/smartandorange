@@ -94,18 +94,6 @@ function PlasmicPayItems__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "price3.isSelected",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "price4.isSelected",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
         path: "price5.isSelected",
         type: "private",
         variableType: "boolean",
@@ -215,39 +203,6 @@ function PlasmicPayItems__RenderFunc(props) {
                     <TabButton
                       className={classNames(
                         "__wab_instance",
-                        sty.tabButton__ux9Rb
-                      )}
-                      tabKey={"tab2"}
-                    >
-                      <Button
-                        color={"softGreen"}
-                        endIcon={null}
-                        startIcon={null}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__wq7RA
-                          )}
-                        >
-                          <React.Fragment>
-                            <React.Fragment>{"高级版\n"}</React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ fontWeight: 100 }}
-                            >
-                              {"VIP 2"}
-                            </span>
-                          </React.Fragment>
-                        </div>
-                      </Button>
-                    </TabButton>
-                    <TabButton
-                      className={classNames(
-                        "__wab_instance",
                         sty.tabButton___2Wk6H
                       )}
                       tabKey={"tab3"}
@@ -272,7 +227,7 @@ function PlasmicPayItems__RenderFunc(props) {
                               }
                               style={{ fontWeight: 100 }}
                             >
-                              {"VIP 3"}
+                              {"VIP 2"}
                             </span>
                           </React.Fragment>
                         </div>
@@ -540,7 +495,7 @@ function PlasmicPayItems__RenderFunc(props) {
                                   sty.text___9X0Z3
                                 )}
                               >
-                                {"20000字/月"}
+                                {"多种模板"}
                               </div>
                             </p.Stack>
                           ) : null}
@@ -685,316 +640,6 @@ function PlasmicPayItems__RenderFunc(props) {
                                 )}
                               >
                                 {"全文生成"}
-                              </div>
-                            </p.Stack>
-                          ) : null}
-                        </div>
-                      </div>
-                    </TabContent>
-                    <TabContent
-                      className={classNames(
-                        "__wab_instance",
-                        sty.tabContent___3YRlf
-                      )}
-                      tabKey={"tab2"}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__stUcM
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___0YoCn
-                          )}
-                        >
-                          {true ? (
-                            <PriceBlock
-                              data-plasmic-name={"price3"}
-                              data-plasmic-override={overrides.price3}
-                              className={classNames(
-                                "__wab_instance",
-                                sty.price3
-                              )}
-                              isSelected={p.generateStateValueProp($state, [
-                                "price3",
-                                "isSelected"
-                              ])}
-                              onIsSelectedChange={p.generateStateOnChangeProp(
-                                $state,
-                                ["price3", "isSelected"]
-                              )}
-                              preDay={"折合1.6元每天"}
-                              price={"50"}
-                              slot={
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__gAub8
-                                  )}
-                                >
-                                  {"1个月"}
-                                </div>
-                              }
-                              version={"高级版"}
-                            />
-                          ) : null}
-                          {true ? (
-                            <PriceBlock
-                              data-plasmic-name={"price4"}
-                              data-plasmic-override={overrides.price4}
-                              className={classNames(
-                                "__wab_instance",
-                                sty.price4
-                              )}
-                              isSelected={p.generateStateValueProp($state, [
-                                "price4",
-                                "isSelected"
-                              ])}
-                              onIsSelectedChange={p.generateStateOnChangeProp(
-                                $state,
-                                ["price4", "isSelected"]
-                              )}
-                              preDay={"折合1.3元每天"}
-                              price={"480"}
-                              version={"高级版"}
-                            />
-                          ) : null}
-                        </div>
-                        <Button2
-                          data-plasmic-name={"btn2"}
-                          data-plasmic-override={overrides.btn2}
-                          className={classNames("__wab_instance", sty.btn2)}
-                          color={"green"}
-                          link={undefined}
-                          onClick={async event => {
-                            const $steps = {};
-                            $steps["updateModalOpen"] = true
-                              ? (() => {
-                                  const actionArgs = {
-                                    variable: __wrapUserFunction(
-                                      {
-                                        type: "InteractionArgLoc",
-                                        actionName: "updateVariable",
-                                        interactionUuid: "Oc8y749fN",
-                                        componentUuid: "l2Kc8Ybaed",
-                                        argName: "variable"
-                                      },
-                                      () => ({
-                                        objRoot: $state,
-                                        variablePath: ["modal", "open"]
-                                      })
-                                    ),
-                                    operation: __wrapUserFunction(
-                                      {
-                                        type: "InteractionArgLoc",
-                                        actionName: "updateVariable",
-                                        interactionUuid: "Oc8y749fN",
-                                        componentUuid: "l2Kc8Ybaed",
-                                        argName: "operation"
-                                      },
-                                      () => 0
-                                    ),
-                                    value: __wrapUserFunction(
-                                      {
-                                        type: "InteractionArgLoc",
-                                        actionName: "updateVariable",
-                                        interactionUuid: "Oc8y749fN",
-                                        componentUuid: "l2Kc8Ybaed",
-                                        argName: "value"
-                                      },
-                                      () => true
-                                    )
-                                  };
-                                  return __wrapUserFunction(
-                                    {
-                                      type: "InteractionLoc",
-                                      actionName: "updateVariable",
-                                      interactionUuid: "Oc8y749fN",
-                                      componentUuid: "l2Kc8Ybaed"
-                                    },
-                                    () =>
-                                      (({
-                                        variable,
-                                        value,
-                                        startIndex,
-                                        deleteCount
-                                      }) => {
-                                        if (!variable) {
-                                          return;
-                                        }
-                                        const { objRoot, variablePath } =
-                                          variable;
-                                        p.set(objRoot, variablePath, value);
-                                        return value;
-                                      })?.apply(null, [actionArgs]),
-                                    actionArgs
-                                  );
-                                })()
-                              : undefined;
-                            if (
-                              typeof $steps["updateModalOpen"] === "object" &&
-                              typeof $steps["updateModalOpen"].then ===
-                                "function"
-                            ) {
-                              $steps["updateModalOpen"] =
-                                await __wrapUserPromise(
-                                  {
-                                    type: "InteractionLoc",
-                                    actionName: "updateVariable",
-                                    interactionUuid: "Oc8y749fN",
-                                    componentUuid: "l2Kc8Ybaed"
-                                  },
-                                  $steps["updateModalOpen"]
-                                );
-                            }
-                          }}
-                        >
-                          {"确认并支付"}
-                        </Button2>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__cwcDz
-                          )}
-                        >
-                          {true ? (
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__zev9G
-                              )}
-                            >
-                              <PriceIcons
-                                data-plasmic-name={"icon3"}
-                                data-plasmic-override={overrides.icon3}
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.icon3
-                                )}
-                              />
-
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__c8NPc
-                                )}
-                              >
-                                {"50000字/月"}
-                              </div>
-                            </p.Stack>
-                          ) : null}
-                          {true ? (
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__g9L3
-                              )}
-                            >
-                              <PriceIcons
-                                data-plasmic-name={"icon4"}
-                                data-plasmic-override={overrides.icon4}
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.icon4
-                                )}
-                              >
-                                <Icon27Icon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg__n1W3
-                                  )}
-                                  role={"img"}
-                                />
-                              </PriceIcons>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__h7Dm2
-                                )}
-                              >
-                                {"所有普通版功能"}
-                              </div>
-                            </p.Stack>
-                          ) : null}
-                          {true ? (
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__imd39
-                              )}
-                            >
-                              <PriceIcons
-                                data-plasmic-name={"icon11"}
-                                data-plasmic-override={overrides.icon11}
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.icon11
-                                )}
-                              >
-                                <Icon31Icon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg__eotp0
-                                  )}
-                                  role={"img"}
-                                />
-                              </PriceIcons>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__wnRGc
-                                )}
-                              >
-                                {"字数控制"}
-                              </div>
-                            </p.Stack>
-                          ) : null}
-                          {true ? (
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__cHcNx
-                              )}
-                            >
-                              <PriceIcons
-                                data-plasmic-name={"icon12"}
-                                data-plasmic-override={overrides.icon12}
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.icon12
-                                )}
-                              >
-                                <Icon32Icon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg__yccT
-                                  )}
-                                  role={"img"}
-                                />
-                              </PriceIcons>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__mNy5X
-                                )}
-                              >
-                                {"高级模版"}
                               </div>
                             </p.Stack>
                           ) : null}
@@ -1350,14 +995,16 @@ function PlasmicPayItems__RenderFunc(props) {
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox__qChkw)}
         >
-          <Button2
-            data-plasmic-name={"aliPayBtn"}
-            data-plasmic-override={overrides.aliPayBtn}
-            className={classNames("__wab_instance", sty.aliPayBtn)}
-            color={"blue"}
-          >
-            {"支付宝支付"}
-          </Button2>
+          {true ? (
+            <Button2
+              data-plasmic-name={"aliPayBtn"}
+              data-plasmic-override={overrides.aliPayBtn}
+              className={classNames("__wab_instance", sty.aliPayBtn)}
+              color={"blue"}
+            >
+              {"支付宝支付"}
+            </Button2>
+          ) : null}
           <Button2
             data-plasmic-name={"wechatPayBtn"}
             data-plasmic-override={overrides.wechatPayBtn}
@@ -1386,13 +1033,6 @@ const PlasmicDescendants = {
     "icon2",
     "icon9",
     "icon10",
-    "price3",
-    "price4",
-    "btn2",
-    "icon3",
-    "icon4",
-    "icon11",
-    "icon12",
     "price5",
     "price6",
     "btn3",
@@ -1417,13 +1057,6 @@ const PlasmicDescendants = {
     "icon2",
     "icon9",
     "icon10",
-    "price3",
-    "price4",
-    "btn2",
-    "icon3",
-    "icon4",
-    "icon11",
-    "icon12",
     "price5",
     "price6",
     "btn3",
@@ -1443,13 +1076,6 @@ const PlasmicDescendants = {
   icon2: ["icon2"],
   icon9: ["icon9"],
   icon10: ["icon10"],
-  price3: ["price3"],
-  price4: ["price4"],
-  btn2: ["btn2"],
-  icon3: ["icon3"],
-  icon4: ["icon4"],
-  icon11: ["icon11"],
-  icon12: ["icon12"],
   price5: ["price5"],
   price6: ["price6"],
   btn3: ["btn3"],
@@ -1505,13 +1131,6 @@ export const PlasmicPayItems = Object.assign(
     icon2: makeNodeComponent("icon2"),
     icon9: makeNodeComponent("icon9"),
     icon10: makeNodeComponent("icon10"),
-    price3: makeNodeComponent("price3"),
-    price4: makeNodeComponent("price4"),
-    btn2: makeNodeComponent("btn2"),
-    icon3: makeNodeComponent("icon3"),
-    icon4: makeNodeComponent("icon4"),
-    icon11: makeNodeComponent("icon11"),
-    icon12: makeNodeComponent("icon12"),
     price5: makeNodeComponent("price5"),
     price6: makeNodeComponent("price6"),
     btn3: makeNodeComponent("btn3"),

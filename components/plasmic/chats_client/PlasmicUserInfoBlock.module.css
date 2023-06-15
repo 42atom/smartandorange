@@ -48,7 +48,7 @@
   padding: 0px 4px;
 }
 .textvips_vip3__rVqWBfDjRf {
-  color: #fde45e;
+  color: #ffdc1f;
 }
 .limit {
   position: relative;
@@ -65,9 +65,65 @@
 }
 .slotTargetLimit {
   font-size: 11px;
+  user-select: none;
+  white-space: pre;
+}
+.slotTargetLimit > :global(.__wab_text),
+.slotTargetLimit > :global(.__wab_expr_html_text),
+.slotTargetLimit > :global(.__wab_slot-string-wrapper),
+.slotTargetLimit > :global(.__wab_slot) > :global(.__wab_text),
+.slotTargetLimit > :global(.__wab_slot) > :global(.__wab_expr_html_text),
+.slotTargetLimit > :global(.__wab_slot) > :global(.__wab_slot-string-wrapper),
+.slotTargetLimit
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_text),
+.slotTargetLimit
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_expr_html_text),
+.slotTargetLimit
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot-string-wrapper),
+.slotTargetLimit
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_text),
+.slotTargetLimit
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_expr_html_text),
+.slotTargetLimit
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot-string-wrapper) {
+  text-overflow: ellipsis;
+}
+.slotTargetLimit > *,
+.slotTargetLimit > :global(.__wab_slot) > *,
+.slotTargetLimit > :global(.__wab_slot) > :global(.__wab_slot) > *,
+.slotTargetLimit
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > *,
+.slotTargetLimit > picture > img,
+.slotTargetLimit > :global(.__wab_slot) > picture > img,
+.slotTargetLimit > :global(.__wab_slot) > :global(.__wab_slot) > picture > img,
+.slotTargetLimit
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  overflow: hidden;
 }
 .slotTargetLimitvips_vip3 {
-  color: #f5ea55;
+  color: #fff025;
 }
 .line {
   display: block;
@@ -120,7 +176,7 @@
   color: #2c7daa;
 }
 .slotTargetUsernamevips_vip3 {
-  color: #fff070;
+  color: #ffe81f;
 }
 .text__sIuAx {
   position: relative;
@@ -166,7 +222,7 @@
   font-size: 11px;
   font-weight: 700;
   color: #ffffff;
-  background: #c30000;
+  background: #9000c3;
   border-radius: 12px;
   border-color: #9e1751;
 }

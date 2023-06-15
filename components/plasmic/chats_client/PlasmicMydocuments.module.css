@@ -202,9 +202,19 @@
     margin-top: 0px;
   }
 }
+.asideMenuGroup {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
 .asideMenuItem2:global(.__wab_instance) {
   max-width: 100%;
-  position: relative;
   width: 100%;
   min-width: 0;
   flex-shrink: 0;
@@ -212,6 +222,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .asideMenuItem2:global(.__wab_instance) {
     width: auto;
+    flex-shrink: 0;
   }
 }
 .svg__czd6N {
@@ -236,6 +247,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .asideMenuItem:global(.__wab_instance) {
     width: auto;
+    flex-shrink: 0;
   }
 }
 .svg__btP5G {
